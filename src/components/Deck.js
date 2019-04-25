@@ -18,7 +18,8 @@ const from = i => ({ rot: 0, scale: 1.5, y: -1000 });
 
 const trans = (r, s) =>
   `perspective(1500px) rotateX(30deg) rotateY(${r /
-    10}deg) rotateZ(${r}deg) scale(${s})`;
+  10}deg) rotateZ(${r}deg) scale(${window.innerHeight / 700})`;
+//scale default instead of window.innerHeigh/700 should be s
 
 function Deck() {
   const [gone] = useState(() => new Set());
@@ -41,7 +42,11 @@ function Deck() {
 
       const dir = xDir < 0 ? -1 : 1;
 
-      if (!down && trigger) gone.add(index);
+      if (!down && trigger) {
+        gone.add(index);
+        // SEND TO REDUX STATE
+        // console.log(index)
+      }
 
       set(i => {
         if (index !== i) return;
@@ -52,6 +57,7 @@ function Deck() {
         const rot = xDelta / 100 + (isGone ? dir * 10 * velocity : 0);
 
         const scale = down ? 1.1 : 1;
+        console.log(isGone, dir)
         return {
           x,
           rot,
@@ -63,11 +69,13 @@ function Deck() {
 
       if (!down && gone.size === data.length)
         setTimeout(() => gone.clear() || set(i => to(i)), 600);
+
     }
   );
 
   return props.map(({ x, y, rot, scale }, i) => (
     <Card
+      key={i}
       i={i}
       x={x}
       y={y}

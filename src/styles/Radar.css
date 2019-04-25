@@ -1,0 +1,10 @@
+.radar-container {
+    width: 100vw !important;
+    height: 100vh !important;
+    background: salmon !important;
+    /* overflow: scroll !important; */
+}
+
+/* canvas {
+    height: 100% !important;
+} */

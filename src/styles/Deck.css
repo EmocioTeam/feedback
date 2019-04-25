@@ -1,25 +1,11 @@
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  overscroll-behavior-y: contain;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  user-select: none;
-  font-family: Raleway, sans-serif;
-  position: fixed;
-  overflow: hidden;
-}
-
 #root {
+  z-index: -1;
   background: salmon;
-  position: fixed;
+  /* position: fixed; */
+  /* margin-top: 40px; */
   overflow: hidden;
   width: 100%;
+  width: 100vw;
   height: 100%;
   cursor: url("https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png")
       39 39,
