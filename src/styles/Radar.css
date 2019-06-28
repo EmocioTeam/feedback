@@ -1,10 +1,39 @@
 .radar-container {
-    width: 100vw !important;
-    height: 100vh !important;
-    background: salmon !important;
-    /* overflow: scroll !important; */
+  width: 100% !important;
+  /* background: salmon !important; */
+  /* overflow: scroll !important; */
 }
 
+.radar-card-container {
+  /* display: block;
+  overflow: scroll; */
+  height: calc(100vh - 140px);
+  /* min-height: calc(100vh - 136px); */
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 70px;
+}
+.radar-card {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0;
+  /* min-height: calc(100vh - 176px); */
+}
+
+.radar-card-body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+
+.radar-chart {
+  /* padding: 100px; */
+}
 /* canvas {
     height: 100% !important;
 } */

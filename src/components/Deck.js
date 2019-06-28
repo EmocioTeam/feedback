@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { useSprings } from "react-spring/hooks";
 import { useGesture } from "react-with-gesture";
-
-import Card from "./Card";
-import data from "../data.js";
-
-import "../styles/Deck.css";
+import _ from "lodash";
+import Card from "../components/Card";
 
 const to = i => ({
   x: 0,
@@ -17,14 +14,20 @@ const to = i => ({
 const from = i => ({ rot: 0, scale: 1.5, y: -1000 });
 
 const trans = (r, s) =>
-  `perspective(1500px) rotateX(30deg) rotateY(${r /
-  10}deg) rotateZ(${r}deg) scale(${window.innerHeight / 700})`;
-//scale default instead of window.innerHeigh/700 should be s
+  //`perspective(1500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(${window.innerHeight /
+  //  800})`;
+  //BACKUP below
+  `perspective(1500px) rotateX(0deg) rotateY(${r /
+    10}deg) rotateZ(${r}deg) scale(${window.innerHeight / 800})`;
 
-function Deck() {
+//BACKUP on top
+//scale default instead of window.innerHeigh/700 should be ${s}
+// scale alternative: ${window.innerHeight / 700}
+
+function Deck(pr) {
   const [gone] = useState(() => new Set());
 
-  const [props, set] = useSprings(data.length, i => ({
+  const [props, set] = useSprings(pr.data.length, i => ({
     ...to(i),
     from: from(i)
   }));
@@ -57,7 +60,11 @@ function Deck() {
         const rot = xDelta / 100 + (isGone ? dir * 10 * velocity : 0);
 
         const scale = down ? 1.1 : 1;
-        console.log(isGone, dir)
+        // console.log(isGone, dir)
+        // console.log(index)
+
+        if (isGone === true && dir === 1) pr.toggleShowAddFeedback(index);
+
         return {
           x,
           rot,
@@ -67,9 +74,8 @@ function Deck() {
         };
       });
 
-      if (!down && gone.size === data.length)
+      if (!down && gone.size === pr.data.length)
         setTimeout(() => gone.clear() || set(i => to(i)), 600);
-
     }
   );
 
@@ -82,7 +88,7 @@ function Deck() {
       rot={rot}
       scale={scale}
       trans={trans}
-      data={data}
+      data={pr.data}
       bind={bind}
     />
   ));

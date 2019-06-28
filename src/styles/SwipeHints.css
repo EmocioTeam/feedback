@@ -1,0 +1,43 @@
+.swipe-hints-wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+}
+
+.swipe-label {
+  float: left;
+  margin: 35px 10px 0 10px;
+  width: 130px;
+  height: auto;
+  font-size: 14px;
+  padding: 10px;
+  /* font: 13px/60px "Barlow Semi Condensed", sans-serif; */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* color: #fff; */
+  text-align: center;
+  /* background: rgba(3, 3, 3, 0.6); */
+  border-radius: 90px;
+  animation: shadow-pulse 1s infinite;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #34ace0;
+  /* padding-left: 20px; */
+  margin-left: 10px;
+  margin-right: 10px;
+}
