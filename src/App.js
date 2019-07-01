@@ -18,6 +18,7 @@ import "./styles/Navbar.css";
 import "./styles/Deck.css";
 import "./styles/WelcomePage.css";
 import "./styles/SwipeHints.css";
+import "./styles/AddCommentModal.css";
 
 const fbFeeds = "feedback";
 const fbHashtags = "hashtags";

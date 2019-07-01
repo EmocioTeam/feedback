@@ -1,7 +1,7 @@
 .feed-card {
   flex: 1;
   padding: 0;
-  margin-bottom: 5px;
+  margin-top: 5px;
   background-color: rgb(255, 255, 255);
   /* border-radius: 5px 5px 5px 5px; */
   /* border-width: 10px !important; */
@@ -23,8 +23,12 @@
   font-weight: 600;
 }
 
+.feed-card-header > p {
+  width: 85%;
+}
+
 .feed-card-header-meta {
-  padding: 8px 8px 8px 8px;
+  padding: 5px 5px 5px 5px;
   font-size: 80%;
   color: white;
   /* float: right; */
@@ -35,18 +39,22 @@
   /* border-radius: 0 5px 0 5px; */
 }
 
-.feed-card-body-meta {
-  font-size: 80%;
-  color: grey;
-  padding-bottom: 0px;
+.feed-card-body > p {
+  text-align: justify;
+  margin-top: 15px;
+  margin-bottom: 0;
+  /* width: 80%; */
 }
 
 .feed-card-body-hashtags {
   margin-bottom: 10px;
+  font-size: 1.1em;
 }
 
-.feed-card-body > p {
-  margin-bottom: 0;
+.feed-card-body-meta {
+  font-size: 80%;
+  color: grey;
+  padding-bottom: 0px;
 }
 
 .feed-card-comments {

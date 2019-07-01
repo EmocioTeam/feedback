@@ -5,7 +5,6 @@ import {
   Form,
   InputGroup,
   OverlayTrigger,
-  Tooltip,
   Popover
 } from "react-bootstrap";
 import moodColorCode from "../moodColorCode";
@@ -57,13 +56,17 @@ export default class NewFeedCard extends Component {
     let dateFormat = "";
     if (currentMonth === fullMonth && currentDate === date) {
       dateFormat = "Today";
-    } else if (currentMonth === fullMonth && currentDate > date) {
+    } else if (
+      currentMonth === fullMonth &&
+      currentDate > date &&
+      currentDate - date <= 7
+    ) {
       dateFormat = currentDate - date + " day(s)";
     } else {
       dateFormat = `${fullMonth} ${date}`;
     }
     return {
-      main: `${hours}:${minutes}`,
+      main: dateFormat === "Today" ? `${hours}:${minutes}` : "",
       secondary: `${dateFormat} ${currentYear === year ? "" : ", " + year}`
     };
   };
@@ -87,20 +90,12 @@ export default class NewFeedCard extends Component {
           {feed.mood}
         </Badge>
         <div className="feed-card-content">
-          <div className="feed-card-header">
+          {/* <div className="feed-card-header">
             {feed.title.length > 0 && (
               <p style={{ marginBottom: "0px" }}>{feed.title}</p>
             )}
-          </div>
+          </div> */}
           <div className="feed-card-body">
-            <p>{feed.comment}</p>
-            {/* <span className="feed-card-header-meta">2:58 PM - 4 Oct 2018</span> */}
-            <div className="feed-card-body-meta">
-              <strong>
-                {this.getDate(feed.timestamp.seconds * 1000).main}
-              </strong>{" "}
-              {this.getDate(feed.timestamp.seconds * 1000).secondary}
-            </div>
             {feed.hashtags.length > 0 && (
               <div className="feed-card-body-hashtags">
                 <span>
@@ -117,6 +112,14 @@ export default class NewFeedCard extends Component {
                 <br />
               </div>
             )}
+            <p>{feed.comment}</p>
+            {/* <span className="feed-card-header-meta">2:58 PM - 4 Oct 2018</span> */}
+            <div className="feed-card-body-meta">
+              <strong>
+                {this.getDate(feed.timestamp.seconds * 1000).main}
+              </strong>{" "}
+              {this.getDate(feed.timestamp.seconds * 1000).secondary}
+            </div>
           </div>
           {feed.reactions && (
             <div className="feed-card-reactions">

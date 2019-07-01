@@ -5,10 +5,12 @@ import Deck from "../components/Deck";
 import SwipeHints from "../components/SwipeHints";
 import moods from "../data.js";
 import _ from "lodash";
+import { geolocated } from "react-geolocated";
+import firebase from "firebase";
 
 const data = _.shuffle(moods);
 
-export default class App extends Component {
+class AddFeedback extends Component {
   state = {
     showAddFeedback: false,
     currentMood: 0,
@@ -60,14 +62,28 @@ export default class App extends Component {
       showAddFeedback: false,
       comment: "",
       title: "",
-      hashtags: []
+      hashtags: [],
+      location: this.props.coords
+        ? new firebase.firestore.GeoPoint(
+            this.props.coords.latitude,
+            this.props.coords.longitude
+          )
+        : false
     });
   };
 
   render() {
+    !this.props.isGeolocationAvailable
+      ? console.log("Your browser does not support Geolocation")
+      : !this.props.isGeolocationEnabled
+      ? console.log("Geolocation is not enabled")
+      : this.props.coords
+      ? console.log(this.props.coords.latitude, this.props.coords.longitude)
+      : console.log("Getting the location data");
+
     return (
       <div className="add-feedback-cards">
-        <Header header="Add Feedback!" />
+        <Header header="Add Feedback" />
         <SwipeHints />
         <Deck toggleShowAddFeedback={this.toggleShowAddFeedback} data={data} />
         <AddComment
@@ -83,3 +99,10 @@ export default class App extends Component {
     );
   }
 }
+
+export default geolocated({
+  positionOptions: {
+    enableHighAccuracy: true
+  },
+  userDecisionTimeout: 5000
+})(AddFeedback);

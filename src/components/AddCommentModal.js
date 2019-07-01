@@ -56,15 +56,17 @@ export default class Comments extends React.Component {
     return (
       <>
         <Modal
+          // class="add-comment-modal"
           show={this.props.state.showAddFeedback}
           onHide={this.props.toggleShowAddFeedback}
-          dialogClassName="modal-90w"
+          dialogClassName="add-comment-modal"
+          bsClass="my-modal"
           aria-labelledby="example-custom-modal-styling-title"
           centered
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-custom-modal-styling-title">
-              Please let us know more about your day!
+              Add comments!
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -84,7 +86,7 @@ export default class Comments extends React.Component {
             >
               {/* {InputGroup(emailInput)} */}
               {/* {InputGroup(hashtagsInput)} */}
-              <Form.Group>
+              {/* <Form.Group>
                 <Form.Label>Add a title</Form.Label>
                 <Form.Control
                   type="text"
@@ -93,7 +95,7 @@ export default class Comments extends React.Component {
                   onChange={this.props.handleInput}
                   name="title"
                 />
-              </Form.Group>
+              </Form.Group> */}
               <Form.Group>
                 <Form.Label>Add Hashtags</Form.Label>
                 <SearchBar
@@ -101,10 +103,10 @@ export default class Comments extends React.Component {
                   hashtags={this.props.hashtags}
                   handleHashtags={this.props.handleHashtags}
                 />
-                <Form.Text>
+                {/* <Form.Text>
                   Add some context to your feedback! Just got out of a skype
                   meeting? Awesome colleague brought breakfast? Tag it!
-                </Form.Text>
+                </Form.Text> */}
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlTextarea1">
                 <Form.Label>Give us the details</Form.Label>

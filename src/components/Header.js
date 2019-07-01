@@ -10,7 +10,14 @@ export default class Header extends Component {
           variant="light"
           className="top-navbar"
         >
-          <Navbar.Brand>{this.props.header}</Navbar.Brand>
+          <Navbar.Brand className="header-brand">
+            <span className="header-brand-button">{this.props.header}</span>
+            {this.props.secondaryHeader && (
+              <span className="header-brand-button">
+                {this.props.secondaryHeader}
+              </span>
+            )}
+          </Navbar.Brand>
         </Navbar>
       </Fragment>
     );

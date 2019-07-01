@@ -40,7 +40,7 @@ export default class FeedPage extends Component {
         <Container className="feed-page">
           {this.props.feeds
             .filter(feed => {
-              return feed.comment || feed.title;
+              return feed.comment;
             })
             .map((feed, index) => {
               return (

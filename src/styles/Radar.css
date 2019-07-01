@@ -7,17 +7,20 @@
 .radar-card-container {
   /* display: block;
   overflow: scroll; */
-  height: calc(100vh - 140px);
+  /* height: calc(100vh - 140px); */
   /* min-height: calc(100vh - 136px); */
+  height: auto;
   width: auto;
   display: flex;
   justify-content: center;
   align-content: center;
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
 }
 .radar-card {
+  /* width: auto; */
+  /* height: auto; */
   width: 100% !important;
   height: 100% !important;
   padding: 0;
