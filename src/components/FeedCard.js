@@ -74,7 +74,7 @@ export default class NewFeedCard extends Component {
     const cardBorderColorCode = {
       borderStyle: "solid",
       borderColor: moodColorCode[feed.mood],
-      borderWidth: "0px 0px 0px 10px"
+      borderWidth: "0px 0px 0px 5px"
     };
 
     const cardBadgeColorCode = {
@@ -232,12 +232,12 @@ export default class NewFeedCard extends Component {
                       value={this.props.commentValue}
                       onChange={e => this.props.handleInput(e, feed.id)}
                       name="feedComment"
-                      style={{ borderRadius: "90px", marginRight: "5px" }}
+                      style={{ borderRadius: "15px", marginRight: "5px" }}
                     />
                     <InputGroup.Append>
                       <Button
                         variant="outline-secondary"
-                        style={{ borderRadius: "90px" }}
+                        style={{ borderRadius: "30px" }}
                         onClick={e => this.props.addComment(e, feed.id)}
                       >
                         Send

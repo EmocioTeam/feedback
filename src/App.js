@@ -25,9 +25,6 @@ const fbHashtags = "hashtags";
 // const fbHashtags = "iotHashtags";
 
 const db = fb.firestore();
-// import "primereact/resources/themes/nova-light/theme.css";
-// import "primereact/resources/primereact.min.css";
-// import "primeicons/primeicons.css";
 
 export default class App extends Component {
   state = {

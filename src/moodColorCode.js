@@ -1,5 +1,5 @@
 export default {
-  Happy: "#89ffcc",
+  Happy: "#84c8b1",
   Excited: "rgb(135, 78, 210)",
   Surprised: "rgb(15,115,138)",
   Sad: "#2c345c",

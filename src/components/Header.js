@@ -7,7 +7,7 @@ export default class Header extends Component {
       <Fragment>
         <Navbar
           // bg="dark"
-          variant="dark"
+          variant="light"
           className="top-navbar"
         >
           <Navbar.Brand>{this.props.header}</Navbar.Brand>
