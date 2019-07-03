@@ -3,6 +3,7 @@ import { Navbar, Nav, Image } from "react-bootstrap";
 import AddIcon from "../icons/add.svg";
 import BarchartIcon from "../icons/barchart.svg";
 import FeedIcon from "../icons/feed.svg";
+import { Link } from "react-router-dom";
 
 const items = [
   { name: "Feed", element: "FeedPage", src: FeedIcon, size: "45px" },
@@ -15,20 +16,21 @@ const items = [
 export default class NavBar extends Component {
   NavLink = ({ element, name, src, size }, index) => {
     return (
-      <Nav.Link
-        href="#"
-        key={element}
-        name={element}
-        className="nav-item"
-        onClick={e => this.props.changeTab(e)}
-        eventKey={`link-${index}`}
-        as={Image}
-        src={src}
-        style={{ height: size }}
-      >
-        {/* <Image  /> */}
-        {/* {name} */}
-      </Nav.Link>
+      <Link key={element} to={`/${element}/`}>
+        <Nav.Link
+          key={element}
+          name={element}
+          className="nav-item"
+          onClick={e => this.props.changeTab(e)}
+          eventKey={`link-${index}`}
+          as={Image}
+          src={src}
+          style={{ height: size }}
+        >
+          {/* <Image  /> */}
+          {/* {name} */}
+        </Nav.Link>
+      </Link>
     );
   };
   render() {

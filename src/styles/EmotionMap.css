@@ -1,0 +1,5 @@
+.geomap-marker {
+  /* transform: scale(0.1, 0.1); */
+  width: 20px;
+  height: 20px;
+}

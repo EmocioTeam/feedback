@@ -3,4 +3,4 @@ applications:
   - name: feedbackapp
     path: build
     memory: 256M
-    # buildpacks: staticfile_buildpack
+    buildpack: staticfile_buildpack

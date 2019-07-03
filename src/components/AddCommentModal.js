@@ -60,7 +60,6 @@ export default class Comments extends React.Component {
           show={this.props.state.showAddFeedback}
           onHide={this.props.toggleShowAddFeedback}
           dialogClassName="add-comment-modal"
-          bsClass="my-modal"
           aria-labelledby="example-custom-modal-styling-title"
           centered
         >

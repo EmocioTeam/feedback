@@ -3,6 +3,7 @@ import {
   Button,
   Badge,
   Form,
+  FormControl,
   InputGroup,
   OverlayTrigger,
   Popover
@@ -12,7 +13,7 @@ import data from "../data";
 
 const emojii = data.map(mood => {
   return {
-    svg: `./emojii/${mood.name}.svg`,
+    svg: `${__dirname}emojii/${mood.name}.svg`,
     name: mood.name
   };
 });
@@ -130,7 +131,7 @@ export default class NewFeedCard extends Component {
                     <div className="feed-card-reactions" key={reaction}>
                       <img
                         key={reaction}
-                        src={`./emojii/${reaction}.svg`}
+                        src={`${__dirname}emojii/${reaction}.svg`}
                         className="feed-card-reactions-emojii"
                         onClick={() =>
                           this.props.addReaction(feed.id, reaction)
@@ -235,7 +236,11 @@ export default class NewFeedCard extends Component {
                       value={this.props.commentValue}
                       onChange={e => this.props.handleInput(e, feed.id)}
                       name="feedComment"
-                      style={{ borderRadius: "15px", marginRight: "5px" }}
+                      style={{
+                        borderRadius: "15px",
+                        marginRight: "5px",
+                        height: "auto"
+                      }}
                     />
                     <InputGroup.Append>
                       <Button

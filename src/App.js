@@ -1,13 +1,17 @@
 import React, { Component } from "react";
+
+// REACT ROUTER
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// CONTAINERS IMPORTS
 import FeedPage from "./containers/FeedPage";
 import AddFeedback from "./containers/AddFeedback";
 import Results from "./containers/Results";
 import Navbar from "./containers/Navbar";
 import Alert from "./components/Alerts";
-import { fb } from "./config";
-import firebase from "firebase";
 import _ from "lodash";
 
+// CSS IMPORTS
 import "./styles/App.css";
 import "./styles/Card.css";
 import "./styles/FeedPage.css";
@@ -19,13 +23,27 @@ import "./styles/Deck.css";
 import "./styles/WelcomePage.css";
 import "./styles/SwipeHints.css";
 import "./styles/AddCommentModal.css";
+import "./styles/EmotionMap.css";
 
+// FIREBASE
+import firebase from "firebase";
+import { fb } from "./config";
 const fbFeeds = "feedback";
 const fbHashtags = "hashtags";
 // const fbFeeds = "iotWorkshop";
 // const fbHashtags = "iotHashtags";
-
 const db = fb.firestore();
+
+//LIST OF FIREBASE FUNCTIONS
+// resetFeeds
+// getUpdatedFeedback
+// realTimeFeedListener
+// getFeeds
+// getHashtagList
+// addFeedback
+// deleteFeedback
+// addComment
+// addReaction
 
 export default class App extends Component {
   state = {
@@ -33,15 +51,6 @@ export default class App extends Component {
     feeds: [],
     hashtags: [],
     alert: null
-  };
-
-  changeTab = e => {
-    // console.log(e.target.name)
-    if (e.target.name === "FeedPage") {
-      // this.getFeeds();
-      this.getHashtagList();
-    }
-    this.setState({ currentTab: e.target.name });
   };
 
   resetFeeds = () => {
@@ -244,13 +253,14 @@ export default class App extends Component {
       .catch(err => console.log(err));
   };
 
-  // componentWillMount = () => {
-  //   document.addEventListener("mousedown", this.addReaction, false);
-  // };
-
-  // componentWillUnmount = () => {
-  //   document.removeEventListener("mousedown", this.addReaction, false);
-  // };
+  changeTab = e => {
+    // console.log(e.target.name)
+    if (e.target.name === "FeedPage") {
+      // this.getFeeds();
+      this.getHashtagList();
+    }
+    this.setState({ currentTab: e.target.name });
+  };
 
   componentDidMount = async () => {
     this.getHashtagList();
@@ -279,30 +289,37 @@ export default class App extends Component {
     const results = <Results feeds={feeds} hashtags={hashtags} />;
     let currentComponent = currentTab;
 
-    switch (currentTab) {
-      case "FeedPage":
-        currentComponent = feedPage;
-        break;
-      case "AddFeedback":
-        currentComponent = addFeedback;
-        break;
-      case "Results":
-        currentComponent = results;
-        break;
-      default:
-        break;
-    }
+    // switch (currentTab) {
+    //   case "FeedPage":
+    //     currentComponent = feedPage;
+    //     break;
+    //   case "AddFeedback":
+    //     currentComponent = addFeedback;
+    //     break;
+    //   case "Results":
+    //     currentComponent = results;
+    //     break;
+    //   default:
+    //     break;
+    // }
 
     return (
-      <div>
-        {alert !== null ? (
-          <Alert data={alert} deleteFeedback={this.deleteFeedback} />
-        ) : (
-          ""
-        )}
-        {currentComponent}
-        <Navbar changeTab={this.changeTab} />
-      </div>
+      <Router>
+        <div>
+          {alert !== null ? (
+            <Alert data={alert} deleteFeedback={this.deleteFeedback} />
+          ) : (
+            ""
+          )}
+          <Navbar changeTab={this.changeTab} />
+          <Switch>
+            <Route path="/AddFeedback" exact render={props => addFeedback} />
+            <Route path="/FeedPage" render={props => feedPage} />
+            <Route path="/Results" render={props => results} />
+            <Route render={props => addFeedback} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

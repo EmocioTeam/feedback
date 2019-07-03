@@ -56,13 +56,7 @@ class AddFeedback extends Component {
       comment: this.state.comment,
       mood: data[this.state.currentMood].name,
       title: this.state.title,
-      hashtags: this.state.hashtags
-    });
-    this.setState({
-      showAddFeedback: false,
-      comment: "",
-      title: "",
-      hashtags: [],
+      hashtags: this.state.hashtags,
       location: this.props.coords
         ? new firebase.firestore.GeoPoint(
             this.props.coords.latitude,
@@ -70,16 +64,22 @@ class AddFeedback extends Component {
           )
         : false
     });
+    this.setState({
+      showAddFeedback: false,
+      comment: "",
+      title: "",
+      hashtags: []
+    });
   };
 
   render() {
-    !this.props.isGeolocationAvailable
-      ? console.log("Your browser does not support Geolocation")
-      : !this.props.isGeolocationEnabled
-      ? console.log("Geolocation is not enabled")
-      : this.props.coords
-      ? console.log(this.props.coords.latitude, this.props.coords.longitude)
-      : console.log("Getting the location data");
+    // !this.props.isGeolocationAvailable
+    //   ? console.log("Your browser does not support Geolocation")
+    //   : !this.props.isGeolocationEnabled
+    //   ? console.log("Geolocation is not enabled")
+    //   : this.props.coords
+    //   ? console.log(this.props.coords.latitude, this.props.coords.longitude)
+    //   : console.log("Getting the location data");
 
     return (
       <div className="add-feedback-cards">
@@ -104,5 +104,6 @@ export default geolocated({
   positionOptions: {
     enableHighAccuracy: true
   },
+  watchPosition: false,
   userDecisionTimeout: 5000
 })(AddFeedback);

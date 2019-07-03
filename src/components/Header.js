@@ -1,7 +1,24 @@
 import React, { Component, Fragment } from "react";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Form, Nav, Button } from "react-bootstrap";
 
 export default class Header extends Component {
+  renderNavTabs = () => {
+    if (this.props.navtabs) {
+      return this.props.navtabs.map(tab => {
+        return (
+          <Nav.Link
+            href=""
+            key={tab.name}
+            onClick={() => this.props.handleState(tab.value)}
+          >
+            {tab.label}
+          </Nav.Link>
+        );
+      });
+    }
+    return "";
+  };
+
   render() {
     return (
       <Fragment>
@@ -10,14 +27,11 @@ export default class Header extends Component {
           variant="light"
           className="top-navbar"
         >
-          <Navbar.Brand className="header-brand">
-            <span className="header-brand-button">{this.props.header}</span>
-            {this.props.secondaryHeader && (
-              <span className="header-brand-button">
-                {this.props.secondaryHeader}
-              </span>
-            )}
-          </Navbar.Brand>
+          <Navbar.Brand className="header-brand">Emocio</Navbar.Brand>
+          {this.renderNavTabs()}
+          <Form inline>
+            <span style={{ float: "right" }}>Icon</span>
+          </Form>
         </Navbar>
       </Fragment>
     );
