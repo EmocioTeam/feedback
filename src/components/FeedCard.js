@@ -98,18 +98,16 @@ export default class NewFeedCard extends Component {
           </div> */}
           <div className="feed-card-body">
             {feed.hashtags.length > 0 && (
-              <div className="feed-card-body-hashtags">
-                <span>
-                  {feed.hashtags.map(hashtag => (
-                    <Badge
-                      key={hashtag}
-                      variant="secondary"
-                      style={{ marginRight: 5 }}
-                    >
-                      {hashtag}
-                    </Badge>
-                  ))}
-                </span>
+              <div className="feed-card-body-hashtags" key={feed.id}>
+                {feed.hashtags.map((hashtag, index) => (
+                  <Badge
+                    key={index + "-" + hashtag + "-" + feed.id}
+                    variant="secondary"
+                    style={{ marginRight: 5 }}
+                  >
+                    {hashtag}
+                  </Badge>
+                ))}
                 <br />
               </div>
             )}

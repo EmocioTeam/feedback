@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Container } from "react-bootstrap";
 
 // REACT ROUTER
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -72,7 +73,11 @@ export default class App extends Component {
   };
 
   realTimeFeedListener = () => {
+    const lastTwoWeeks = new Date();
+    lastTwoWeeks.setDate(lastTwoWeeks.getDate() - 15);
+
     db.collection(fbFeeds)
+      .where("timestamp", ">", lastTwoWeeks)
       .orderBy("timestamp", "desc")
       .onSnapshot(snapshot => {
         // console.log(snapshot);
@@ -88,7 +93,7 @@ export default class App extends Component {
           return;
         }
 
-        // After first page load app listens to changes
+        // AFTER first page load app listens to changes
         // and updates state
         const changes = snapshot.docChanges();
         console.log("real-time changes", changes);
@@ -287,21 +292,6 @@ export default class App extends Component {
       />
     );
     const results = <Results feeds={feeds} hashtags={hashtags} />;
-    let currentComponent = currentTab;
-
-    // switch (currentTab) {
-    //   case "FeedPage":
-    //     currentComponent = feedPage;
-    //     break;
-    //   case "AddFeedback":
-    //     currentComponent = addFeedback;
-    //     break;
-    //   case "Results":
-    //     currentComponent = results;
-    //     break;
-    //   default:
-    //     break;
-    // }
 
     return (
       <Router>
@@ -323,3 +313,19 @@ export default class App extends Component {
     );
   }
 }
+
+// let currentComponent = currentTab;
+
+// switch (currentTab) {
+//   case "FeedPage":
+//     currentComponent = feedPage;
+//     break;
+//   case "AddFeedback":
+//     currentComponent = addFeedback;
+//     break;
+//   case "Results":
+//     currentComponent = results;
+//     break;
+//   default:
+//     break;
+// }
