@@ -229,6 +229,7 @@ export default class NewFeedCard extends Component {
                   <InputGroup>
                     <Form.Control
                       autoFocus
+                      autocomplete="off"
                       type="text"
                       placeholder="Interesting cause I think.."
                       value={this.props.commentValue}
