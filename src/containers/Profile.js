@@ -36,9 +36,12 @@ class Profile extends Component {
             { label: "Stats", name: "stats", value: "stats" }
           ]}
         />
-        {this.props.auth.user ? (
+        {this.props.auth.email ? (
           <Container style={{ marginTop: "50px" }}>
-            <h3>Welcome {this.props.auth.user}</h3>
+            <h3>
+              Welcome{" "}
+              {this.props.auth.user ? this.props.auth.user : "SpookyMaster"}
+            </h3>
             <Form
               onSubmit={e => {
                 e.preventDefault();
