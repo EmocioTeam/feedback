@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { FormGroup } from "react-bootstrap";
-import { AutoComplete } from "primereact/autocomplete";
 import { Typeahead, Menu, MenuItem } from "react-bootstrap-typeahead";
 import _ from "lodash";
 

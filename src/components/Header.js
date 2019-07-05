@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from "react";
-import { Navbar, Form, Nav, Button } from "react-bootstrap";
+import { Navbar, Nav, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import ProfileIcon from "../icons/user.svg";
 
 export default class Header extends Component {
   renderNavTabs = () => {
@@ -27,11 +29,19 @@ export default class Header extends Component {
           variant="light"
           className="top-navbar"
         >
-          <Navbar.Brand className="header-brand">Emocio</Navbar.Brand>
-          {this.renderNavTabs()}
-          <Form inline>
-            <span style={{ float: "right" }}>Icon</span>
-          </Form>
+          <Nav className="mr-auto">
+            <Navbar.Brand className="header-brand">Emocio</Navbar.Brand>
+            {this.renderNavTabs()}
+          </Nav>
+          <Nav>
+            <Link to="/profile">
+              <Nav.Item
+                as={Image}
+                src={ProfileIcon}
+                style={{ height: "25px", cursor: "pointer" }}
+              />
+            </Link>
+          </Nav>
         </Navbar>
       </Fragment>
     );

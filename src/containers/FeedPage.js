@@ -3,9 +3,9 @@ import FeedCard from "../components/FeedCard";
 import Header from "../components/Header";
 import { Container } from "react-bootstrap";
 import EmotionMap from "../components/EmotionMap";
+import { connect } from "react-redux";
 
-export default class FeedPage extends Component {
-  // console.log(props.feeds);
+class FeedPage extends Component {
   state = {
     showFeed: "wall"
   };
@@ -17,15 +17,28 @@ export default class FeedPage extends Component {
 
   addComment = (e, id) => {
     e.preventDefault();
+
+    const author = {};
+    // first get if user is logged in
+    if (this.props.user.email) {
+      this.props.user.user
+        ? (author.name = this.props.user.user)
+        : (author.name = "SpookyMaster");
+    }
+    this.props.user.stakeholder
+      ? (author.stakeholder = true)
+      : (author.stakeholder = false);
+
     // console.log("id", id);
-    const stateKeys = Object.keys(this.state);
-    stateKeys.forEach(state => {
+    // dafuq did I do here
+    const stateObjectKeys = Object.keys(this.state);
+    stateObjectKeys.forEach(state => {
       console.log("stateKey", state);
       this.setState({
         [state]: ""
       });
     });
-    this.props.addComment(id, this.state[id]);
+    this.props.addComment(id, this.state[id], author);
   };
 
   showFeed = status => {
@@ -33,7 +46,6 @@ export default class FeedPage extends Component {
   };
 
   render() {
-    // console.log("feeds", this.props.feeds);
     return (
       <Fragment>
         <Header
@@ -47,10 +59,10 @@ export default class FeedPage extends Component {
         />
         <Container className="feed-page">
           {this.state.showFeed === "map" ? (
-            <EmotionMap feeds={this.props.feeds} />
+            <EmotionMap feeds={this.props.feed} />
           ) : (
-            this.props.feeds &&
-            this.props.feeds
+            this.props.feed &&
+            this.props.feed
               .filter(feed => {
                 return feed.comment;
               })
@@ -76,3 +88,13 @@ export default class FeedPage extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    user: state.auth,
+    feed: state.feed
+  };
+};
+
+export default connect(mapStateToProps)(FeedPage);

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
 
 // REACT ROUTER
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -9,6 +8,7 @@ import FeedPage from "./containers/FeedPage";
 import AddFeedback from "./containers/AddFeedback";
 import Results from "./containers/Results";
 import Navbar from "./containers/Navbar";
+import Profile from "./containers/Profile";
 import Alert from "./components/Alerts";
 import _ from "lodash";
 
@@ -25,10 +25,18 @@ import "./styles/WelcomePage.css";
 import "./styles/SwipeHints.css";
 import "./styles/AddCommentModal.css";
 import "./styles/EmotionMap.css";
+import "./styles/Profile.css";
+
+// REDUX
+import { connect } from "react-redux";
 
 // FIREBASE
 import firebase from "firebase";
 import { fb } from "./config";
+import {
+  onAuthStateChanged,
+  realTimeFeedListener
+} from "./actions/firebaseActions";
 const fbFeeds = "feedback";
 const fbHashtags = "hashtags";
 // const fbFeeds = "iotWorkshop";
@@ -46,7 +54,7 @@ const db = fb.firestore();
 // addComment
 // addReaction
 
-export default class App extends Component {
+class App extends Component {
   state = {
     currentTab: "AddFeedback",
     feeds: [],
@@ -230,14 +238,15 @@ export default class App extends Component {
     // });
   };
 
-  addComment = (id, comment) => {
+  addComment = (id, comment, author) => {
     console.log(id);
     db.collection(fbFeeds)
       .doc(id)
       .update({
         comments: firebase.firestore.FieldValue.arrayUnion({
           timestamp: Date.now(),
-          comment
+          comment,
+          author
         })
       })
       .then(res => {
@@ -268,6 +277,8 @@ export default class App extends Component {
   };
 
   componentDidMount = async () => {
+    this.props.onAuthStateChanged();
+    this.props.realTimeFeedListener();
     this.getHashtagList();
     // this.getFeeds();
     this.realTimeFeedListener();
@@ -278,7 +289,7 @@ export default class App extends Component {
     // console.log("feeds", feeds);
     const feedPage = (
       <FeedPage
-        feeds={feeds}
+        // feeds={feeds}
         refreshing={this.state.refreshing}
         addComment={this.addComment}
         addReaction={this.addReaction}
@@ -292,6 +303,7 @@ export default class App extends Component {
       />
     );
     const results = <Results feeds={feeds} hashtags={hashtags} />;
+    const profile = <Profile />;
 
     return (
       <Router>
@@ -303,9 +315,10 @@ export default class App extends Component {
           )}
           <Navbar changeTab={this.changeTab} />
           <Switch>
-            <Route path="/AddFeedback" exact render={props => addFeedback} />
-            <Route path="/FeedPage" render={props => feedPage} />
-            <Route path="/Results" render={props => results} />
+            <Route path="/add-feed" exact render={props => addFeedback} />
+            <Route path="/feed-page" render={props => feedPage} />
+            <Route path="/analytics" render={props => results} />
+            <Route path="/profile" render={props => profile} />
             <Route render={props => addFeedback} />
           </Switch>
         </div>
@@ -314,18 +327,7 @@ export default class App extends Component {
   }
 }
 
-// let currentComponent = currentTab;
-
-// switch (currentTab) {
-//   case "FeedPage":
-//     currentComponent = feedPage;
-//     break;
-//   case "AddFeedback":
-//     currentComponent = addFeedback;
-//     break;
-//   case "Results":
-//     currentComponent = results;
-//     break;
-//   default:
-//     break;
-// }
+export default connect(
+  null,
+  { onAuthStateChanged, realTimeFeedListener }
+)(App);

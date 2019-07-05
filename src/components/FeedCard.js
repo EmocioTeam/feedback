@@ -3,7 +3,6 @@ import {
   Button,
   Badge,
   Form,
-  FormControl,
   InputGroup,
   OverlayTrigger,
   Popover
@@ -78,7 +77,7 @@ export default class NewFeedCard extends Component {
     const cardBorderColorCode = {
       borderStyle: "solid",
       borderColor: moodColorCode[feed.mood],
-      borderWidth: "0px 0px 0px 5px"
+      borderWidth: "5px 0px 0px 0px"
     };
 
     const cardBadgeColorCode = {
@@ -91,6 +90,11 @@ export default class NewFeedCard extends Component {
           {feed.mood}
         </Badge>
         <div className="feed-card-content">
+          {feed.author && (
+            <div className="feed-card-header">
+              <p>{this.author}</p>
+            </div>
+          )}
           {/* <div className="feed-card-header">
             {feed.title.length > 0 && (
               <p style={{ marginBottom: "0px" }}>{feed.title}</p>
@@ -103,7 +107,11 @@ export default class NewFeedCard extends Component {
                   <Badge
                     key={index + "-" + hashtag + "-" + feed.id}
                     variant="secondary"
-                    style={{ marginRight: 5 }}
+                    style={
+                      hashtag === "#Lisbon"
+                        ? { backgroundColor: "#8CC785", marginRight: 5 }
+                        : { marginRight: 5 }
+                    }
                   >
                     {hashtag}
                   </Badge>
@@ -196,7 +204,20 @@ export default class NewFeedCard extends Component {
               {feed.comments.map((comment, i) => {
                 return (
                   <div className="feed-card-comments-item-div" key={i}>
-                    <p className="feed-card-comments-item">
+                    <p
+                      className="feed-card-comments-item"
+                      style={
+                        comment.author
+                          ? // && comment.author.stakeholder
+                            { backgroundColor: "#c1e7ff" }
+                          : {}
+                      }
+                    >
+                      <strong>
+                        {comment.author && comment.author.name
+                          ? comment.author.name
+                          : ""}
+                      </strong>{" "}
                       {comment.comment ? comment.comment : comment}
                       <br />
                       <span className="feed-card-comments-item-actions">
@@ -229,7 +250,7 @@ export default class NewFeedCard extends Component {
                   <InputGroup>
                     <Form.Control
                       autoFocus
-                      autocomplete="off"
+                      autoComplete="off"
                       type="text"
                       placeholder="Interesting cause I think.."
                       value={this.props.commentValue}
