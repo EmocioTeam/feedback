@@ -207,7 +207,7 @@ export default class NewFeedCard extends Component {
                     <p
                       className="feed-card-comments-item"
                       style={
-                        comment.author
+                        comment.author && comment.author.stakeholder
                           ? // && comment.author.stakeholder
                             { backgroundColor: "#c1e7ff" }
                           : {}

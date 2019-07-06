@@ -4,6 +4,7 @@ import { fb } from "../config";
 const fbFeeds = "feedback";
 const fbHashtags = "hashtags";
 const db = fb.firestore();
+const users = "users";
 // export const resetFeeds = () => {
 //   this.setState({
 //     feeds: []
@@ -34,18 +35,57 @@ export const onAuthStateChanged = () => dispatch => {
     if (res) {
       // User is signed in.
       console.log("userSignedIn", res);
-      dispatch({
-        type: "signIn",
-        payload: {
-          user: res.displayName,
-          email: res.email
-        }
-      });
+      db.collection(users)
+        .doc(res.uid)
+        .get()
+        .then(user => {
+          console.log("EOOO", user);
+
+          dispatch({
+            type: "signIn",
+            payload: {
+              user: res.displayName,
+              email: res.email,
+              stakeholder: user.exists ? user.data().stakeholder : false
+            }
+          });
+        });
     } else {
       // No user is signed in.
       console.log("noUser", res);
     }
   });
+};
+
+export const signIn = (email, password) => {
+  return async dispatch => {
+    await fb
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(res => {
+        console.log("actionRes", res);
+        db.collection(users)
+          .doc(res.user.uid)
+          .get()
+          .then(user => {
+            dispatch({
+              type: "signIn",
+              payload: {
+                user: res.user.displayName,
+                email: res.user.email,
+                stakeholder: user.exists ? user.data().stakeholder : false
+              }
+            });
+          });
+      })
+      .catch(err => {
+        console.log("err", err);
+        dispatch({
+          type: "signInError",
+          payload: err.message
+        });
+      });
+  };
 };
 
 export const signOut = () => dispatch => {
@@ -62,34 +102,6 @@ export const signOut = () => dispatch => {
       // An error happened.
     });
 };
-
-export const signIn = (email, password) => {
-  return async dispatch => {
-    // const email = "test@test.com";
-    // const password = "123456";
-    await fb
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(res => {
-        console.log("actionRes", res);
-        dispatch({
-          type: "signIn",
-          payload: {
-            user: res.user.displayName,
-            email: res.user.email
-          }
-        });
-      })
-      .catch(err => {
-        console.log("err", err);
-        dispatch({
-          type: "signInError",
-          payload: err.message
-        });
-      });
-  };
-};
-
 export const updateUserName = name => dispatch => {
   var user = firebase.auth().currentUser;
 

@@ -14,11 +14,11 @@ class AddFeedback extends Component {
   state = {
     showAddFeedback: false,
     currentMood: 0,
-    // email: "",
     comment: "",
-    // mood: data[this.state.currentMood].name,
     title: "",
     hashtags: []
+    // email: "",
+    // mood: data[this.state.currentMood].name,
   };
 
   handleHashtags = list => {
