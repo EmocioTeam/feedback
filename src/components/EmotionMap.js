@@ -46,7 +46,7 @@ class Geomap extends Component {
       return (
         <Layer
           type="symbol"
-          layout={{ "icon-image": mood.name }}
+          layout={{ "icon-image": mood.name, "icon-allow-overlap": true }}
           key={mood.name}
           images={emojii[mood.name]}
         >
