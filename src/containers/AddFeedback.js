@@ -102,7 +102,7 @@ class AddFeedback extends Component {
 
 export default geolocated({
   positionOptions: {
-    enableHighAccuracy: true
+    enableHighAccuracy: false
   },
   watchPosition: false,
   userDecisionTimeout: 5000

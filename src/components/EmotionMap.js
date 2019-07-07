@@ -30,27 +30,40 @@ data.forEach(mood => {
 
 const emojii = {};
 data.forEach(mood => {
-  emojii[mood.name] = `${__dirname}emojii/${mood.name}.svg`;
+  const newEmojii = new Image(25, 25);
+  newEmojii.src = `${__dirname}emojii/${mood.name}.svg`;
+  emojii[mood.name] = [mood.name, newEmojii];
 });
 
 class Geomap extends Component {
-  renderEmojiiOnMap = () => {
+  renderEmojiiLayer = () => {
     // RENDER FEEDBACKS WITH LOCATION
     const filteredFeedsWithGeolocation = this.props.feeds.filter(feed => {
       return feed.location;
     });
 
-    return filteredFeedsWithGeolocation.map((feed, index) => {
+    return data.map(mood => {
       return (
-        <Feature
-          key={index}
-          properties={{
-            image: "Happy"
-          }}
-          coordinates={[feed.location.longitude, feed.location.latitude]}
+        <Layer
+          type="symbol"
+          layout={{ "icon-image": mood.name }}
+          key={mood.name}
+          images={emojii[mood.name]}
         >
-          <MapImage id="Happy" url="./emojii/Happy.svg" />
-        </Feature>
+          {filteredFeedsWithGeolocation
+            .filter(feed => feed.mood === mood.name)
+            .map((feed, index) => {
+              return (
+                <Feature
+                  key={index}
+                  coordinates={[
+                    feed.location.longitude,
+                    feed.location.latitude
+                  ]}
+                />
+              );
+            })}
+        </Layer>
       );
     });
   };
@@ -74,45 +87,33 @@ class Geomap extends Component {
 
   render() {
     // FIRST GEOLOCATION
-    !this.props.isGeolocationAvailable
-      ? console.log("Your browser does not support Geolocation")
-      : !this.props.isGeolocationEnabled
-      ? console.log("Geolocation is not enabled")
-      : this.props.coords
-      ? console.log(this.props.coords.latitude, this.props.coords.longitude)
-      : console.log("Getting the location data");
+    // !this.props.isGeolocationAvailable
+    //   ? console.log("Your browser does not support Geolocation")
+    //   : !this.props.isGeolocationEnabled
+    //   ? console.log("Geolocation is not enabled")
+    //   : this.props.coords
+    //   ? console.log(this.props.coords.latitude, this.props.coords.longitude)
+    //   : console.log("Getting the location data");
 
     const defaultLatitude = 41.3851;
     const defaultLongitude = 2.1734;
     return (
       <div>
         <Map
-          zoom={[10]}
+          zoom={[13]}
           center={
             this.props.coords
               ? [this.props.coords.longitude, this.props.coords.latitude]
               : [defaultLongitude, defaultLatitude]
           }
-          style="mapbox://styles/mapbox/streets-v9"
+          style="mapbox://styles/mapbox/streets-v11?optimize=true"
           containerStyle={{
             height: "100vh",
             width: "100vw"
           }}
         >
-          {this.renderEmojiiMarkers()}
-          {/* <Layer
-            // key={index}
-            type="symbol"
-            id="marker"
-            layout={{
-              // "icon-size": true,
-              "icon-image": "{image}",
-              "icon-allow-overlap": true
-            }}
-            // images={images}
-          >
-            {this.renderEmojiiOnMap()}
-          </Layer> */}
+          {this.renderEmojiiLayer()}
+          {/* {this.renderEmojiiMarkers()} */}
         </Map>
       </div>
     );
@@ -121,7 +122,7 @@ class Geomap extends Component {
 
 export default geolocated({
   positionOptions: {
-    enableHighAccuracy: true
+    enableHighAccuracy: false
   },
   watchPosition: false,
   userDecisionTimeout: 5000
