@@ -106,7 +106,7 @@ class Geomap extends Component {
               ? [this.props.coords.longitude, this.props.coords.latitude]
               : [defaultLongitude, defaultLatitude]
           }
-          style="mapbox://styles/mapbox/streets-v11?optimize=true"
+          style="mapbox://styles/mapbox/streets-v11"
           containerStyle={{
             height: "100vh",
             width: "100vw"

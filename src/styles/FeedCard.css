@@ -61,6 +61,7 @@
 .feed-card-comments {
   margin-top: 0px;
   padding: 0 0 0 0;
+  word-wrap: break-word;
 }
 
 .feed-card-reactions {
