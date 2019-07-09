@@ -39,7 +39,7 @@ export const onAuthStateChanged = () => dispatch => {
         .doc(res.uid)
         .get()
         .then(user => {
-          console.log("EOOO", user);
+          // console.log("EOOO", user);
 
           dispatch({
             type: "signIn",
@@ -124,17 +124,24 @@ export const updateUserName = name => dispatch => {
 };
 
 export const realTimeFeedListener = () => (dispatch, getState) => {
-  console.log("getState", getState());
-  const lastTwoWeeks = new Date();
-  lastTwoWeeks.setDate(lastTwoWeeks.getDate() - 15);
-
+  // console.log("getState", getState());
+  // const n = getState().feed.length;
+  // const lastTwoWeeks = new Date();
+  // lastTwoWeeks.setDate(lastTwoWeeks.getDate() - 15);
+  console.log("FIRST LOAD");
   db.collection(fbFeeds)
-    .where("timestamp", ">", lastTwoWeeks)
+    // .where("timestamp", ">", lastTwoWeeks)
     .orderBy("timestamp", "desc")
+    // .limit(3)
     .onSnapshot(snapshot => {
-      // console.log(snapshot);
-      // This is done to update state on first page load
+      // const lastVisible = snapshot.docs[snapshot.docs.length - 1];
+      // dispatch({
+      //   type: "getLastFeed",
+      //   payload: lastVisible
+      // });
       if (getState().feed.length === 0) {
+        // console.log(snapshot);
+        // This is done to update state on first page load
         snapshot.docs.forEach(feed => {
           const firstFeedLoad = feed.data();
           firstFeedLoad.id = feed.id;
@@ -145,15 +152,14 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
         });
         return;
       }
-
       // After first page load app listens to changes
       // and updates state
       const changes = snapshot.docChanges();
       console.log("real-time changes", changes);
       changes.forEach(change => {
-        // console.log("modified", change.doc);
         const data = change.doc.data();
         data.id = change.doc.id;
+
         if (change.type === "modified") {
           let modifiedFeedList = getState().feed;
           const modifiedFeedIndex = modifiedFeedList.findIndex(
@@ -169,9 +175,6 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
             type: "addedFeedList",
             payload: data
           });
-          // this.setState({
-          //   feeds: [data, ...this.state.feeds]
-          // });
         } else if (change.type === "removed") {
           const removeFeed = getState().feed.filter(feed => {
             return feed.id !== change.doc.id;
@@ -180,48 +183,109 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
             type: "removedFeedList",
             payload: removeFeed
           });
-          // this.setState({
-          //   feeds: removeFeed
-          // });
         }
       });
     });
 };
 
-export const getFeeds = () => {
-  this.setState({ refreshing: true });
-
+export const getMoreFeeds = () => (dispatch, getState) => {
   db.collection(fbFeeds)
     .orderBy("timestamp", "desc")
-    .get()
-    .then(feed => {
-      this.setState({
-        feeds: []
+    .startAfter(getState().lastFeed)
+    .limit(3)
+    .onSnapshot(snapshot => {
+      const lastVisible = snapshot.docs[snapshot.docs.length - 1];
+      dispatch({
+        type: "getLastFeed",
+        payload: lastVisible
       });
-      feed.forEach(elem => {
-        const data = elem.data();
-        data.id = elem.id;
-        this.setState({
-          feeds: [...this.state.feeds, data],
-          refreshing: false
+
+      snapshot.docs.forEach(feed => {
+        const fetchedFeeds = feed.data();
+        fetchedFeeds.id = feed.id;
+        dispatch({
+          type: "getMoreFeeds",
+          payload: fetchedFeeds
         });
+      });
+      return;
+      // After first page load app listens to changes
+      // and updates state
+      const changes = snapshot.docChanges();
+      console.log("real-time changes", changes);
+      changes.forEach(change => {
+        const data = change.doc.data();
+        data.id = change.doc.id;
+
+        if (change.type === "modified") {
+          let modifiedFeedList = getState().feed;
+          const modifiedFeedIndex = modifiedFeedList.findIndex(
+            feed => feed.id === change.doc.id
+          );
+          modifiedFeedList[modifiedFeedIndex] = data;
+          dispatch({
+            type: "modifiedFeedList",
+            payload: modifiedFeedList
+          });
+        } else if (change.type === "added") {
+          dispatch({
+            type: "addedFeedList",
+            payload: data
+          });
+        } else if (change.type === "removed") {
+          const removeFeed = getState().feed.filter(feed => {
+            return feed.id !== change.doc.id;
+          });
+          dispatch({
+            type: "removedFeedList",
+            payload: removeFeed
+          });
+        }
       });
     });
 };
 
-export const getHashtagList = () => {
+export const getFeedWithLocation = () => dispatch => {
+  db.collection(fbFeeds)
+    // .orderByChild('location')
+    // .where("location", "!=", "false")
+    .orderBy("timestamp", "desc")
+    .get()
+    .then(feed => {
+      // console.log("FEEED", feed);
+      const feedWithLocation = feed.docs
+        .map(elem => {
+          const data = elem.data();
+          data.id = elem.id;
+          return data;
+        })
+        .filter(f => f.location);
+      dispatch({
+        type: "feedWithLocation",
+        payload: feedWithLocation
+      });
+    });
+};
+
+export const getHashtagList = () => dispatch => {
   db.collection(fbHashtags)
     .get()
     .then(async hashtags => {
-      this.setState({ hashtags: [] });
+      // this.setState({ hashtags: [] });
       const hashList = await hashtags.docs.map(hash => {
         const hashData = hash.data();
         delete hashData.count;
         return { id: hash.id, moods: hashData, count: hash.data().count };
       });
       const sortedHashList = _.orderBy(hashList, ["count"], ["desc"]);
-      sortedHashList.forEach(hash => {
-        this.setState({ hashtags: [...this.state.hashtags, hash] });
+
+      // sortedHashList.forEach(hash => {
+      //   this.setState({ hashtags: [...this.state.hashtags, hash] });
+      // });
+      // console.log("getHashtagList", sortedHashList);
+      dispatch({
+        type: "getHashtagList",
+        payload: sortedHashList
       });
     });
 };

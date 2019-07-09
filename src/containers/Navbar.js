@@ -39,7 +39,7 @@ export default class NavBar extends Component {
           key={element}
           name={element}
           className="nav-item"
-          onClick={e => this.props.changeTab(e)}
+          // onClick={e => this.props.changeTab(e)}
           eventKey={`link-${index}`}
           as={Image}
           src={src}

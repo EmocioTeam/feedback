@@ -1,20 +1,19 @@
 import React, { Component } from "react";
-import Charts from "../components/Radar";
 import Recharts from "../components/Rechart";
 import SearchBar from "../components/SearchBar";
 import Header from "../components/Header";
 import FeedCard from "../components/FeedCard";
-import EmotionMap from "../components/EmotionMap";
-import { Figure } from "react-bootstrap";
+import { connect } from "react-redux";
 import _ from "lodash";
 
-export default class Results extends Component {
+class Results extends Component {
   state = {
     hashtags: [],
     graphData: []
   };
 
   handleHashtags = list => {
+    // console.log("eEAJSDÑFLASJ", list);
     const graphData = list.map(elem => {
       return _.find(this.props.hashtags, ["id", elem.split(" ")[0]]);
     });
@@ -32,7 +31,7 @@ export default class Results extends Component {
         <div className="results-searchbar">
           <SearchBar
             handleHashtags={this.handleHashtags}
-            hashtags={this.props.hashtags}
+            // hashtags={this.props.hashtags}
           />
         </div>
         <Recharts
@@ -44,7 +43,7 @@ export default class Results extends Component {
         {this.state.hashtags.length > 0 &&
           this.props.feeds
             .filter(feed => {
-              return feed.comment || feed.title;
+              return feed.comment;
             })
             .filter((feed, index, arr) => {
               for (let hash of this.state.hashtags) {
@@ -72,3 +71,11 @@ export default class Results extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    hashtags: state.hashtags
+  };
+};
+
+export default connect(mapStateToProps)(Results);

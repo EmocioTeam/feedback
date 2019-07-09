@@ -7,26 +7,27 @@ import ReactMapboxGl, {
 } from "react-mapbox-gl";
 import { geolocated } from "react-geolocated";
 import data from "../data";
+import FeedCard from "./FeedCard";
 
 const Map = ReactMapboxGl({
   accessToken:
     "pk.eyJ1IjoidHVydXR1cGEiLCJhIjoiY2pyeDlubnI0MGo4dzN6bHh6dHd1eXMyYSJ9.LzJY9l4E1kBtSXQSoPhS9A"
 });
 
-const images = [
-  data.map(mood => {
-    const image = new Image(20, 20);
-    image.src = `${__dirname}emojii/${mood}.svg`;
-    return [mood.name, image];
-  })
-];
+// const images = [
+//   data.map(mood => {
+//     const image = new Image(20, 20);
+//     image.src = `${__dirname}emojii/${mood}.svg`;
+//     return [mood.name, image];
+//   })
+// ];
 
-const icons = {};
-data.forEach(mood => {
-  const image = new Image(20, 20);
-  image.src = `${__dirname}emojii/${mood}.svg`;
-  icons[mood.name] = [mood.name, image];
-});
+// const icons = {};
+// data.forEach(mood => {
+//   const image = new Image(20, 20);
+//   image.src = `${__dirname}emojii/${mood}.svg`;
+//   icons[mood.name] = [mood.name, image];
+// });
 
 const emojii = {};
 data.forEach(mood => {
@@ -36,12 +37,13 @@ data.forEach(mood => {
 });
 
 class Geomap extends Component {
-  renderEmojiiLayer = () => {
-    // RENDER FEEDBACKS WITH LOCATION
-    const filteredFeedsWithGeolocation = this.props.feeds.filter(feed => {
-      return feed.location;
-    });
+  state = {
+    showCard: false,
+    selectedEmojii: false,
+    mapCenter: false
+  };
 
+  renderEmojiiLayer = () => {
     return data.map(mood => {
       return (
         <Layer
@@ -50,19 +52,30 @@ class Geomap extends Component {
           key={mood.name}
           images={emojii[mood.name]}
         >
-          {filteredFeedsWithGeolocation
-            .filter(feed => feed.mood === mood.name)
-            .map((feed, index) => {
-              return (
-                <Feature
-                  key={index}
-                  coordinates={[
-                    feed.location.longitude,
-                    feed.location.latitude
-                  ]}
-                />
-              );
-            })}
+          {this.props.feeds &&
+            this.props.feeds
+              .filter(feed => feed.mood === mood.name)
+              .map((feed, index) => {
+                return (
+                  <Feature
+                    onClick={e => {
+                      this.setState({
+                        showCard: true,
+                        selectedEmojii: feed,
+                        mapCenter: [
+                          feed.location.longitude,
+                          feed.location.latitude
+                        ]
+                      });
+                    }}
+                    key={index}
+                    coordinates={[
+                      feed.location.longitude,
+                      feed.location.latitude
+                    ]}
+                  />
+                );
+              })}
         </Layer>
       );
     });
@@ -85,35 +98,45 @@ class Geomap extends Component {
       });
   };
 
-  render() {
-    // FIRST GEOLOCATION
-    // !this.props.isGeolocationAvailable
-    //   ? console.log("Your browser does not support Geolocation")
-    //   : !this.props.isGeolocationEnabled
-    //   ? console.log("Geolocation is not enabled")
-    //   : this.props.coords
-    //   ? console.log(this.props.coords.latitude, this.props.coords.longitude)
-    //   : console.log("Getting the location data");
+  componentDidMount = () => {
+    this.props.getFeedWithLocation();
+  };
 
+  render() {
     const defaultLatitude = 41.3851;
     const defaultLongitude = 2.1734;
     return (
       <div>
+        {this.state.showCard && this.state.selectedEmojii && (
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              zIndex: 9999,
+              width: "100vw",
+              marginTop: "27px"
+            }}
+          >
+            <FeedCard feed={this.state.selectedEmojii} showActions={false} />
+          </div>
+        )}
         <Map
           zoom={[13]}
           center={
-            this.props.coords
+            this.state.mapCenter
+              ? this.state.mapCenter
+              : this.props.coords
               ? [this.props.coords.longitude, this.props.coords.latitude]
               : [defaultLongitude, defaultLatitude]
           }
           style="mapbox://styles/mapbox/streets-v11"
           containerStyle={{
-            height: "100vh",
+            height: "calc(100vh - 50px)",
             width: "100vw"
           }}
         >
           {this.renderEmojiiLayer()}
-          {/* {this.renderEmojiiMarkers()} */}
         </Map>
       </div>
     );

@@ -58,7 +58,7 @@ export default class Comments extends React.Component {
                 <Form.Label>Add Hashtags</Form.Label>
                 <SearchBar
                   allowNew={true}
-                  hashtags={this.props.hashtags}
+                  // hashtags={this.props.hashtags}
                   handleHashtags={this.props.handleHashtags}
                 />
               </Form.Group>

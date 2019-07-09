@@ -2,8 +2,9 @@ import React, { Component, Fragment } from "react";
 import { FormGroup } from "react-bootstrap";
 import { Typeahead, Menu, MenuItem } from "react-bootstrap-typeahead";
 import _ from "lodash";
+import { connect } from "react-redux";
 
-export default class SearchBar extends Component {
+class SearchBar extends Component {
   state = {
     multiple: true
   };
@@ -63,3 +64,11 @@ export default class SearchBar extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    hashtags: state.hashtags
+  };
+};
+
+export default connect(mapStateToProps)(SearchBar);

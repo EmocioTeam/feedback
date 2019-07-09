@@ -4,45 +4,61 @@ import Header from "../components/Header";
 import { Container } from "react-bootstrap";
 import EmotionMap from "../components/EmotionMap";
 import { connect } from "react-redux";
+import { getFeedWithLocation } from "../actions/firebaseActions";
+import LazyLoadButton from "../components/LazyLoadButton";
+import _ from "lodash";
+import LazyLoad from "react-lazy-load";
 
 class FeedPage extends Component {
   state = {
-    showFeed: "wall"
-  };
-
-  handleInput = (e, id) => {
-    // console.log(e.target.value, id);
-    this.setState({ [id]: e.target.value });
-  };
-
-  addComment = (e, id) => {
-    e.preventDefault();
-
-    const author = {};
-    // first get if user is logged in
-    if (this.props.user.email) {
-      this.props.user.user
-        ? (author.name = this.props.user.user)
-        : (author.name = "SpookyMaster");
-    }
-    this.props.user.stakeholder
-      ? (author.stakeholder = true)
-      : (author.stakeholder = false);
-
-    // console.log("id", id);
-    // dafuq did I do here
-    const stateObjectKeys = Object.keys(this.state);
-    stateObjectKeys.forEach(state => {
-      console.log("stateKey", state);
-      this.setState({
-        [state]: ""
-      });
-    });
-    this.props.addComment(id, this.state[id], author);
+    showFeed: "wall",
+    showPosts: 15,
+    dots: ".",
+    finishedLoadingFeeds: false
   };
 
   showFeed = status => {
     this.setState({ showFeed: status });
+  };
+
+  showPosts = () => {
+    this.setState({
+      showPosts: this.state.showPosts + 15
+    });
+  };
+
+  showDots = () => {
+    if (this.props.feed.length <= 0) {
+      setInterval(() => {
+        if (this.props.feed.length > 0) clearInterval();
+        this.setState({ dots: this.state.dots + "." });
+        if (this.state.dots.length > 5) {
+          this.setState({
+            dots: "."
+          });
+        }
+      }, 200);
+    }
+  };
+
+  renderCards = () => {
+    return this.props.feed
+      .filter(feed => {
+        return feed.comment;
+      })
+      .splice(0, this.state.showPosts)
+      .map((feed, index) => {
+        return (
+          <FeedCard
+            key={index}
+            feed={feed}
+            handleInput={this.handleInput}
+            addComment={this.props.addComment}
+            addReaction={this.props.addReaction}
+            user={this.props.user}
+          />
+        );
+      });
   };
 
   render() {
@@ -59,29 +75,31 @@ class FeedPage extends Component {
         />
         <Container className="feed-page">
           {this.state.showFeed === "map" ? (
-            <EmotionMap feeds={this.props.feed} />
+            <EmotionMap
+              feeds={this.props.localizedFeed}
+              getFeedWithLocation={this.props.getFeedWithLocation}
+            />
+          ) : this.props.feed.length == 0 ? (
+            <div className="loader-container">
+              <div className="loader">
+                <div className="loader-circle">&nbsp;</div>
+                <div className="loader-circle">&nbsp;</div>
+                <div className="loader-circle">&nbsp;</div>
+                <div className="loader-circle">&nbsp;</div>
+              </div>
+            </div>
           ) : (
-            this.props.feed &&
-            this.props.feed
-              .filter(feed => {
-                return feed.comment;
-              })
-              .map((feed, index) => {
-                return (
-                  <FeedCard
-                    key={index}
-                    feed={feed}
-                    handleInput={this.handleInput}
-                    addComment={this.addComment}
-                    addReaction={this.props.addReaction}
-                    commentValue={
-                      this.state[feed.id] === undefined
-                        ? ""
-                        : this.state[feed.id]
-                    }
-                  />
-                );
-              })
+            this.props.feed && (
+              <div>
+                {this.renderCards()}
+                <LazyLoad
+                  offsetVertical={300}
+                  onContentVisible={() => this.showPosts()}
+                >
+                  <LazyLoadButton showPosts={this.showPosts} />
+                </LazyLoad>
+              </div>
+            )
           )}
         </Container>
       </Fragment>
@@ -90,11 +108,14 @@ class FeedPage extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     user: state.auth,
-    feed: state.feed
+    feed: state.feed,
+    localizedFeed: state.feedWithLocation
   };
 };
 
-export default connect(mapStateToProps)(FeedPage);
+export default connect(
+  mapStateToProps,
+  { getFeedWithLocation }
+)(FeedPage);

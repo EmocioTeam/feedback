@@ -10,6 +10,9 @@ export default (feed = [], action) => {
     case "removedFeedList":
       const removedFeed = [...action.payload];
       return removedFeed;
+    case "getMoreFeeds":
+      console.log("is it getting here??");
+      return [...feed, action.payload];
     default:
       return feed;
   }

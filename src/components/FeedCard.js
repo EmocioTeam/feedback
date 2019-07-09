@@ -71,6 +71,35 @@ export default class NewFeedCard extends Component {
     };
   };
 
+  handleInput = (e, id) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  addComment = (e, id) => {
+    e.preventDefault();
+
+    const author = {};
+    // first get if user is logged in
+    if (this.props.user.email) {
+      this.props.user.user
+        ? (author.name = this.props.user.user)
+        : (author.name = "SpookyMaster");
+    }
+    this.props.user.stakeholder
+      ? (author.stakeholder = true)
+      : (author.stakeholder = false);
+
+    // console.log("id", id);
+    // dafuq did I do here
+    const stateObjectKeys = Object.keys(this.state);
+    stateObjectKeys.forEach(state => {
+      this.setState({
+        [state]: ""
+      });
+    });
+    this.props.addComment(id, this.state.feedComment, author);
+  };
+
   render() {
     const { feed } = this.props;
     // console.log(feed);
@@ -128,154 +157,162 @@ export default class NewFeedCard extends Component {
               {this.getDate(feed.timestamp.seconds * 1000).secondary}
             </div>
           </div>
-          {feed.reactions && (
-            <div className="feed-card-reactions">
-              {feed.reactions &&
-                Object.keys(feed.reactions).map(reaction => {
-                  // console.log(feed);
-                  return (
-                    <div className="feed-card-reactions" key={reaction}>
-                      <img
-                        key={reaction}
-                        src={`${__dirname}emojii/${reaction}.svg`}
-                        className="feed-card-reactions-emojii"
-                        onClick={() =>
-                          this.props.addReaction(feed.id, reaction)
-                        }
-                      />
-                      <div className="feed-card-reaction-counter">
-                        {feed.reactions[reaction]}
-                      </div>
+          {this.props.showActions === false
+            ? false
+            : true && (
+                <div>
+                  {feed.reactions && (
+                    <div className="feed-card-reactions">
+                      {feed.reactions &&
+                        Object.keys(feed.reactions).map(reaction => {
+                          // console.log(feed);
+                          return (
+                            <div className="feed-card-reactions" key={reaction}>
+                              <img
+                                key={reaction}
+                                src={`${__dirname}emojii/${reaction}.svg`}
+                                className="feed-card-reactions-emojii"
+                                // onClick={() =>
+                                //   this.props.addReaction(feed.id, reaction)
+                                // }
+                              />
+                              <div className="feed-card-reaction-counter">
+                                {feed.reactions[reaction]}
+                              </div>
+                            </div>
+                          );
+                        })}
                     </div>
-                  );
-                })}
-            </div>
-          )}
-          <div className="feed-card-actions">
-            {
-              <OverlayTrigger
-                // ref="overlay"
-                placement="top"
-                trigger="click"
-                rootClose
-                onClick={() => this.setState({ showPopover: true })}
-                show={this.state.showPopover}
-                overlay={
-                  <Popover id={`tooltip-top`}>
-                    {emojii.map(mood => {
-                      return (
-                        <img
-                          key={mood.name}
-                          src={mood.svg}
-                          className="feed-card-actions-emojii"
-                          onClick={() => {
-                            this.props.addReaction(feed.id, mood.name);
-                            document.body.click();
-                            // this.refs.overlay.hide();
-                          }}
-                        />
-                      );
-                    })}
-                  </Popover>
-                }
-              >
-                <span className="feed-card-actions-item">Like</span>
-              </OverlayTrigger>
-            }
-            <span
-              className="feed-card-actions-item"
-              onClick={() => {
-                // console.log(feed.id);
-                this.setState({
-                  addCommentFocus: true,
-                  addComment: true // this.state.addComment ? false : true
-                });
-              }}
-            >
-              Comment
-            </span>
-            {/* <span className="feed-card-actions-item">Dislike</span> */}
-            <span className="feed-card-actions-item">Share</span>
-          </div>
-          {feed.comments && feed.comments.length > 0 && (
-            <div className="feed-card-comments">
-              <hr className="feed-card-comments-divider" />
-              {/* <strong>Comments</strong> */}
-              {feed.comments.map((comment, i) => {
-                return (
-                  <div className="feed-card-comments-item-div" key={i}>
-                    <p
-                      className="feed-card-comments-item"
-                      style={
-                        comment.author && comment.author.stakeholder
-                          ? // && comment.author.stakeholder
-                            { backgroundColor: "#c1e7ff" }
-                          : {}
-                      }
-                    >
-                      <strong>
-                        {comment.author && comment.author.name
-                          ? comment.author.name
-                          : ""}
-                      </strong>{" "}
-                      {comment.comment ? comment.comment : comment}
-                      <br />
-                      <span className="feed-card-comments-item-actions">
-                        {comment.timestamp ? (
-                          <span>
-                            <strong>
-                              {this.getDate(comment.timestamp).main}
-                            </strong>{" "}
-                            {this.getDate(comment.timestamp).secondary}
-                          </span>
-                        ) : (
-                          ""
-                        )}
-                      </span>
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-          {this.state.addComment && (
-            <div className="feed-card-add-comment">
-              <Form
-                onSubmit={e => {
-                  this.props.addComment(e, feed.id);
-                }}
-              >
-                <Form.Group className="feed-card-add-comment-form-group">
-                  {/* <Form.Label>Add a title</Form.Label> */}
-                  <InputGroup>
-                    <Form.Control
-                      autoFocus
-                      autoComplete="off"
-                      type="text"
-                      placeholder="Interesting cause I think.."
-                      value={this.props.commentValue}
-                      onChange={e => this.props.handleInput(e, feed.id)}
-                      name="feedComment"
-                      style={{
-                        borderRadius: "15px",
-                        marginRight: "5px",
-                        height: "auto"
-                      }}
-                    />
-                    <InputGroup.Append>
-                      <Button
-                        variant="outline-secondary"
-                        style={{ borderRadius: "30px" }}
-                        onClick={e => this.props.addComment(e, feed.id)}
+                  )}
+
+                  <div className="feed-card-actions">
+                    {
+                      <OverlayTrigger
+                        // ref="overlay"
+                        placement="top"
+                        trigger="click"
+                        rootClose
+                        onClick={() => this.setState({ showPopover: true })}
+                        show={this.state.showPopover}
+                        overlay={
+                          <Popover id={`tooltip-top`}>
+                            {emojii.map(mood => {
+                              return (
+                                <img
+                                  key={mood.name}
+                                  src={mood.svg}
+                                  className="feed-card-actions-emojii"
+                                  onClick={() => {
+                                    this.props.addReaction(feed.id, mood.name);
+                                    document.body.click();
+                                    // this.refs.overlay.hide();
+                                  }}
+                                />
+                              );
+                            })}
+                          </Popover>
+                        }
                       >
-                        Send
-                      </Button>
-                    </InputGroup.Append>
-                  </InputGroup>
-                </Form.Group>
-              </Form>
-            </div>
-          )}
+                        <span className="feed-card-actions-item">Like</span>
+                      </OverlayTrigger>
+                    }
+                    <span
+                      className="feed-card-actions-item"
+                      onClick={() => {
+                        // console.log(feed.id);
+                        this.setState({
+                          addCommentFocus: true,
+                          addComment: true // this.state.addComment ? false : true
+                        });
+                      }}
+                    >
+                      Comment
+                    </span>
+                    {/* <span className="feed-card-actions-item">Dislike</span> */}
+                    <span className="feed-card-actions-item">Share</span>
+                  </div>
+
+                  {feed.comments && feed.comments.length > 0 && (
+                    <div className="feed-card-comments">
+                      <hr className="feed-card-comments-divider" />
+                      {/* <strong>Comments</strong> */}
+                      {feed.comments.map((comment, i) => {
+                        return (
+                          <div className="feed-card-comments-item-div" key={i}>
+                            <p
+                              className="feed-card-comments-item"
+                              style={
+                                comment.author && comment.author.stakeholder
+                                  ? // && comment.author.stakeholder
+                                    { backgroundColor: "#c1e7ff" }
+                                  : {}
+                              }
+                            >
+                              <strong>
+                                {comment.author && comment.author.name
+                                  ? comment.author.name
+                                  : ""}
+                              </strong>{" "}
+                              {comment.comment ? comment.comment : comment}
+                              <br />
+                              <span className="feed-card-comments-item-actions">
+                                {comment.timestamp ? (
+                                  <span>
+                                    <strong>
+                                      {this.getDate(comment.timestamp).main}
+                                    </strong>{" "}
+                                    {this.getDate(comment.timestamp).secondary}
+                                  </span>
+                                ) : (
+                                  ""
+                                )}
+                              </span>
+                            </p>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                  {this.state.addComment && (
+                    <div className="feed-card-add-comment">
+                      <Form
+                        onSubmit={e => {
+                          this.addComment(e, feed.id);
+                        }}
+                      >
+                        <Form.Group className="feed-card-add-comment-form-group">
+                          {/* <Form.Label>Add a title</Form.Label> */}
+                          <InputGroup>
+                            <Form.Control
+                              autoFocus
+                              autoComplete="off"
+                              type="text"
+                              placeholder="Interesting cause I think.."
+                              // value={this.props.commentValue}
+                              onChange={e => this.handleInput(e, feed.id)}
+                              name="feedComment"
+                              style={{
+                                borderRadius: "15px",
+                                marginRight: "5px",
+                                height: "auto"
+                              }}
+                            />
+                            <InputGroup.Append>
+                              <Button
+                                variant="outline-secondary"
+                                style={{ borderRadius: "30px" }}
+                                onClick={e => this.props.addComment(e, feed.id)}
+                              >
+                                Send
+                              </Button>
+                            </InputGroup.Append>
+                          </InputGroup>
+                        </Form.Group>
+                      </Form>
+                    </div>
+                  )}
+                </div>
+              )}
         </div>
       </div>
     );

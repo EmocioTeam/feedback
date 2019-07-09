@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Card, Container } from 'react-bootstrap';
-import moods from '../data';
-import _ from 'lodash';
+import React, { Component } from "react";
+import { Card, Container } from "react-bootstrap";
+import moods from "../data";
+import _ from "lodash";
 import {
   Radar,
   RadarChart,
@@ -10,16 +10,16 @@ import {
   PolarRadiusAxis,
   Legend
   // ResponsiveContainer
-} from 'recharts';
+} from "recharts";
 
 const style = {
   container: {
-    height: 'calc(100vh - 176px)',
-    width: 'auto',
-    display: 'flex',
-    justifyContent: 'center',
-    marginLeft: '15px',
-    marginRight: '15px'
+    height: "calc(100vh - 176px)",
+    width: "auto",
+    display: "flex",
+    justifyContent: "center",
+    marginLeft: "15px",
+    marginRight: "15px"
   }
 };
 
@@ -60,41 +60,41 @@ export default class Rechart extends Component {
       // <ResponsiveContainer width="100%" height="100%">
       <RadarChart
         data={data}
-        className='radar-chart'
-        margin={{ left: 40, right: 40, top: 40, bottom: 0 }}
-        padding={{ left: 0, right: 0, top: 0, bottom: 0 }}
-        width={window.innerWidth}
+        className="radar-chart"
+        // margin={{ left: 40, right: 40, top: 40, bottom: 0 }}
+        // padding={{ left: 0, right: 0, top: 0, bottom: 0 }}
+        width={window.innerWidth / 1.1}
         height={window.innerHeight / 1.5}
         outerRadius={90}
       >
         <PolarGrid />
-        <PolarAngleAxis dataKey='subject' />
+        <PolarAngleAxis dataKey="subject" />
         {/* <PolarRadiusAxis angle={162} domain={["dataMin", "dataMax"]} /> */}
         <PolarRadiusAxis angle={162} domain={[-1, MAX === 0 ? 100 : MAX]} />
         {graphData[0] && (
           <Radar
-            name={graphData[0] && graphData[0].id ? graphData[0].id : ' - '}
-            dataKey='A'
-            stroke='#8884d8'
-            fill='#8884d8'
+            name={graphData[0] && graphData[0].id ? graphData[0].id : " - "}
+            dataKey="A"
+            stroke="#8884d8"
+            fill="#8884d8"
             fillOpacity={0.2}
           />
         )}
         {graphData[1] && (
           <Radar
-            name={graphData[1] && graphData[1].id ? graphData[1].id : ' - '}
-            dataKey='B'
-            stroke='#82ca9d'
-            fill='#82ca9d'
+            name={graphData[1] && graphData[1].id ? graphData[1].id : " - "}
+            dataKey="B"
+            stroke="#82ca9d"
+            fill="#82ca9d"
             fillOpacity={0.2}
           />
         )}
         {graphData[2] && (
           <Radar
-            name={graphData[2] && graphData[2].id ? graphData[2].id : ' - '}
-            dataKey='C'
-            stroke='#630'
-            fill='#630'
+            name={graphData[2] && graphData[2].id ? graphData[2].id : " - "}
+            dataKey="C"
+            stroke="#630"
+            fill="#630"
             fillOpacity={0.2}
           />
         )}
@@ -107,9 +107,9 @@ export default class Rechart extends Component {
   render() {
     const { currentHashtag, graphData } = this.props;
     return (
-      <div className='radar-card-container'>
-        <Card className='radar-card'>
-          <Card.Body className='radar-card-body'>
+      <div className="radar-card-container">
+        <Card className="radar-card">
+          <Card.Body className="radar-card-body">
             {this.getGraph(graphData)}
           </Card.Body>
         </Card>

@@ -73,14 +73,6 @@ class AddFeedback extends Component {
   };
 
   render() {
-    // !this.props.isGeolocationAvailable
-    //   ? console.log("Your browser does not support Geolocation")
-    //   : !this.props.isGeolocationEnabled
-    //   ? console.log("Geolocation is not enabled")
-    //   : this.props.coords
-    //   ? console.log(this.props.coords.latitude, this.props.coords.longitude)
-    //   : console.log("Getting the location data");
-
     return (
       <div className="add-feedback-cards">
         <Header header="Add Feedback" />
@@ -88,7 +80,7 @@ class AddFeedback extends Component {
         <Deck toggleShowAddFeedback={this.toggleShowAddFeedback} data={data} />
         <AddComment
           data={data}
-          hashtags={this.props.hashtags}
+          // hashtags={this.props.hashtags}
           toggleShowAddFeedback={this.toggleShowAddFeedback}
           handleHashtags={this.handleHashtags}
           handleInput={this.handleInput}

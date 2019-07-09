@@ -48,7 +48,8 @@
 }
 
 .feed-card-body-hashtags {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  margin-top: 8px;
   font-size: 1.1em;
 }
 

@@ -26,6 +26,8 @@ import "./styles/SwipeHints.css";
 import "./styles/AddCommentModal.css";
 import "./styles/EmotionMap.css";
 import "./styles/Profile.css";
+import "./styles/LazyLoadButton.css";
+import "./styles/Loader.css";
 
 // REDUX
 import { connect } from "react-redux";
@@ -35,7 +37,8 @@ import firebase from "firebase";
 import { fb } from "./config";
 import {
   onAuthStateChanged,
-  realTimeFeedListener
+  realTimeFeedListener,
+  getHashtagList
 } from "./actions/firebaseActions";
 const fbFeeds = "feedback";
 const fbHashtags = "hashtags";
@@ -43,29 +46,12 @@ const fbHashtags = "hashtags";
 // const fbHashtags = "iotHashtags";
 const db = fb.firestore();
 
-//LIST OF FIREBASE FUNCTIONS
-// resetFeeds
-// getUpdatedFeedback
-// realTimeFeedListener
-// getFeeds
-// getHashtagList
-// addFeedback
-// deleteFeedback
-// addComment
-// addReaction
-
 class App extends Component {
   state = {
     currentTab: "AddFeedback",
     feeds: [],
     hashtags: [],
     alert: null
-  };
-
-  resetFeeds = () => {
-    this.setState({
-      feeds: []
-    });
   };
 
   getUpdatedFeedback = doc => {
@@ -76,98 +62,6 @@ class App extends Component {
         this.state.feeds.findIndex(doc);
         this.setState({
           feeds: this.state.feeds
-        });
-      });
-  };
-
-  realTimeFeedListener = () => {
-    const lastTwoWeeks = new Date();
-    lastTwoWeeks.setDate(lastTwoWeeks.getDate() - 15);
-
-    db.collection(fbFeeds)
-      .where("timestamp", ">", lastTwoWeeks)
-      .orderBy("timestamp", "desc")
-      .onSnapshot(snapshot => {
-        // console.log(snapshot);
-        // This is done to update state on first page load
-        if (this.state.feeds.length === 0) {
-          snapshot.docs.forEach(feed => {
-            const firstFeedLoad = feed.data();
-            firstFeedLoad.id = feed.id;
-            this.setState({
-              feeds: [...this.state.feeds, firstFeedLoad]
-            });
-          });
-          return;
-        }
-
-        // AFTER first page load app listens to changes
-        // and updates state
-        const changes = snapshot.docChanges();
-        console.log("real-time changes", changes);
-        changes.forEach(change => {
-          // console.log("modified", change.doc);
-          const data = change.doc.data();
-          data.id = change.doc.id;
-          if (change.type === "modified") {
-            let modifiedFeedList = this.state.feeds;
-            const modifiedFeedIndex = modifiedFeedList.findIndex(
-              feed => feed.id === change.doc.id
-            );
-            modifiedFeedList[modifiedFeedIndex] = data;
-            this.setState({
-              feeds: modifiedFeedList
-            });
-          } else if (change.type === "added") {
-            this.setState({
-              feeds: [data, ...this.state.feeds]
-            });
-          } else if (change.type === "removed") {
-            const removeFeed = this.state.feeds.filter(feed => {
-              return feed.id !== change.doc.id;
-            });
-            this.setState({
-              feeds: removeFeed
-            });
-          }
-        });
-      });
-  };
-
-  getFeeds = () => {
-    this.setState({ refreshing: true });
-
-    db.collection(fbFeeds)
-      .orderBy("timestamp", "desc")
-      .get()
-      .then(feed => {
-        this.setState({
-          feeds: []
-        });
-        feed.forEach(elem => {
-          const data = elem.data();
-          data.id = elem.id;
-          this.setState({
-            feeds: [...this.state.feeds, data],
-            refreshing: false
-          });
-        });
-      });
-  };
-
-  getHashtagList = () => {
-    db.collection(fbHashtags)
-      .get()
-      .then(async hashtags => {
-        this.setState({ hashtags: [] });
-        const hashList = await hashtags.docs.map(hash => {
-          const hashData = hash.data();
-          delete hashData.count;
-          return { id: hash.id, moods: hashData, count: hash.data().count };
-        });
-        const sortedHashList = _.orderBy(hashList, ["count"], ["desc"]);
-        sortedHashList.forEach(hash => {
-          this.setState({ hashtags: [...this.state.hashtags, hash] });
         });
       });
   };
@@ -210,8 +104,8 @@ class App extends Component {
             hashtags: data.hashtags
           }
         });
-        // this.getFeeds();
-        this.getHashtagList();
+
+        this.props.getHashtagList();
         setTimeout(() => this.setState({ alert: null }), 2000);
       })
       .catch(err => {
@@ -225,7 +119,7 @@ class App extends Component {
       .delete()
       .then(() => {
         // console.log("Document successfully deleted!");
-        // this.getFeeds();
+
         this.getHashtagList();
       })
       .catch(function(error) {
@@ -251,7 +145,6 @@ class App extends Component {
       })
       .then(res => {
         console.log(res);
-        // this.getFeeds();
       });
   };
 
@@ -267,21 +160,10 @@ class App extends Component {
       .catch(err => console.log(err));
   };
 
-  changeTab = e => {
-    // console.log(e.target.name)
-    if (e.target.name === "FeedPage") {
-      // this.getFeeds();
-      this.getHashtagList();
-    }
-    this.setState({ currentTab: e.target.name });
-  };
-
   componentDidMount = async () => {
     this.props.onAuthStateChanged();
     this.props.realTimeFeedListener();
-    this.getHashtagList();
-    // this.getFeeds();
-    this.realTimeFeedListener();
+    this.props.getHashtagList();
   };
 
   render() {
@@ -313,7 +195,7 @@ class App extends Component {
           ) : (
             ""
           )}
-          <Navbar changeTab={this.changeTab} />
+          <Navbar />
           <Switch>
             <Route path="/add-feed" exact render={props => addFeedback} />
             <Route path="/feed-page" render={props => feedPage} />
@@ -329,5 +211,5 @@ class App extends Component {
 
 export default connect(
   null,
-  { onAuthStateChanged, realTimeFeedListener }
+  { onAuthStateChanged, realTimeFeedListener, getHashtagList }
 )(App);
