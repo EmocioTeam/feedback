@@ -20,7 +20,8 @@ const emojii = data.map(mood => {
 export default class NewFeedCard extends Component {
   state = {
     addComment: false,
-    showPopover: true
+    showPopover: true,
+    feedComment: ""
   };
 
   getDate = timestamp => {
@@ -77,6 +78,7 @@ export default class NewFeedCard extends Component {
 
   addComment = (e, id) => {
     e.preventDefault();
+    console.log("feedId", id);
 
     const author = {};
     // first get if user is logged in
@@ -288,7 +290,7 @@ export default class NewFeedCard extends Component {
                               autoComplete="off"
                               type="text"
                               placeholder="Interesting cause I think.."
-                              // value={this.props.commentValue}
+                              value={this.state.feedComment}
                               onChange={e => this.handleInput(e, feed.id)}
                               name="feedComment"
                               style={{
@@ -301,7 +303,7 @@ export default class NewFeedCard extends Component {
                               <Button
                                 variant="outline-secondary"
                                 style={{ borderRadius: "30px" }}
-                                onClick={e => this.props.addComment(e, feed.id)}
+                                onClick={e => this.addComment(e, feed.id)}
                               >
                                 Send
                               </Button>

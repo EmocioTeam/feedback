@@ -5,11 +5,6 @@ const fbFeeds = "feedback";
 const fbHashtags = "hashtags";
 const db = fb.firestore();
 const users = "users";
-// export const resetFeeds = () => {
-//   this.setState({
-//     feeds: []
-//   });
-// }
 
 // export const getUpdatedFeedback = doc => {
 //   db.collection(fbFeeds)
@@ -123,6 +118,20 @@ export const updateUserName = name => dispatch => {
     });
 };
 
+export const getAllFeeds = () => dispatch => {
+  db.collection(fbFeeds)
+    .orderBy("timestamp", "desc")
+    .get()
+    .then(res => {
+      const dbJSON = {};
+      res.docs.forEach(elem => {
+        const data = elem.data();
+        dbJSON[elem.id] = data;
+      });
+      console.log(dbJSON);
+    });
+};
+
 export const realTimeFeedListener = () => (dispatch, getState) => {
   // console.log("getState", getState());
   // const n = getState().feed.length;
@@ -140,7 +149,6 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
       //   payload: lastVisible
       // });
       if (getState().feed.length === 0) {
-        // console.log(snapshot);
         // This is done to update state on first page load
         snapshot.docs.forEach(feed => {
           const firstFeedLoad = feed.data();
@@ -152,63 +160,6 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
         });
         return;
       }
-      // After first page load app listens to changes
-      // and updates state
-      const changes = snapshot.docChanges();
-      console.log("real-time changes", changes);
-      changes.forEach(change => {
-        const data = change.doc.data();
-        data.id = change.doc.id;
-
-        if (change.type === "modified") {
-          let modifiedFeedList = getState().feed;
-          const modifiedFeedIndex = modifiedFeedList.findIndex(
-            feed => feed.id === change.doc.id
-          );
-          modifiedFeedList[modifiedFeedIndex] = data;
-          dispatch({
-            type: "modifiedFeedList",
-            payload: modifiedFeedList
-          });
-        } else if (change.type === "added") {
-          dispatch({
-            type: "addedFeedList",
-            payload: data
-          });
-        } else if (change.type === "removed") {
-          const removeFeed = getState().feed.filter(feed => {
-            return feed.id !== change.doc.id;
-          });
-          dispatch({
-            type: "removedFeedList",
-            payload: removeFeed
-          });
-        }
-      });
-    });
-};
-
-export const getMoreFeeds = () => (dispatch, getState) => {
-  db.collection(fbFeeds)
-    .orderBy("timestamp", "desc")
-    .startAfter(getState().lastFeed)
-    .limit(3)
-    .onSnapshot(snapshot => {
-      const lastVisible = snapshot.docs[snapshot.docs.length - 1];
-      dispatch({
-        type: "getLastFeed",
-        payload: lastVisible
-      });
-
-      snapshot.docs.forEach(feed => {
-        const fetchedFeeds = feed.data();
-        fetchedFeeds.id = feed.id;
-        dispatch({
-          type: "getMoreFeeds",
-          payload: fetchedFeeds
-        });
-      });
-      return;
       // After first page load app listens to changes
       // and updates state
       const changes = snapshot.docChanges();

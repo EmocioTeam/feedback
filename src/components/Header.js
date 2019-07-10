@@ -2,8 +2,10 @@ import React, { Component, Fragment } from "react";
 import { Navbar, Nav, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ProfileIcon from "../icons/user.svg";
+import { connect } from "react-redux";
+import { getAllFeeds } from "../actions/firebaseActions";
 
-export default class Header extends Component {
+class Header extends Component {
   renderNavTabs = () => {
     if (this.props.navtabs) {
       return this.props.navtabs.map(tab => {
@@ -30,7 +32,14 @@ export default class Header extends Component {
           className="top-navbar"
         >
           <Nav className="mr-auto">
-            <Navbar.Brand className="header-brand">Emocio</Navbar.Brand>
+            <Navbar.Brand
+              onClick={() => {
+                // this.props.getAllFeeds();
+              }}
+              className="header-brand"
+            >
+              Emocio
+            </Navbar.Brand>
             {this.renderNavTabs()}
           </Nav>
           <Nav>
@@ -47,3 +56,8 @@ export default class Header extends Component {
     );
   }
 }
+
+export default connect(
+  null,
+  { getAllFeeds }
+)(Header);
