@@ -21,7 +21,10 @@ export default class NewFeedCard extends Component {
   state = {
     addComment: false,
     showPopover: true,
-    feedComment: ""
+    feedComment: "",
+    maxCommentChars: 140,
+    characterCount: 0,
+    alertCommentChars: false
   };
 
   getDate = timestamp => {
@@ -72,7 +75,16 @@ export default class NewFeedCard extends Component {
     };
   };
 
+  getCharacterCount = () => {
+    this.setState({ characterCount: this.state.feedComment.length });
+  };
+
   handleInput = (e, id) => {
+    if (this.state.feedComment.length >= 140) {
+      this.setState({ alertCommentChars: true });
+    } else {
+      this.setState({ alertCommentChars: false });
+    }
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -99,7 +111,9 @@ export default class NewFeedCard extends Component {
         [state]: ""
       });
     });
-    this.props.addComment(id, this.state.feedComment, author);
+    if (this.state.feedComment.length < 141) {
+      this.props.addComment(id, this.state.feedComment, author);
+    }
   };
 
   render() {
@@ -150,7 +164,14 @@ export default class NewFeedCard extends Component {
                 <br />
               </div>
             )}
-            <p>{feed.comment}</p>
+            <p>
+              {feed.comment.split("\n").map((row, index) => (
+                <span key={index}>
+                  {row}
+                  <br />
+                </span>
+              ))}
+            </p>
             {/* <span className="feed-card-header-meta">2:58 PM - 4 Oct 2018</span> */}
             <div className="feed-card-body-meta">
               <strong>
@@ -250,13 +271,28 @@ export default class NewFeedCard extends Component {
                                   : {}
                               }
                             >
-                              <strong>
-                                {comment.author && comment.author.name
-                                  ? comment.author.name
-                                  : ""}
-                              </strong>{" "}
-                              {comment.comment ? comment.comment : comment}
-                              <br />
+                              {comment.comment ? (
+                                <span>
+                                  {comment.author && comment.author.name ? (
+                                    <strong style={{ fontSize: "90%" }}>
+                                      {comment.author.name} <br />
+                                    </strong>
+                                  ) : (
+                                    ""
+                                  )}
+
+                                  {comment.comment
+                                    .split("\n")
+                                    .map((row, index) => (
+                                      <span key={index}>
+                                        {row}
+                                        <br />
+                                      </span>
+                                    ))}
+                                </span>
+                              ) : (
+                                comment
+                              )}
                               <span className="feed-card-comments-item-actions">
                                 {comment.timestamp ? (
                                   <span>
@@ -287,10 +323,28 @@ export default class NewFeedCard extends Component {
                           <InputGroup>
                             <Form.Control
                               autoFocus
+                              as="textarea"
+                              rows={1}
                               autoComplete="off"
                               type="text"
                               placeholder="Interesting cause I think.."
                               value={this.state.feedComment}
+                              onKeyDown={e => {
+                                if (
+                                  this.state.feedComment.split("\n").length >=
+                                    6 &&
+                                  e.which === 13
+                                ) {
+                                  e.preventDefault();
+                                }
+                                this.getCharacterCount();
+                              }}
+                              onKeyUp={element => {
+                                // console.log(element);
+                                element.target.style.height = "5px";
+                                element.target.style.height =
+                                  element.target.scrollHeight + "px";
+                              }}
                               onChange={e => this.handleInput(e, feed.id)}
                               name="feedComment"
                               style={{
@@ -301,14 +355,28 @@ export default class NewFeedCard extends Component {
                             />
                             <InputGroup.Append>
                               <Button
-                                variant="outline-secondary"
-                                style={{ borderRadius: "30px" }}
+                                variant="secondary"
+                                style={{ borderRadius: "15px" }}
                                 onClick={e => this.addComment(e, feed.id)}
                               >
                                 Send
                               </Button>
                             </InputGroup.Append>
                           </InputGroup>
+                          <Form.Text
+                            className={
+                              !this.state.alertCommentChars ? "text-muted" : ""
+                            }
+                            style={{
+                              marginLeft: "10px",
+                              color: this.state.alertCommentChars
+                                ? "#f44336"
+                                : ""
+                            }}
+                          >
+                            {this.state.characterCount}/
+                            {this.state.maxCommentChars}
+                          </Form.Text>
                         </Form.Group>
                       </Form>
                     </div>

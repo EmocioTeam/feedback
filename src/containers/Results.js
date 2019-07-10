@@ -29,10 +29,7 @@ class Results extends Component {
       <div className="results-container">
         <Header header="Analytics" />
         <div className="results-searchbar">
-          <SearchBar
-            handleHashtags={this.handleHashtags}
-            // hashtags={this.props.hashtags}
-          />
+          <SearchBar handleHashtags={this.handleHashtags} />
         </div>
         <Recharts
           currentHashtags={this.state.hashtags}

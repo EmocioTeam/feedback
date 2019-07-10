@@ -1,8 +1,10 @@
 import _ from "lodash";
 import firebase from "firebase";
 import { fb } from "../config";
-const fbFeeds = "feedback";
-const fbHashtags = "hashtags";
+const fbFeeds = "publicEmocio";
+const fbHashtags = "publicHashtags";
+// const fbFeeds = "feedback";
+// const fbHashtags = "hashtags";
 const db = fb.firestore();
 const users = "users";
 
@@ -137,7 +139,6 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
   // const n = getState().feed.length;
   // const lastTwoWeeks = new Date();
   // lastTwoWeeks.setDate(lastTwoWeeks.getDate() - 15);
-  console.log("FIRST LOAD");
   db.collection(fbFeeds)
     // .where("timestamp", ">", lastTwoWeeks)
     .orderBy("timestamp", "desc")
@@ -149,7 +150,9 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
       //   payload: lastVisible
       // });
       if (getState().feed.length === 0) {
+        /*
         // This is done to update state on first page load
+        console.log(snapshot);
         snapshot.docs.forEach(feed => {
           const firstFeedLoad = feed.data();
           firstFeedLoad.id = feed.id;
@@ -157,6 +160,12 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
             type: "firstFeedLoad",
             payload: firstFeedLoad
           });
+        });
+        */
+        // console.log("FB ACTIONS", snapshot);
+        dispatch({
+          type: "firstFeedLoad",
+          payload: snapshot
         });
         return;
       }
@@ -170,10 +179,10 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
 
         if (change.type === "modified") {
           let modifiedFeedList = getState().feed;
-          const modifiedFeedIndex = modifiedFeedList.findIndex(
+          const modifiedFeedIndex = modifiedFeedList.docs.findIndex(
             feed => feed.id === change.doc.id
           );
-          modifiedFeedList[modifiedFeedIndex] = data;
+          modifiedFeedList.docs[modifiedFeedIndex] = data;
           dispatch({
             type: "modifiedFeedList",
             payload: modifiedFeedList

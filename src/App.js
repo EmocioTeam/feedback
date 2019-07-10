@@ -40,8 +40,10 @@ import {
   realTimeFeedListener,
   getHashtagList
 } from "./actions/firebaseActions";
-const fbFeeds = "feedback";
-const fbHashtags = "hashtags";
+const fbFeeds = "publicEmocio";
+const fbHashtags = "publicHashtags";
+// const fbFeeds = "feedback";
+// const fbHashtags = "hashtags";
 // const fbFeeds = "iotWorkshop";
 // const fbHashtags = "iotHashtags";
 const db = fb.firestore();

@@ -122,7 +122,7 @@ class Geomap extends Component {
           </div>
         )}
         <Map
-          zoom={[13]}
+          zoom={[14]}
           center={
             this.state.mapCenter
               ? this.state.mapCenter

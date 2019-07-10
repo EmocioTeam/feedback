@@ -1,11 +1,13 @@
 import React, { Fragment, Component } from "react";
+import { Container } from "react-bootstrap";
 import FeedCard from "../components/FeedCard";
 import Header from "../components/Header";
-import { Container } from "react-bootstrap";
 import EmotionMap from "../components/EmotionMap";
+import SearchBar from "../components/SearchBar";
+import LazyLoadButton from "../components/LazyLoadButton";
+import Loader from "../components/Loader";
 import { connect } from "react-redux";
 import { getFeedWithLocation } from "../actions/firebaseActions";
-import LazyLoadButton from "../components/LazyLoadButton";
 import _ from "lodash";
 import LazyLoad from "react-lazy-load";
 
@@ -13,8 +15,7 @@ class FeedPage extends Component {
   state = {
     showFeed: "wall",
     showPosts: 15,
-    dots: ".",
-    finishedLoadingFeeds: false
+    hashtags: []
   };
 
   showFeed = status => {
@@ -27,32 +28,55 @@ class FeedPage extends Component {
     });
   };
 
-  showDots = () => {
-    if (this.props.feed.length <= 0) {
-      setInterval(() => {
-        if (this.props.feed.length > 0) clearInterval();
-        this.setState({ dots: this.state.dots + "." });
-        if (this.state.dots.length > 5) {
-          this.setState({
-            dots: "."
-          });
-        }
-      }, 200);
-    }
+  handleHashtags = list => {
+    console.log(list);
+    this.setState({
+      hashtags: list
+    });
   };
 
   renderCards = () => {
-    return this.props.feed
-      .filter(feed => {
-        return feed.comment;
-      })
+    return this.props.feed.docs
       .splice(0, this.state.showPosts)
-      .map((feed, index) => {
+      .filter(feed => {
+        return feed.data().comment;
+      })
+      .map((data, index) => {
+        const feed = data.data();
+        feed.id = data.id;
         return (
           <FeedCard
             key={index}
             feed={feed}
-            handleInput={this.handleInput}
+            addComment={this.props.addComment}
+            addReaction={this.props.addReaction}
+            user={this.props.user}
+          />
+        );
+      });
+  };
+
+  renderFilteredFeedByHashtag = () => {
+    return this.props.feed.docs
+      .filter(feed => {
+        return feed.data().comment;
+      })
+      .filter(data => {
+        const feed = data.data();
+        for (let hash of this.state.hashtags) {
+          if (feed.hashtags.includes(hash)) {
+            return true;
+          }
+        }
+        return false;
+      })
+      .map((data, index) => {
+        const feed = data.data();
+        feed.id = data.id;
+        return (
+          <FeedCard
+            key={index}
+            feed={feed}
             addComment={this.props.addComment}
             addReaction={this.props.addReaction}
             user={this.props.user}
@@ -79,25 +103,31 @@ class FeedPage extends Component {
               feeds={this.props.localizedFeed}
               getFeedWithLocation={this.props.getFeedWithLocation}
             />
-          ) : this.props.feed.length == 0 ? (
-            <div className="loader-container">
-              <div className="loader">
-                <div className="loader-circle">&nbsp;</div>
-                <div className="loader-circle">&nbsp;</div>
-                <div className="loader-circle">&nbsp;</div>
-                <div className="loader-circle">&nbsp;</div>
-              </div>
-            </div>
+          ) : this.props.feed.docs && this.props.feed.docs.length == 0 ? (
+            <Loader />
           ) : (
-            this.props.feed && (
+            this.props.feed &&
+            this.props.feed.docs && (
               <div>
-                {this.renderCards()}
-                <LazyLoad
-                  offsetVertical={300}
-                  onContentVisible={() => this.showPosts()}
-                >
-                  <LazyLoadButton showPosts={this.showPosts} />
-                </LazyLoad>
+                <div className="results-searchbar">
+                  <SearchBar handleHashtags={this.handleHashtags} />
+                </div>
+
+                {this.state.hashtags.length > 0 ? (
+                  <div style={{ marginBottom: "55px" }}>
+                    {this.renderFilteredFeedByHashtag()}
+                  </div>
+                ) : (
+                  <span>
+                    {this.renderCards()}
+                    <LazyLoad
+                      offsetVertical={300}
+                      onContentVisible={() => this.showPosts()}
+                    >
+                      <LazyLoadButton showPosts={this.showPosts} />
+                    </LazyLoad>
+                  </span>
+                )}
               </div>
             )
           )}
@@ -108,6 +138,7 @@ class FeedPage extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state.feed);
   return {
     user: state.auth,
     feed: state.feed,
