@@ -40,12 +40,8 @@ import {
   realTimeFeedListener,
   getHashtagList
 } from "./actions/firebaseActions";
-const fbFeeds = "publicEmocio";
-const fbHashtags = "publicHashtags";
-// const fbFeeds = "feedback";
-// const fbHashtags = "hashtags";
-// const fbFeeds = "iotWorkshop";
-// const fbHashtags = "iotHashtags";
+import { fbFeeds, fbHashtags } from "./config";
+
 const db = fb.firestore();
 
 class App extends Component {
@@ -54,18 +50,6 @@ class App extends Component {
     feeds: [],
     hashtags: [],
     alert: null
-  };
-
-  getUpdatedFeedback = doc => {
-    db.collection(fbFeeds)
-      .doc(doc)
-      .get()
-      .then(updatedDoc => {
-        this.state.feeds.findIndex(doc);
-        this.setState({
-          feeds: this.state.feeds
-        });
-      });
   };
 
   addFeedback = data => {

@@ -1,10 +1,7 @@
 import _ from "lodash";
 import firebase from "firebase";
 import { fb } from "../config";
-const fbFeeds = "publicEmocio";
-const fbHashtags = "publicHashtags";
-// const fbFeeds = "feedback";
-// const fbHashtags = "hashtags";
+import { fbFeeds, fbHashtags } from "../config";
 const db = fb.firestore();
 const users = "users";
 
@@ -135,15 +132,14 @@ export const getAllFeeds = () => dispatch => {
 };
 
 export const realTimeFeedListener = () => (dispatch, getState) => {
-  // console.log("getState", getState());
-  // const n = getState().feed.length;
   // const lastTwoWeeks = new Date();
   // lastTwoWeeks.setDate(lastTwoWeeks.getDate() - 15);
+  // const n = getState().lastFeed + 15;
   db.collection(fbFeeds)
     // .where("timestamp", ">", lastTwoWeeks)
     .orderBy("timestamp", "desc")
-    // .limit(3)
-    .onSnapshot(async snapshot => {
+    // .limit(n)
+    .onSnapshot(snapshot => {
       // const lastVisible = snapshot.docs[snapshot.docs.length - 1];
       // dispatch({
       //   type: "getLastFeed",
@@ -168,11 +164,15 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
         type: "firstFeedLoad",
         payload: snapshot
       });
+      // dispatch({
+      //   type: "getLastFeed",
+      //   payload: n
+      // });
       return;
       // }
       // After first page load app listens to changes
       // and updates state
-      const changes = await snapshot.docChanges();
+      const changes = snapshot.docChanges();
       console.log("real-time changes", changes);
       changes.forEach(async change => {
         const data = await change.doc.data();

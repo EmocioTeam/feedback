@@ -17,6 +17,12 @@ const firebaseConfig = {
 };
 
 export const fb = firebase.initializeApp(firebaseConfig);
+// export const fbFeeds = "publicEmocio";
+// export const fbHashtags = "publicHashtags";
+export const fbFeeds = "feedback";
+export const fbHashtags = "hashtags";
+// const fbFeeds = "iotWorkshop";
+// const fbHashtags = "iotHashtags";
 
 // class Firebase {
 //   constructor() {

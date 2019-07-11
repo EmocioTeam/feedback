@@ -7,7 +7,10 @@ import SearchBar from "../components/SearchBar";
 import LazyLoadButton from "../components/LazyLoadButton";
 import Loader from "../components/Loader";
 import { connect } from "react-redux";
-import { getFeedWithLocation } from "../actions/firebaseActions";
+import {
+  getFeedWithLocation,
+  realTimeFeedListener
+} from "../actions/firebaseActions";
 import _ from "lodash";
 import LazyLoad from "react-lazy-load";
 
@@ -125,14 +128,8 @@ class FeedPage extends Component {
                       onContentVisible={() => this.showPosts()}
                     >
                       <LazyLoadButton
-                        showPosts={this.showPosts}
-                        lazyButtonText={
-                          this.state.showPosts &&
-                          this.props.feed.docs &&
-                          this.state.showPosts > this.props.feed.docs.length
-                            ? "There are no more Emocios!"
-                            : "Load more Emocios!"
-                        }
+                        showPosts={this.props.showPosts}
+                        lazyButtonText={"Load more Emocios!"}
                       />
                     </LazyLoad>
                   </span>
@@ -157,5 +154,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { getFeedWithLocation }
+  { getFeedWithLocation, realTimeFeedListener }
 )(FeedPage);

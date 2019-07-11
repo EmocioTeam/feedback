@@ -1,4 +1,4 @@
-export default (feed = [], action) => {
+export default (feed = {}, action) => {
   switch (action.type) {
     case "firstFeedLoad":
       return action.payload;
