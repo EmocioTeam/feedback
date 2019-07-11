@@ -143,14 +143,15 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
     // .where("timestamp", ">", lastTwoWeeks)
     .orderBy("timestamp", "desc")
     // .limit(3)
-    .onSnapshot(snapshot => {
+    .onSnapshot(async snapshot => {
       // const lastVisible = snapshot.docs[snapshot.docs.length - 1];
       // dispatch({
       //   type: "getLastFeed",
       //   payload: lastVisible
       // });
-      if (getState().feed.length === 0) {
-        /*
+      // console.log("SNAPSHOOOOT", snapshot);
+      // if (getState().feed.length === 0) {
+      /*
         // This is done to update state on first page load
         console.log(snapshot);
         snapshot.docs.forEach(feed => {
@@ -162,19 +163,19 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
           });
         });
         */
-        // console.log("FB ACTIONS", snapshot);
-        dispatch({
-          type: "firstFeedLoad",
-          payload: snapshot
-        });
-        return;
-      }
+      // console.log("FB ACTIONS", snapshot);
+      dispatch({
+        type: "firstFeedLoad",
+        payload: snapshot
+      });
+      return;
+      // }
       // After first page load app listens to changes
       // and updates state
-      const changes = snapshot.docChanges();
+      const changes = await snapshot.docChanges();
       console.log("real-time changes", changes);
-      changes.forEach(change => {
-        const data = change.doc.data();
+      changes.forEach(async change => {
+        const data = await change.doc.data();
         data.id = change.doc.id;
 
         if (change.type === "modified") {
@@ -183,6 +184,8 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
             feed => feed.id === change.doc.id
           );
           modifiedFeedList.docs[modifiedFeedIndex] = data;
+
+          console.log("TIROREEE", modifiedFeedList);
           dispatch({
             type: "modifiedFeedList",
             payload: modifiedFeedList
@@ -190,7 +193,8 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
         } else if (change.type === "added") {
           dispatch({
             type: "addedFeedList",
-            payload: data
+            payload: changes[0]
+            // payload: data
           });
         } else if (change.type === "removed") {
           const removeFeed = getState().feed.filter(feed => {

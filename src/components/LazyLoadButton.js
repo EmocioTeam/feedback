@@ -6,7 +6,7 @@ class LazyLoadButton extends Component {
   render() {
     return (
       <div className="lazy-load-button" onClick={() => this.props.showPosts()}>
-        Load more Emocios
+        {this.props.lazyButtonText}
       </div>
     );
   }

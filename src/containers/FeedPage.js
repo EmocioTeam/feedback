@@ -124,7 +124,16 @@ class FeedPage extends Component {
                       offsetVertical={300}
                       onContentVisible={() => this.showPosts()}
                     >
-                      <LazyLoadButton showPosts={this.showPosts} />
+                      <LazyLoadButton
+                        showPosts={this.showPosts}
+                        lazyButtonText={
+                          this.state.showPosts &&
+                          this.props.feed.docs &&
+                          this.state.showPosts > this.props.feed.docs.length
+                            ? "There are no more Emocios!"
+                            : "Load more Emocios!"
+                        }
+                      />
                     </LazyLoad>
                   </span>
                 )}

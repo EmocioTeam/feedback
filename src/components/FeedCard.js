@@ -374,8 +374,8 @@ export default class NewFeedCard extends Component {
                                 : ""
                             }}
                           >
-                            {this.state.characterCount}/
-                            {this.state.maxCommentChars}
+                            {this.state.characterCount || 0}/
+                            {this.state.maxCommentChars || 140}
                           </Form.Text>
                         </Form.Group>
                       </Form>

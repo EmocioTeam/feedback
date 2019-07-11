@@ -4,11 +4,13 @@ export default (feed = [], action) => {
       return action.payload;
     // return [...feed, action.payload];
     case "modifiedFeedList":
-      // return feed;
-      return action.payload;
+      // return action.payload;
+      return { ...action.payload };
     // const modifiedFeed = [...action.payload];
     // return modifiedFeed;
     case "addedFeedList":
+      // feed.docs = [action.payload, ...feed.docs];
+      return feed;
       return [action.payload, ...feed];
     case "removedFeedList":
       const removedFeed = [...action.payload];
