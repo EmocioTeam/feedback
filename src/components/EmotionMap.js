@@ -99,7 +99,7 @@ class Geomap extends Component {
   };
 
   componentDidMount = () => {
-    this.props.getFeedWithLocation();
+    // this.props.getFeedWithLocation();
   };
 
   render() {
@@ -122,7 +122,7 @@ class Geomap extends Component {
           </div>
         )}
         <Map
-          zoom={[14]}
+          zoom={[15]}
           center={
             this.state.mapCenter
               ? this.state.mapCenter

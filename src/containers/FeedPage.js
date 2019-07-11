@@ -103,8 +103,14 @@ class FeedPage extends Component {
         <Container className="feed-page">
           {this.state.showFeed === "map" ? (
             <EmotionMap
-              feeds={this.props.localizedFeed}
-              getFeedWithLocation={this.props.getFeedWithLocation}
+              feeds={this.props.feed.docs
+                .map(elem => {
+                  const data = elem.data();
+                  data.id = elem.id;
+                  return data;
+                })
+                .filter(f => f.location)}
+              // getFeedWithLocation={this.props.getFeedWithLocation}
             />
           ) : this.props.feed.docs && this.props.feed.docs.length == 0 ? (
             <Loader />

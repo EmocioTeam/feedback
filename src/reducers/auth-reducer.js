@@ -1,3 +1,10 @@
+// auth = {
+//   user: display name,
+//   email: email,
+//   stakeholder: true / false
+//   errorMsg: if something went wrong logging
+// }
+
 export default (auth = {}, action) => {
   switch (action.type) {
     case "signIn":

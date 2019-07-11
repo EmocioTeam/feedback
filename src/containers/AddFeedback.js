@@ -52,7 +52,12 @@ class AddFeedback extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+
     this.props.addFeedback({
+      author:
+        this.props.author && this.props.author.user
+          ? this.props.author.user
+          : false,
       comment: this.state.comment,
       mood: data[this.state.currentMood].name,
       title: this.state.title,

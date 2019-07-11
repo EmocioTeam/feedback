@@ -97,7 +97,7 @@ export default class NewFeedCard extends Component {
     if (this.props.user.email) {
       this.props.user.user
         ? (author.name = this.props.user.user)
-        : (author.name = "SpookyMaster");
+        : (author.name = "SpookyMinion");
     }
     this.props.user.stakeholder
       ? (author.stakeholder = true)
@@ -131,20 +131,15 @@ export default class NewFeedCard extends Component {
 
     return (
       <div className="feed-card" style={cardBorderColorCode}>
+        {this.props.showActions && (
+          <span style={{ float: "left" }} className="text-muted">
+            X
+          </span>
+        )}
         <Badge style={cardBadgeColorCode} className="feed-card-header-meta">
           {feed.mood}
         </Badge>
         <div className="feed-card-content">
-          {feed.author && (
-            <div className="feed-card-header">
-              <p>{this.author}</p>
-            </div>
-          )}
-          {/* <div className="feed-card-header">
-            {feed.title.length > 0 && (
-              <p style={{ marginBottom: "0px" }}>{feed.title}</p>
-            )}
-          </div> */}
           <div className="feed-card-body">
             {feed.hashtags.length > 0 && (
               <div className="feed-card-body-hashtags" key={feed.id}>
@@ -165,6 +160,7 @@ export default class NewFeedCard extends Component {
               </div>
             )}
             <p>
+              {feed.author && <strong>{feed.author} </strong>}
               {feed.comment.split("\n").map((row, index) => (
                 <span key={index}>
                   {row}

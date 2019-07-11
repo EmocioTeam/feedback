@@ -165,6 +165,7 @@ class App extends Component {
     );
     const addFeedback = (
       <AddFeedback
+        author={this.props.user}
         hashtags={hashtags}
         addFeedback={this.addFeedback}
         deleteFeedback={this.deleteFeedback}
@@ -195,7 +196,14 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  console.log("this.props.user", state.auth);
+  return {
+    user: state.auth
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   { onAuthStateChanged, realTimeFeedListener, getHashtagList }
 )(App);
