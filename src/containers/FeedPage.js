@@ -134,7 +134,7 @@ class FeedPage extends Component {
                       onContentVisible={() => this.showPosts()}
                     >
                       <LazyLoadButton
-                        showPosts={this.props.showPosts}
+                        showPosts={this.showPosts}
                         lazyButtonText={"Load more Emocios!"}
                       />
                     </LazyLoad>
