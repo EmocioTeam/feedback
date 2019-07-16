@@ -103,16 +103,9 @@ export default class NewFeedCard extends Component {
       ? (author.stakeholder = true)
       : (author.stakeholder = false);
 
-    // console.log("id", id);
-    // dafuq did I do here
-    const stateObjectKeys = Object.keys(this.state);
-    stateObjectKeys.forEach(state => {
-      this.setState({
-        [state]: ""
-      });
-    });
     if (this.state.feedComment.length < 141) {
       this.props.addComment(id, this.state.feedComment, author);
+      this.setState({ feedComment: "", characterCount: 0 });
     }
   };
 
@@ -333,15 +326,19 @@ export default class NewFeedCard extends Component {
                                 ) {
                                   e.preventDefault();
                                 }
-                                this.getCharacterCount();
+                                // this.getCharacterCount();
                               }}
                               onKeyUp={element => {
                                 // console.log(element);
+                                // this.getCharacterCount();
                                 element.target.style.height = "5px";
                                 element.target.style.height =
                                   element.target.scrollHeight + "px";
                               }}
-                              onChange={e => this.handleInput(e, feed.id)}
+                              onChange={e => {
+                                this.getCharacterCount();
+                                this.handleInput(e, feed.id);
+                              }}
                               name="feedComment"
                               style={{
                                 borderRadius: "15px",
@@ -372,6 +369,9 @@ export default class NewFeedCard extends Component {
                           >
                             {this.state.characterCount || 0}/
                             {this.state.maxCommentChars || 140}
+                            {this.state.alertCommentChars
+                              ? " Max 140 characters per comment!!"
+                              : ""}
                           </Form.Text>
                         </Form.Group>
                       </Form>

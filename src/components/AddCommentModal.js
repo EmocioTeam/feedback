@@ -25,11 +25,11 @@ export default class Comments extends React.Component {
           show={this.props.state.showAddFeedback}
           onHide={this.props.toggleShowAddFeedback}
           dialogClassName="add-comment-modal"
-          aria-labelledby="example-custom-modal-styling-title"
+          aria-labelledby="add-comment-modal-custom"
           centered
         >
           <Modal.Header closeButton>
-            <Modal.Title id="example-custom-modal-styling-title">
+            <Modal.Title id="add-comment-modal-custom-title">
               Add comments!
             </Modal.Title>
           </Modal.Header>
@@ -66,16 +66,32 @@ export default class Comments extends React.Component {
                 <Form.Label>Give us the details</Form.Label>
                 <Form.Control
                   as="textarea"
-                  rows="6"
+                  rows="8"
                   placeholder="So this just happened..And I said.. THAT. IS. AWESOME!!!"
                   name="comment"
                   value={comment}
                   onChange={this.props.handleInput}
                 />
               </Form.Group>
-              <Button variant="primary" type="submit" block>
-                Submit
-              </Button>
+              <Modal.Footer>
+                {/* <Button
+                  variant="secondary"
+                  type="button"
+                  onClick={() => {
+                    document.body.click();
+                  }}
+                >
+                  Cancel
+                </Button> */}
+                <Button
+                  block
+                  variant="primary"
+                  type="submit"
+                  style={{ paddingLeft: "50px", paddingRight: "50px" }}
+                >
+                  Submit
+                </Button>
+              </Modal.Footer>
             </Form>
           </Modal.Body>
         </Modal>
