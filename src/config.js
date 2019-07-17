@@ -23,11 +23,3 @@ export const fbFeeds = "feedback";
 export const fbHashtags = "hashtags";
 // const fbFeeds = "iotWorkshop";
 // const fbHashtags = "iotHashtags";
-
-// class Firebase {
-//   constructor() {
-//     app.initializeApp(config);
-//   }
-// }
-
-// export default Firebase;

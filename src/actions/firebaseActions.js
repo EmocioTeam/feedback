@@ -132,11 +132,11 @@ export const getAllFeeds = () => dispatch => {
 };
 
 export const realTimeFeedListener = () => (dispatch, getState) => {
-  // const lastTwoWeeks = new Date();
-  // lastTwoWeeks.setDate(lastTwoWeeks.getDate() - 15);
+  const lastTwoWeeks = new Date();
+  lastTwoWeeks.setDate(lastTwoWeeks.getDate() - 10);
   // const n = getState().lastFeed + 15;
   db.collection(fbFeeds)
-    // .where("timestamp", ">", lastTwoWeeks)
+    .where("timestamp", ">", lastTwoWeeks)
     .orderBy("timestamp", "desc")
     // .limit(n)
     .onSnapshot(snapshot => {
