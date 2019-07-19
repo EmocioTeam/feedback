@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import FeedCard from "../components/FeedCard";
 import { connect } from "react-redux";
 import _ from "lodash";
+import RadarChart from "../components/RadarChart";
 
 class Results extends Component {
   state = {
@@ -31,11 +32,15 @@ class Results extends Component {
         <div className="results-searchbar">
           <SearchBar handleHashtags={this.handleHashtags} />
         </div>
-        <Recharts
+        <RadarChart
+          graphData={this.state.graphData}
+          selectedHashtags={this.state.hashtags}
+        />
+        {/* <Recharts
           currentHashtags={this.state.hashtags}
           graphData={this.state.graphData}
           hashtagList={this.props.hashtags}
-        />
+        /> */}
 
         {this.state.hashtags.length > 0 &&
           this.props.feeds

@@ -11,8 +11,11 @@ import {
   getFeedWithLocation,
   realTimeFeedListener
 } from "../actions/firebaseActions";
+import { getFeedPageTab } from "../actions/feedPageTab";
 import _ from "lodash";
 import LazyLoad from "react-lazy-load";
+import MapIcon from "../icons/location.svg";
+import FeedPageIcon from "../icons/feedPage.svg";
 
 class FeedPage extends Component {
   state = {
@@ -88,20 +91,27 @@ class FeedPage extends Component {
       });
   };
 
+  componentWillReceiveProps = () => {};
+
   render() {
     return (
       <Fragment>
         <Header
-          handleState={this.showFeed}
+          handleState={this.props.getFeedPageTab}
           navtabs={[
-            { label: "Wall", name: "wall", value: "wall" },
-            { label: "Map", name: "map", value: "map" }
+            {
+              label: "Wall",
+              name: "wall",
+              value: "wall",
+              icon: FeedPageIcon
+            },
+            { label: "Map", name: "map", value: "map", icon: MapIcon }
           ]}
           header={this.props.refreshing ? "Loading new feeds.." : "Feedbacks"}
           className="feed-page-header"
         />
         <Container className="feed-page">
-          {this.state.showFeed === "map" ? (
+          {this.props.feedPageTab === "map" ? (
             <EmotionMap
               feeds={this.props.feed.docs
                 .map(elem => {
@@ -154,11 +164,12 @@ const mapStateToProps = state => {
   return {
     user: state.auth,
     feed: state.feed,
-    localizedFeed: state.feedWithLocation
+    localizedFeed: state.feedWithLocation,
+    feedPageTab: state.feedPageTab
   };
 };
 
 export default connect(
   mapStateToProps,
-  { getFeedWithLocation, realTimeFeedListener }
+  { getFeedWithLocation, realTimeFeedListener, getFeedPageTab }
 )(FeedPage);

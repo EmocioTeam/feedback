@@ -1,0 +1,6784 @@
+{
+  "z1hmgsw6ekzn2fNwu59L": {
+    "author": false,
+    "comment": "Haven't been able to sleep properly in the last couple of weeks and weekends, feeling the impact today. I need a leave day just to sleep and rest 😔",
+    "hashtags": ["#tired", "#norest", "#CX"],
+    "location": false,
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1563439873,
+      "nanoseconds": 267000000
+    },
+    "title": ""
+  },
+  "FaJfguEQArJMKUXgqatd": {
+    "author": false,
+    "comment": "😔 ",
+    "hashtags": ["#nodbquota"],
+    "location": {
+      "_lat": 38.7046385,
+      "_long": -9.3369679
+    },
+    "mood": "Bored",
+    "reactions": {
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1563405411,
+      "nanoseconds": 335000000
+    },
+    "title": ""
+  },
+  "N6e5ERggSuVEapU9fvDO": {
+    "author": false,
+    "comment": "Having a great bootcamp in Rot. Arc Plus II ",
+    "hashtags": ["#training"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1563397122,
+      "nanoseconds": 496000000
+    },
+    "title": ""
+  },
+  "GCCWbl7WYNdXgxqTph2H": {
+    "author": false,
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 38.712191829810735,
+      "_long": -9.311417896788587
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1563374708,
+      "nanoseconds": 152000000
+    },
+    "title": ""
+  },
+  "xtU4IyMRL58gNBnUomjx": {
+    "author": false,
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 38.712191829810735,
+      "_long": -9.311417896788587
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563374698,
+      "nanoseconds": 493000000
+    },
+    "title": ""
+  },
+  "56Mu5Iydksk0tTtLPDLk": {
+    "author": false,
+    "comment": "",
+    "hashtags": ["#emocio"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563372524,
+      "nanoseconds": 113000000
+    },
+    "title": ""
+  },
+  "XCgezfaQAW5dou2Otxg0": {
+    "author": false,
+    "comment": "It would be great to somehow filter/navigate to the comments just by interacting with the chart. I felt the need to press the chart edges to see the emotios in it so I could read them and think about the actions to improve these feedbacks",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "Awesome feedback!! Thank you so much!!!! Gonna write that for future release :)",
+        "timestamp": 1563373127712
+      }
+    ],
+    "hashtags": ["#emocio", "#Enhancement"],
+    "location": {
+      "_lat": 38.7118539,
+      "_long": -9.3112143
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1563355194,
+      "nanoseconds": 225000000
+    },
+    "title": ""
+  },
+  "a7ZRGhvRHF0IcFP5vall": {
+    "author": false,
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563354560,
+      "nanoseconds": 500000000
+    },
+    "title": ""
+  },
+  "YHikHx9rEHanm2RF4NWq": {
+    "author": false,
+    "comment": "The cards shouldn’t be on top of the Swipe buttons. When I open the app for the first time, I couldn’t know if I should swipe to the left or to the right because I couldn’t read the description. Thanks!\nKeep up with the good work!",
+    "comments": [
+      {
+        "author": {
+          "name": "EmocioTeam",
+          "stakeholder": true
+        },
+        "comment": "Thanks for the feedback, we'll look into that 👍 😉",
+        "timestamp": 1563350653896
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Same here",
+        "timestamp": 1563354506604
+      }
+    ],
+    "hashtags": ["#FeedbackApp"],
+    "location": {
+      "_lat": 38.712351147013294,
+      "_long": -9.310396372028988
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Bored": 1,
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1563350527,
+      "nanoseconds": 923000000
+    },
+    "title": ""
+  },
+  "k2WJnmAfaMzAQB8cPGd5": {
+    "author": false,
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 38.712129955947496,
+      "_long": -9.311373235707379
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563350166,
+      "nanoseconds": 847000000
+    },
+    "title": ""
+  },
+  "Ma3q3iCB2szLznHZYYue": {
+    "author": false,
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563350114,
+      "nanoseconds": 841000000
+    },
+    "title": ""
+  },
+  "L00nrHOzqc2kZQltdykv": {
+    "author": false,
+    "comment": "It was very interesting. This app is also very useful. Thanks!",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Thanks!!! :)",
+        "timestamp": 1563438893333
+      }
+    ],
+    "hashtags": ["#coffeecornermeeting"],
+    "location": {
+      "_lat": 38.71236278445724,
+      "_long": -9.310400522250948
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563350098,
+      "nanoseconds": 639000000
+    },
+    "title": ""
+  },
+  "9LznW4OjuLTJdYbT7b2P": {
+    "author": false,
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 38.71216006446253,
+      "_long": -9.311383593686255
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1563346419,
+      "nanoseconds": 622000000
+    },
+    "title": ""
+  },
+  "iHqVsad57otYjWtPjrbu": {
+    "author": false,
+    "comment": "Very good kebab 🌯🥤",
+    "hashtags": ["#kebab"],
+    "location": {
+      "_lat": 38.77683000094156,
+      "_long": -9.221155718620832
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1563311382,
+      "nanoseconds": 291000000
+    },
+    "title": ""
+  },
+  "h4tszYKwUjLROwtOWUIh": {
+    "comment": "",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1563299169,
+      "nanoseconds": 663000000
+    },
+    "title": ""
+  },
+  "Y2eKZWWpQ9n4l3gwPyT8": {
+    "comment": "It’s amazing to have the opportunity to interact directly with our leaders! ",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Definatley, was a great coffee corner 👌",
+        "timestamp": 1563304611936
+      }
+    ],
+    "hashtags": ["#SAP", "#lovemyjob"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2,
+      "Happy": 3
+    },
+    "timestamp": {
+      "seconds": 1563299162,
+      "nanoseconds": 36000000
+    },
+    "title": ""
+  },
+  "KTIUFWcG5HvnACLEE9pp": {
+    "comment": "Vera nice moment, sharing good ideas and suggestions",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 3
+    },
+    "timestamp": {
+      "seconds": 1563299148,
+      "nanoseconds": 830000000
+    },
+    "title": ""
+  },
+  "5yUMXtxIARjwmyTM8spW": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1563299073,
+      "nanoseconds": 986000000
+    },
+    "title": ""
+  },
+  "LsfZ70BJDNfdpHd3pGZU": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1563299063,
+      "nanoseconds": 263000000
+    },
+    "title": ""
+  },
+  "uytFyZlaHgWkexyEgNUh": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563299060,
+      "nanoseconds": 518000000
+    },
+    "title": ""
+  },
+  "YG1ZkhlmY00aou0DHiJP": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563299042,
+      "nanoseconds": 297000000
+    },
+    "title": ""
+  },
+  "xVCUYO8e3LgC9agjwcGa": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1563299036,
+      "nanoseconds": 535000000
+    },
+    "title": ""
+  },
+  "ofiEBHH86lzGLib2Pp1i": {
+    "comment": "A great speaker! Feel encouraged to new achievements ",
+    "hashtags": [],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1563298173,
+      "nanoseconds": 591000000
+    },
+    "title": ""
+  },
+  "abx6pOKuPOcDAlCCMhnB": {
+    "comment": "Empático, directo e preocupado connosco.",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": {
+      "_lat": 38.71211706756492,
+      "_long": -9.311370475447323
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 3
+    },
+    "timestamp": {
+      "seconds": 1563297144,
+      "nanoseconds": 553000000
+    },
+    "title": ""
+  },
+  "m1mw8sU0cRx2IPYDfMCW": {
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 38.71209491264082,
+      "_long": -9.311223023531163
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563296944,
+      "nanoseconds": 887000000
+    },
+    "title": ""
+  },
+  "kr29d3XnHHs4UWdav3RY": {
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 38.712092235604324,
+      "_long": -9.311245609046809
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563296908,
+      "nanoseconds": 39000000
+    },
+    "title": ""
+  },
+  "THE6aPTVMoKtciHbTgtO": {
+    "author": false,
+    "comment": "Liked the experience sharing and the openness!\nLove this app!!",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2,
+      "Happy": 11
+    },
+    "timestamp": {
+      "seconds": 1563296561,
+      "nanoseconds": 130000000
+    },
+    "title": ""
+  },
+  "XGMczkSIpjclRWkx0icL": {
+    "comment": "Gostei muito da sessão do João Paulo. A Catarina tem razão na necessidade de haver mais contacto entre a MU e o NSC.",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": {
+      "_lat": 38.712112722697874,
+      "_long": -9.31137460318562
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Bored": 3,
+      "Happy": 3
+    },
+    "timestamp": {
+      "seconds": 1563296521,
+      "nanoseconds": 480000000
+    },
+    "title": ""
+  },
+  "UbIxld4KwvWmmBJppHMo": {
+    "comment": "Time for questions",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563296454,
+      "nanoseconds": 315000000
+    },
+    "title": ""
+  },
+  "XBXj0Y16AfoonXcmS82n": {
+    "comment": "Experience Management opportunity ",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1563296425,
+      "nanoseconds": 827000000
+    },
+    "title": ""
+  },
+  "novAn20NR6xMNtIOikqu": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563296268,
+      "nanoseconds": 290000000
+    },
+    "title": ""
+  },
+  "5QB2CFAig335P5kfRwdR": {
+    "comment": "It was awsome and love this Project emocio",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563295778,
+      "nanoseconds": 111000000
+    },
+    "title": ""
+  },
+  "u4gcdewNxTZv6SeSvlYd": {
+    "comment": "",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": {
+      "_lat": 38.7120732797085,
+      "_long": -9.311231123666365
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563288830,
+      "nanoseconds": 577000000
+    },
+    "title": ""
+  },
+  "vhjHWSs2cgefSWTC3rbI": {
+    "comment": "Fantastic",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1563288821,
+      "nanoseconds": 734000000
+    },
+    "title": ""
+  },
+  "NXfukNedbeztuJRKzeBE": {
+    "author": false,
+    "comment": "Awesome!",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563287551,
+      "nanoseconds": 688000000
+    },
+    "title": ""
+  },
+  "mVjS2axd5b39TKF8qlVx": {
+    "author": false,
+    "comment": "",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563287519,
+      "nanoseconds": 942000000
+    },
+    "title": ""
+  },
+  "xneiE3X5DTSmKmNC3bKn": {
+    "comment": "",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1563287134,
+      "nanoseconds": 77000000
+    },
+    "title": ""
+  },
+  "wpCRLtDThI3H0bK1Fwly": {
+    "comment": "Hey colleagues! Tell me what you think about this session.",
+    "hashtags": ["#coffeecornermeeting"],
+    "location": {
+      "_lat": 38.71207663223346,
+      "_long": -9.311219482708921
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1563286468,
+      "nanoseconds": 831000000
+    },
+    "title": ""
+  },
+  "ENt1CxlRoH1ElhYV6IxZ": {
+    "comment": "",
+    "hashtags": ["#Enhancement"],
+    "location": {
+      "_lat": 38.71207202640691,
+      "_long": -9.311232218727524
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563285316,
+      "nanoseconds": 234000000
+    },
+    "title": ""
+  },
+  "ystF6T9vPMbRv7vcMVW5": {
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 38.71204674733539,
+      "_long": -9.311234825364837
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563285138,
+      "nanoseconds": 569000000
+    },
+    "title": ""
+  },
+  "2yTC41g2OBkqy9XFR9qa": {
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 38.712071036261555,
+      "_long": -9.311232131866559
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563284882,
+      "nanoseconds": 128000000
+    },
+    "title": ""
+  },
+  "BzFrLqBCcdz9T87LFD7O": {
+    "author": false,
+    "comment": "pkpkpl",
+    "hashtags": ["#CX"],
+    "location": false,
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1563206776,
+      "nanoseconds": 781000000
+    },
+    "title": ""
+  },
+  "lfDe4OSI96qbX90HetZf": {
+    "author": false,
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 49.241672344205426,
+      "_long": 8.637645202448915
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1563188773,
+      "nanoseconds": 249000000
+    },
+    "title": ""
+  },
+  "TTohw8Quf5qLfLH1TDi1": {
+    "author": false,
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 49.24267599672838,
+      "_long": 8.63810158009048
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1563180238,
+      "nanoseconds": 545000000
+    },
+    "title": ""
+  },
+  "JGxQk3wC1qaIb7CPMddo": {
+    "author": false,
+    "comment": "This workload is draining me bit by bit. This Mondays and weeks are getting harder and harder 😩😔",
+    "hashtags": [
+      "#CX",
+      "#workload",
+      "#customer",
+      "#training",
+      "#internalprojects"
+    ],
+    "location": {
+      "_lat": 38.7123455,
+      "_long": -9.3103996
+    },
+    "mood": "Sad",
+    "reactions": {
+      "Sad": 2
+    },
+    "timestamp": {
+      "seconds": 1563176928,
+      "nanoseconds": 115000000
+    },
+    "title": ""
+  },
+  "kEUQhuNo0zV43Of6J8hf": {
+    "author": false,
+    "comment": "There should be a maximum characters allowed per post. Few people stop to read long texts.",
+    "hashtags": ["#FeedbackApp", "#Enhancement"],
+    "location": false,
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1563098345,
+      "nanoseconds": 516000000
+    },
+    "title": ""
+  },
+  "VlYeXJXKi1o24Wm5Xgl6": {
+    "author": false,
+    "comment": "Beach, camping, friends, good vibes and the sunset in the background.. \n👌😌🙏🌅🏖️⛺🎶",
+    "hashtags": ["#friends", "#beach", "#sunset"],
+    "location": {
+      "_lat": 37.0736778,
+      "_long": -7.7333529
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1563045575,
+      "nanoseconds": 194000000
+    },
+    "title": ""
+  },
+  "9oHLVspgGF2KZF3uy8Lc": {
+    "author": false,
+    "comment": "The sun is back 🌞\n",
+    "hashtags": ["#sunday", "#hot"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1563015602,
+      "nanoseconds": 302000000
+    },
+    "title": ""
+  },
+  "elVWQr3xpbAPNK4zRVQv": {
+    "author": false,
+    "comment": "E o Benfica que é o nosso grande amor? ❤️⚽️🏆🥇",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "❤️❤️❤️",
+        "timestamp": 1563045380927
+      }
+    ],
+    "hashtags": ["#benfica"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1563015172,
+      "nanoseconds": 321000000
+    },
+    "title": ""
+  },
+  "w9JZJ7eS9D0Il4sw5qiM": {
+    "author": false,
+    "comment": "This day seems a little bit constipated 😂😂",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Loool",
+        "timestamp": 1563014805700
+      }
+    ],
+    "hashtags": ["#cloudy", "#Lisbon"],
+    "location": {
+      "_lat": 38.7047062,
+      "_long": -9.3366564
+    },
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1563008565,
+      "nanoseconds": 718000000
+    },
+    "title": ""
+  },
+  "R23f67u3Rw1OmZRi8gbc": {
+    "author": "TheStakeholder",
+    "comment": "Finally going back to the south and meet family and friends. Was about time 😌💪",
+    "hashtags": ["#weekend", "#visitinghome"],
+    "location": {
+      "_lat": 38.7046498,
+      "_long": -9.3369329
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562965325,
+      "nanoseconds": 340000000
+    },
+    "title": ""
+  },
+  "FEkZzxleERZIpmHSNDYJ": {
+    "author": false,
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1562950535,
+      "nanoseconds": 9000000
+    },
+    "title": ""
+  },
+  "ATzogeRQElVNIVffTRt9": {
+    "author": false,
+    "comment": "I am bored with my current project so I am breaking the app.... Awsome my own custom app can use your api to get a map provider xD. Access Key its exposed and its always the same... never changes xD. Ok I am also using your images because I dont want to have my own hosting XD. Awsome!!!! Now I dont feel so bored.... xD so maybe we could have some kind of mix between specific cards .\n😁\n😁\n😁\n",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Next I will attempt to control your DB xD",
+        "timestamp": 1562941204610
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "I have provided a 160 characters text.... no warning and I just lost everything I had, in my case was just lorem ipsum",
+        "timestamp": 1562941382475
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "You shouldn't text so much 😊",
+        "timestamp": 1563013967131
+      }
+    ],
+    "hashtags": ["#bug", "#security", "#Enhancement"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Bored",
+    "reactions": {
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562940735,
+      "nanoseconds": 646000000
+    },
+    "title": ""
+  },
+  "kOsMxnuckjcdvZ7moWkG": {
+    "author": false,
+    "comment": "requests are not encrypted.... I can see a lot of information that may be sensible.... we should perhaps encrypt some of it.... ",
+    "hashtags": ["#bug", "#Enhancement", "#FeedbackApp"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Sad",
+    "reactions": {
+      "Bored": 1
+    },
+    "timestamp": {
+      "seconds": 1562940407,
+      "nanoseconds": 285000000
+    },
+    "title": ""
+  },
+  "yyklOGPDMRHpeEVv1GnT": {
+    "author": false,
+    "comment": "In the map, once you open an emocio, you cannot close the emocio on top, never ever again, the only way is to select another one, besides this, selecting and emocio sets the default zoom, and sometimes this default assume different random values",
+    "hashtags": ["#bug", "#FeedbackApp", "#emocio"],
+    "location": false,
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562940178,
+      "nanoseconds": 825000000
+    },
+    "title": ""
+  },
+  "0R49jcBRPeC7dxMbaabQ": {
+    "author": "TheStakeholder",
+    "comment": "Thank you all for the great feedback! ❤️ It really means a lot to our team 🙏🙂 we'll keep pushing the app to the next level and feel free to keep using it 👌💪",
+    "hashtags": ["#emocio", "#CXTeamMeeting"],
+    "location": {
+      "_lat": 38.7136568,
+      "_long": -9.3095751
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562932815,
+      "nanoseconds": 546000000
+    },
+    "title": ""
+  },
+  "R2OZUVjFVV4jtsXX0UP2": {
+    "author": false,
+    "comment": "Last lunch here! FUN!",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Hope you enjoyed the ride 😉 we surely enjoyed having you here 👍🙏😎",
+        "timestamp": 1562932551672
+      }
+    ],
+    "hashtags": ["#doubletap"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562931334,
+      "nanoseconds": 93000000
+    },
+    "title": ""
+  },
+  "hULFIWlpFGWSYO4Kzshg": {
+    "author": false,
+    "comment": "I was able to do several likes in the same post.  ",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Well take car of that, we are still analyzing how to track that to prevent it. 😉 ",
+        "timestamp": 1562928828938
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#bug"],
+    "location": false,
+    "mood": "Frustrated",
+    "reactions": {
+      "Frustrated": 2,
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562927947,
+      "nanoseconds": 522000000
+    },
+    "title": ""
+  },
+  "JGCFNQQ0CPRucwsZqZT0": {
+    "author": false,
+    "comment": "If I click on the map... The I cannot click on the button to the wall. The one below, not the one on the top screen.",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "👍",
+        "timestamp": 1562934736855
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#CXTeamMeeting"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Bored": 1,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562927945,
+      "nanoseconds": 845000000
+    },
+    "title": ""
+  },
+  "4dI0t57U13xZ2RB6MBqp": {
+    "author": false,
+    "comment": "Everyone can access this app, I didn’t even register and I can see everyone’s comments, so not part of the community using it, but I see it all, not sure if I feel ok with this",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Later the corporate version will require login to access it. ",
+        "timestamp": 1562928603013
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "For now because it is a pilot it's like this 😉",
+        "timestamp": 1562928635653
+      }
+    ],
+    "hashtags": ["#Enhancement"],
+    "location": false,
+    "mood": "Sad",
+    "reactions": {
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562927924,
+      "nanoseconds": 949000000
+    },
+    "title": ""
+  },
+  "PExoTXPEX5N3VURkpFfl": {
+    "author": false,
+    "comment": "I can spam the like button! Maybe Should only allow one per post per user!",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Same here",
+        "timestamp": 1562928000200
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "We are a awere of it and will take care of it. 😉😉😉",
+        "timestamp": 1562928757939
+      }
+    ],
+    "hashtags": ["#FeedbackApp"],
+    "location": false,
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 20,
+      "Happy": 1,
+      "Sad": 20
+    },
+    "timestamp": {
+      "seconds": 1562927892,
+      "nanoseconds": 597000000
+    },
+    "title": ""
+  },
+  "WG7kmuO4ZYsceFqXsJjm": {
+    "author": false,
+    "comment": "Nice meeting, dinâmica, loved to see people innovate projects",
+    "hashtags": ["#CXTeamMeeting"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 4,
+      "Happy": 16
+    },
+    "timestamp": {
+      "seconds": 1562927795,
+      "nanoseconds": 548000000
+    },
+    "title": ""
+  },
+  "RWYEbBZ2iSpdvucdTKUm": {
+    "author": false,
+    "comment": "Really nice presentation from Fábio #emocio",
+    "hashtags": ["#CXTeamMeeting"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 3
+    },
+    "timestamp": {
+      "seconds": 1562927751,
+      "nanoseconds": 418000000
+    },
+    "title": ""
+  },
+  "LJjg7FtEshlCIuC3LA4n": {
+    "author": false,
+    "comment": "The first emoji when we click the like button should be the smile. I just clicked in the bored emoji by mistake because it is intuitive to click the first.",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "I did the same mistake. And I cannot remove it.",
+        "timestamp": 1562927795283
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "We should click on the wrong smile and then the system delete our like.",
+        "timestamp": 1562927855700
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "@SpookyApricot 🤔😏👀",
+        "timestamp": 1562932649239
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#bug"],
+    "location": false,
+    "mood": "Frustrated",
+    "reactions": {
+      "Happy": 16
+    },
+    "timestamp": {
+      "seconds": 1562927738,
+      "nanoseconds": 615000000
+    },
+    "title": ""
+  },
+  "NACEtzlHqnyIJYTl05pk": {
+    "author": false,
+    "comment": "People have so many ideas, so often and rarely are able to implement them. Congrats on the feedback app team, it looks really nice!",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Thanks for the lovely feedback ❤️🙏",
+        "timestamp": 1562930836604
+      }
+    ],
+    "hashtags": ["#FeedbackApp"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 13
+    },
+    "timestamp": {
+      "seconds": 1562927652,
+      "nanoseconds": 256000000
+    },
+    "title": ""
+  },
+  "lXagEjnyrfNzOmsP9qSK": {
+    "author": false,
+    "comment": "Awesome presentation! #great",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Thanks 😉",
+        "timestamp": 1562930881167
+      }
+    ],
+    "hashtags": ["#CXTeamMeeting"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1562927620,
+      "nanoseconds": 212000000
+    },
+    "title": ""
+  },
+  "Q1UIaKRWnkPdpL5E4zyH": {
+    "author": false,
+    "comment": "Amazing Emocio presentation!\nAmazing idea. ",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Thanks for the kind words ❤️😉",
+        "timestamp": 1562930924759
+      }
+    ],
+    "hashtags": ["#CXTeamMeeting"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Bored": 2,
+      "Happy": 3
+    },
+    "timestamp": {
+      "seconds": 1562927603,
+      "nanoseconds": 430000000
+    },
+    "title": ""
+  },
+  "ji6So2vKZuZHIrOeEnom": {
+    "author": false,
+    "comment": "",
+    "hashtags": ["#CXTeamMeeting"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562927575,
+      "nanoseconds": 250000000
+    },
+    "title": ""
+  },
+  "aT9qKSFYshNJwXwFjL47": {
+    "author": false,
+    "comment": "Excited about the new possibilities! ",
+    "hashtags": ["#CXTeamMeeting"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Bored": 1,
+      "Excited": 3,
+      "Happy": 3
+    },
+    "timestamp": {
+      "seconds": 1562927565,
+      "nanoseconds": 790000000
+    },
+    "title": ""
+  },
+  "E3PXiE9YLN4abzQ4PhPQ": {
+    "author": false,
+    "comment": "Cool! Love it",
+    "hashtags": ["#CXTeamMeeting", "#emocio"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Bored": 1,
+      "Excited": 2,
+      "Frustrated": 1,
+      "Happy": 5,
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562927560,
+      "nanoseconds": 905000000
+    },
+    "title": ""
+  },
+  "O2tnoFv200jV1BOoKLZN": {
+    "author": false,
+    "comment": "This app looks good Fabio ",
+    "hashtags": ["#CXTeamMeeting"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1,
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1562927546,
+      "nanoseconds": 812000000
+    },
+    "title": ""
+  },
+  "A0RqHU2r6emMc5RO9oE2": {
+    "author": false,
+    "comment": "I just had the worst presentation ever, for the worst project ever",
+    "hashtags": ["#WorstPresentationEver"],
+    "location": {
+      "_lat": 38.711878048675274,
+      "_long": -9.311312206545667
+    },
+    "mood": "Sad",
+    "reactions": {
+      "Bored": 1,
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562925601,
+      "nanoseconds": 248000000
+    },
+    "title": ""
+  },
+  "pxY1QA2S4OnYsvElaFiL": {
+    "author": "TheStakeholder",
+    "comment": "Excited to pilot the emocio in our team meeting today ❤️😊",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Vamos!",
+        "timestamp": 1562927329029
+      }
+    ],
+    "hashtags": ["#CXTeamMeeting"],
+    "location": {
+      "_lat": 38.709892,
+      "_long": -9.3120015
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562924015,
+      "nanoseconds": 115000000
+    },
+    "title": ""
+  },
+  "TRpDZmKfQxyeFvBUPKJ2": {
+    "author": false,
+    "comment": "Last day at the office for the next two weeks! 😉",
+    "hashtags": ["#needcoffee"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562919256,
+      "nanoseconds": 641000000
+    },
+    "title": ""
+  },
+  "NlkmHfvakG2xEUYVKW8u": {
+    "author": false,
+    "comment": "Someone is leaaaaving today! 😎😎😎😎😎",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "HAHAHA where are you going?? ",
+        "timestamp": 1562925354254
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Weekend with the frenchies in la Manga, one week 🏡 office and next friday to Marseilla, Nimes, Avignon, La Provence...",
+        "timestamp": 1562930557669
+      }
+    ],
+    "hashtags": ["#cm32", "#summer", "#vacation"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562919093,
+      "nanoseconds": 98000000
+    },
+    "title": ""
+  },
+  "I8c1EkYCGIAgmJacf6s3": {
+    "author": "SpookyApricot",
+    "comment": "It's finally Friday! Look forward to relax and drink some beers\nAny cool ideas for the weekend? ",
+    "hashtags": ["#friday", "#break", "#chill"],
+    "location": {
+      "_lat": 41.4039443,
+      "_long": 2.197982
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562912492,
+      "nanoseconds": 188000000
+    },
+    "title": ""
+  },
+  "CHTslPRoCI5gNqgbPFOQ": {
+    "author": "SpookyApricot",
+    "comment": "Chilling at cm32.\n\nGood vibes and Ice cream 🍦🍦🍦🍦",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "The ice cream is not a sexual thing ",
+        "timestamp": 1562877655632
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Same here 👌 ",
+        "timestamp": 1562882691170
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "I didnt get any 🍦 ",
+        "timestamp": 1562930596527
+      }
+    ],
+    "hashtags": ["#cm32", "#summer", "#Bcn"],
+    "location": {
+      "_lat": 41.4082672,
+      "_long": 2.2037526
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 1,
+      "Happy": 1,
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562871106,
+      "nanoseconds": 822000000
+    },
+    "title": ""
+  },
+  "mI6mrjRj7iggdoBWyQRu": {
+    "author": "SpookyApricot",
+    "comment": "App looking cool YEAH",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": ":)",
+        "timestamp": 1562857929557
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "👌👌",
+        "timestamp": 1562882599501
+      }
+    ],
+    "hashtags": ["#emocio"],
+    "location": {
+      "_lat": 41.4075777,
+      "_long": 2.2182176
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562857910,
+      "nanoseconds": 582000000
+    },
+    "title": ""
+  },
+  "fBOKLIm4tjNmJD0qfApP": {
+    "comment": "looovely",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "asdfasdfas",
+        "timestamp": 1562780429455
+      }
+    ],
+    "hashtags": ["#Bcn"],
+    "location": {
+      "_lat": 41.4075615,
+      "_long": 2.2182365
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 3,
+      "Happy": 5
+    },
+    "timestamp": {
+      "seconds": 1562777257,
+      "nanoseconds": 909000000
+    },
+    "title": ""
+  },
+  "z6RwUHGhDIkrhIQ3myhK": {
+    "comment": "",
+    "hashtags": ["#cm32"],
+    "location": {
+      "_lat": 41.4076787,
+      "_long": 2.2179469
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562759834,
+      "nanoseconds": 87000000
+    },
+    "title": ""
+  },
+  "BZ3V462hX66WWQShNdyO": {
+    "comment": "Por fin alguien limpió ",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "GIMME A HALLELUJAH 🙌🙌🙌🙏",
+        "timestamp": 1562754502932
+      },
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "That took a while 👀😏 ahah",
+        "timestamp": 1562758017184
+      }
+    ],
+    "hashtags": ["#cristobalmoura32"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2
+    },
+    "timestamp": {
+      "seconds": 1562708931,
+      "nanoseconds": 701000000
+    },
+    "title": ""
+  },
+  "e5Rl7mgQKOruDmPMxrxr": {
+    "comment": "My manager gets confused and blames me for their mistakes. I am bored of this type of leadership 😭",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "WELCOME TO THE REAL WORLD",
+        "timestamp": 1562695449427
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "asdfadsdfa😃",
+        "timestamp": 1562706660691
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "If I put text fist it works? reallY? 🤯🤯🤯🤯 I don't understand shit",
+        "timestamp": 1562706687247
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "😁",
+        "timestamp": 1562748943927
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "😜",
+        "timestamp": 1562749126908
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "alberto\nis the \nbest \naround\nYEAH!",
+        "timestamp": 1562754105965
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Feels bad man 😔 ",
+        "timestamp": 1562758059232
+      }
+    ],
+    "hashtags": ["#manager"],
+    "location": {
+      "_lat": 38.7144763,
+      "_long": -9.2749202
+    },
+    "mood": "Bored",
+    "reactions": {
+      "Frustrated": 2,
+      "Sad": 2
+    },
+    "timestamp": {
+      "seconds": 1562690536,
+      "nanoseconds": 992000000
+    },
+    "title": ""
+  },
+  "FshCrEoVKYrwaR1HVlWL": {
+    "comment": "teset",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "Test",
+        "timestamp": 1562700663276
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "No emojii works",
+        "timestamp": 1562705866488
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "testing\ntext area\nor not",
+        "timestamp": 1562749714717
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "asdf\nadf\nas\na",
+        "timestamp": 1562750517823
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "al\nis\nthe\nbest",
+        "timestamp": 1562750549211
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "🤔",
+        "timestamp": 1562758079967
+      }
+    ],
+    "hashtags": ["#bug"],
+    "location": {
+      "_lat": 41.4075729,
+      "_long": 2.2182584999999997
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562669116,
+      "nanoseconds": 273000000
+    },
+    "title": ""
+  },
+  "9H4uKrxw7RZ1AryYojBv": {
+    "comment": "buuuugs BUUUUGS EVERYWHERE",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "comment",
+        "timestamp": 1562668625964
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "tst",
+        "timestamp": 1562695387445
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "teeest",
+        "timestamp": 1562695431172
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "&#64",
+        "timestamp": 1562938544022
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "\" + &#64 + \"",
+        "timestamp": 1562938560680
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "1=1;–",
+        "timestamp": 1562938728419
+      }
+    ],
+    "hashtags": ["#bug", "#fix"],
+    "location": {
+      "_lat": 41.4075353,
+      "_long": 2.2182351
+    },
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562667668,
+      "nanoseconds": 549000000
+    },
+    "title": ""
+  },
+  "yxpplJS07Q5CtqulsDqt": {
+    "comment": "",
+    "hashtags": ["#bug", "#fix"],
+    "location": {
+      "_lat": 41.4075353,
+      "_long": 2.2182351
+    },
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562667643,
+      "nanoseconds": 462000000
+    },
+    "title": ""
+  },
+  "Ufssq4sKdKDn85zsCeP5": {
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 41.407584899999996,
+      "_long": 2.2182523
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562667392,
+      "nanoseconds": 399000000
+    },
+    "title": ""
+  },
+  "VswbJeNLdGKaq0IfSNDX": {
+    "comment": "Things are running smoothly today, happy with the progress. Music Playlist is helping 🎶🎧👌",
+    "hashtags": ["#Lisbon", "#project", "#CX", "#integration"],
+    "location": {
+      "_lat": 38.7123349,
+      "_long": -9.3103946
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562667350,
+      "nanoseconds": 827000000
+    },
+    "title": ""
+  },
+  "Yda7NJQKFh2FV4yBVNCh": {
+    "comment": "Mondays are never easy. Finally home 🏡 😌",
+    "hashtags": ["#Lisbon", "#happy"],
+    "location": {
+      "_lat": 38.7047307,
+      "_long": -9.3367918
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562617159,
+      "nanoseconds": 100000000
+    },
+    "title": ""
+  },
+  "U6aMNmkygTLOtaXEqfJg": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562580365,
+      "nanoseconds": 739000000
+    },
+    "title": ""
+  },
+  "NagE7RKeWCXkryfbVGNV": {
+    "comment": "☔☔☔",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "I HATE RAAAAIN",
+        "timestamp": 1562668945687
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "BUUUHH",
+        "timestamp": 1562668984969
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "test",
+        "timestamp": 1562669040921
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "adf",
+        "timestamp": 1562669045090
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "adfadf",
+        "timestamp": 1562680665777
+      }
+    ],
+    "hashtags": ["#rainy"],
+    "location": false,
+    "mood": "Sad",
+    "reactions": {
+      "Bored": 1,
+      "Sad": 3
+    },
+    "timestamp": {
+      "seconds": 1562580147,
+      "nanoseconds": 226000000
+    },
+    "title": ""
+  },
+  "D3ooRQoOWxlSSXuhPXrY": {
+    "comment": "Feeling so tired today, came from vacations a week and 2 days ago and already feels like a month 😔😑 2 customer projects, 2 internal projects, one is app and expected to give training to the team. Managers should give more support in the handling of this assignments and manage better the workload, and not only send an email when want things done and expect the world will come together to make it happen. \n#workingLikeSenior\n#paidLikeConsultant",
+    "hashtags": [
+      "#project",
+      "#client",
+      "#CX",
+      "#paycheck",
+      "#workingLikeSenior",
+      "#paidLikeConsultant"
+    ],
+    "location": false,
+    "mood": "Frustrated",
+    "reactions": {
+      "Frustrated": 1
+    },
+    "timestamp": {
+      "seconds": 1562568215,
+      "nanoseconds": 91000000
+    },
+    "title": ""
+  },
+  "qtyY4GdChUFGb6INmzkV": {
+    "comment": "Best weekend of the year. Beer festival at poblenou - Barcelona. I am so happy right now, nothing beats dancing under the rain while drinking the best beer. Hope you all had an amazing weekend as well. Cheers 🍻😇😁😁😁",
+    "hashtags": ["#beer", "#beerfestival", "#summer", "#happy", "#Bcn"],
+    "location": {
+      "_lat": 41.4039364,
+      "_long": 2.1979335
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 1,
+      "Happy": 5
+    },
+    "timestamp": {
+      "seconds": 1562537040,
+      "nanoseconds": 555000000
+    },
+    "title": ""
+  },
+  "E4AJ9FCdbG7uIH0LUC2T": {
+    "comment": "It’s time!!\nThey are climbing the fucking construction things!!!!! Alcohol made it!!! Stand by to call an ambulance lololol ",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "We really need to add pictures here. I have 2 stupid monkeys climbing the fucjijf building. I’m holding my phone with 112 (local 911)",
+        "timestamp": 1562529245351
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Andre found a beer from a construction worker in the construction things. Says he will drink it and I’m about to 🤢 ",
+        "timestamp": 1562529335261
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "He drank it!! Reporting live from Emocio!!!!!! 🤪",
+        "timestamp": 1562529374205
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "🤮 ",
+        "timestamp": 1562529380739
+      },
+      {
+        "author": {
+          "name": "TheStakeholder ",
+          "stakeholder": true
+        },
+        "comment": "Crazy 🤪 #neverwastebeer",
+        "timestamp": 1562531991371
+      }
+    ],
+    "hashtags": ["#crazy"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 3
+    },
+    "timestamp": {
+      "seconds": 1562529132,
+      "nanoseconds": 356000000
+    },
+    "title": ""
+  },
+  "2pK7p9I9KfgqVk6NZPKl": {
+    "comment": "I like emocio but I like Tiago’s balcony and Gin better. Make emocio as awesome as Gin and tonic ",
+    "comments": [
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "We're getting there 😊🍸👌",
+        "timestamp": 1562532242011
+      }
+    ],
+    "hashtags": ["#fuckingdrunkintiagobalcony"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562528730,
+      "nanoseconds": 522000000
+    },
+    "title": ""
+  },
+  "LVtLzMTNWVzJ2SaXO4HG": {
+    "comment": "Consuela can you come and do the laundry. We will be heading to an amazing week. I am going to be overworked but I am feeling good!!\n",
+    "comments": [
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "Can send you a couple of tips 😉💯 ™️#YearsOfExperience",
+        "timestamp": 1562532568291
+      }
+    ],
+    "hashtags": ["#Lisbon", "#Consuela"],
+    "location": {
+      "_lat": 38.7247532,
+      "_long": -9.1326443
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562527726,
+      "nanoseconds": 726000000
+    },
+    "title": ""
+  },
+  "fRFU95ioMyxkFrPbhq6Z": {
+    "comment": "Arrived 3 hours later to lx. Accident on the highway plus headache. Not the best way to finish a weekend ",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "On behalf of Consuela o recommend listening to Flashlight from Bonobo",
+        "timestamp": 1562528501098
+      },
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "☝️👌👌 ",
+        "timestamp": 1562532327678
+      }
+    ],
+    "hashtags": ["#Lisbon"],
+    "location": false,
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562527523,
+      "nanoseconds": 503000000
+    },
+    "title": ""
+  },
+  "9HYOr6bmIJBWGjH9S3xO": {
+    "comment": "Wtf? Common all, post more shit. I have 2 new users monitoring this. They want to watch this crashing the stress test",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Stop playing with your phone and get Me a another beer",
+        "timestamp": 1562518832160
+      },
+      {
+        "author": {
+          "name": "TheStakeholder ",
+          "stakeholder": true
+        },
+        "comment": "Ahahahah ",
+        "timestamp": 1562531759699
+      }
+    ],
+    "hashtags": [],
+    "location": {
+      "_lat": 38.792524656657584,
+      "_long": -9.17515049741054
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562518281,
+      "nanoseconds": 825000000
+    },
+    "title": ""
+  },
+  "cTd9SP2HRiK7eXxBaWV6": {
+    "comment": "Emocio: me love you long time \n",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder ",
+          "stakeholder": true
+        },
+        "comment": "❤️",
+        "timestamp": 1562531722174
+      },
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "That makes both us ❤️",
+        "timestamp": 1562532698685
+      }
+    ],
+    "hashtags": ["#dontgetjealousConsuela"],
+    "location": {
+      "_lat": 38.79254387242093,
+      "_long": -9.175240130736354
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562516083,
+      "nanoseconds": 419000000
+    },
+    "title": ""
+  },
+  "S2bURIya49VR11jmysiz": {
+    "comment": "Emocio isn’t back on!! Yeah!",
+    "hashtags": ["#breakITpayIT"],
+    "location": {
+      "_lat": 38.79249497707861,
+      "_long": -9.175305499833504
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562515941,
+      "nanoseconds": 127000000
+    },
+    "title": ""
+  },
+  "v3bFsWETnJPnAeY91S1W": {
+    "comment": "Worst part on the app now is slowlyness. We need lazy-loading and when trying to comment it is slow!!!!!\n",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "That probably because Tu! are I the gas station ",
+        "timestamp": 1562515995686
+      }
+    ],
+    "hashtags": ["#Enhancement", "#emocio", "#development", "#fix", "#bug"],
+    "location": {
+      "_lat": 41.403975599999995,
+      "_long": 2.198047
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Frustrated": 1
+    },
+    "timestamp": {
+      "seconds": 1562515863,
+      "nanoseconds": 888000000
+    },
+    "title": ""
+  },
+  "R5MyUS3maRdotj7KWqu3": {
+    "comment": "I really miss photos and other media contents.\nAlso an history and feed filters would be nice. CONSUELA START DEVS",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder ",
+          "stakeholder": true
+        },
+        "comment": "We are working on that 😉",
+        "timestamp": 1562513555763
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#Enhancement", "#Lisbon"],
+    "location": {
+      "_lat": 39.9228332,
+      "_long": -8.6296401
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Bored": 1,
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562512658,
+      "nanoseconds": 488000000
+    },
+    "title": ""
+  },
+  "WZJZ541LPi0zZRU4vMG2": {
+    "comment": "Stuck in a smelly gas station waiting for a lift. Never trust your portuguese friends on timings. :eyeroll:",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Do not drop the soap! I repeat DO NOT drop the soap",
+        "timestamp": 1562513272699
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "If you die can I keep your laptop? 😎",
+        "timestamp": 1562513479507
+      },
+      {
+        "author": {
+          "name": "TheStakeholder ",
+          "stakeholder": true
+        },
+        "comment": "😂😂😂",
+        "timestamp": 1562513482590
+      },
+      {
+        "author": {
+          "name": "TheStakeholder ",
+          "stakeholder": true
+        },
+        "comment": "That escaleted quickly 😂",
+        "timestamp": 1562513517053
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "220 ouros e vamos te buscar 🤓",
+        "timestamp": 1562513528845
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Please tell us you are not dressed as a sailor 🤔",
+        "timestamp": 1562513555213
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "And you @stakeholder 🤬",
+        "timestamp": 1562514281213
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Hey behave boys",
+        "timestamp": 1562514300163
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ░░░░░░░░░░░░░▄▄▄▄▄▄▄░░░░░░░░░ ░░░░░░░░░▄▀▀▀░░░░░░░▀▄░░░░░░░ ░░░░░░░▄▀░░░░░░░░░░░░▀▄░░░░░░ ░░░░░░▄▀░░░░░░░░░░▄▀▀▄▀▄░░░░░ ░░░░▄▀░░░░░░░░░░▄▀░░██▄▀▄░░░░ ░░░▄▀░░▄▀▀▀▄░░░░█░░░▀▀░█▀▄░░░ ░░░█░░█▄▄░░░█░░░▀▄░░░░░▐░█░░░ ░░▐▌░░█▀▀░░▄▀░░░░░▀▄▄▄▄▀░░█░░ ░░▐▌░░█░░░▄▀░░░░░░░░░░░░░░█░░ ░░▐▌░░░▀▀▀░░░░░░░░░░░░░░░░▐▌░ ░░▐▌░░░░░░░░░░░░░░░▄░░░░░░▐▌░ ░░▐▌░░░░░░░░░▄░░░░░█░░░░░░▐▌░ ░░░█░░░░░░░░░▀█▄░░▄█░░░░░░▐▌░ ░░░▐▌░░░░░░░░░░▀▀▀▀░░░░░░░▐▌░ ░░░░█░░░░░░░░░░░░░░░░░░░░░█░░ ░░░░▐▌▀▄░░░░░░░░░░░░░░░░░▐▌░░ ░░░░░█░░▀░░░░░░░░░░░░░░░░▀░░░ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░",
+        "timestamp": 1562514373613
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Lós o siento Alberto 🤪",
+        "timestamp": 1562514391366
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Lo siento perdona. Estoy adicted ",
+        "timestamp": 1562514588254
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "░░░░░░░░░░░░▄▄░░░░░░░░░░░░░░ ░░░░░░░░░░░█░░█░░░░░░░░░░░░░ ░░░░░░░░░░░█░░█░░░░░░░░░░░░░ ░░░░░░░░░░█░░░█░░░░░░░░░░░░░ ░░░░░░░░░█░░░░█░░░░░░░░░░░░░ ██████▄▄█░░░░░██████▄░░░░░░░ ▓▓▓▓▓▓█░░░░░░░░░░░░░░█░░░░░░ ▓▓▓▓▓▓█░░░░░░░░░░░░░░█░░░░░░ ▓▓▓▓▓▓█░░░░░░░░░░░░░░█░░░░░░ ▓▓▓▓▓▓█░░░░░░░░░░░░░░█░░░░░░ ▓▓▓▓▓▓█░░░░░░░░░░░░░░█░░░░░░ ▓▓▓▓▓▓█████░░░░░░░░░██░░░░░░ █████▀░░░░▀▀████████░░░░░░░░ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ░▀█▀░░░▀█▀░▀█▀░▀█▀░░▀█▀▀▀▀█░ ░░█░░░░░█░░░█░▄▀░░░░░█░░░░░░ ░░█░░░░░█░░░█▀▄░░░░░░█▄▄▄░░░ ░░█░░░░░█░░░█░░▀▄░░░░█░░░░░░ ░▄█▄▄█░▄█▄░▄█▄░░▄█▄░▄█▄▄▄▄█░ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░﻿",
+        "timestamp": 1562514591514
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "How the fuck did you break it now ",
+        "timestamp": 1562514959589
+      },
+      {
+        "author": {
+          "name": "TheStakeholder ",
+          "stakeholder": true
+        },
+        "comment": "No issues for me, except for slowliness ",
+        "timestamp": 1562515305333
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "naughty",
+        "timestamp": 1562668595873
+      }
+    ],
+    "hashtags": ["#Lisbon", "#gasStation", "#late", "#SMELLY"],
+    "location": false,
+    "mood": "Sad",
+    "reactions": {
+      "Frustrated": 2
+    },
+    "timestamp": {
+      "seconds": 1562512503,
+      "nanoseconds": 748000000
+    },
+    "title": ""
+  },
+  "CObUQnT1IE9M83NOLXX2": {
+    "comment": "Playing H1Z1 with Consuela 🤫",
+    "hashtags": ["#stakeholder", "#gaming"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 2
+    },
+    "timestamp": {
+      "seconds": 1562510879,
+      "nanoseconds": 168000000
+    },
+    "title": ""
+  },
+  "WnhkhhHRRFJqd9yjHCaz": {
+    "comment": "",
+    "hashtags": ["#Lisbon", "#Cinema", "#kebab"],
+    "location": {
+      "_lat": 38.77704223583992,
+      "_long": -9.22094348023653
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562510587,
+      "nanoseconds": 631000000
+    },
+    "title": ""
+  },
+  "DzOnYWtF2aWpnDFBIl4p": {
+    "comment": "Testing geo location at the gym",
+    "hashtags": ["#stakeholder", "#gym"],
+    "location": {
+      "_lat": 38.77687459760311,
+      "_long": -9.219047797636664
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562505704,
+      "nanoseconds": 159000000
+    },
+    "title": ""
+  },
+  "8K3qFJ6r7Brp3ntbKGxF": {
+    "comment": "Feeling bored and nostalgic that I have to go back",
+    "hashtags": ["#Lisbon"],
+    "location": {
+      "_lat": 39.9230238,
+      "_long": -8.3573506
+    },
+    "mood": "Bored",
+    "reactions": {
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562501948,
+      "nanoseconds": 55000000
+    },
+    "title": ""
+  },
+  "EQ9CePaSqBGsoPVKCJpS": {
+    "comment": "Lunch time with familiy. Beautiful sunday",
+    "hashtags": ["#sunday"],
+    "location": {
+      "_lat": 39.9230238,
+      "_long": -8.3573506
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562501749,
+      "nanoseconds": 323000000
+    },
+    "title": ""
+  },
+  "dgLsCGFF67iszfscUV0u": {
+    "comment": "Have to go back to lx. I want holidays :/",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder ",
+          "stakeholder": true
+        },
+        "comment": "The com back from festivals is always the hardest 😉 make a stop and wat h rhe sunset 🌇 by the beach just to close the weekend always does the job for me 👌",
+        "timestamp": 1562504852742
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "The sun here also decided to reflect my mood @consuela Consuela wears grey today",
+        "timestamp": 1562508858212
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Have a few drinks 🍹 ",
+        "timestamp": 1562510928825
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Even Consuela will look good",
+        "timestamp": 1562510949716
+      }
+    ],
+    "hashtags": ["#Lisbon", "#Trip"],
+    "location": false,
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1562501535,
+      "nanoseconds": 219000000
+    },
+    "title": ""
+  },
+  "ZKYSEuVe7kP4KRLsCH8z": {
+    "comment": "Whoever is developing this app is fucking great!!",
+    "hashtags": ["#emocioTeam"],
+    "location": {
+      "_lat": -37.810579,
+      "_long": 145.0067982
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562501533,
+      "nanoseconds": 298000000
+    },
+    "title": ""
+  },
+  "6zyIzwMZnTgZ4Dh6IWls": {
+    "comment": "Incredible feeling when I discovered this channel!! Fantastic place CM32!!",
+    "hashtags": ["#cristobalmoura32"],
+    "location": {
+      "_lat": -37.810579,
+      "_long": 145.0067982
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Bored": 4,
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1562501461,
+      "nanoseconds": 671000000
+    },
+    "title": ""
+  },
+  "gidahWeHnLxcZvhr8fiH": {
+    "comment": "So jealous to see people enjoying summer in Europe. It's fucking cold down here.",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "Where are you man?",
+        "timestamp": 1562501559533
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Here its crazy aswell Consuels send some good weather over there",
+        "timestamp": 1562501579688
+      },
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "Sending some good hot vibes 🌅☀️",
+        "timestamp": 1562504627713
+      }
+    ],
+    "hashtags": [],
+    "location": {
+      "_lat": -37.8105795,
+      "_long": 145.0067998
+    },
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1562501323,
+      "nanoseconds": 931000000
+    },
+    "title": ""
+  },
+  "gxb1TKzLhAtei0Ssgca9": {
+    "comment": "Incredible app!! I'm so exited!!",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "So glad you are enjoying it ❤️",
+        "timestamp": 1562504677345
+      }
+    ],
+    "hashtags": ["#emocioTeam"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562500892,
+      "nanoseconds": 955000000
+    },
+    "title": ""
+  },
+  "NeBfnYt6kSY5ePkl5neo": {
+    "comment": "I can still see but boob\nThx @SpookyApricot for not breaking Consuela nor her boobs",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder ",
+          "stakeholder": true
+        },
+        "comment": "@SpookyApricot is a gentleman ",
+        "timestamp": 1562505313668
+      }
+    ],
+    "hashtags": ["#stillSeeBoob", "#stakeholder"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2
+    },
+    "timestamp": {
+      "seconds": 1562500546,
+      "nanoseconds": 691000000
+    },
+    "title": ""
+  },
+  "M8cxnpYeTtwSGMSnFNCt": {
+    "comment": "My toylet tap just broke, bought some new ones on IKEA. Let's see how do you replace this things 🛠️ 🚿🛁",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Ask for consuela help",
+        "timestamp": 1562499549015
+      }
+    ],
+    "hashtags": ["#Lisbon", "#fixit", "#brokentap", "#replace"],
+    "location": {
+      "_lat": 38.7046735,
+      "_long": -9.3369415
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562496709,
+      "nanoseconds": 897000000
+    },
+    "title": ""
+  },
+  "LSf8qkmCS0zbpw0fHYvy": {
+    "comment": "When you're writing a comment and a new emocio is posted I start writing a comment for that one so it would be splitted between two posts 😂😂😂 imagine if they come quickly enough ",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Drink coffee and you will type messages faster 🤪",
+        "timestamp": 1562494752072
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "#CommentAllThePosts #GifThatIcantPost",
+        "timestamp": 1562495304122
+      }
+    ],
+    "hashtags": ["#bug"],
+    "location": {
+      "_lat": 38.7046714,
+      "_long": -9.3369167
+    },
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562494624,
+      "nanoseconds": 312000000
+    },
+    "title": ""
+  },
+  "Hb3xirB1lpAo97B1CC9B": {
+    "comment": "Haha, Griezmann is so fucked!\nPlay on the streets boy",
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562494474,
+      "nanoseconds": 277000000
+    },
+    "title": ""
+  },
+  "FHwrnzxHXkBvBYDtmqRH": {
+    "comment": "Dude, where’s my car?",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Lucky 🍀 11s 😉",
+        "timestamp": 1562495206336
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Bored",
+    "timestamp": {
+      "seconds": 1562494317,
+      "nanoseconds": 379000000
+    },
+    "title": ""
+  },
+  "CBtZPJCiLp1TCel809IF": {
+    "comment": "Last time fucking with the app:\n\n\n╔══╗\n╚╗╔╝\n╔╝(¯`v´¯)\n╚══`.¸.Emocio",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Great well crafted effort tough 👏🛠️ hope you enjoyed it 😉",
+        "timestamp": 1562495527691
+      }
+    ],
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562494235,
+      "nanoseconds": 171000000
+    },
+    "title": ""
+  },
+  "Re44cItD6YkzODHAwaUo": {
+    "comment": "iPhone simply does not work with geo location in emocio! :(\n\n___________________________$$\n _________________________$$$$\n _______________________$$$$$$\n ______________________$$$$$$\n ______________________$$$$\n ______________________$$\n _________$$$$$$$$$$$$$_$$$$$$$$$$$$$\n ______$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n ____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n ___$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n __$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n _$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n _$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n _$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n _$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n __$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n ___$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n ____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n _____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n ______$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n ________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n __________$$$$$$$$$$$$$$$$$$$$$$$$$\n ____________$$$$$$$$$$$$$$$$$$$$$\n ______________$$$$$$$$__$$$$$$",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "will look into that",
+        "timestamp": 1562493919947
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "in the meantime",
+        "timestamp": 1562493923580
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "stop fucking WITH THE APP!!!! ",
+        "timestamp": 1562493929017
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "HAHAHAHA",
+        "timestamp": 1562493931963
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "It's a good effort never the less 🤔 that's a cool one",
+        "timestamp": 1562494019248
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "I don’t understand: we can’t ask Consuela what she is wearing. We can’t complain about apple. What kind of shoe are you running here @stakeholder?",
+        "timestamp": 1562494111658
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Consuela didn't slept well today, you can express yourselve as you want 😉 I'm quite impressed actually",
+        "timestamp": 1562495790686
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Ahh, you are so nice Consuela. Really appreciate your support",
+        "timestamp": 1562496198324
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Btw:",
+        "timestamp": 1562496204000
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "What are you wearing?",
+        "timestamp": 1562496212286
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "#trollingConsuela",
+        "timestamp": 1562496229551
+      }
+    ],
+    "hashtags": ["#stakeholder", "#apple"],
+    "location": false,
+    "mood": "Sad",
+    "reactions": {
+      "Excited": 6,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562493613,
+      "nanoseconds": 398000000
+    },
+    "title": ""
+  },
+  "rvvgvV6kBRZkk9appAT5": {
+    "comment": "I invited a friend to test emocio and he is based in london. We already have some data showing in London. Nice\n\n",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Nice! Ahah we needed to have one in the USA, I think I'll ask my buddy ",
+        "timestamp": 1562496193524
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562493053,
+      "nanoseconds": 396000000
+    },
+    "title": ""
+  },
+  "QzUpTneuhhsNd3oovUV5": {
+    "comment": "Is this you @Consuela?\n\n\n_______ad88888888888888888888888a, \n________a88888\"8888888888888888888888, \n______,8888\"__\"P88888888888888888888b, \n______d88_________`\"\"P88888888888888888, \n_____,8888b_______________\"\"88888888888888, \n_____d8P'''__,aa,______________\"\"888888888b \n_____888bbdd888888ba,__,I_________\"88888888, \n_____8888888888888888ba8\"_________,88888888b \n____,888888888888888888b,________,8888888888 \n____(88888888888888888888,______,88888888888, \n____d888888888888888888888,____,8___\"8888888b \n____88888888888888888888888__.;8'\"\"\"__(888888 \n____8888888888888I\"8888888P_,8\"_,aaa,__888888 \n____888888888888I:8888888\"_,8\"__`b8d'__(88888 \n____(8888888888I'888888P'_,8)__________88888 \n_____88888888I\"__8888P'__,8\")__________88888 \n_____8888888I'___888\"___,8\"_(._.)_______88888 \n_____(8888I\"_____\"88,__,8\"_____________,8888P \n______888I'_______\"P8_,8\"_____________,88888) \n_____(88I'__________\",8\"__M\"\"\"\"\"\"M___,888888' \n____,8I\"____________,8(____\"aaaa\"___,8888888 \n___,8I'____________,888a___________,8888888) \n__,8I'____________,888888,_______,888888888 \n_,8I'____________,8888888'`-===-'888888888' \n,8I'____________,8888888\"________88888888\" \n8I'____________,8\"____88_________\"888888P \n8I____________,8'_____88__________`P888\" \n8I___________,8I______88____________\"8ba,. \n(8,_________,8P'______88______________88\"\"8bma,. \n_8I________,8P'_______88,______________\"8b___\"\"P8ma, \n_(8,______,8d\"________`88,_______________\"8b_____`\"8a \n__8I_____,8dP_________,8X8,________________\"8b.____:8b \n__(8____,8dP'__,I____,8XXX8,________________`88,____8) \n___8,___8dP'__,I____,8XxxxX8,_____I,_________8X8,__,8 \n___8I___8P'__,I____,8XxxxxxX8,_____I,________`8X88,I8 \n___I8,__\"___,I____,8XxxxxxxxX8b,____I,________8XXX88I, \n___`8I______I'__,8XxxxxxxxxxxxXX8____I________8XXxxXX8, \n____8I_____(8__,8XxxxxxxxxxxxxxxX8___I________8XxxxxxXX8, \n___,8I_____I[_,8XxxxxxxxxxxxxxxxxX8__8________8XxxxxxxxX8, \n___d8I,____I[_8XxxxxxxxxxxxxxxxxxX8b_8_______(8XxxxxxxxxX8, \n___888I____`8,8XxxxxxxxxxxxxxxxxxxX8_8,_____,8XxxxxxxxxxxX8 \n___8888,____\"88XxxxxxxxxxxxxxxxxxxX8)8I____.8XxxxxxxxxxxxX8 \n__,8888I_____88XxxxxxxxxxxxxxxxxxxX8_`8,__,8XxxxxxxxxxxxX8\" \n__d88888_____`8XXxxxxxxxxxxxxxxxxX8'__`8,,8XxxxxxxxxxxxX8\" \n__888888I_____`8XXxxxxxxxxxxxxxxX8'____\"88XxxxxxxxxxxxX8\" \n__88888888bbaaaa88XXxxxxxxxxxxXX8)______)8XXxxxxxxxxXX8\" \n__8888888I,_``\"\"\"\"\"\"8888888888888888aaaaa8888XxxxxXX8\" \n__(8888888I,______________________.__```\"\"\"\"\"88888P\" \n___88888888I,___________________,8I___8,_______I8\" \n____\"\"\"88888I,________________,8I'____\"I8,____;8\" \n___________`8I,_____________,8I'_______`I8,___8) \n____________`8I,___________,8I'__________I8__:8' \n_____________`8I,_________,8I'___________I8__:8 \n______________`8I_______,8I'_____________`8__(8 \n_______________8I_____,8I'________________8__(8; \n_______________8I____,8\"__________________I___88, \n______________.8I___,8'_______________________8\"8, \n______________(PI___'8_______________________,8,`8, \n_____________.88'____________,@@___________.a8X8,`8, \n_____________(88_____________@@@_________,a8XX888,`8, \n____________(888_____________@@'_______,d8XX8\"__\"b_`8, \n___________.8888,_____________________a8XXX8\"____\"a_`8, \n__________.888X88___________________,d8XX8I\"______9,_`8, \n_________.88:8XX8,_________________a8XxX8I'_______`8__`8, \n________.88'_8XxX8a_____________,ad8XxX8I'________,8___`8, \n________d8'__8XxxxX8ba,______,ad8XxxX8I\"__________8__,__`8, \n_______(8I___8XxxxxxX888888888XxxxX8I\"____________8__II__`8 \n_______8I'___\"8XxxxxxxxxxxxxxxxxxX8I'____________(8__8)___8; \n______(8I_____8XxxxxxxxxxxxxxxxxX8\"______________(8__8)___8I \n______8P'_____(8XxxxxxxxxxxxxxX8I'________________8,_(8___:8 \n_____(8'_______8XxxxxxxxxxxxxxX8'_________________`8,_8____8 \n_____8I________`8XxxxxxxxxxxxX8'___________________`8,8___;8 \n_____8'_________`8XxxxxxxxxxX8'_____________________`8I__,8' \n_____8___________`8XxxxxxxxX8'_______________________8'_,8' \n_____8____________`8XxxxxxX8'________________________8_,8' \n_____8_____________`8XxxxX8'________________________d'_8' \n_____8______________`8XxxX8_________________________8_8' \n_____8________________\"8X8'_________________________\"8\" \n_____8,________________`88___________________________8 \n_____8I________________,8'__________________________d) \n_____`8,_______________d8__________________________,8 \n______(b_______________8'_________________________,8' \n_______8,_____________dP_________________________,8' \n_______(b_____________8'________________________,8' \n________8,___________d8________________________,8' \n________(b___________8'_______________________,8' \n_________8,_________a8_______________________,8' \n_________(b_________8'______________________,8' \n__________8,_______,8______________________,8' \n__________(b_______8'_____________________,8' \n___________8,_____,8_____________________,8' \n___________(b_____8'____________________,8' \n____________8,___d8____________________,8' \n____________(b__,8'___________________,8' \n_____________8,,I8___________________,8' \n_____________I8I8'__________________,8' \n_____________`I8I__________________,8' \n______________I8'_________________,8' \n______________\"8_________________,8' \n______________(8________________,8' \n______________8I_______________,8' \n______________(b,___8,________,8) \n______________`8I___\"88______,8i8, \n_______________(b,__________,8\"8\") \n_______________`8I__,8______8)_8_8 \n________________8I__8I______\"__8_8 \n________________(b__8I_________8_8 \n________________`8__(8,________b_8, \n_________________8___8)________\"b\"8, \n_________________8___8(_________\"b\"8 \n_________________8___\"I__________\"b8, \n_________________8________________`8) \n_________________8_________________I8 \n_________________8_________________(8 \n_________________8,_________________8, \n_________________Ib_________________8) \n_________________(8_________________I8 \n__________________8_________________I8 \n__________________8_________________I8 \n__________________8,________________I8 \n__________________Ib________________8I \n__________________(8_______________(8' \n___________________8_______________I8 \n___________________8,______________8I \n___________________Ib_____________(8' \n___________________(8_____________I8 \n___________________`8_____________8I \n____________________8____________(8' \n____________________8,___________I8 \n____________________Ib___________8I \n____________________(8___________8' \n_____________________8,_________(8 \n_____________________Ib_________I8 \n_____________________(8_________8I \n______________________8,________8' \n______________________(b_______(8 \n_______________________8,______I8 \n_______________________I8______I8 \n_______________________(8______I8 \n________________________8______I8, \n________________________8______8_8, \n________________________8,_____8_8' \n_______________________,I8_____\"8\" \n______________________,8\"8,_____8, \n_____________________,8'_`8_____`b \n____________________,8'___8______8, \n___________________,8'____(a_____`b \n__________________,8'_____`8______8, \n__________________I8/______8______`b, \n__________________I8-/_____8_______`8, \n__________________(8/-/____8________`8, \n___________________8I/-/__,8_________`8 \n___________________`8I/--,I8________-8) \n____________________`8I,,d8I_______-8) \n______________________\"bdI\"8,_____-I8 \n___________________________`8,___-I8' \n____________________________`8,,--I8 \n_____________________________`Ib,,I8 \n______________________________`I8I",
+    "comments": [
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "👀",
+        "timestamp": 1562494269773
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "There’s a boob outside of the text box. Scroll right a you will see it 🤓",
+        "timestamp": 1562494811007
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Still better than my Gifs toug 😅",
+        "timestamp": 1562495659273
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562492814,
+      "nanoseconds": 400000000
+    },
+    "title": ""
+  },
+  "PaEJG74Ev5u8A3lZ6tu9": {
+    "comment": "Lisbon weather\n\n░░░░░░░░░░░░░░░▄▄░░░░░░░░░░░\n░░░░░░░░░░░░░░█░░█░░░░░░░░░░\n░░░░░░░░░░░░░░█░░█░░░░░░░░░░\n░░░░░░░░░░░░░░█░░█░░░░░░░░░░\n░░░░░░░░░░░░░░█░░█░░░░░░░░░░\n██████▄███▄████░░███▄░░░░░░░\n▓▓▓▓▓▓█░░░█░░░█░░█░░░███░░░░\n▓▓▓▓▓▓█░░░█░░░█░░█░░░█░░█░░░\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█░░█░░░\n▓▓▓▓▓▓█░░░░░░░░░░░░░░░░█░░░░\n▓▓▓▓▓▓█░░░░░░░░░░░░░░██░░░░░\n▓▓▓▓▓▓█████░░░░░░░░░██░░░░░░",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Try watching the movie suggested above 👆🎦 it's a good one for a lazy afternoon 👌",
+        "timestamp": 1562494697586
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Bored",
+    "timestamp": {
+      "seconds": 1562492645,
+      "nanoseconds": 845000000
+    },
+    "title": ""
+  },
+  "ZDHt0xouHExY7I7JBKbK": {
+    "comment": "░░░░░░░░░░░█▀▀░░█░░░░░░\n░░░░░░▄▀▀▀▀░░░░░█▄▄░░░░\n░░░░░░█░█░░░░░░░░░░▐░░░\n░░░░░░▐▐░░░░░░░░░▄░▐░░░\n░░░░░░█░░░░░░░░▄▀▀░▐░░░\n░░░░▄▀░░░░░░░░▐░▄▄▀░░░░\n░░▄▀░░░▐░░░░░█▄▀░▐░░░░░\n░░█░░░▐░░░░░░░░▄░█░░░░░\n░░░█▄░░▀▄░░░░▄▀▐░█░░░░░\n░░░█▐▀▀▀░▀▀▀▀░░▐░█░░░░░\n░░▐█▐▄░░▀░░░░░░▐░█▄▄░░░\n░░░▀▀▄░░░░░░░░▄▐▄▄▄▀░░░",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "He he he",
+        "timestamp": 1562492556878
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "El culo para la Luna. Painted for Consuela in July 2019.",
+        "timestamp": 1562493347348
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "It’s going to a highly valuable gif in the decades to come",
+        "timestamp": 1562493375696
+      },
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "👀",
+        "timestamp": 1562494152835
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 5
+    },
+    "timestamp": {
+      "seconds": 1562492533,
+      "nanoseconds": 741000000
+    },
+    "title": ""
+  },
+  "W4n8mFG9RRGu0vSw8l4Z": {
+    "comment": "The news on tv are so boring!!! @Consuela: please do something exciting so that it features on the news",
+    "comments": [
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "that would be just a matter of ⌚ ",
+        "timestamp": 1562494368554
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "👏 ",
+        "timestamp": 1562494392348
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Bored",
+    "timestamp": {
+      "seconds": 1562491938,
+      "nanoseconds": 663000000
+    },
+    "title": ""
+  },
+  "qyHkrocnD33zfEHmjFWX": {
+    "comment": "Looking forward to test changes that Consuela requested on behalf from me",
+    "comments": [
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "🛠️",
+        "timestamp": 1562496025723
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562489453,
+      "nanoseconds": 292000000
+    },
+    "title": ""
+  },
+  "ICucPP0JNWvP8LJ0ZNr1": {
+    "comment": "The map is way smoother now! 🗺️👌 So much easier to use. ",
+    "hashtags": ["#emocio", "#emojimap"],
+    "location": {
+      "_lat": 38.7045855,
+      "_long": -9.3369296
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562489102,
+      "nanoseconds": 259000000
+    },
+    "title": ""
+  },
+  "hsDW05NAmFI5FNpkYIw9": {
+    "comment": "Sushi time 😀",
+    "hashtags": ["#Lisbon", "#sushi"],
+    "location": {
+      "_lat": 38.714034844137245,
+      "_long": -9.23648662582509
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1562442184,
+      "nanoseconds": 380000000
+    },
+    "title": ""
+  },
+  "Bm9TQH6tdKLjfmkxaAXT": {
+    "comment": "When you ask for a beer and they bring you cidra...",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "L9L",
+        "timestamp": 1562446720465
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "LOL",
+        "timestamp": 1562446729377
+      }
+    ],
+    "hashtags": ["#beer"],
+    "location": {
+      "_lat": 39.9121725,
+      "_long": -8.441557
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 2
+    },
+    "timestamp": {
+      "seconds": 1562437021,
+      "nanoseconds": 708000000
+    },
+    "title": ""
+  },
+  "oguZgT4i9dsEYBNnMhHl": {
+    "comment": "When you have to plan a party bar with 20 people. Lean UX where are u",
+    "comments": [
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "🛠 🛠 ",
+        "timestamp": 1562439146051
+      }
+    ],
+    "hashtags": ["#barplanning"],
+    "location": {
+      "_lat": 39.9121725,
+      "_long": -8.441557
+    },
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562436886,
+      "nanoseconds": 292000000
+    },
+    "title": ""
+  },
+  "zVPZcG5k6mCV1WZzqXtx": {
+    "comment": "Enjoyed my after lunch nap",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "Same here 👌 #powernap ",
+        "timestamp": 1562436792940
+      }
+    ],
+    "hashtags": ["#Lisbon"],
+    "location": {
+      "_lat": 38.750267922914354,
+      "_long": -9.228667756551157
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562435626,
+      "nanoseconds": 537000000
+    },
+    "title": ""
+  },
+  "ho91y2DltfHBsDZ4JAFj": {
+    "comment": "Consuela: I’m testing chrome now and currently in cascais. Please fix geo in iphone’s Browsers :( \nTalk to ninja dev alb",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "We'll need to look into that, an easier way to opt in or opt out the location 😉",
+        "timestamp": 1562436768581
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Txs Consuela! ",
+        "timestamp": 1562437028424
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Btw: what are you wearing?",
+        "timestamp": 1562437040637
+      },
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "Beawere of your thoughts or you'll be cleaned  ⛔",
+        "timestamp": 1562437143285
+      },
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "👀",
+        "timestamp": 1562437161383
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "There is probably a bug with iPhone. Will look into that. Or just buy a decent phone 😂😂😜😜😜😜",
+        "timestamp": 1562453028700
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Hey Consuela, I need a new phone as suggested by spookyapricot. Can you do something about it?",
+        "timestamp": 1562492042633
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Btw: what are you wearing right now? 🤪",
+        "timestamp": 1562492071534
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562435598,
+      "nanoseconds": 166000000
+    },
+    "title": ""
+  },
+  "pNInWGgsmuY7yMo6mx6W": {
+    "comment": "Not sure what I'm doing 🤷‍♂️",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "You need to fix everything Consuela. Why aren’t you fixing everything?",
+        "timestamp": 1562435680880
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": {
+      "_lat": 51.5318736,
+      "_long": -0.2043904
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Bored": 1
+    },
+    "timestamp": {
+      "seconds": 1562435420,
+      "nanoseconds": 252000000
+    },
+    "title": ""
+  },
+  "NOOy4jawrh5t75MIa5Sy": {
+    "comment": "Too many tourists in Cascais ! Please do something about it @Consuela #stakeholder",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "I would prescribe a bear by the sunset 😉🌅",
+        "timestamp": 1562436720701
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Txs Consuela. I will probably follow your advice . #ConsuelaBeer",
+        "timestamp": 1562443510734
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Bored",
+    "timestamp": {
+      "seconds": 1562435087,
+      "nanoseconds": 10000000
+    },
+    "title": ""
+  },
+  "rCsb1VkmQlkvnUct17jM": {
+    "comment": "Consuela!!!!!!!!!",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "HAHAHAHAHA",
+        "timestamp": 1562446811279
+      }
+    ],
+    "hashtags": ["#stakeholder"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 8
+    },
+    "timestamp": {
+      "seconds": 1562428936,
+      "nanoseconds": 422000000
+    },
+    "title": ""
+  },
+  "WcUfUplCTdHGv2KfFLCK": {
+    "comment": "H1z1",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "#gaming 👌",
+        "timestamp": 1562429241270
+      }
+    ],
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562428815,
+      "nanoseconds": 149000000
+    },
+    "title": ""
+  },
+  "BgN2wSRmaWpVWRs2U5UH": {
+    "comment": "I officialy rename Fabio to consuela. Can you please come and clean my house? I OFFER COOKIES!!",
+    "comments": [
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "Who the hel is Fabio? 🤔 #official",
+        "timestamp": 1562422015615
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Priceless I love your sense of humor 😂 #proud",
+        "timestamp": 1562422193536
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "😂😂😂",
+        "timestamp": 1562422647824
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Ex Quarter leader demands some clean up!",
+        "timestamp": 1562436261616
+      },
+      {
+        "author": {
+          "name": "Consuela",
+          "stakeholder": true
+        },
+        "comment": "👀",
+        "timestamp": 1562436918991
+      }
+    ],
+    "hashtags": ["#Lisbon", "#Consuela", "#Fabio"],
+    "location": {
+      "_lat": 39.9226999,
+      "_long": -8.3572605
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 6,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562421690,
+      "nanoseconds": 946000000
+    },
+    "title": ""
+  },
+  "018YFyMsRYRrJeCrw2cO": {
+    "comment": "We should be able to determine the #tags from the details of the post so even the posts without #tags provided would have a context ",
+    "hashtags": ["#emocio", "#bug", "#Enhancement"],
+    "location": {
+      "_lat": 38.7046642,
+      "_long": -9.3369578
+    },
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562420020,
+      "nanoseconds": 932000000
+    },
+    "title": ""
+  },
+  "oZinoMZTPq3loDuQp6uF": {
+    "comment": "With so many feedback I whish the stats page could show me more stats about the top emotions out there today ",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "totally agreeee",
+        "timestamp": 1562420793272
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "I reaaaaaly want to se those staaaats, and in the future a cool real time 📊? ",
+        "timestamp": 1562421051233
+      }
+    ],
+    "hashtags": ["#emocio", "#Enhancement"],
+    "location": {
+      "_lat": 38.7046583,
+      "_long": -9.3369789
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562419411,
+      "nanoseconds": 255000000
+    },
+    "title": ""
+  },
+  "TT5zjII6sB0FwLoODYGT": {
+    "comment": "Love the map but I think it should start more focused to my location or selected card. Emocio pls twerk twerk",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": false
+        },
+        "comment": "It's supposed to start on your location if you accepted to share location. Could be a bug ",
+        "timestamp": 1562417932613
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "I said to be more expanded  I know it starts on your location just too far away I see my whole district",
+        "timestamp": 1562419814208
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "Will try that and we can compare :)",
+        "timestamp": 1562421983759
+      }
+    ],
+    "hashtags": ["#Lisbon", "#FeedbackApp"],
+    "location": {
+      "_lat": 40.0083549,
+      "_long": -8.3748446
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562417680,
+      "nanoseconds": 368000000
+    },
+    "title": ""
+  },
+  "9lfOv8WvEViwAr0WLUhV": {
+    "comment": "- Another nice feature is the “guess what I am feeling” using the so called emotion face recognition, using sap business hub ml apis it’s already possible to implement(or attempt) this feature without sending  the taken photo to the internet",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "Awesome! We should try that!",
+        "timestamp": 1562418418542
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": true
+        },
+        "comment": "It would be so cool, that probably would allow us to have more emotion cards and use that feature to select the ones more close to what we are feeling",
+        "timestamp": 1562420947623
+      }
+    ],
+    "hashtags": ["#Enhancement", "#Future"],
+    "location": {
+      "_lat": 38.75054171985496,
+      "_long": -9.228468887282393
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 4
+    },
+    "timestamp": {
+      "seconds": 1562417605,
+      "nanoseconds": 130000000
+    },
+    "title": ""
+  },
+  "mmLF3Vypr4UpObhuzS2x": {
+    "comment": "Dont know where allergies are the worst but here I feel like a vacuum ",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "Have you considered a ride on the countryside around the city or in Sintra to ease it off.? Some policies already but we deffinately need to go more green inside of big cities",
+        "timestamp": 1562420886525
+      }
+    ],
+    "hashtags": ["#Allergies", "#Lisbon"],
+    "location": {
+      "_lat": 40.0083549,
+      "_long": -8.3748446
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562417572,
+      "nanoseconds": 979000000
+    },
+    "title": ""
+  },
+  "7AWSPyQmU48Roo3MWSjX": {
+    "comment": "Fu**** 🤬😡🤯🤮💩\nSo... I wrote the comment, forgot to add the hashtag and my “stone cellphone” got buggy to the point that I only saw the undo warning for a fraction of a second..... ",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Hey you can always do it again or comment saying Bleh mistake.",
+        "timestamp": 1562417745057
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": false
+        },
+        "comment": "It's fine. If you forget to add the hashtag it is added for you. Added this long ago for hashtag styling consistency 😉😉😉😉",
+        "timestamp": 1562418506868
+      }
+    ],
+    "hashtags": ["#bug"],
+    "location": {
+      "_lat": 38.75058190900716,
+      "_long": -9.228502046325456
+    },
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1562417518,
+      "nanoseconds": 655000000
+    },
+    "title": ""
+  },
+  "h8oq48WUHXjtMvOXymcb": {
+    "comment": "Time for an afterparty! Finally good techno music.",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "#secondround ",
+        "timestamp": 1562420768274
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": true
+        },
+        "comment": "test",
+        "timestamp": 1562658658321
+      }
+    ],
+    "hashtags": [],
+    "location": {
+      "_lat": 40.0083549,
+      "_long": -8.3748446
+    },
+    "mood": "Bored",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562417389,
+      "nanoseconds": 584000000
+    },
+    "title": ""
+  },
+  "hl2wjrG2VvORI4cwkOyp": {
+    "comment": "Seriously in a festival there is 2 things you cant miss to make it work. That the sound those not stop in the middle of the set and you make sure you have food",
+    "hashtags": [],
+    "location": {
+      "_lat": 40.0083549,
+      "_long": -8.3748446
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562417335,
+      "nanoseconds": 535000000
+    },
+    "title": ""
+  },
+  "cxAcWsq8Fn0qAmTw4CzM": {
+    "comment": "One idea that came up to my mind was to make use of SAP Conversational ai(recast.ai) to use Natural language processing to extract keywords, intents from comments + emotion.",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "This sounds really nice. Read my mind pls.",
+        "timestamp": 1562417420384
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": false
+        },
+        "comment": "I love it! 😊",
+        "timestamp": 1562418568504
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "That sounds great 👌👍",
+        "timestamp": 1562419861383
+      }
+    ],
+    "hashtags": [],
+    "location": {
+      "_lat": 38.75058190900716,
+      "_long": -9.228502046325456
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562417303,
+      "nanoseconds": 957000000
+    },
+    "title": ""
+  },
+  "vZmd4yqtfY1RFMlu3W2f": {
+    "comment": "I also would like to take a photo to describe the context of my emotion, here I imagine myself only picking a card and make use of some AI capabilities to extract meaning of my photo, in the wall I want to see the photo, emotio, and the extracted content",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "💯",
+        "timestamp": 1562420744671
+      }
+    ],
+    "hashtags": ["#Enhancement", "#Future"],
+    "location": {
+      "_lat": 38.75049511439982,
+      "_long": -9.228716455408584
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562417217,
+      "nanoseconds": 438000000
+    },
+    "title": ""
+  },
+  "SDTvTqR6H4apMusk6FzZ": {
+    "comment": "Still hangover. Dont mix music with vodka and rum. All you will do is pum pum pum. #sendhelp",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "Oh shit upss 😝🤐 #sendhelp @SpookyAppricot",
+        "timestamp": 1562419284296
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": false
+        },
+        "comment": "GOOD JOB ",
+        "timestamp": 1562419862463
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "Sorry 😔 #ninja ❤️👌",
+        "timestamp": 1562420091175
+      }
+    ],
+    "hashtags": ["#Sendhelp", "#Lisbon", "#vodka"],
+    "location": {
+      "_lat": 40.0083549,
+      "_long": -8.3748446
+    },
+    "mood": "Sad",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562417178,
+      "nanoseconds": 840000000
+    },
+    "title": ""
+  },
+  "2irbCPOqJtZANyo4KHFP": {
+    "comment": "In map I felt the need ( not only to select multiple hashtags ) but also to draw an area to better Analyse the collected data, in future I believe this will be a major feature to introduce to stakeholders, with pre defined/draw areas",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "Hmmmm it would indeed, we should also consider speeding up the movement of the map ",
+        "timestamp": 1562420666540
+      }
+    ],
+    "hashtags": ["#Enhancement"],
+    "location": {
+      "_lat": 38.750526971455116,
+      "_long": -9.22855291811297
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562417127,
+      "nanoseconds": 781000000
+    },
+    "title": ""
+  },
+  "bllZlDFg5CDhBmonPEhV": {
+    "comment": "You knw your grandma rocks when she can still rock a needle and fix a shirt botton in under 2 minutes at 96 years. ",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "Grandma's are the best 😌",
+        "timestamp": 1562418883649
+      }
+    ],
+    "hashtags": ["#grandma "],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562417086,
+      "nanoseconds": 636000000
+    },
+    "title": ""
+  },
+  "pq8KoydVDlQmD4nfBdNg": {
+    "comment": "Filter and search on feed wall, it’s painfull to scroll all over the wall trying to find what you want to reply or read",
+    "hashtags": ["#Enhancement", "#bug"],
+    "location": {
+      "_lat": 38.7503123179115,
+      "_long": -9.228600922024624
+    },
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1562417012,
+      "nanoseconds": 213000000
+    },
+    "title": ""
+  },
+  "DJ7cBe2Rg0b7dYgEqtfk": {
+    "comment": "Please disable zoom capability in cards page.... makes the hole app to behave hummm.... funny",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "Eh have to look into that 👍",
+        "timestamp": 1562420615177
+      }
+    ],
+    "hashtags": ["#bug"],
+    "location": {
+      "_lat": 38.7503123179115,
+      "_long": -9.228600922024624
+    },
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562416922,
+      "nanoseconds": 840000000
+    },
+    "title": ""
+  },
+  "vnuvzq3tRrHukQ064tog": {
+    "comment": "We are receiving great feedback and suggestions to make our app even better. ❤️💯 Well consider all of those for our next release 👌💪",
+    "hashtags": ["#emocio", "#Enhancement", "#emocioTeam"],
+    "location": {
+      "_lat": 38.7046686,
+      "_long": -9.3369602
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562415953,
+      "nanoseconds": 60000000
+    },
+    "title": ""
+  },
+  "RGXxXomZMYEda1XTq0Xo": {
+    "comment": "For more than once I felt the need to provide a different emotion, kinda of a mix/fusion between two or more cards",
+    "comments": [
+      {
+        "author": {
+          "name": "emocio",
+          "stakeholder": false
+        },
+        "comment": "🤔😏😉",
+        "timestamp": 1562415468268
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "So true like me. I am happy and hangover",
+        "timestamp": 1562417249955
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "I asked my girlfriend ro pick a cardboard and... guess what... she couldn’t decide and argued that she wanted to pick two cards....🤨",
+        "timestamp": 1562417825257
+      }
+    ],
+    "hashtags": ["#Enhancement"],
+    "location": {
+      "_lat": 38.75125057294815,
+      "_long": -9.228498324392154
+    },
+    "mood": "Sad",
+    "reactions": {
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1562407306,
+      "nanoseconds": 288000000
+    },
+    "title": ""
+  },
+  "IXaTwKjtkoznCp1GwTuu": {
+    "comment": "I would give the footer buttons some ui contrast so it can be immediately perceptible what’s the page you are in",
+    "comments": [
+      {
+        "author": {
+          "name": "emocio",
+          "stakeholder": false
+        },
+        "comment": "We'll look into that for the next round of enhancements. 💪😉",
+        "timestamp": 1562415375432
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Drop shadown when selected at 3%, trust me",
+        "timestamp": 1562417486300
+      }
+    ],
+    "hashtags": ["#Enhancement"],
+    "location": {
+      "_lat": 38.75049089905795,
+      "_long": -9.228577869083843
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562407086,
+      "nanoseconds": 743000000
+    },
+    "title": ""
+  },
+  "FFUBf14l7ZyGkiHnQVH7": {
+    "comment": "After you pick a card and submit an emotio, the cards don’t return to the start point. It would be better if it does.",
+    "hashtags": ["#bug"],
+    "location": {
+      "_lat": 38.75049089905795,
+      "_long": -9.228577869083843
+    },
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562407000,
+      "nanoseconds": 558000000
+    },
+    "title": ""
+  },
+  "biClsE9pW9W66AJYHIs3": {
+    "comment": "My cat had nightmares all night long... and so I haven’t slept well",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "#ouch 🤐",
+        "timestamp": 1562420572391
+      }
+    ],
+    "hashtags": ["#Lisbon"],
+    "location": {
+      "_lat": 38.75049089905795,
+      "_long": -9.228577869083843
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562406773,
+      "nanoseconds": 298000000
+    },
+    "title": ""
+  },
+  "hQIITI9YTeIBNbdpcyAw": {
+    "comment": "Home work it’s always the worst part of my weekends",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "I feel your pain 😥😑 same here 😔",
+        "timestamp": 1562416060227
+      }
+    ],
+    "hashtags": ["#Lisbon"],
+    "location": {
+      "_lat": 38.75058568554383,
+      "_long": -9.228554208832678
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Bored": 1
+    },
+    "timestamp": {
+      "seconds": 1562405878,
+      "nanoseconds": 35000000
+    },
+    "title": ""
+  },
+  "09nlKjZZ3ltqG78NCvi9": {
+    "comment": "IT'S SO F*CKING HOT IN BCN 😱😱😱",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "🏖 🏖️🏖️😎😎😎",
+        "timestamp": 1562415181934
+      }
+    ],
+    "hashtags": ["#Bcn", "#summer", "#hot", "#desperate", "#omg"],
+    "location": {
+      "_lat": 41.4100916,
+      "_long": 2.2123201
+    },
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562404433,
+      "nanoseconds": 767000000
+    },
+    "title": ""
+  },
+  "Z2C6eNBmdqzhoEMujIhr": {
+    "comment": "They are still renovating front of my building! I hope the #stakeholder can speed it up or at least make the workers put the music with lower volume",
+    "comments": [
+      {
+        "author": {
+          "name": "LisbonStakeholder",
+          "stakeholder": false
+        },
+        "comment": "Thanks for sharing, renovations can take long sometimes, well check if everything is in order",
+        "timestamp": 1562403840802
+      }
+    ],
+    "hashtags": ["#Lisbon"],
+    "location": false,
+    "mood": "Frustrated",
+    "reactions": {
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562402056,
+      "nanoseconds": 63000000
+    },
+    "title": ""
+  },
+  "MEx7am6XK2kXHMIJpjLc": {
+    "comment": "Testing a new cool app",
+    "comments": [
+      {
+        "author": {
+          "name": "emocio",
+          "stakeholder": false
+        },
+        "comment": "Hope you enjoy it and if you have a suggestion for us you can post it by using the #emocio 😉 ",
+        "timestamp": 1562403473774
+      }
+    ],
+    "hashtags": [],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562401804,
+      "nanoseconds": 523000000
+    },
+    "title": ""
+  },
+  "9Zj6pV6xw19zVhStY7AJ": {
+    "comment": "Last break of the day, always the most relaxing one\n",
+    "comments": [
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": false
+        },
+        "comment": "We got beer festival here in bcn!! +200 beers and +50 brewers with awesome music and food trucks. It is my FAVORITE weekend of the year 😍😍😍😍😍😊😊😊",
+        "timestamp": 1562404280376
+      }
+    ],
+    "hashtags": [],
+    "location": {
+      "_lat": 38.71312942524447,
+      "_long": -9.310108125344206
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562341963,
+      "nanoseconds": 688000000
+    },
+    "title": ""
+  },
+  "0KaGHRsvcNgH0z5DOTCE": {
+    "comment": "Nunca mais começa",
+    "comments": [
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "safoda o Benfica este ano é Mengão",
+        "timestamp": 1562335645522
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "#OMeuGrandeAmor",
+        "timestamp": 1562335900309
+      }
+    ],
+    "hashtags": ["#benfica"],
+    "location": false,
+    "mood": "Frustrated",
+    "reactions": {
+      "Happy": 12
+    },
+    "timestamp": {
+      "seconds": 1562335628,
+      "nanoseconds": 798000000
+    },
+    "title": ""
+  },
+  "P7R1C9PnKLWcZnfTpzV0": {
+    "comment": "So happy that Filipe Carqueja volunteered to pay the C4C team's lunch on monday!",
+    "comments": [
+      {
+        "comment": "#CarquejasLunch",
+        "timestamp": 1562334773778
+      },
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "#marisco",
+        "timestamp": 1562334798439
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "#TuesdayAnasCookies",
+        "timestamp": 1562335407054
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "#CarquejasLunch ",
+        "timestamp": 1562335475872
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "Bora Carqueja! #OChefeEQuePaga #Marisco #AteEscacarPedra",
+        "timestamp": 1562335503586
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "#Awards #Sammy's",
+        "timestamp": 1562335587344
+      }
+    ],
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Bored": 1,
+      "Excited": 22,
+      "Happy": 33,
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562334606,
+      "nanoseconds": 491000000
+    },
+    "title": ""
+  },
+  "JilGzNeF5etYDNa8wjkL": {
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 41.4075658,
+      "_long": 2.2182454
+    },
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1562332990,
+      "nanoseconds": 303000000
+    },
+    "title": ""
+  },
+  "XU06rx8K3j0AugVwSlZm": {
+    "comment": "Lisbon baby!! Gimme your best places to go, I need recommendations :) ",
+    "comments": [
+      {
+        "author": {
+          "name": "TheStakeholder",
+          "stakeholder": false
+        },
+        "comment": "You should try Moinho D. Quixote great place for a beer with a view in the middle of the mountain. It's not really in Lisbon but it's one of the best places if you want just to be in peace ✌️ ",
+        "timestamp": 1562332920844
+      }
+    ],
+    "hashtags": ["#Lisbon", "#emocio", "#beer", "#summer"],
+    "location": {
+      "_lat": 41.4075633,
+      "_long": 2.2181941
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562332175,
+      "nanoseconds": 264000000
+    },
+    "title": ""
+  },
+  "7CJqTFxDinHT4DfB4YZ4": {
+    "comment": "I feel like I’ve just evolved from Magikarp to Gyarados.\nSeriously I’m glad I learned these concepts and they should prove useful.",
+    "comments": [
+      {
+        "comment": "Sounds like it was a good one 👌💪🐟",
+        "timestamp": 1562271277589
+      },
+      {
+        "comment": "HAHAHAH best comment of the day",
+        "timestamp": 1562322272774
+      },
+      {
+        "comment": "Indeed 💯",
+        "timestamp": 1562326451653
+      }
+    ],
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 1,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562258163,
+      "nanoseconds": 322000000
+    },
+    "title": ""
+  },
+  "PSswY8pK4X3b4DP8mHzo": {
+    "comment": "Have never used as many Post-its in my life. ",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562257973,
+      "nanoseconds": 633000000
+    },
+    "title": ""
+  },
+  "onBmsvfYRDSiyIVU8dYP": {
+    "comment": "",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562257902,
+      "nanoseconds": 696000000
+    },
+    "title": ""
+  },
+  "sMGVVlrjQl0aAa2UDn8e": {
+    "comment": "",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562257901,
+      "nanoseconds": 442000000
+    },
+    "title": ""
+  },
+  "AxgycqYly8nNgalX9sWj": {
+    "comment": "",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": {
+      "_lat": 38.71209205166332,
+      "_long": -9.311481038437767
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562257892,
+      "nanoseconds": 56000000
+    },
+    "title": ""
+  },
+  "0XJoJ4EUb6AWXaTRbPcz": {
+    "comment": "",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562257891,
+      "nanoseconds": 47000000
+    },
+    "title": ""
+  },
+  "pZ1lPXTuL4HTwfrsJ3vH": {
+    "comment": "",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562257883,
+      "nanoseconds": 584000000
+    },
+    "title": ""
+  },
+  "6ZW1XwB9BFEFXr8jLxyS": {
+    "comment": "Great problem solving strategy! Very happy to being introduced to this new concept!!! ",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": {
+      "_lat": 38.7120987103747,
+      "_long": -9.311460467877886
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1562257874,
+      "nanoseconds": 720000000
+    },
+    "title": ""
+  },
+  "Tz4LZ6IZNjO95H2Jl0R9": {
+    "comment": "",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562257873,
+      "nanoseconds": 122000000
+    },
+    "title": ""
+  },
+  "0Poboe9xI04jjE15VNN5": {
+    "comment": "",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": false,
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562257872,
+      "nanoseconds": 302000000
+    },
+    "title": ""
+  },
+  "i5VRjRcHvG7v53KKd4AL": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562257870,
+      "nanoseconds": 201000000
+    },
+    "title": ""
+  },
+  "LjGfvJBIU1vWCoAsf5zl": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562257852,
+      "nanoseconds": 134000000
+    },
+    "title": ""
+  },
+  "2QdTTWcjhLHffz9bvblD": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562257847,
+      "nanoseconds": 389000000
+    },
+    "title": ""
+  },
+  "s3lit5AzDxs5Mt3JKBUV": {
+    "comment": "",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": false,
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562257837,
+      "nanoseconds": 93000000
+    },
+    "title": ""
+  },
+  "RAv28UMJirBrMwScAtNB": {
+    "comment": "",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562257820,
+      "nanoseconds": 426000000
+    },
+    "title": ""
+  },
+  "NdVRoTYtkJJbmGi64MAL": {
+    "comment": "",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": {
+      "_lat": 38.712089959727784,
+      "_long": -9.311458890848401
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562256307,
+      "nanoseconds": 976000000
+    },
+    "title": ""
+  },
+  "GhpQrK9uc67hkzTAANyQ": {
+    "comment": "The share button is not working",
+    "comments": [
+      {
+        "comment": "YET!",
+        "timestamp": 1562237663934
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#share", "#button"],
+    "location": false,
+    "mood": "Bored",
+    "reactions": {
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562237355,
+      "nanoseconds": 504000000
+    },
+    "title": ""
+  },
+  "hudl5F2TumhG8KMW3PzJ": {
+    "comment": "We need to navigate emojis!!!",
+    "comments": [
+      {
+        "comment": "What do you mean with vaigate to emojis? 😉🤔 To the ones on the map? ",
+        "timestamp": 1562236810226
+      }
+    ],
+    "hashtags": ["#Enhancement"],
+    "location": {
+      "_lat": 38.7119043,
+      "_long": -9.3112967
+    },
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1562233754,
+      "nanoseconds": 343000000
+    },
+    "title": ""
+  },
+  "g0ClGRMNIeSD89IX30EH": {
+    "comment": "#tag for design thinking workshop is now available for participant feedback ❤️ 😉",
+    "hashtags": ["#DesignThinkingWorkshop"],
+    "location": {
+      "_lat": 38.7123239,
+      "_long": -9.3103981
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562230130,
+      "nanoseconds": 755000000
+    },
+    "title": ""
+  },
+  "tY3H95mnrMjE5w14Pv7d": {
+    "comment": "Another sad day on the life of a refactoring app",
+    "hashtags": ["#project"],
+    "location": false,
+    "mood": "Sad",
+    "reactions": {
+      "Bored": 2
+    },
+    "timestamp": {
+      "seconds": 1562227945,
+      "nanoseconds": 94000000
+    },
+    "title": ""
+  },
+  "55K32Ef9P2Lnhg9jH3uz": {
+    "comment": "Would be really helpful to enhance a help tutorial, aiming guidance for initial users ",
+    "comments": [
+      {
+        "comment": "+1",
+        "timestamp": 1562227308974
+      },
+      {
+        "comment": "Who wants to do it? 😊",
+        "timestamp": 1562227438955
+      },
+      {
+        "comment": "I have a kind of a draft on the teams page will work on that 😉",
+        "timestamp": 1562227737939
+      }
+    ],
+    "hashtags": ["#Enhancement"],
+    "location": false,
+    "mood": "Bored",
+    "reactions": {
+      "Bored": 1,
+      "Excited": 6,
+      "Frustrated": 1
+    },
+    "timestamp": {
+      "seconds": 1562227085,
+      "nanoseconds": 295000000
+    },
+    "title": ""
+  },
+  "8jP1r0Ew54aOJqfypVXY": {
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 38.71214742407297,
+      "_long": -9.311438696437568
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562227044,
+      "nanoseconds": 63000000
+    },
+    "title": ""
+  },
+  "y1zDwxsSP93VQhJLsVI5": {
+    "comment": "Fuck*#\"$ Awesome! Congrats.\nGive me more!!",
+    "hashtags": ["#FeedbackApp"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 3,
+      "Sad": 2
+    },
+    "timestamp": {
+      "seconds": 1562226852,
+      "nanoseconds": 808000000
+    },
+    "title": ""
+  },
+  "sAeaZWFqozivh7emAdt3": {
+    "comment": "The color bar in the feed should be highlighted to be more easy to visually identify the  os the person/post.   ",
+    "comments": [
+      {
+        "comment": "*To identify the feeling of the person ",
+        "timestamp": 1562237305951
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#color", "#feeling", "#scrolldown"],
+    "location": false,
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562226524,
+      "nanoseconds": 293000000
+    },
+    "title": ""
+  },
+  "LpWyTwE0YlcPngOlNc2S": {
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 41.4039211,
+      "_long": 2.1979277
+    },
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562221322,
+      "nanoseconds": 964000000
+    },
+    "title": ""
+  },
+  "40X9sxznJI5xophxcLr9": {
+    "comment": "",
+    "hashtags": ["#happy"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562218905,
+      "nanoseconds": 82000000
+    },
+    "title": ""
+  },
+  "AhIzbDl38OmLjeioSAlo": {
+    "comment": "Notifications would be nice to let you know when someone reacted to your feedback. ",
+    "comments": [
+      {
+        "comment": "On the road map 😉😊 will be added when we have authentication so you get notifications just for YOUR feedbacks 😊",
+        "timestamp": 1562219223153
+      }
+    ],
+    "hashtags": ["#emocio", "#notifications", "#Enhancement"],
+    "location": {
+      "_lat": 38.7046723,
+      "_long": -9.3369214
+    },
+    "mood": "Bored",
+    "timestamp": {
+      "seconds": 1562193520,
+      "nanoseconds": 566000000
+    },
+    "title": ""
+  },
+  "tX7zYAjELuBExe02d0ks": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562192453,
+      "nanoseconds": 45000000
+    },
+    "title": ""
+  },
+  "QLrVErfZwMw2tyM0DYZr": {
+    "comment": "Bonobo black sands is actually pretty relaxing for this 🤔😌",
+    "comments": [
+      {
+        "comment": "Awesome! Thanks for sharing! ",
+        "timestamp": 1562219110940
+      },
+      {
+        "comment": "Come cook at my place, ill play a song for you 😂😂😂😂😂",
+        "timestamp": 1562228032678
+      },
+      {
+        "comment": "Ahah I think I do sent work quile like that 😎 ",
+        "timestamp": 1562236857663
+      },
+      {
+        "comment": "*it doesn't ",
+        "timestamp": 1562236873901
+      }
+    ],
+    "hashtags": ["#cooking "],
+    "location": {
+      "_lat": 38.7046587,
+      "_long": -9.3369947
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562186553,
+      "nanoseconds": 967000000
+    },
+    "title": ""
+  },
+  "1yR7SXeEaH3ZN8VL6T76": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562175677,
+      "nanoseconds": 329000000
+    },
+    "title": ""
+  },
+  "o9yCUUnoVXuL00Ktfidx": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1562175316,
+      "nanoseconds": 472000000
+    },
+    "title": ""
+  },
+  "CIaOssAV3sx2zJ0fP4dH": {
+    "comment": "Seems like new host is 'not secure' and location is not being retrieved 😒😕😕😕",
+    "comments": [
+      {
+        "comment": "Is this happening to anyone else???",
+        "timestamp": 1562174949837
+      },
+      {
+        "comment": "Nope, for me it worked 🤔",
+        "timestamp": 1562176666588
+      },
+      {
+        "comment": "How the hell can I check if I am sharing location with the app?",
+        "timestamp": 1562192531936
+      },
+      {
+        "comment": "If you are on desktop your coordinates are console logged. Open developers tool. Or else I don't know ",
+        "timestamp": 1562219056964
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#Enhancement"],
+    "location": false,
+    "mood": "Frustrated",
+    "reactions": {
+      "Happy": 1,
+      "Sad": 10
+    },
+    "timestamp": {
+      "seconds": 1562174778,
+      "nanoseconds": 257000000
+    },
+    "title": ""
+  },
+  "9kBMo1ksfzxlgR7tHBwb": {
+    "comment": "",
+    "hashtags": [],
+    "location": false,
+    "mood": "Bored",
+    "timestamp": {
+      "seconds": 1562174579,
+      "nanoseconds": 345000000
+    },
+    "title": ""
+  },
+  "YuufGaoppnl2y7QBLFrB": {
+    "comment": "Happyhour at lagoas park! 😎",
+    "comments": [
+      {
+        "comment": "👌👌",
+        "timestamp": 1562192857473
+      }
+    ],
+    "hashtags": ["#sagres", "#beer"],
+    "location": false,
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 3,
+      "Happy": 6
+    },
+    "timestamp": {
+      "seconds": 1562174573,
+      "nanoseconds": 869000000
+    },
+    "title": ""
+  },
+  "1rGxP6LwyEEHJZ2aZazg": {
+    "comment": "",
+    "hashtags": ["#beer", "#sagres"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562174461,
+      "nanoseconds": 371000000
+    },
+    "title": ""
+  },
+  "FJdsISeNKL9BSSvXaU9e": {
+    "comment": "",
+    "hashtags": ["#sagres"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562174390,
+      "nanoseconds": 214000000
+    },
+    "title": ""
+  },
+  "gVXiNwUNGEMfKraq86Ft": {
+    "comment": "",
+    "hashtags": ["#Venture.IO"],
+    "location": false,
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562174224,
+      "nanoseconds": 376000000
+    },
+    "title": ""
+  },
+  "HmrdSuYyNMJpcwFp8ok1": {
+    "comment": "Ahha",
+    "comments": [
+      {
+        "comment": "Lol",
+        "timestamp": 1562174239691
+      },
+      {
+        "comment": "#everything ",
+        "timestamp": 1562192893943
+      }
+    ],
+    "hashtags": [
+      "#skypemeetings",
+      "#FeedbackApp",
+      "#happy",
+      "#skypemeetings",
+      "#project",
+      "#Enhancement",
+      "#Enhancement",
+      "#Innovatorchallenge",
+      "#IOTworkshop",
+      "#sap",
+      "#SAP",
+      "#Sap",
+      "#Sap"
+    ],
+    "location": {
+      "_lat": 38.7133111,
+      "_long": -9.3101159
+    },
+    "mood": "Bored",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562174218,
+      "nanoseconds": 928000000
+    },
+    "title": ""
+  },
+  "3iBIMEDm025DNqxw3HbG": {
+    "comment": "Someone should clean!",
+    "comments": [
+      {
+        "comment": "Votation? 🤔",
+        "timestamp": 1562192917066
+      }
+    ],
+    "hashtags": ["#cristobalmoura32"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2
+    },
+    "timestamp": {
+      "seconds": 1562168431,
+      "nanoseconds": 361000000
+    },
+    "title": ""
+  },
+  "fZlThMFXAHOilGVYMkCQ": {
+    "comment": "LA CASA DE LOS LIOS! ",
+    "hashtags": ["#cristobalmoura32"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562167763,
+      "nanoseconds": 598000000
+    },
+    "title": ""
+  },
+  "hkXrZtbPDp5km9Fm1pIv": {
+    "comment": "",
+    "hashtags": ["#Enhancement"],
+    "location": {
+      "_lat": 41.4100067,
+      "_long": 2.2138386
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562163762,
+      "nanoseconds": 709000000
+    },
+    "title": ""
+  },
+  "sJBRCvU3Ok8XNhnFHOTe": {
+    "comment": "Time to twerk ",
+    "comments": [
+      {
+        "comment": "Excited to twerk 🤠🤔",
+        "timestamp": 1562156758994
+      },
+      {
+        "comment": "YOU SHOULD BE WORKING!!",
+        "timestamp": 1562159473345
+      }
+    ],
+    "hashtags": ["#Fuckmylife"],
+    "location": {
+      "_lat": 38.711834599999996,
+      "_long": -9.311394
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2
+    },
+    "timestamp": {
+      "seconds": 1562156259,
+      "nanoseconds": 153000000
+    },
+    "title": ""
+  },
+  "rRIKlMcaXUmRuQA3qcw6": {
+    "comment": "",
+    "hashtags": ["#map", "#project"],
+    "location": {
+      "_lat": 38.7117912,
+      "_long": -9.3113794
+    },
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1562156188,
+      "nanoseconds": 687000000
+    },
+    "title": ""
+  },
+  "Z1FLKICW9Ud0XejqLUwN": {
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 41.4075725,
+      "_long": 2.2178763
+    },
+    "mood": "Bored",
+    "timestamp": {
+      "seconds": 1562155355,
+      "nanoseconds": 887000000
+    },
+    "title": ""
+  },
+  "VcJpDVR8XvG6xeYB0imf": {
+    "comment": "There is something that is weird. I think we would have more by now at our locations. Myself I have added like 4 of them.\n",
+    "comments": [
+      {
+        "comment": "Will look into that ",
+        "timestamp": 1562153482528
+      },
+      {
+        "comment": "Just added a new feedback (without comments or anything) and it showed up in the map",
+        "timestamp": 1562155399644
+      }
+    ],
+    "hashtags": ["#bug"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Sad": 3
+    },
+    "timestamp": {
+      "seconds": 1562151623,
+      "nanoseconds": 824000000
+    },
+    "title": ""
+  },
+  "TiA1DDDKemC00349SJa9": {
+    "comment": "Awesome ",
+    "hashtags": ["#FeedbackApp"],
+    "location": {
+      "_lat": 38.7120994142115,
+      "_long": -9.311471195586083
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1,
+      "Happy": 18
+    },
+    "timestamp": {
+      "seconds": 1562151546,
+      "nanoseconds": 128000000
+    },
+    "title": ""
+  },
+  "YtHlppSf9xnNVZ2InPmG": {
+    "comment": "GREAT",
+    "comments": [
+      {
+        "comment": "Those are looking clean 💯💪👌",
+        "timestamp": 1562193008147
+      }
+    ],
+    "hashtags": ["#newicons"],
+    "location": {
+      "_lat": 38.7117977,
+      "_long": -9.3114367
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 5,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562151443,
+      "nanoseconds": 462000000
+    },
+    "title": ""
+  },
+  "jc77wLfho2h9vK21udFb": {
+    "comment": "I just saw the stupidest most funniest bug I can't believe I hadn't realised till now: if you click on an emojii reaction (not selecting Like) but one of the already selected emojii reactions you will add +1. So you can select it like crazy and add +1000000",
+    "comments": [
+      {
+        "comment": "click on the smiley face up there...",
+        "timestamp": 1562150144059
+      },
+      {
+        "comment": "Yup indeed",
+        "timestamp": 1562151252092
+      },
+      {
+        "comment": "Just added like 20 xD",
+        "timestamp": 1562151273528
+      },
+      {
+        "comment": "Bug or feature?",
+        "timestamp": 1562151453963
+      },
+      {
+        "comment": "😉😉😉😉",
+        "timestamp": 1562151460989
+      },
+      {
+        "comment": "this is something healthy use we will to discuss. So it does not spam XD",
+        "timestamp": 1562151501657
+      },
+      {
+        "comment": "Hih",
+        "timestamp": 1562173939807
+      }
+    ],
+    "hashtags": ["#Enhancement"],
+    "location": {
+      "_lat": 41.4074905,
+      "_long": 2.2182599
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Bored": 1,
+      "Excited": 22,
+      "Frustrated": 17,
+      "Happy": 286,
+      "Sad": 3
+    },
+    "timestamp": {
+      "seconds": 1562150119,
+      "nanoseconds": 421000000
+    },
+    "title": ""
+  },
+  "tG566Gj4eWSP2vedjLc1": {
+    "comment": "If I give 2 feedbacks in the same exact location (my chair) at the moment I will just see the latest emoji/feedback right? Or are they on top of each other?",
+    "comments": [
+      {
+        "comment": "Should be one on top of the other",
+        "timestamp": 1562149781483
+      },
+      {
+        "comment": "If you zoom in enough you see both xD",
+        "timestamp": 1562151311150
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#emojimap"],
+    "location": {
+      "_lat": 38.7123152,
+      "_long": -9.310483
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Bored": 1,
+      "Happy": 1,
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562149609,
+      "nanoseconds": 237000000
+    },
+    "title": ""
+  },
+  "AQY9rQNNKrTQ8fTDsW2S": {
+    "comment": "GOD I LOVE THIS FEATURE. The potential of it is FREAKING AMAZING!",
+    "comments": [
+      {
+        "comment": "🤠🤠🤠",
+        "timestamp": 1562146018317
+      },
+      {
+        "comment": "You guys can even see more or less who added the feedback, location is so precise you can see in what area the guy who sent the feedback is seated hahaahha",
+        "timestamp": 1562146881383
+      },
+      {
+        "comment": "Or if he was texting and driving 😂😂😂",
+        "timestamp": 1562148191914
+      },
+      {
+        "comment": "HAHAHAHAHAHAHA +1",
+        "timestamp": 1562148233646
+      },
+      {
+        "comment": "Or just passing by 🕺",
+        "timestamp": 1562193079625
+      }
+    ],
+    "hashtags": ["#emojimap"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 6,
+      "Happy": 7
+    },
+    "timestamp": {
+      "seconds": 1562144551,
+      "nanoseconds": 250000000
+    },
+    "title": ""
+  },
+  "tAwrty3yvcDnKipb0uJo": {
+    "comment": "I LOVE THE MAP. ",
+    "comments": [
+      {
+        "comment": "Are we actually only the emojis... I mean, only the reactions to a feedback? ( curiosity only )",
+        "timestamp": 1562144185023
+      },
+      {
+        "comment": "*only showing",
+        "timestamp": 1562144232289
+      },
+      {
+        "comment": "baby steps. Ideally we should see the emoji for that feedback and a counter. I think now only when we react to it, it actually shows,",
+        "timestamp": 1562144878592
+      },
+      {
+        "comment": "I didn't get it. Emojiis shown in the map are Feedback, not comments. So if you add a new feedback it will pop in the map",
+        "timestamp": 1562145207697
+      },
+      {
+        "comment": "So... if a feedback has like 100 reactions to it, the map shows these 100 emojis right ?",
+        "timestamp": 1562151734706
+      },
+      {
+        "comment": "And the location it’s regarding this reaction location, not the one from the feedback? Am I thinking correctly?",
+        "timestamp": 1562151808558
+      },
+      {
+        "comment": "I said it wrong 😓 what I mean was that if we were only showing th Feedbacks on the map or the reactions as well. If we are just showing the feedbacks perhaps it would be interesting to isolate that feedback and see its reactions across the 🗺 ",
+        "timestamp": 1562193277068
+      },
+      {
+        "comment": "Inthe future perhaps even an heat map showing the reach of that feedback and how we're the the reactions across the locations, but for that I would say",
+        "timestamp": 1562193401713
+      }
+    ],
+    "hashtags": ["#map"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1562144078,
+      "nanoseconds": 113000000
+    },
+    "title": ""
+  },
+  "jp8270R16cIuTQfowoxH": {
+    "comment": "The map looks great 😃 can’t wait for a non corporate access to the app so we can actually see lots of emojis across the world",
+    "comments": [
+      {
+        "comment": "SAME HERE!!!!",
+        "timestamp": 1562144046745
+      },
+      {
+        "comment": "Little steps, I'll be thrilled when I see feedbacks from places like Africa or Iceland like out of nowhere xD",
+        "timestamp": 1562145894444
+      }
+    ],
+    "hashtags": ["#FeedbackApp"],
+    "location": {
+      "_lat": 38.712137561763825,
+      "_long": -9.311477158591915
+    },
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 4,
+      "Happy": 7
+    },
+    "timestamp": {
+      "seconds": 1562144003,
+      "nanoseconds": 729000000
+    },
+    "title": ""
+  },
+  "Iv09IDzwRN0epE3REqyP": {
+    "comment": "The map is great but I am seeing a big picture (with poor resolution) to open it, in the chart page. Is this supposed to happen? ",
+    "comments": [
+      {
+        "comment": "this is just to have something to access it. Ideally every card will have an icon to expand it to the map ",
+        "timestamp": 1562144036304
+      },
+      {
+        "comment": "Ok, now it’s awaome",
+        "timestamp": 1562151866164
+      }
+    ],
+    "hashtags": ["#FeedbackApp"],
+    "location": {
+      "_lat": 38.71208674870107,
+      "_long": -9.31142172472701
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562143839,
+      "nanoseconds": 524000000
+    },
+    "title": ""
+  },
+  "QzriuRoyDIV4YuTg5ou6": {
+    "comment": "I will try to use the feedback app in this workshop, let’s see the results",
+    "comments": [
+      {
+        "comment": "We need to check if we can post feedbacks without context at all as this one",
+        "timestamp": 1562145281315
+      },
+      {
+        "comment": "No login needed on SCP right? Only need to be connected to corporate network?",
+        "timestamp": 1562151934572
+      }
+    ],
+    "hashtags": [],
+    "location": {
+      "_lat": 38.708984038937906,
+      "_long": -9.307072612679367
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562143624,
+      "nanoseconds": 381000000
+    },
+    "title": ""
+  },
+  "CUPw41oyJWBRTJDoJ3ZM": {
+    "comment": "this project still sucks big time",
+    "hashtags": ["#skypemeetings"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Bored": 5,
+      "Frustrated": 1
+    },
+    "timestamp": {
+      "seconds": 1562140738,
+      "nanoseconds": 544000000
+    },
+    "title": ""
+  },
+  "QhS6cql64ZV7DYrwSb9X": {
+    "comment": "Is the location authorization prompted on the app? Or is is the device location the one picked up? ",
+    "comments": [
+      {
+        "comment": "Btw I think the map just replaces the emotion on map and not add a new one",
+        "timestamp": 1562083674125
+      },
+      {
+        "comment": "Also I'm in Portugal and when I submitted United the this feedback with location on it was picked up as Barcelona and changed the happy emotion that was there",
+        "timestamp": 1562083746453
+      },
+      {
+        "comment": "I am having trouble with the map component. Your locations latitude and long are correctly retrieved, problem I am having is showing the different emojiis on the map. If it were just 1 type of emojii it would already be working. ",
+        "timestamp": 1562084389659
+      },
+      {
+        "comment": "FUCK IT",
+        "timestamp": 1562084898069
+      },
+      {
+        "comment": "I think I am going to use gmaps instead of mapbox, spent way to long trying to do something that should be real simple",
+        "timestamp": 1562084924318
+      },
+      {
+        "comment": "Yes probably that's easier, btw is the location just for the feedback or do reactions and comments also have the location stored?",
+        "timestamp": 1562137425359
+      },
+      {
+        "comment": "Probably it would be interesting to have the feedback location and then when selected see the sworm of reactions and comments across the map for that feedback. It would be nice to see the reach of the feedback 🤔🤠",
+        "timestamp": 1562137537819
+      },
+      {
+        "comment": "Comments need to collapse! lets keep the comment chain going strong!",
+        "timestamp": 1562140814185
+      },
+      {
+        "comment": "Comments need to collapse indeed!! HAHAHAH at the minute only feedback's location is stored. But I think it is a great idea to start storing also comments and reactions location. Will look into that",
+        "timestamp": 1562143804367
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#Enhancement", "#refactoring"],
+    "location": {
+      "_lat": 38.7123105,
+      "_long": -9.3105009
+    },
+    "mood": "Frustrated",
+    "reactions": {
+      "Happy": 1,
+      "Sad": 1
+    },
+    "timestamp": {
+      "seconds": 1562083602,
+      "nanoseconds": 320000000
+    },
+    "title": ""
+  },
+  "lEtln0ystTKEqTjHdbG7": {
+    "comment": "Feed is looking great and clean 🥰🥰\nAnd I love the map! Takes a while to zoom out but I think we should keep those images to switch to the map 😂😂 golden 😘",
+    "comments": [
+      {
+        "comment": "test",
+        "timestamp": 1562084409916
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#Enhancement", "#refactoring"],
+    "location": false,
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2
+    },
+    "timestamp": {
+      "seconds": 1562083430,
+      "nanoseconds": 665000000
+    },
+    "title": ""
+  },
+  "lIY8sNYyli4b4ycEAJjQ": {
+    "comment": "sdfdsf",
+    "hashtags": ["#FeedbackApp"],
+    "location": {
+      "_lat": 38.7118228,
+      "_long": -9.3114257
+    },
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562080765,
+      "nanoseconds": 382000000
+    },
+    "title": ""
+  },
+  "1tBscfjbHvCvTxfy5JEz": {
+    "comment": "sdfdsfs",
+    "hashtags": ["#FeedbackApp"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Bored",
+    "reactions": {
+      "Bored": 1,
+      "Frustrated": 1
+    },
+    "timestamp": {
+      "seconds": 1562075904,
+      "nanoseconds": 349000000
+    },
+    "title": ""
+  },
+  "P5nwlEgfBz5LY3LXOB1v": {
+    "comment": "sdfsdf",
+    "hashtags": ["#skypemeetings"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Bored",
+    "reactions": {
+      "Bored": 1
+    },
+    "timestamp": {
+      "seconds": 1562075689,
+      "nanoseconds": 608000000
+    },
+    "title": ""
+  },
+  "fPnudhOoQeL3puTspeA0": {
+    "comment": "literally someone did a diaherria of a job on an APP and now I have to clean this smelly sh**T.",
+    "comments": [
+      {
+        "comment": "Haha I wonder who was that xD",
+        "timestamp": 1562083125875
+      }
+    ],
+    "hashtags": ["#project", "#app", "#refactoring"],
+    "location": {
+      "_lat": 38.710057299999995,
+      "_long": -9.3118391
+    },
+    "mood": "Bored",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1562075636,
+      "nanoseconds": 11000000
+    },
+    "title": ""
+  },
+  "kitb0yyCb3OExdalCoNG": {
+    "comment": "",
+    "hashtags": [],
+    "location": {
+      "_lat": 41.407523399999995,
+      "_long": 2.218215
+    },
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562072971,
+      "nanoseconds": 736000000
+    },
+    "title": ""
+  },
+  "odWee2hHyklKtJ4wcyGZ": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562072908,
+      "nanoseconds": 925000000
+    },
+    "title": ""
+  },
+  "EB0gYcIeZcSOaE4kCZ14": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1562072805,
+      "nanoseconds": 879000000
+    },
+    "title": ""
+  },
+  "dAtDEJ2t3UGko17F6ALk": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1562072783,
+      "nanoseconds": 774000000
+    },
+    "title": ""
+  },
+  "ekq4r0J6j3lNBfiidh2N": {
+    "comment": "Looking forward the new features!!!",
+    "comments": [
+      {
+        "comment": "yes!",
+        "timestamp": 1562076255602
+      }
+    ],
+    "hashtags": ["#FeedbackApp"],
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1562008479,
+      "nanoseconds": 913000000
+    },
+    "title": ""
+  },
+  "VO09mTBLgWQ2iy4r9yY8": {
+    "comment": "This back to back project meetings without a defined agenda are killing me. We should consider organizing a better communication strategy with the customer and the team.",
+    "comments": [
+      {
+        "comment": "That suuuuucks",
+        "timestamp": 1562055579296
+      }
+    ],
+    "hashtags": ["#Myteam", "#skypemeetings", "#norest"],
+    "mood": "Bored",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1561849862,
+      "nanoseconds": 580000000
+    },
+    "title": "Back to back meetings"
+  },
+  "VWrILjiAMKtsP9xwVI3A": {
+    "comment": "Hey this should already be available",
+    "hashtags": ["#FeedbackApp", "#Enhancement"],
+    "mood": "Excited",
+    "reactions": {
+      "Bored": 1,
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1561657957,
+      "nanoseconds": 436000000
+    },
+    "title": "Feedback app is great¿"
+  },
+  "UEPohoK1Z4298pfbplXk": {
+    "comment": "Cvv",
+    "comments": [
+      {
+        "author": {
+          "name": "MasterDisaster",
+          "stakeholder": false
+        },
+        "comment": "fucking YEAHH",
+        "timestamp": 1562328844946
+      },
+      {
+        "author": {
+          "name": "MasterDisaster",
+          "stakeholder": false
+        },
+        "comment": "adfas",
+        "timestamp": 1562329167473
+      },
+      {
+        "author": {
+          "name": "SpookyApricot",
+          "stakeholder": false
+        },
+        "comment": "test",
+        "timestamp": 1562337678803
+      }
+    ],
+    "hashtags": ["#IOTworkshop"],
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1561558752,
+      "nanoseconds": 521000000
+    },
+    "title": "Coool"
+  },
+  "uVtXKJvtX0FER7NyZ5r9": {
+    "comment": "I just got to Lisbon!! Can't wait for the innovation labs ",
+    "comments": [
+      {
+        "comment": "Awesome! I'll also be there! ",
+        "timestamp": 1561503422699
+      },
+      {
+        "author": {
+          "stakeholder": false
+        },
+        "comment": "d",
+        "timestamp": 1562325881541
+      }
+    ],
+    "hashtags": ["#Innovatorchallenge"],
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 1,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1561503306,
+      "nanoseconds": 680000000
+    },
+    "title": "Innovator challenge!! "
+  },
+  "ahCN13MgH6NRjhEyVyYx": {
+    "comment": "We were one of the 28 teams selected for the next phase of Venture.IO 💪😍\n\nWe know this is just the begging of the journey but we would like to take the time to say \n🎉Thank You 🎉 to all of you people that helped and contribute to make this happen! We will keep our head down and take this app to the next level 🤓🥰",
+    "comments": [
+      {
+        "comment": "Congrats! ",
+        "timestamp": 1560790140301
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#Venture.IO"],
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1,
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1560531673,
+      "nanoseconds": 42000000
+    },
+    "title": "Venture.IO - We made it to the next phase 🎉💯😍"
+  },
+  "PGI5MTp6iT20g5u8dypG": {
+    "comment": "We should consider adding more stats in the stats page:\n-Total nr of Feedbacks\n-Total nr of Comments on feedback\n-Total nr of Reactions to feedback\n-Top Emotion\nThese above can be since beginning of the app by default and be related to the filtered #tag when added. \nWe should also alow time-based filters like (day/week/month/year) and perhaps show\n- Emotion of the day/week/month\n- #tag of the day\n\nThis is a lot of stats but we should start with the general totals 😉 or just by filtering timewhise the already filtered #tags and then add the above stats. Depends on what is more interesting to have first 😉",
+    "comments": [
+      {
+        "comment": "Totally agree!!! The Stats page is our main focus now and these ideas are GREAT!!! - thanks for sharing!! We are going to be talking about this this week so please if you have more ideas feel free to post them. cheers",
+        "timestamp": 1560255647741
+      },
+      {
+        "comment": "😎💪🦸‍♀️🕺",
+        "timestamp": 1560324888362
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#Enhancement"],
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1,
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1560250247,
+      "nanoseconds": 460000000
+    },
+    "title": "More stats on app"
+  },
+  "v920D8gqKkwMVPGRUcpF": {
+    "comment": "The cards are a little too wide in the feed page, but emotion on top right corner looks clean, better than before",
+    "comments": [
+      {
+        "comment": "At the min no time has been spent to make it look nice on laptop. UI is very device oriented (ipad.. mobile phones..). But will add grid format for better PC experience",
+        "timestamp": 1560255528120
+      },
+      {
+        "comment": "Actually it was on my Huawei P20 pro, like just a little overt the edge on the right side. 😉",
+        "timestamp": 1560325014763
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#Enhancement"],
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 3
+    },
+    "timestamp": {
+      "seconds": 1560249347,
+      "nanoseconds": 381000000
+    },
+    "title": "Cards a little to big in feed"
+  },
+  "NOeU3VwgwzjZ1NfAapGi": {
+    "comment": "",
+    "hashtags": ["#client"],
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 1
+    },
+    "timestamp": {
+      "seconds": 1560246706,
+      "nanoseconds": 189000000
+    },
+    "title": "teste 2"
+  },
+  "vEzaQupo4j5i3DgFW0nj": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559906075,
+      "nanoseconds": 4000000
+    },
+    "title": ""
+  },
+  "25apSnwIedkZMFWACbcG": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559905425,
+      "nanoseconds": 413000000
+    },
+    "title": ""
+  },
+  "TooW4vWFImcsrjphB3bT": {
+    "comment": "This app is really awesome!!! Keep up the good work!",
+    "comments": [
+      {
+        "comment": "Thanks for the kind words! :) ",
+        "timestamp": 1559915372815
+      }
+    ],
+    "hashtags": ["#FeedbackApp"],
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2,
+      "Happy": 5
+    },
+    "timestamp": {
+      "seconds": 1559903270,
+      "nanoseconds": 303000000
+    },
+    "title": "Awesome feedback app"
+  },
+  "Ov8Id2QOGAyyZuOfXl9F": {
+    "comment": "Unfortunately this workshop is directioned for functionals rather than technicals",
+    "comments": [
+      {
+        "comment": "Thank you for the feedback!!",
+        "timestamp": 1559919681370
+      }
+    ],
+    "hashtags": ["#IOTworkshop"],
+    "mood": "Frustrated",
+    "reactions": {
+      "Bored": 7,
+      "Sad": 2
+    },
+    "timestamp": {
+      "seconds": 1559903118,
+      "nanoseconds": 403000000
+    },
+    "title": "Not for thecnicals "
+  },
+  "g6QQWQNsDjOwPZWeSWWE": {
+    "comment": "Awesome for a starting point",
+    "hashtags": [],
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 3,
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1559901133,
+      "nanoseconds": 424000000
+    },
+    "title": "My awesome day in IoT workshop "
+  },
+  "T2NY5Ztj2ViBcusrHLn7": {
+    "comment": "It's nice to do something different from time to time 😁👌",
+    "hashtags": ["#IOTworkshop"],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559900748,
+      "nanoseconds": 652000000
+    },
+    "title": "Filming and shooting workshop. "
+  },
+  "grB5n5PzkiYuSkLRL9D3": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559897583,
+      "nanoseconds": 29000000
+    },
+    "title": ""
+  },
+  "TdTsXdUanOPAzbbDjwYW": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1559897445,
+      "nanoseconds": 979000000
+    },
+    "title": "Iot workshop"
+  },
+  "3DsY8DpdbY3GKUW4U28b": {
+    "comment": "My cat is a bastard 😒🐈",
+    "comments": [
+      {
+        "comment": "what are you feeding him!?",
+        "timestamp": 1559835073010
+      }
+    ],
+    "hashtags": ["#Fuckmylife"],
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 5,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1559830310,
+      "nanoseconds": 455000000
+    },
+    "title": "My cat puked on the carpet"
+  },
+  "YP4Sr81oIkdfZT8hXabV": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 4
+    },
+    "timestamp": {
+      "seconds": 1559830202,
+      "nanoseconds": 798000000
+    },
+    "title": "My cat puked on the carpet"
+  },
+  "38nvW6nkN0SNhU9h6iaN": {
+    "comment": "",
+    "hashtags": ["#FeedbackApp"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1559814656,
+      "nanoseconds": 687000000
+    },
+    "title": ""
+  },
+  "9i2OKmALIz3sBpCC7Wha": {
+    "comment": "",
+    "hashtags": ["#FeedbackApp"],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559814640,
+      "nanoseconds": 473000000
+    },
+    "title": ""
+  },
+  "PVdlnDVIX18Nuc0upwCL": {
+    "comment": "I had i Nice time 😀",
+    "comments": [
+      {
+        "comment": "Me too! Just had a break and talked to an old colleague about app architecture and got some interesting insights. Can't wait to see this app going forward!!!!",
+        "timestamp": 1559814446431
+      }
+    ],
+    "hashtags": [],
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 3,
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1559747284,
+      "nanoseconds": 630000000
+    },
+    "title": "Coffe break"
+  },
+  "qWza90thBy1iBtZM9Lsh": {
+    "comment": "I had a Nice time on coffe break",
+    "comments": [],
+    "hashtags": ["#coffebreak"],
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 4
+    },
+    "timestamp": {
+      "seconds": 1559747145,
+      "nanoseconds": 878000000
+    },
+    "title": "Coffebreak"
+  },
+  "rgLjfcxPzW8SM5Aqf0jf": {
+    "comment": "Yayyy",
+    "comments": [],
+    "hashtags": ["#FeedbackApp", "#Enhancement"],
+    "mood": "Excited",
+    "reactions": {
+      "Bored": 4,
+      "Excited": 3,
+      "Frustrated": 4,
+      "Happy": 8,
+      "Sad": 2
+    },
+    "timestamp": {
+      "seconds": 1559745671,
+      "nanoseconds": 20000000
+    },
+    "title": "Yay"
+  },
+  "BZHGFwBx5wW3dIDKoCZl": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Sad",
+    "reactions": {
+      "Frustrated": 1
+    },
+    "timestamp": {
+      "seconds": 1559743717,
+      "nanoseconds": 794000000
+    },
+    "title": "tttttt"
+  },
+  "CHtplupbgh7O2f1vze47": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1559743670,
+      "nanoseconds": 482000000
+    },
+    "title": "Ttttt "
+  },
+  "ohsHz86repelopXFf66f": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1559742153,
+      "nanoseconds": 412000000
+    },
+    "title": ""
+  },
+  "imu3xSDvmL0gvZpdSUM5": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Bored",
+    "timestamp": {
+      "seconds": 1559741763,
+      "nanoseconds": 829000000
+    },
+    "title": ""
+  },
+  "rf555WMkYboFq5JyV1DC": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1559741657,
+      "nanoseconds": 102000000
+    },
+    "title": ""
+  },
+  "n3C3NRGT0FXnJ0g1c9Uf": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559741644,
+      "nanoseconds": 221000000
+    },
+    "title": ""
+  },
+  "YUo6A8zCgLgwOKeyEnwI": {
+    "comment": "Test",
+    "comments": [
+      {
+        "comment": "Also comments don't erase after submit from c9mmll, might lead to issues, also if commenting and something new is posted comments go to the newest feedback, this comment was for the below feedback ⬇️",
+        "timestamp": 1559737935749
+      },
+      {
+        "comment": "Good to know. Gonna go back to prev versión on the meantime",
+        "timestamp": 1559737986182
+      },
+      {
+        "comment": "And yes duplicated posts are a thing 🤔👀🤓",
+        "timestamp": 1559738014480
+      },
+      {
+        "comment": "No worries. It ain’t a major thing. But glad to see on real time updates, it’s gonna massively improve the user experience 😊😊😊😊",
+        "timestamp": 1559741184052
+      },
+      {
+        "comment": "duplication is not occurring in DB btw, is just printing duplicated ",
+        "timestamp": 1559741850742
+      },
+      {
+        "comment": "That's a strange one then",
+        "timestamp": 1559742079591
+      },
+      {
+        "comment": "Like reactions arte taken into account on Android but box doesn't disappear after selecting, that's why we have around 30 entries fr some of them xD",
+        "timestamp": 1559742171022
+      },
+      {
+        "comment": "I know I know HHAHAHAHAH",
+        "timestamp": 1559744746275
+      },
+      {
+        "comment": "I saw it live!",
+        "timestamp": 1559744749051
+      },
+      {
+        "comment": "hahahahahahha",
+        "timestamp": 1559744752771
+      }
+    ],
+    "hashtags": ["#Enhancement"],
+    "mood": "Happy",
+    "reactions": {
+      "Bored": 11,
+      "Excited": 7,
+      "Frustrated": 2,
+      "Happy": 16
+    },
+    "timestamp": {
+      "seconds": 1559737876,
+      "nanoseconds": 650000000
+    },
+    "title": "Test "
+  },
+  "9Az5BWLxwfeuxt7M863s": {
+    "comment": "Now data is fetched in real time! Smoother experience ",
+    "comments": [
+      {
+        "comment": "When selecting a reaction popover doesn't disappear. Lol",
+        "timestamp": 1559737735603
+      },
+      {
+        "comment": "Gotta fix that ",
+        "timestamp": 1559737750346
+      },
+      {
+        "comment": "Posts duplicated? ",
+        "timestamp": 1559737807718
+      },
+      {
+        "comment": "Ahah it is indeed real time, just saw that last commented appear in front os my eyes 💪💯👏",
+        "timestamp": 1559737812344
+      },
+      {
+        "comment": "Experiencing some issues now due to that ",
+        "timestamp": 1559737831352
+      },
+      {
+        "comment": "Test",
+        "timestamp": 1559737993935
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#Enhancement"],
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 3,
+      "Happy": 33
+    },
+    "timestamp": {
+      "seconds": 1559737666,
+      "nanoseconds": 381000000
+    },
+    "title": "Real time baby"
+  },
+  "Erv4zaNFlEsH7uqQcDHO": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1559736635,
+      "nanoseconds": 878000000
+    },
+    "title": ""
+  },
+  "ArtrMbCBxbWfxgvDj6o3": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1559736594,
+      "nanoseconds": 62000000
+    },
+    "title": ""
+  },
+  "JO8eJ7t2ssji8OJI2ZAd": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559736496,
+      "nanoseconds": 769000000
+    },
+    "title": ""
+  },
+  "jVxdNIMs4yv1sekL5kw9": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Bored",
+    "timestamp": {
+      "seconds": 1559735403,
+      "nanoseconds": 726000000
+    },
+    "title": ""
+  },
+  "DIaHy8uIfUuVHnI35muw": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559731747,
+      "nanoseconds": 274000000
+    },
+    "title": ""
+  },
+  "O3V02PYvT2LLFuxcvHDb": {
+    "comment": "",
+    "comments": [],
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559731472,
+      "nanoseconds": 299000000
+    },
+    "title": ""
+  },
+  "5ZzmzH0xMw8YD83sbtO7": {
+    "comment": "I'll be back in after Saints season, \n\nNever too old to take holidays for festivals!!\nBody will pay for this",
+    "comments": [
+      {
+        "comment": "wrong eemotion ahaha should be able to change it after we submitted. ",
+        "timestamp": 1559729474202
+      },
+      {
+        "comment": "#bodywillpay #soulwillappreciate",
+        "timestamp": 1559729687285
+      },
+      {
+        "comment": "easiest is to UNDO right now after submission..",
+        "timestamp": 1559729970750
+      }
+    ],
+    "hashtags": ["#FeedbackApp", "#poc", "#finalpresentation"],
+    "mood": "Sad",
+    "reactions": {
+      "Excited": 15,
+      "Frustrated": 1,
+      "Happy": 9
+    },
+    "timestamp": {
+      "seconds": 1559729386,
+      "nanoseconds": 600000000
+    },
+    "title": "Last day before holidays and clients are super happy"
+  },
+  "a4IYjX2PLMPEKW8nSpQH": {
+    "comment": "I really like this user experience ",
+    "comments": [
+      {
+        "comment": "Then why frustrated???",
+        "timestamp": 1559675078822
+      },
+      {
+        "comment": "I changed my mind in the middle of the way and forgot to change the emotion xD",
+        "timestamp": 1559719290562
+      },
+      {
+        "comment": "#missclick #ups we will keep improving on this. Much to do, to little time!",
+        "timestamp": 1559729440075
+      }
+    ],
+    "hashtags": ["FeedbackApp"],
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 4,
+      "Happy": 8
+    },
+    "timestamp": {
+      "seconds": 1559665723,
+      "nanoseconds": 902000000
+    },
+    "title": "This app is awesome 😍"
+  },
+  "QZRAjbFOW4P6ODSrMFSv": {
+    "comment": "Finaaaaaaaaly 💪🤯🥳",
+    "comments": [],
+    "hashtags": ["CX", "#client", "C/4HANNA"],
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1559663922,
+      "nanoseconds": 442000000
+    },
+    "title": "Finally I fixed the damn bug "
+  },
+  "Wb4JCv7J5VdTsdVabDJp": {
+    "comment": "",
+    "comments": [],
+    "hashtags": ["#FeedbackApp"],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559640727,
+      "nanoseconds": 225000000
+    },
+    "title": ""
+  },
+  "GXYDZh9BFw43ndkmKZfj": {
+    "comment": "Today is gonna be an hectic day.. ",
+    "comments": [
+      {
+        "comment": "Oh wait it's the full day, just realized 😂 not easy but let's get trough it 💪",
+        "timestamp": 1559637922621
+      }
+    ],
+    "hashtags": ["#project", "#client", "skypemeetings", "CX"],
+    "mood": "Frustrated",
+    "reactions": {
+      "Bored": 3,
+      "Frustrated": 1,
+      "Sad": 3
+    },
+    "timestamp": {
+      "seconds": 1559629778,
+      "nanoseconds": 56000000
+    },
+    "title": "Full morning of meetings 😔"
+  },
+  "6Fjk5pKSwlWJLMRZJj1f": {
+    "comment": "Client loved the work!!!",
+    "comments": [
+      {
+        "comment": "💪👏",
+        "timestamp": 1559576118169
+      },
+      {
+        "comment": "good job!",
+        "timestamp": 1559584478520
+      }
+    ],
+    "hashtags": ["#project", "#client"],
+    "mood": "Happy",
+    "reactions": {
+      "Excited": 6,
+      "Happy": 8
+    },
+    "timestamp": {
+      "seconds": 1559570048,
+      "nanoseconds": 504000000
+    },
+    "title": "AnotherProjectDone"
+  },
+  "clMLH1b7oBuqzUHbloOR": {
+    "comment": "I hate when people ask for support, you of course will try to help the the best you can... The issue is when they think that's an opportunity to have someone to do their work for them and they can relax and no longer worry about it 😔😤👎",
+    "comments": [],
+    "hashtags": ["SupportRequest", "Integration ", "C/4HANNA "],
+    "mood": "Frustrated",
+    "reactions": {
+      "Excited": 3,
+      "Frustrated": 2,
+      "Happy": 2,
+      "Sad": 2
+    },
+    "timestamp": {
+      "seconds": 1559566205,
+      "nanoseconds": 556000000
+    },
+    "title": "Support is not the same as I'll do it for you 🤦🏼‍♂️",
+    "updatedField": 5
+  },
+  "N7hDWaLclgVxWWS1gAb8": {
+    "comment": "Not so bad for a Monday!",
+    "comments": [
+      {
+        "comment": "buuuuuhh mondaays no like",
+        "timestamp": 1559559216005
+      },
+      {
+        "comment": "Well... at least the  ☀ is out there 😉",
+        "timestamp": 1559561393140
+      }
+    ],
+    "hashtags": ["mondays"],
+    "mood": "Excited",
+    "reactions": {
+      "Bored": 2,
+      "Frustrated": 3,
+      "Sad": 2
+    },
+    "timestamp": {
+      "seconds": 1559555454,
+      "nanoseconds": 843000000
+    },
+    "title": ""
+  },
+  "8iut002UlT7K3E88Hvgc": {
+    "comment": "I really like how this app is going!!!",
+    "hashtags": ["happy"],
+    "mood": "Happy",
+    "reactions": {
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1559240894,
+      "nanoseconds": 697000000
+    },
+    "title": "This app looks promising!!!"
+  },
+  "p5novRqAxlcCQ85DLNR6": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559240873,
+      "nanoseconds": 118000000
+    },
+    "title": ""
+  },
+  "hmYlxyCrw9ZOM6KUJsoH": {
+    "comment": "So my boss just told me I'm his number 1!",
+    "comments": [
+      "Comments now! Awesome!",
+      {
+        "comment": "NICEEEE!",
+        "timestamp": 1559672884577
+      }
+    ],
+    "hashtags": ["happy", "1:1"],
+    "mood": "Excited",
+    "reactions": {
+      "Excited": 2,
+      "Happy": 1
+    },
+    "timestamp": {
+      "seconds": 1559223599,
+      "nanoseconds": 593000000
+    },
+    "title": "My 1:1 went fantastic "
+  },
+  "EBSpoYUWbV3RP1ffKvC2": {
+    "comment": "Hey new UI looking good! 🤓\nLast change would be to make background white and increase top and bottom bar by 10px\n😉👌 ",
+    "comments": [
+      "It might look to whitey?? What do you guys think??",
+      "Probably, but as it is it looks like a white dirty shirt, I'm honest I liked the blue version 💙🤓",
+      "Hmm 🤔 the dirty white is worse on the cards page than here, what about this: make background white but make buttons in the bottom and the flashing swipe borders blue instead of black (that blue mentioned before) what do you guys think? "
+    ],
+    "hashtags": ["FeedbackApp", "Ui"],
+    "mood": "Excited",
+    "reactions": {
+      "Happy": 2
+    },
+    "timestamp": {
+      "seconds": 1559216030,
+      "nanoseconds": 521000000
+    },
+    "title": "Background and top bar change"
+  },
+  "1hofoJHsRhgsmpa634Zi": {
+    "comment": "Good weather today- Always makes me happy!",
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559205817,
+      "nanoseconds": 673000000
+    },
+    "title": ""
+  },
+  "ISWPbwrNjvEjzoRUm3AO": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1559144366,
+      "nanoseconds": 130000000
+    },
+    "title": ""
+  },
+  "bROFPOzrOnBpsvMQE2DQ": {
+    "comment": "",
+    "hashtags": ["FeedbackApp"],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1559130260,
+      "nanoseconds": 857000000
+    },
+    "title": "Feedback is coming to live ❤️"
+  },
+  "CDOc1V1Z1cjM6gOtCpxG": {
+    "comment": "",
+    "hashtags": ["FeedbackApp"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1559120757,
+      "nanoseconds": 52000000
+    },
+    "title": ""
+  },
+  "NkzIQfC9xft4itiPW3N8": {
+    "comment": "We should have app onboarding cards, just explaining how it works. ",
+    "hashtags": ["FeedbackApp", "Enhancement"],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1559118143,
+      "nanoseconds": 398000000
+    },
+    "title": "I don't know how this app works"
+  },
+  "a0fRc23RitssmHevuqF5": {
+    "comment": "Probably more emotions are needed",
+    "hashtags": ["FeedbackApp", "Enhancement"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1559117458,
+      "nanoseconds": 6000000
+    },
+    "title": "Tiday we are going to submit ideas"
+  },
+  "lvwXnKULCWI0XiA7MbR0": {
+    "comment": "",
+    "hashtags": ["happy"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1559117073,
+      "nanoseconds": 31000000
+    },
+    "title": "I love to see the feed with the smiles! 😍♥️"
+  },
+  "jobs2cgB2Om2pq31xFOl": {
+    "comment": "",
+    "hashtags": ["happy"],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1559117069,
+      "nanoseconds": 60000000
+    },
+    "title": "I love to see the feed with the smiles! 😍♥️"
+  },
+  "IIHBgWfKOVyc5WcIjKZ9": {
+    "comment": "",
+    "hashtags": ["happy"],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559117052,
+      "nanoseconds": 389000000
+    },
+    "title": "I love to see the feed with the smiles! 😍♥️"
+  },
+  "sZLdRrxxzfAHoxLWAJ72": {
+    "comment": "Today is the day! ",
+    "hashtags": ["FeedbackApp", "Venture. IO"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1559113305,
+      "nanoseconds": 326000000
+    },
+    "title": "Submission prep day! "
+  },
+  "fNKVKAzdHP4404kWQJZx": {
+    "comment": "This is great. ",
+    "hashtags": ["FeedbackApp"],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1559061962,
+      "nanoseconds": 694000000
+    },
+    "title": "Feedback ❤️"
+  },
+  "Y9jAZuvOk5XEsCHjcLBj": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559055654,
+      "nanoseconds": 224000000
+    },
+    "title": ""
+  },
+  "TjvFj0AYmRopQrXlxOg6": {
+    "comment": "",
+    "hashtags": ["#s4hana"],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1559043599,
+      "nanoseconds": 475000000
+    },
+    "title": "S4HANA Movement Day"
+  },
+  "BQC9g06hkCxlfZ6oA6Dd": {
+    "comment": "What about changing the feed title to \"Feedbacks\" and center it on the page? 👀🤔🧐🤓",
+    "hashtags": ["FeedbackApp", "Enhancement"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1559039838,
+      "nanoseconds": 370000000
+    },
+    "title": "Consider a change to feed Title"
+  },
+  "Lg1CYKJMPyYVrbRdvXHk": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1559037750,
+      "nanoseconds": 114000000
+    },
+    "title": "S4HANA Rocks!"
+  },
+  "cVZfnEppcUE4CrWsvmzE": {
+    "comment": "We should consider making the cards a little smaller, my screen is big and the still cover the swipe indicator. I would make them 20% smaller 😉",
+    "hashtags": ["FeedbackApp", "Update"],
+    "mood": "Bored",
+    "timestamp": {
+      "seconds": 1559024780,
+      "nanoseconds": 525000000
+    },
+    "title": "Emotion cards are a bit too big 💡📐"
+  },
+  "DnpwRJzeNUnV8mcojZ12": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558980906,
+      "nanoseconds": 168000000
+    },
+    "title": ""
+  },
+  "4RhPNfnJky1BG52Y6JhM": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1558980902,
+      "nanoseconds": 173000000
+    },
+    "title": ""
+  },
+  "7lsmcONPV2Z8hGAxvpuL": {
+    "comment": "",
+    "hashtags": ["#longpresentation"],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1558980852,
+      "nanoseconds": 943000000
+    },
+    "title": ""
+  },
+  "FI10Lk1V9JRkDGgkjzw2": {
+    "comment": "Great job! ",
+    "hashtags": ["FeedbackApp", "happy"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558975439,
+      "nanoseconds": 676000000
+    },
+    "title": "THIS SWIPE LEFT AND RIGHT IS AWESOME"
+  },
+  "soR8kOcfV9fESdstxVUa": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1558975211,
+      "nanoseconds": 804000000
+    },
+    "title": ""
+  },
+  "vy2dioDSvbgpPOjeQZ3Z": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558975207,
+      "nanoseconds": 643000000
+    },
+    "title": ""
+  },
+  "lRDRRZK2ONISme9zaqaw": {
+    "comment": "Long & boring",
+    "hashtags": ["#longpresentation"],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1558974753,
+      "nanoseconds": 632000000
+    },
+    "title": "Metso AAAAHHHHH"
+  },
+  "2iLkJ04W2MPXKm7vNMSn": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1558968501,
+      "nanoseconds": 320000000
+    },
+    "title": ""
+  },
+  "SkQECf9Ya0pnXI1lWNBW": {
+    "comment": "Right now my biggest concern is that the Graph is not showing in my ipad. I can see it on the PC with the ipad preview, I can see it on my phone but for some reason I CAN NOT F+++++ SEE IT ON THE IPAD!!!\n\nCan someone else check this?",
+    "hashtags": ["broken?"],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1558964452,
+      "nanoseconds": 561000000
+    },
+    "title": "Biggest Error"
+  },
+  "Sk4Gn2z326u9rMjUEQfK": {
+    "comment": "We should consider having the actions of swipe left or right more clear like:\n\n⬅️ DISCARD\n➡️ SELECT\n\nAnd have this in The screen just belo or above cards, but not on top",
+    "hashtags": ["FeedbackApp", "Enhancement"],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1558964314,
+      "nanoseconds": 468000000
+    },
+    "title": "Actions not clear in add page "
+  },
+  "IcbkptUC1g1W7cF4W7s8": {
+    "comment": "I was wondering, we have 3 more negative emotions and only 2 positive, I was wondering about a 6th such as curious* or inspired* 🤔🧐",
+    "hashtags": ["FeedbackApp", "Enhancement"],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1558964031,
+      "nanoseconds": 486000000
+    },
+    "title": "Add-in a 6th emotion - Curious or Inspired"
+  },
+  "WcS3DHmI9mPh2M5i67q6": {
+    "comment": "We should replace this Grey color for a different one, this one is quite depressing 😔 what about something more exciting like \nthis color in hexa - > 34ace0 😉😏\n",
+    "hashtags": ["FeedbackApp", "Enhancement"],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1558963800,
+      "nanoseconds": 849000000
+    },
+    "title": "Color is needed! 💙💜❤️"
+  },
+  "Fc574eJaMZiI0uQF1ZTo": {
+    "comment": "What If not only the graph updates on the analytics page but we also showed the feedbacks that contained the selected tags listed below? ",
+    "hashtags": ["FeedbackApp", "Enhancement"],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1558962638,
+      "nanoseconds": 840000000
+    },
+    "title": "Comments under graph"
+  },
+  "RChjGX7ZSDYbXJbKrYL5": {
+    "comment": "When I swipe down to refresh I'm taken to the feed page, shouldn't we stay on the page we're at? 🤔👀",
+    "hashtags": ["FeedbackApp", "broken?"],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1558962523,
+      "nanoseconds": 602000000
+    },
+    "title": "Redirect"
+  },
+  "TK9NLACe8bjVzN1aIlTY": {
+    "comment": "Ui of graph page is buggy while adding new hash tags, only appears correctly after closing the input keyboard",
+    "hashtags": ["FeedbackApp (1)", "broken? (1)"],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1558962344,
+      "nanoseconds": 307000000
+    },
+    "title": "Graph page buggy when adding hashtags"
+  },
+  "HZqCWsrFOBOfI04wpTmo": {
+    "comment": "After I submit a feedback I'm note redirected to any page, I stay looking ",
+    "hashtags": ["FeedbackApp (1)", "broken? (1)"],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1558962111,
+      "nanoseconds": 419000000
+    },
+    "title": "Not redirecting after adding feedback. "
+  },
+  "YU40EFY8mwvXGIm0RcaA": {
+    "comment": "Graphs are buggy on mobile when adding, new ones for review, only the line grows and note the area, if you know what I mean",
+    "hashtags": ["FeedbackApp", "Update"],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1558962019,
+      "nanoseconds": 89000000
+    },
+    "title": "New Updates looking sharp! 👀"
+  },
+  "pu1AwM1geiSCnZcZGCZp": {
+    "comment": "",
+    "hashtags": ["#TEST2"],
+    "mood": "Frustrated",
+    "timestamp": {
+      "seconds": 1558961355,
+      "nanoseconds": 593000000
+    },
+    "title": ""
+  },
+  "c5IF2jy0wTumNAocPUhT": {
+    "comment": "trying out new changes",
+    "hashtags": ["testingnewhashtags", "broken?"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558956525,
+      "nanoseconds": 589000000
+    },
+    "title": "MADE TONS OS CHANGES!!!"
+  },
+  "fy3moOG2soIE00CUz7NG": {
+    "comment": "Full morning of back to back meetings... ",
+    "hashtags": ["#skypemeetings", "#sad", "#sap"],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1558679631,
+      "nanoseconds": 181000000
+    },
+    "title": "I'm so tired today 😪"
+  },
+  "3leTuDCAOzpgVHJXWrRU": {
+    "comment": "Nice ",
+    "hashtags": ["#happyfriday"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558630279,
+      "nanoseconds": 903000000
+    },
+    "title": "Feedback ❤️"
+  },
+  "2EblssCGJCXi5MtsXWGQ": {
+    "comment": "",
+    "hashtags": ["#itsucks"],
+    "mood": "Amused",
+    "timestamp": {
+      "seconds": 1558605728,
+      "nanoseconds": 845000000
+    },
+    "title": ""
+  },
+  "iwBIUvWHSQci4oNAzKYx": {
+    "comment": "This should be done first thing in the morning instead of last thing in the afternoon 😉",
+    "hashtags": ["#sap"],
+    "mood": "Angry",
+    "timestamp": {
+      "seconds": 1558540575,
+      "nanoseconds": 223000000
+    },
+    "title": "All hands meeting "
+  },
+  "f8q7kDGkR7b63s8FuFYa": {
+    "comment": "Fck",
+    "hashtags": ["#needcoffee"],
+    "mood": "Angry",
+    "timestamp": {
+      "seconds": 1558540262,
+      "nanoseconds": 47000000
+    },
+    "title": "All hands no brains "
+  },
+  "pCUzQFxJakwPiuTiCrbS": {
+    "comment": "This is hard",
+    "hashtags": ["#sap"],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1558540163,
+      "nanoseconds": 246000000
+    },
+    "title": "All hands and no sleep"
+  },
+  "1EbsJxju9x1joD4mNbxr": {
+    "comment": "",
+    "hashtags": ["#happy"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558538589,
+      "nanoseconds": 585000000
+    },
+    "title": "Feedback ❤️"
+  },
+  "kS7BmBaSoIiA1olXSFT1": {
+    "comment": "Ttyhj",
+    "hashtags": [],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558524334,
+      "nanoseconds": 70000000
+    },
+    "title": "Lol"
+  },
+  "Ob3iV7tBAXW6o36kAwkG": {
+    "comment": "Nicuhh",
+    "hashtags": ["#happy"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558524241,
+      "nanoseconds": 987000000
+    },
+    "title": "Feedback ❤️"
+  },
+  "jZD6p4hyOvt0MCLHSNrA": {
+    "comment": "test",
+    "hashtags": ["#iknow"],
+    "mood": "Angry",
+    "timestamp": {
+      "seconds": 1558523001,
+      "nanoseconds": 496000000
+    },
+    "title": "test"
+  },
+  "qj7c6R9bj6euzVxYFUzu": {
+    "comment": "HELL YEAHHHH",
+    "hashtags": ["#iknow"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558522916,
+      "nanoseconds": 247000000
+    },
+    "title": "this is awesome"
+  },
+  "fCeDrdmi0L7NRdTyGk3H": {
+    "comment": "Just testing it 🙈🙉🙊",
+    "hashtags": ["#happy"],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1558522319,
+      "nanoseconds": 889000000
+    },
+    "title": "Don't be bad to me 😢 ahah"
+  },
+  "G3smJdqTTiW1POpmilWe": {
+    "comment": "shut up ;)",
+    "hashtags": ["#happy"],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1558522080,
+      "nanoseconds": 925000000
+    },
+    "title": "i know they are not yet working"
+  },
+  "c6249EUdw4dgXWFdMIyv": {
+    "comment": "New #tags also not working",
+    "hashtags": ["#sad"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558521986,
+      "nanoseconds": 483000000
+    },
+    "title": "Feedback ❤️"
+  },
+  "ykc7tszIoutPLC4RbqDW": {
+    "comment": "Small steps",
+    "hashtags": ["#happy"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558521101,
+      "nanoseconds": 450000000
+    },
+    "title": "Feedback is coming to live ❤️"
+  },
+  "RvRZnU3afoxQYENTzz2v": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Amused",
+    "timestamp": {
+      "seconds": 1558513568,
+      "nanoseconds": 320000000
+    },
+    "title": ""
+  },
+  "OiRyBSRDgEJWQpKkAFdB": {
+    "comment": "",
+    "hashtags": ["#skypemeetings"],
+    "mood": "Indifferent",
+    "timestamp": {
+      "seconds": 1558513068,
+      "nanoseconds": 310000000
+    },
+    "title": ""
+  },
+  "B4RnYHoumhWs9KAz435t": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1558513006,
+      "nanoseconds": 56000000
+    },
+    "title": ""
+  },
+  "3O26nGOXTv6qrlXu3bTc": {
+    "comment": "Finally all feedback in a single place! ",
+    "hashtags": ["#happy"],
+    "mood": "Happy",
+    "timestamp": {
+      "seconds": 1558512614,
+      "nanoseconds": 833000000
+    },
+    "title": "We are live baby"
+  },
+  "LPQ8kz0Okkrky6tOBw0u": {
+    "comment": "IM IN LISBON BABYYY",
+    "hashtags": ["#happy", "#skypemeetings"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1558083821,
+      "nanoseconds": 566000000
+    },
+    "title": "my awesome day!!!"
+  },
+  "rPuXJ33RTT78miHAi9zL": {
+    "comment": "",
+    "hashtags": [],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1558083779,
+      "nanoseconds": 235000000
+    },
+    "title": ""
+  },
+  "IPFmsuNpItX27HsX2jSu": {
+    "comment": "who doesn't",
+    "hashtags": ["#sap", "#mornings"],
+    "mood": "Angry",
+    "timestamp": {
+      "seconds": 1558024363,
+      "nanoseconds": 490000000
+    },
+    "title": "I HATE MORNINGS"
+  },
+  "31Rheng9NSr20efx04dI": {
+    "comment": "lisboa is the best city in the wooorld",
+    "hashtags": ["#happy", "#sundayconcert"],
+    "mood": "Excited",
+    "timestamp": {
+      "seconds": 1557855465,
+      "nanoseconds": 180000000
+    },
+    "title": "OLEE"
+  },
+  "LbakWzjhGkSZVUGkoALB": {
+    "comment": "WHAT IS GOING OON",
+    "comments": [
+      "test",
+      {
+        "author": {
+          "name": "MasterDisaster",
+          "stakeholder": false
+        },
+        "comment": "adfaf",
+        "timestamp": 1562328554855
+      },
+      {
+        "author": {
+          "name": "MasterDisaster",
+          "stakeholder": false
+        },
+        "comment": "dafas",
+        "timestamp": 1562328560182
+      }
+    ],
+    "hashtags": ["#sad", "#sap"],
+    "mood": "Sad",
+    "timestamp": {
+      "seconds": 1557855424,
+      "nanoseconds": 530000000
+    },
+    "title": "not so awesome today"
+  },
+  "akt4UfgrMwC9gicASzXc": {
+    "comment": "not bad at all",
+    "comments": [
+      "I totally agree with you!!!",
+      "second comment!!!",
+      {
+        "comment": "third comment!!",
+        "timestamp": 1559557628676
+      }
+    ],
+    "hashtags": ["#skypemeetings"],
+    "mood": "Indifferent",
+    "timestamp": {
+      "seconds": 1557852286,
+      "nanoseconds": 231000000
+    },
+    "title": "meh"
+  }
+}

@@ -4,11 +4,15 @@ import feedReducer from "./feed-reducer";
 import hashtagsReducer from "./hashtags-reducer";
 import FeedWithLocationReducer from "./feedWithLocation-reducer";
 import lastFeedReducer from "./lastFeed-reducer";
+import feedPageTabReducer from "./feedPageTab-reducer";
+import radarChartReducer from "./radarChart-reducer";
 
 export default combineReducers({
   auth: authReducer,
   feed: feedReducer,
   hashtags: hashtagsReducer,
   feedWithLocation: FeedWithLocationReducer,
-  lastFeed: lastFeedReducer
+  lastFeed: lastFeedReducer,
+  feedPageTab: feedPageTabReducer,
+  radarChartData: radarChartReducer
 });

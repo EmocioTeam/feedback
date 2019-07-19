@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 import moodColorCode from "../moodColorCode";
 import data from "../data";
+import Emoji from "react-facebook-emoji";
 
 const emojii = data.map(mood => {
   return {
@@ -180,13 +181,11 @@ export default class NewFeedCard extends Component {
                           // console.log(feed);
                           return (
                             <div className="feed-card-reactions" key={reaction}>
+                              {/* <Emoji type={reaction} size="sm" /> */}
                               <img
                                 key={reaction}
                                 src={`${__dirname}emojii/${reaction}.svg`}
                                 className="feed-card-reactions-emojii"
-                                // onClick={() =>
-                                //   this.props.addReaction(feed.id, reaction)
-                                // }
                               />
                               <div className="feed-card-reaction-counter">
                                 {feed.reactions[reaction]}
@@ -241,7 +240,7 @@ export default class NewFeedCard extends Component {
                       Comment
                     </span>
                     {/* <span className="feed-card-actions-item">Dislike</span> */}
-                    <span className="feed-card-actions-item">Share</span>
+                    {/* <span className="feed-card-actions-item">Share</span> */}
                   </div>
 
                   {feed.comments && feed.comments.length > 0 && (
@@ -379,6 +378,21 @@ export default class NewFeedCard extends Component {
                   )}
                 </div>
               )}
+          {this.props.showActions === false ? (
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  this.props.closeCard();
+                }}
+                // className="text-muted"
+              >
+                Close
+              </Button>
+            </div>
+          ) : (
+            false
+          )}
         </div>
       </div>
     );

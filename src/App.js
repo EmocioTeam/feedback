@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 
 // REACT ROUTER
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 
 // CONTAINERS IMPORTS
 import FeedPage from "./containers/FeedPage";
@@ -28,6 +33,7 @@ import "./styles/EmotionMap.css";
 import "./styles/Profile.css";
 import "./styles/LazyLoadButton.css";
 import "./styles/Loader.css";
+import "./styles/RadarChart.css";
 
 // REDUX
 import { connect } from "react-redux";
@@ -176,6 +182,11 @@ class App extends Component {
 
     return (
       <Router>
+        {window.location.pathname === "/" ? (
+          <Redirect to="/add-feed/" />
+        ) : (
+          false
+        )}
         <div>
           {alert !== null ? (
             <Alert data={alert} deleteFeedback={this.deleteFeedback} />

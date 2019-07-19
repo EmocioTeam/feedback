@@ -15,7 +15,15 @@ class Header extends Component {
             key={tab.name}
             onClick={() => this.props.handleState(tab.value)}
           >
-            {tab.label}
+            {tab.icon ? (
+              <Nav.Item
+                as={Image}
+                src={tab.icon}
+                style={{ height: "25px", cursor: "pointer" }}
+              />
+            ) : (
+              tab.label
+            )}
           </Nav.Link>
         );
       });

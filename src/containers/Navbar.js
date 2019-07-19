@@ -4,6 +4,8 @@ import AddIcon from "../icons/add.svg";
 import BarchartIcon from "../icons/barchart.svg";
 import FeedIcon from "../icons/feed.svg";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { getFeedPageTab } from "../actions/feedPageTab";
 
 const items = [
   {
@@ -31,15 +33,28 @@ const items = [
   // { name: "Account", element: "Account" }
 ];
 
-export default class NavBar extends Component {
+const active = {
+  filter: "opacity(0.2)"
+};
+
+class BottomNavBar extends Component {
+  state = {
+    currentPage: window.location.pathname
+  };
+
   NavLink = ({ element, name, src, size, url }, index) => {
+    const activeStyle = window.location.pathname !== `/${url}/` ? active : {};
+
     return (
-      <Link key={element} to={`/${url}/`}>
+      <Link key={element} to={`/${url}/`} style={activeStyle}>
         <Nav.Link
           key={element}
           name={element}
           className="nav-item"
-          // onClick={e => this.props.changeTab(e)}
+          onClick={e => {
+            this.props.getFeedPageTab("wall");
+            this.setState({ currentPage: `/${url}/` });
+          }}
           eventKey={`link-${index}`}
           as={Image}
           src={src}
@@ -58,3 +73,8 @@ export default class NavBar extends Component {
     );
   }
 }
+
+export default connect(
+  null,
+  { getFeedPageTab }
+)(BottomNavBar);

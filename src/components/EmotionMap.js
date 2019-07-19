@@ -14,21 +14,6 @@ const Map = ReactMapboxGl({
     "pk.eyJ1IjoidHVydXR1cGEiLCJhIjoiY2pyeDlubnI0MGo4dzN6bHh6dHd1eXMyYSJ9.LzJY9l4E1kBtSXQSoPhS9A"
 });
 
-// const images = [
-//   data.map(mood => {
-//     const image = new Image(20, 20);
-//     image.src = `${__dirname}emojii/${mood}.svg`;
-//     return [mood.name, image];
-//   })
-// ];
-
-// const icons = {};
-// data.forEach(mood => {
-//   const image = new Image(20, 20);
-//   image.src = `${__dirname}emojii/${mood}.svg`;
-//   icons[mood.name] = [mood.name, image];
-// });
-
 const emojii = {};
 data.forEach(mood => {
   const newEmojii = new Image(25, 25);
@@ -81,21 +66,8 @@ class Geomap extends Component {
     });
   };
 
-  renderEmojiiMarkers = () => {
-    return this.props.feeds
-      .filter(feed => feed.location)
-      .map((feed, index) => {
-        console.log("feedWithLocation: ", feed, index);
-        return (
-          <Marker
-            key={index}
-            coordinates={[feed.location.longitude, feed.location.latitude]}
-            anchor="bottom"
-          >
-            <img src={emojii[feed.mood]} className="geomap-marker" />
-          </Marker>
-        );
-      });
+  closeCard = () => {
+    this.setState({ showCard: false });
   };
 
   componentDidMount = () => {
@@ -110,15 +82,19 @@ class Geomap extends Component {
         {this.state.showCard && this.state.selectedEmojii && (
           <div
             style={{
-              position: "absolute",
+              position: "fixed",
               top: 0,
               left: 0,
               zIndex: 9999,
               width: "100vw",
-              marginTop: "27px"
+              marginTop: "42px"
             }}
           >
-            <FeedCard feed={this.state.selectedEmojii} showActions={false} />
+            <FeedCard
+              feed={this.state.selectedEmojii}
+              showActions={false}
+              closeCard={this.closeCard}
+            />
           </div>
         )}
         <Map
@@ -130,7 +106,7 @@ class Geomap extends Component {
               ? [this.props.coords.longitude, this.props.coords.latitude]
               : [defaultLongitude, defaultLatitude]
           }
-          style="mapbox://styles/mapbox/streets-v11"
+          style="mapbox://styles/mapbox/basic-v8"
           containerStyle={{
             height: "calc(100vh - 50px)",
             width: "100vw"
@@ -150,3 +126,35 @@ export default geolocated({
   watchPosition: false,
   userDecisionTimeout: 5000
 })(Geomap);
+
+// const images = [
+//   data.map(mood => {
+//     const image = new Image(20, 20);
+//     image.src = `${__dirname}emojii/${mood}.svg`;
+//     return [mood.name, image];
+//   })
+// ];
+
+// const icons = {};
+// data.forEach(mood => {
+//   const image = new Image(20, 20);
+//   image.src = `${__dirname}emojii/${mood}.svg`;
+//   icons[mood.name] = [mood.name, image];
+// });
+
+// renderEmojiiMarkers = () => {
+//   return this.props.feeds
+//     .filter(feed => feed.location)
+//     .map((feed, index) => {
+//       console.log("feedWithLocation: ", feed, index);
+//       return (
+//         <Marker
+//           key={index}
+//           coordinates={[feed.location.longitude, feed.location.latitude]}
+//           anchor="bottom"
+//         >
+//           <img src={emojii[feed.mood]} className="geomap-marker" />
+//         </Marker>
+//       );
+//     });
+// };

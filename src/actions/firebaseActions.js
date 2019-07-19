@@ -164,6 +164,10 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
         type: "firstFeedLoad",
         payload: snapshot
       });
+      dispatch({
+        type: "getRadarChartData",
+        payload: snapshot
+      });
       // dispatch({
       //   type: "getLastFeed",
       //   payload: n
