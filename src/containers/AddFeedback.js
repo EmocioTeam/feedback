@@ -52,10 +52,24 @@ class AddFeedback extends Component {
     });
   };
 
-  handleSubmit = async (e, pic) => {
+  handleSubmit = (e, pic) => {
     e.preventDefault();
 
-    if (pic.length <= 0) {
+    const Author =
+      this.props.author && this.props.author.user
+        ? this.props.author.user
+        : false;
+    const Comment = this.state.comment;
+    const Mood = data[this.state.currentMood].name;
+    const Hashtags = this.state.hashtags;
+    const Location = this.props.coords
+      ? new firebase.firestore.GeoPoint(
+          this.props.coords.latitude,
+          this.props.coords.longitude
+        )
+      : false;
+
+    if (pic === undefined) {
       this.props.addFeedback({
         author:
           this.props.author && this.props.author.user
@@ -63,7 +77,6 @@ class AddFeedback extends Component {
             : false,
         comment: this.state.comment,
         mood: data[this.state.currentMood].name,
-        title: this.state.title,
         hashtags: this.state.hashtags,
         location: this.props.coords
           ? new firebase.firestore.GeoPoint(
@@ -71,6 +84,12 @@ class AddFeedback extends Component {
               this.props.coords.longitude
             )
           : false
+      });
+      this.setState({
+        showAddFeedback: false,
+        comment: "",
+        title: "",
+        hashtags: []
       });
       return;
     }
@@ -84,32 +103,22 @@ class AddFeedback extends Component {
         .child(res.ref.name)
         .getDownloadURL()
         .then(url => {
-          console.log("URL", url);
+          // console.log("URL", url);
           this.props.addFeedback({
-            author:
-              this.props.author && this.props.author.user
-                ? this.props.author.user
-                : false,
-            comment: this.state.comment,
-            mood: data[this.state.currentMood].name,
-            title: this.state.title,
-            hashtags: this.state.hashtags,
-            location: this.props.coords
-              ? new firebase.firestore.GeoPoint(
-                  this.props.coords.latitude,
-                  this.props.coords.longitude
-                )
-              : false,
+            author: Author,
+            comment: Comment,
+            mood: Mood,
+            hashtags: Hashtags,
+            location: Location,
             picture: url
           });
         });
-    });
-
-    this.setState({
-      showAddFeedback: false,
-      comment: "",
-      title: "",
-      hashtags: []
+      this.setState({
+        showAddFeedback: false,
+        comment: "",
+        title: "",
+        hashtags: []
+      });
     });
   };
 
