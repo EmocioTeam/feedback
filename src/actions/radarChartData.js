@@ -1,4 +1,4 @@
-export const getRadarChartData = () => dispatch => {
+export const getRadarChartData = () => (dispatch, getState) => {
   //   console.log("SERIES", series);
 
   dispatch({
@@ -7,5 +7,15 @@ export const getRadarChartData = () => dispatch => {
       var data = [1, 1, 1, 1, 1];
       return data.map(d => Math.floor(Math.random() * 100));
     })
+  });
+};
+
+export const getRadarChartDataByHashtag = (
+  graphData,
+  selectedHashtags
+) => dispatch => {
+  dispatch({
+    type: "getRadarChartDataByHashtag",
+    payload: graphData
   });
 };

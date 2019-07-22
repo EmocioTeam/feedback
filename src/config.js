@@ -7,7 +7,7 @@ require("firebase/firestore");
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDhTdc6ihK-JDXoaH2dZHjV1UjmtN-aAUU",
+  apiKey: "AIzaSyASfTxXQW93Vn4PsDVial2xCMj784UZfko",
   authDomain: "feedback-65ee3.firebaseapp.com",
   databaseURL: "https://feedback-65ee3.firebaseio.com",
   projectId: "feedback-65ee3",

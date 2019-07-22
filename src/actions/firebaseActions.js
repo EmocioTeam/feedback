@@ -17,13 +17,6 @@ const users = "users";
 //     });
 // }
 
-export const test = () => dispatch => {
-  dispatch({
-    type: "test",
-    payload: "action is INDEED in action!!!"
-  });
-};
-
 export const onAuthStateChanged = () => dispatch => {
   firebase.auth().onAuthStateChanged(function(res) {
     if (res) {
@@ -136,7 +129,7 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
   lastTwoWeeks.setDate(lastTwoWeeks.getDate() - 10);
   // const n = getState().lastFeed + 15;
   db.collection(fbFeeds)
-    .where("timestamp", ">", lastTwoWeeks)
+    // .where("timestamp", ">", lastTwoWeeks)
     .orderBy("timestamp", "desc")
     // .limit(n)
     .onSnapshot(snapshot => {
@@ -159,15 +152,14 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
           });
         });
         */
-      // console.log("FB ACTIONS", snapshot);
       dispatch({
         type: "firstFeedLoad",
         payload: snapshot
       });
-      dispatch({
-        type: "getRadarChartData",
-        payload: snapshot
-      });
+      // dispatch({
+      //   type: "getRadarChartData",
+      //   payload: snapshot
+      // });
       // dispatch({
       //   type: "getLastFeed",
       //   payload: n

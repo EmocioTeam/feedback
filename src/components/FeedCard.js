@@ -10,6 +10,8 @@ import {
 import moodColorCode from "../moodColorCode";
 import data from "../data";
 import Emoji from "react-facebook-emoji";
+import { fetchImg } from "../actions/firebaseUploadImg";
+import { connect } from "react-redux";
 
 const emojii = data.map(mood => {
   return {
@@ -18,7 +20,7 @@ const emojii = data.map(mood => {
   };
 });
 
-export default class NewFeedCard extends Component {
+class NewFeedCard extends Component {
   state = {
     addComment: false,
     showPopover: true,
@@ -91,7 +93,7 @@ export default class NewFeedCard extends Component {
 
   addComment = (e, id) => {
     e.preventDefault();
-    console.log("feedId", id);
+    // console.log("feedId", id);
 
     const author = {};
     // first get if user is logged in
@@ -112,6 +114,7 @@ export default class NewFeedCard extends Component {
 
   render() {
     const { feed } = this.props;
+    // console.log("AJDÑLFJASLF", feed.picture);
     // console.log(feed);
     const cardBorderColorCode = {
       borderStyle: "solid",
@@ -133,6 +136,7 @@ export default class NewFeedCard extends Component {
         <Badge style={cardBadgeColorCode} className="feed-card-header-meta">
           {feed.mood}
         </Badge>
+        {feed.picture && <img className="feed-card-image" src={feed.picture} />}
         <div className="feed-card-content">
           <div className="feed-card-body">
             {feed.hashtags.length > 0 && (
@@ -162,7 +166,6 @@ export default class NewFeedCard extends Component {
                 </span>
               ))}
             </p>
-            {/* <span className="feed-card-header-meta">2:58 PM - 4 Oct 2018</span> */}
             <div className="feed-card-body-meta">
               <strong>
                 {this.getDate(feed.timestamp.seconds * 1000).main}
@@ -178,7 +181,6 @@ export default class NewFeedCard extends Component {
                     <div className="feed-card-reactions">
                       {feed.reactions &&
                         Object.keys(feed.reactions).map(reaction => {
-                          // console.log(feed);
                           return (
                             <div className="feed-card-reactions" key={reaction}>
                               {/* <Emoji type={reaction} size="sm" /> */}
@@ -398,3 +400,15 @@ export default class NewFeedCard extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  // console.log(state.feedCardImg);
+  return {
+    img: state.feedCardImg
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { fetchImg }
+)(NewFeedCard);

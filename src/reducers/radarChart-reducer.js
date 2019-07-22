@@ -1,38 +1,79 @@
-export default function(state = {}, action) {
-  state.series = [
-    {
-      name: "Series 1",
-      data: [80, 50, 30, 40, 100]
-    },
-    {
-      name: "Series 2",
-      data: [20, 30, 40, 80, 20]
-    },
-    {
-      name: "Series 3",
-      data: [44, 76, 78, 13, 43]
-    }
-  ];
+import data from "../data";
 
+const initialState = {
+  series: [
+    {
+      name: "No data",
+      data: [0, 0, 0, 0, 0]
+    }
+  ]
+};
+
+export default function(state = initialState, action) {
   switch (action.type) {
-    case "getRadarChartData":
+    case "firstFeedLoad":
       console.log("all data snapshot", action.payload);
-      return state;
-    case "getRadarChartDataByHashtag":
-      return [
+      const allData = action.payload.docs.map(doc => {
+        const docData = doc.data();
+        docData.id = doc.id;
+        return docData;
+      });
+      const totalNumberEmocios = action.payload.docs.length;
+      const emotionCount = allData.reduce((prev, current, index) => {
+        // console.log("TEEEST", prev);
+        if (prev[current.mood] !== undefined) {
+          prev[current.mood] = prev[current.mood] + 1;
+        } else {
+          prev[current.mood] = 1;
+        }
+        return prev;
+      }, {});
+
+      const commentsCount = allData.reduce((prev, current, index) => {
+        return current.comments ? prev + current.comments.length : prev;
+      }, 0);
+
+      const topEmotion = Object.keys(emotionCount).reduce((a, b) =>
+        emotionCount[a] > emotionCount[b] ? a : b
+      );
+
+      const series = [
         {
-          name: "series 1",
-          data: action.payload[0]
-        },
-        {
-          name: "series 2",
-          data: action.payload[1]
-        },
-        {
-          name: "series 3",
-          data: action.payload[2]
+          name: "All",
+          data: data.map(mood => {
+            if (emotionCount[mood.name]) {
+              return emotionCount[mood.name];
+            } else {
+              return 0;
+            }
+          })
         }
       ];
+      return {
+        ...state,
+        topEmotion,
+        totalNumberEmocios,
+        commentsCount,
+        series: [...series],
+        defaultSeries: [...series]
+      };
+    case "getRadarChartDataByHashtag":
+      const newSeries = action.payload.map(doc => {
+        return {
+          name: doc.id,
+          data: data.map(mood => {
+            if (doc.moods[mood.name]) {
+              return doc.moods[mood.name];
+            } else {
+              return 0;
+            }
+          })
+        };
+      });
+      if (action.payload.length === 0) {
+        return { ...state, series: [...state.defaultSeries] };
+      }
+      return { ...state, series: [...newSeries] };
     default:
       return state;
   }

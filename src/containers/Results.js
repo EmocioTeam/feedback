@@ -6,6 +6,8 @@ import FeedCard from "../components/FeedCard";
 import { connect } from "react-redux";
 import _ from "lodash";
 import RadarChart from "../components/RadarChart";
+import StatsCard from "../components/StatsCard";
+import { getRadarChartDataByHashtag } from "../actions/radarChartData";
 
 class Results extends Component {
   state = {
@@ -14,15 +16,17 @@ class Results extends Component {
   };
 
   handleHashtags = list => {
-    // console.log("eEAJSDÑFLASJ", list);
     const graphData = list.map(elem => {
+      console.log(elem);
       return _.find(this.props.hashtags, ["id", elem.split(" ")[0]]);
     });
-    console.log(graphData);
-    this.setState({
-      hashtags: list,
-      graphData
-    });
+
+    this.props.getRadarChartDataByHashtag(graphData, list);
+
+    // this.setState({
+    //   hashtags: list,
+    //   graphData
+    // });
   };
 
   render() {
@@ -32,43 +36,29 @@ class Results extends Component {
         <div className="results-searchbar">
           <SearchBar handleHashtags={this.handleHashtags} />
         </div>
+        <div className="results-stats-cards">
+          <StatsCard
+            statLabel="Total No Emocios"
+            stat={this.props.totalNumberEmocios}
+          />
+          <StatsCard
+            statLabel="Total No Comments"
+            stat={this.props.commentsCount}
+          />
+        </div>
+        <div className="results-stats-cards">
+          <StatsCard statLabel="Top Emotion" stat={this.props.topEmotion} />
+          <StatsCard
+            statLabel="Top Hashtag"
+            stat={
+              this.props.hashtags.length > 0 ? this.props.hashtags[0].id : ""
+            }
+          />
+        </div>
         <RadarChart
           graphData={this.state.graphData}
           selectedHashtags={this.state.hashtags}
         />
-        {/* <Recharts
-          currentHashtags={this.state.hashtags}
-          graphData={this.state.graphData}
-          hashtagList={this.props.hashtags}
-        /> */}
-
-        {this.state.hashtags.length > 0 &&
-          this.props.feeds
-            .filter(feed => {
-              return feed.comment;
-            })
-            .filter((feed, index, arr) => {
-              for (let hash of this.state.hashtags) {
-                if (feed.hashtags.includes(hash)) {
-                  return true;
-                }
-              }
-              return false;
-            })
-            .map((feed, index) => {
-              return (
-                <FeedCard
-                  key={index}
-                  feed={feed}
-                  handleInput={this.handleInput}
-                  addComment={this.addComment}
-                  addReaction={this.props.addReaction}
-                  commentValue={
-                    this.state[feed.id] === undefined ? "" : this.state[feed.id]
-                  }
-                />
-              );
-            })}
       </div>
     );
   }
@@ -76,8 +66,14 @@ class Results extends Component {
 
 const mapStateToProps = state => {
   return {
-    hashtags: state.hashtags
+    hashtags: state.hashtags,
+    topEmotion: state.radarChartData.topEmotion,
+    totalNumberEmocios: state.radarChartData.totalNumberEmocios,
+    commentsCount: state.radarChartData.commentsCount
   };
 };
 
-export default connect(mapStateToProps)(Results);
+export default connect(
+  mapStateToProps,
+  { getRadarChartDataByHashtag }
+)(Results);

@@ -42,49 +42,18 @@ class RadarChart extends Component {
   }
 
   render() {
-    console.log(this.props.series);
-    // console.log(
-    //   this.props.graphData.map(doc => {
-    //     return {
-    //       name: doc.id,
-    //       data: data.map(mood => {
-    //         if (doc.moods[mood.name]) {
-    //           return doc.moods[mood.name];
-    //         } else {
-    //           return 0;
-    //         }
-    //       })
-    //     };
-    //   })
-    // );
     return (
       <div id="chart" className="radar-chart-container">
         <div className="radar-chart-card">
           <div className="radar-chart-content">
-            <h4>Currently Under Construction</h4>
-            <p className="text-muted">Sorry for the inconvenience</p>
-            {/* <button onClick={() => this.props.getRadarChartData()}>
-              UPDATE DATA
-            </button> */}
+            <h4>Comparison chart</h4>
+            <p className="text-muted">
+              Select 2 or more hashtags to compare. Default is all Emocios
+              Overview
+            </p>
             <ReactApexChart
               options={this.state.options}
-              series={
-                this.props.series
-                // !this.props.graphData
-                //   ? this.state.series
-                //   : this.props.graphData.map(doc => {
-                //       return {
-                //         name: doc.id,
-                //         data: data.map(mood => {
-                //           if (doc.moods[mood.name]) {
-                //             return doc.moods[mood];
-                //           } else {
-                //             return 0;
-                //           }
-                //         })
-                //       };
-                //     })
-              }
+              series={this.props.series}
               type="radar"
               height="350"
             />

@@ -34,6 +34,7 @@ import "./styles/Profile.css";
 import "./styles/LazyLoadButton.css";
 import "./styles/Loader.css";
 import "./styles/RadarChart.css";
+import "./styles/ImageUploadPreview.css";
 
 // REDUX
 import { connect } from "react-redux";
@@ -63,6 +64,7 @@ class App extends Component {
     // first: get the Refs for the Hashtag list & the new feedback entry
     const hashtagListRef = db.collection(fbHashtags);
     const newFeedbackRef = db.collection(fbFeeds);
+
     // get whole hashtag obj from firebase
     const updateHashtagList = data.hashtags.map(async hash => {
       const hashtagDocRef = hashtagListRef.doc(hash);
@@ -82,6 +84,7 @@ class App extends Component {
         return;
       }
     });
+
     // third: create new feedback entry
     const createFeedback = newFeedbackRef.add(data);
     // resolve all promises
@@ -208,7 +211,6 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log("this.props.user", state.auth);
   return {
     user: state.auth
   };

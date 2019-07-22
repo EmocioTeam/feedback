@@ -3,10 +3,23 @@ import { Button, Modal, Form, Badge } from "react-bootstrap";
 // import data from "../data";
 import SearchBar from "../components/SearchBar";
 import moodColorCode from "../moodColorCode";
-// import data from "../data";
+import ImageUpload from "./ImageUpload";
+import { connect } from "react-redux";
+import { uploadImg } from "../actions/firebaseUploadImg";
 
-export default class Comments extends React.Component {
-  state = {};
+class Comments extends React.Component {
+  state = { pictures: [] };
+
+  onDrop = picture => {
+    console.log(picture);
+    this.setState({
+      pictures: picture
+    });
+  };
+
+  removePics = () => {
+    this.setState({ pictures: [] });
+  };
 
   render() {
     const { email, comment, mood, title } = this.props.state;
@@ -51,14 +64,17 @@ export default class Comments extends React.Component {
             </Form.Label>
             <Form
               onSubmit={e => {
-                this.props.handleSubmit(e);
+                this.props.handleSubmit(
+                  e,
+                  this.state.pictures[this.state.pictures.length - 1]
+                );
+                this.removePics();
               }}
             >
               <Form.Group>
                 <Form.Label>Add Hashtags</Form.Label>
                 <SearchBar
                   allowNew={true}
-                  // hashtags={this.props.hashtags}
                   handleHashtags={this.props.handleHashtags}
                 />
               </Form.Group>
@@ -73,25 +89,22 @@ export default class Comments extends React.Component {
                   onChange={this.props.handleInput}
                 />
               </Form.Group>
-              <Modal.Footer>
-                {/* <Button
-                  variant="secondary"
-                  type="button"
-                  onClick={() => {
-                    document.body.click();
-                  }}
-                >
-                  Cancel
-                </Button> */}
-                <Button
-                  block
-                  variant="primary"
-                  type="submit"
-                  style={{ paddingLeft: "50px", paddingRight: "50px" }}
-                >
-                  Submit
-                </Button>
-              </Modal.Footer>
+              <Button
+                variant="secondary"
+                as={ImageUpload}
+                block
+                onDrop={this.onDrop}
+                removePics={this.removePics}
+                pictures={this.state.pictures}
+              />
+              <Button
+                block
+                variant="primary"
+                type="submit"
+                style={{ paddingLeft: "50px", paddingRight: "50px" }}
+              >
+                Submit
+              </Button>
             </Form>
           </Modal.Body>
         </Modal>
@@ -99,3 +112,8 @@ export default class Comments extends React.Component {
     );
   }
 }
+
+export default connect(
+  null,
+  { uploadImg }
+)(Comments);

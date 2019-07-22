@@ -7,6 +7,8 @@ import moods from "../data.js";
 import _ from "lodash";
 import { geolocated } from "react-geolocated";
 import firebase from "firebase";
+import { connect } from "react-redux";
+import { uploadImg } from "../actions/firebaseUploadImg";
 
 const data = _.shuffle(moods);
 
@@ -50,25 +52,59 @@ class AddFeedback extends Component {
     });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async (e, pic) => {
     e.preventDefault();
 
-    this.props.addFeedback({
-      author:
-        this.props.author && this.props.author.user
-          ? this.props.author.user
-          : false,
-      comment: this.state.comment,
-      mood: data[this.state.currentMood].name,
-      title: this.state.title,
-      hashtags: this.state.hashtags,
-      location: this.props.coords
-        ? new firebase.firestore.GeoPoint(
-            this.props.coords.latitude,
-            this.props.coords.longitude
-          )
-        : false
+    if (pic.length <= 0) {
+      this.props.addFeedback({
+        author:
+          this.props.author && this.props.author.user
+            ? this.props.author.user
+            : false,
+        comment: this.state.comment,
+        mood: data[this.state.currentMood].name,
+        title: this.state.title,
+        hashtags: this.state.hashtags,
+        location: this.props.coords
+          ? new firebase.firestore.GeoPoint(
+              this.props.coords.latitude,
+              this.props.coords.longitude
+            )
+          : false
+      });
+      return;
+    }
+
+    this.props.uploadImg(pic).then(res => {
+      console.log("UPLOAD IMG RESPONSE", res);
+
+      firebase
+        .storage()
+        .ref("images")
+        .child(res.ref.name)
+        .getDownloadURL()
+        .then(url => {
+          console.log("URL", url);
+          this.props.addFeedback({
+            author:
+              this.props.author && this.props.author.user
+                ? this.props.author.user
+                : false,
+            comment: this.state.comment,
+            mood: data[this.state.currentMood].name,
+            title: this.state.title,
+            hashtags: this.state.hashtags,
+            location: this.props.coords
+              ? new firebase.firestore.GeoPoint(
+                  this.props.coords.latitude,
+                  this.props.coords.longitude
+                )
+              : false,
+            picture: url
+          });
+        });
     });
+
     this.setState({
       showAddFeedback: false,
       comment: "",
@@ -85,7 +121,6 @@ class AddFeedback extends Component {
         <Deck toggleShowAddFeedback={this.toggleShowAddFeedback} data={data} />
         <AddComment
           data={data}
-          // hashtags={this.props.hashtags}
           toggleShowAddFeedback={this.toggleShowAddFeedback}
           handleHashtags={this.handleHashtags}
           handleInput={this.handleInput}
@@ -97,10 +132,15 @@ class AddFeedback extends Component {
   }
 }
 
-export default geolocated({
-  positionOptions: {
-    enableHighAccuracy: false
-  },
-  watchPosition: false,
-  userDecisionTimeout: 5000
-})(AddFeedback);
+export default connect(
+  null,
+  { uploadImg }
+)(
+  geolocated({
+    positionOptions: {
+      enableHighAccuracy: false
+    },
+    watchPosition: false,
+    userDecisionTimeout: 5000
+  })(AddFeedback)
+);

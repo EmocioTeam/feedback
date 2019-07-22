@@ -35,7 +35,7 @@ class FeedPage extends Component {
   };
 
   handleHashtags = list => {
-    console.log(list);
+    // console.log(list);
     this.setState({
       hashtags: list
     });
@@ -45,7 +45,7 @@ class FeedPage extends Component {
     return this.props.feed.docs
       .splice(0, this.state.showPosts)
       .filter(feed => {
-        return feed.data().comment;
+        return feed.data().comment || feed.data().picture;
       })
       .map((data, index) => {
         const feed = data.data();
@@ -160,7 +160,6 @@ class FeedPage extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state.feed);
   return {
     user: state.auth,
     feed: state.feed,
