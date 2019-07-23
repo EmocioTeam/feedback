@@ -13,3 +13,19 @@ body {
   font-family: Raleway, sans-serif;
   background-color: #f3f3f3;
 }
+
+@media (min-width: 600px) {
+  .app-container {
+    margin: 0 5% 0 5%;
+  }
+}
+@media (min-width: 1000px) {
+  .app-container {
+    margin: 0 20% 0 20%;
+  }
+}
+@media (min-width: 1300px) {
+  .app-container {
+    margin: 0 30% 0 30%;
+  }
+}

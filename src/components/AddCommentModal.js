@@ -10,17 +10,6 @@ import { uploadImg } from "../actions/firebaseUploadImg";
 class Comments extends React.Component {
   state = { pictures: [] };
 
-  onDrop = picture => {
-    console.log(picture);
-    this.setState({
-      pictures: picture
-    });
-  };
-
-  removePics = () => {
-    this.setState({ pictures: [] });
-  };
-
   render() {
     const { email, comment, mood, title } = this.props.state;
 
@@ -64,11 +53,7 @@ class Comments extends React.Component {
             </Form.Label>
             <Form
               onSubmit={e => {
-                this.props.handleSubmit(
-                  e,
-                  this.state.pictures[this.state.pictures.length - 1]
-                );
-                this.removePics();
+                this.props.handleSubmit(e);
               }}
             >
               <Form.Group>
@@ -93,9 +78,10 @@ class Comments extends React.Component {
                 variant="secondary"
                 as={ImageUpload}
                 block
-                onDrop={this.onDrop}
-                removePics={this.removePics}
-                pictures={this.state.pictures}
+                onDrop={this.props.onDrop}
+                removePics={this.props.removePics}
+                pictures={this.props.state.pictures}
+                text={this.props.state.text}
               />
               <Button
                 block
@@ -106,6 +92,17 @@ class Comments extends React.Component {
                 Submit
               </Button>
             </Form>
+            {this.props.state.posting && (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  margin: "30px 0 0 0"
+                }}
+              >
+                Posting.. .
+              </div>
+            )}
           </Modal.Body>
         </Modal>
       </>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Nav, Image } from "react-bootstrap";
+import { Navbar, Nav, Image, Container } from "react-bootstrap";
 import AddIcon from "../icons/add.svg";
 import BarchartIcon from "../icons/barchart.svg";
 import FeedIcon from "../icons/feed.svg";

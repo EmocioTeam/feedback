@@ -18,7 +18,9 @@ class AddFeedback extends Component {
     currentMood: 0,
     comment: "",
     title: "",
-    hashtags: []
+    hashtags: [],
+    posting: false,
+    pictures: []
     // email: "",
     // mood: data[this.state.currentMood].name,
   };
@@ -45,6 +47,17 @@ class AddFeedback extends Component {
     console.log(this.state);
   };
 
+  onDrop = picture => {
+    console.log(picture);
+    this.setState({
+      pictures: picture
+    });
+  };
+
+  removePics = () => {
+    this.setState({ pictures: [] });
+  };
+
   toggleShowAddFeedback = i => {
     this.setState({
       showAddFeedback: this.state.showAddFeedback ? false : true,
@@ -52,8 +65,21 @@ class AddFeedback extends Component {
     });
   };
 
-  handleSubmit = (e, pic) => {
+  resetState = () => {
+    this.setState({
+      showAddFeedback: false,
+      comment: "",
+      title: "",
+      hashtags: [],
+      posting: false,
+      pictures: []
+    });
+  };
+
+  handleSubmit = e => {
     e.preventDefault();
+    const pic = this.state.pictures[this.state.pictures.length - 1];
+    this.setState({ posting: true });
 
     const Author =
       this.props.author && this.props.author.user
@@ -69,34 +95,21 @@ class AddFeedback extends Component {
         )
       : false;
 
-    if (pic === undefined) {
+    if (this.state.pictures.length <= 0) {
       this.props.addFeedback({
-        author:
-          this.props.author && this.props.author.user
-            ? this.props.author.user
-            : false,
-        comment: this.state.comment,
-        mood: data[this.state.currentMood].name,
-        hashtags: this.state.hashtags,
-        location: this.props.coords
-          ? new firebase.firestore.GeoPoint(
-              this.props.coords.latitude,
-              this.props.coords.longitude
-            )
-          : false
+        author: Author,
+        comment: Comment,
+        mood: Mood,
+        hashtags: Hashtags,
+        location: Location
       });
-      this.setState({
-        showAddFeedback: false,
-        comment: "",
-        title: "",
-        hashtags: []
-      });
+      this.resetState();
       return;
     }
 
     this.props.uploadImg(pic).then(res => {
       console.log("UPLOAD IMG RESPONSE", res);
-
+      alert("res", res);
       firebase
         .storage()
         .ref("images")
@@ -112,30 +125,38 @@ class AddFeedback extends Component {
             location: Location,
             picture: url
           });
+          this.setState({ text: url });
+          return;
+          this.resetState();
+        })
+        .catch(err => {
+          console.log(err);
+          alert(err);
         });
-      this.setState({
-        showAddFeedback: false,
-        comment: "",
-        title: "",
-        hashtags: []
-      });
     });
   };
 
   render() {
     return (
-      <div className="add-feedback-cards">
+      <div>
         <Header header="Add Feedback" />
-        <SwipeHints />
-        <Deck toggleShowAddFeedback={this.toggleShowAddFeedback} data={data} />
-        <AddComment
-          data={data}
-          toggleShowAddFeedback={this.toggleShowAddFeedback}
-          handleHashtags={this.handleHashtags}
-          handleInput={this.handleInput}
-          handleSubmit={this.handleSubmit}
-          state={this.state}
-        />
+        <div className="add-feedback-cards">
+          {/* <SwipeHints /> */}
+          <Deck
+            toggleShowAddFeedback={this.toggleShowAddFeedback}
+            data={data}
+          />
+          <AddComment
+            data={data}
+            toggleShowAddFeedback={this.toggleShowAddFeedback}
+            handleHashtags={this.handleHashtags}
+            handleInput={this.handleInput}
+            handleSubmit={this.handleSubmit}
+            state={this.state}
+            onDrop={this.onDrop}
+            removePics={this.removePics}
+          />
+        </div>
       </div>
     );
   }

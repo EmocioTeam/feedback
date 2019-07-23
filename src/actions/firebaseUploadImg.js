@@ -14,7 +14,7 @@ export const uploadImg = picture => dispatch => {
     contentType: picture.type
   };
 
-  return storageRef.put(picture, metadata);
+  return storageRef.put(picture);
 };
 
 export const fetchImg = picture => dispatch => {

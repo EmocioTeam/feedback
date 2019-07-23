@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 100%;
+  bottom: 60;
+  z-index: 999999;
 }
 
 @keyframes shadow-pulse {
@@ -21,12 +24,9 @@
   height: auto;
   font-size: 14px;
   padding: 10px;
-  /* font: 13px/60px "Barlow Semi Condensed", sans-serif; */
   text-transform: uppercase;
   letter-spacing: 1px;
-  /* color: #fff; */
   text-align: center;
-  /* background: rgba(3, 3, 3, 0.6); */
   border-radius: 90px;
   animation: shadow-pulse 1s infinite;
 }

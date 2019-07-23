@@ -8,6 +8,7 @@ export default class ImgUpload extends React.Component {
   }
 
   render() {
+    const { pictures } = this.props;
     return (
       <div>
         {this.props.pictures.length > 0 ? (
@@ -17,6 +18,16 @@ export default class ImgUpload extends React.Component {
               this.props.removePics();
             }}
           >
+            {this.props.text && <div>{this.props.text}</div>}
+            {pictures ? (
+              <div>
+                {pictures[pictures.length - 1].size} /{" "}
+                {pictures[pictures.length - 1].name} /{" "}
+                {typeof pictures[pictures.length - 1]}
+              </div>
+            ) : (
+              false
+            )}
             <img
               src={URL.createObjectURL(
                 this.props.pictures[this.props.pictures.length - 1]
@@ -33,7 +44,7 @@ export default class ImgUpload extends React.Component {
         <ImageUploader
           buttonText="Upload Image"
           onChange={this.props.onDrop}
-          imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+          imgExtension={[".jpg", ".gif", ".png", ".gif", ".jpeg", ".bmp"]}
           maxFileSize={5242880}
           singleImage={true}
           label=""

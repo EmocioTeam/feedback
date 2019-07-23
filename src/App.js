@@ -36,6 +36,9 @@ import "./styles/Loader.css";
 import "./styles/RadarChart.css";
 import "./styles/ImageUploadPreview.css";
 
+// BOOTSTRAP
+import { Container } from "react-bootstrap";
+
 // REDUX
 import { connect } from "react-redux";
 
@@ -190,7 +193,7 @@ class App extends Component {
         ) : (
           false
         )}
-        <div>
+        <div className="app-container">
           {alert !== null ? (
             <Alert data={alert} deleteFeedback={this.deleteFeedback} />
           ) : (
