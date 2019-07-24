@@ -50,17 +50,17 @@
 
 @media (min-width: 600px) {
   .feed-card-header-meta {
-    right: 5% !important;
+    right: 3% !important;
   }
 }
 @media (min-width: 1000px) {
   .feed-card-header-meta {
-    right: 20% !important;
+    right: 19% !important;
   }
 }
 @media (min-width: 1300px) {
   .feed-card-header-meta {
-    right: 30% !important;
+    right: 29.45% !important;
   }
 }
 

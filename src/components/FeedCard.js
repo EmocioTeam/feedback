@@ -127,7 +127,7 @@ class NewFeedCard extends Component {
     };
 
     return (
-      <div className="feed-card" style={cardBorderColorCode}>
+      <div className="feed-card" style={cardBorderColorCode} id={feed.id}>
         {this.props.showActions && (
           <span style={{ float: "left" }} className="text-muted">
             X

@@ -107,33 +107,33 @@ class AddFeedback extends Component {
       return;
     }
 
-    this.props.uploadImg(pic).then(res => {
-      console.log("UPLOAD IMG RESPONSE", res);
-      alert("res", res);
-      firebase
-        .storage()
-        .ref("images")
-        .child(res.ref.name)
-        .getDownloadURL()
-        .then(url => {
-          // console.log("URL", url);
-          this.props.addFeedback({
-            author: Author,
-            comment: Comment,
-            mood: Mood,
-            hashtags: Hashtags,
-            location: Location,
-            picture: url
+    this.props
+      .uploadImg(pic)
+      .then(res => {
+        console.log("UPLOAD IMG RESPONSE", res);
+        firebase
+          .storage()
+          .ref("images")
+          .child(res.ref.name)
+          .getDownloadURL()
+          .then(url => {
+            // console.log("URL", url);
+            this.props.addFeedback({
+              author: Author,
+              comment: Comment,
+              mood: Mood,
+              hashtags: Hashtags,
+              location: Location,
+              picture: url
+            });
+            this.resetState();
+          })
+          .catch(err => {
+            console.log(err);
+            alert(err);
           });
-          this.setState({ text: url });
-          return;
-          this.resetState();
-        })
-        .catch(err => {
-          console.log(err);
-          alert(err);
-        });
-    });
+      })
+      .catch(err => alert("You need to be a logged in user to post images"));
   };
 
   render() {

@@ -12,10 +12,11 @@ export const getRadarChartData = () => (dispatch, getState) => {
 
 export const getRadarChartDataByHashtag = (
   graphData,
-  selectedHashtags
+  feed,
+  list
 ) => dispatch => {
   dispatch({
     type: "getRadarChartDataByHashtag",
-    payload: graphData
+    payload: { graphData, feed, list }
   });
 };

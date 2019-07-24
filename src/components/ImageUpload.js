@@ -18,7 +18,7 @@ export default class ImgUpload extends React.Component {
               this.props.removePics();
             }}
           >
-            {this.props.text && <div>{this.props.text}</div>}
+            {/* {this.props.text && <div>{this.props.text}</div>}
             {pictures ? (
               <div>
                 {pictures[pictures.length - 1].size} /{" "}
@@ -27,7 +27,7 @@ export default class ImgUpload extends React.Component {
               </div>
             ) : (
               false
-            )}
+            )} */}
             <img
               src={URL.createObjectURL(
                 this.props.pictures[this.props.pictures.length - 1]

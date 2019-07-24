@@ -3,7 +3,10 @@ import ReactMapboxGl, {
   Marker,
   Layer,
   Feature,
-  Image as MapImage
+  Image as MapImage,
+  ZoomControl,
+  Popup,
+  RotationControl
 } from "react-mapbox-gl";
 import { geolocated } from "react-geolocated";
 import data from "../data";
@@ -80,16 +83,7 @@ class Geomap extends Component {
     return (
       <div>
         {this.state.showCard && this.state.selectedEmojii && (
-          <div
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              zIndex: 9999,
-              width: "100vw",
-              marginTop: "42px"
-            }}
-          >
+          <div className="emotion-map-comment-card">
             <FeedCard
               feed={this.state.selectedEmojii}
               showActions={false}
@@ -97,23 +91,33 @@ class Geomap extends Component {
             />
           </div>
         )}
-        <Map
-          zoom={[15]}
-          center={
-            this.state.mapCenter
-              ? this.state.mapCenter
-              : this.props.coords
-              ? [this.props.coords.longitude, this.props.coords.latitude]
-              : [defaultLongitude, defaultLatitude]
-          }
-          style="mapbox://styles/mapbox/basic-v8"
-          containerStyle={{
-            height: "calc(100vh - 50px)",
-            width: "100vw"
-          }}
-        >
-          {this.renderEmojiiLayer()}
-        </Map>
+        <div className="emotion-map-container">
+          <Map
+            zoom={[15]}
+            center={
+              this.state.mapCenter
+                ? this.state.mapCenter
+                : this.props.coords
+                ? [this.props.coords.longitude, this.props.coords.latitude]
+                : [defaultLongitude, defaultLatitude]
+            }
+            style="mapbox://styles/mapbox/basic-v8"
+            containerStyle={{
+              height: "100vh",
+              width: "100vw"
+            }}
+          >
+            {this.renderEmojiiLayer()}
+            <RotationControl
+              position="bottom-right"
+              style={{ marginBottom: "60px" }}
+            />
+            <ZoomControl
+              position="bottom-right"
+              style={{ marginBottom: "160px" }}
+            />
+          </Map>
+        </div>
       </div>
     );
   }

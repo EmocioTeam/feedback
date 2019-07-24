@@ -17,18 +17,15 @@ class Results extends Component {
 
   handleHashtags = list => {
     const graphData = list.map(elem => {
-      console.log(elem);
-      return _.find(this.props.hashtags, ["id", elem.split(" ")[0]]);
+      // elem.split(" ")[0] ->> ñapul para obligar a que sea un string
+      return _.find(this.props.hashtags, ["id", elem]);
     });
-
-    this.props.getRadarChartDataByHashtag(graphData, list);
-
-    // this.setState({
-    //   hashtags: list,
-    //   graphData
-    // });
+    this.props.getRadarChartDataByHashtag(graphData, this.props.feed, list);
   };
 
+  componentWillUnmount() {
+    this.props.getRadarChartDataByHashtag([]);
+  }
   render() {
     return (
       <div className="results-container">
@@ -66,6 +63,7 @@ class Results extends Component {
 
 const mapStateToProps = state => {
   return {
+    feed: state.feed,
     hashtags: state.hashtags,
     topEmotion: state.radarChartData.topEmotion,
     totalNumberEmocios: state.radarChartData.totalNumberEmocios,

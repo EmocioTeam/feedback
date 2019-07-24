@@ -91,8 +91,6 @@ class FeedPage extends Component {
       });
   };
 
-  componentWillReceiveProps = () => {};
-
   render() {
     return (
       <Fragment>

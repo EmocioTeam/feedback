@@ -84,6 +84,7 @@ class Comments extends React.Component {
                 text={this.props.state.text}
               />
               <Button
+                disabled={this.props.state.posting}
                 block
                 variant="primary"
                 type="submit"
@@ -97,7 +98,8 @@ class Comments extends React.Component {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  margin: "30px 0 0 0"
+                  margin: "30px 0 0 0",
+                  fontSize: "120%"
                 }}
               >
                 Posting.. .

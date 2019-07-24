@@ -1,5 +1,58 @@
-.geomap-marker {
-  /* transform: scale(0.1, 0.1); */
-  width: 20px;
-  height: 20px;
+.emotion-map-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 600px) {
+  .emotion-map-container {
+    margin: 0 -5% 0 -5%;
+    left: 5%;
+  }
+}
+@media (min-width: 1000px) {
+  .emotion-map-container {
+    margin: 0 -20% 0 -20%;
+    left: 20%;
+  }
+}
+@media (min-width: 1300px) {
+  .emotion-map-container {
+    margin: 0 -30% 0 -30%;
+    left: 30%;
+  }
+}
+
+.emotion-map-comment-card {
+  position: fixed;
+  /* top: 0;
+  left: 0; */
+  /* margin-top: 42px; */
+  z-index: 9999;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .emotion-map-comment-card {
+    margin: 0 -5% 0 -5%;
+    left: 5%;
+    width: calc(100vw - 10%);
+    left: 10%;
+  }
+}
+@media (min-width: 1000px) {
+  .emotion-map-comment-card {
+    margin: 0 -20% 0 -20%;
+    width: calc(100vw - 40%);
+    left: 40%;
+  }
+}
+@media (min-width: 1300px) {
+  .emotion-map-comment-card {
+    margin: 0 -30% 0 -30%;
+    width: calc(100vw - 60%);
+    left: 60%;
+  }
 }
