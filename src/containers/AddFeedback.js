@@ -9,6 +9,7 @@ import { geolocated } from "react-geolocated";
 import firebase from "firebase";
 import { connect } from "react-redux";
 import { uploadImg } from "../actions/firebaseUploadImg";
+import { getDefaultHashtag } from "../actions/defaultHashtag";
 
 const data = _.shuffle(moods);
 
@@ -21,8 +22,6 @@ class AddFeedback extends Component {
     hashtags: [],
     posting: false,
     pictures: []
-    // email: "",
-    // mood: data[this.state.currentMood].name,
   };
 
   handleHashtags = list => {
@@ -136,12 +135,17 @@ class AddFeedback extends Component {
       .catch(err => alert("You need to be a logged in user to post images"));
   };
 
+  componentDidMount = () => {
+    if (this.props.router.match.params.hashtag) {
+      this.props.getDefaultHashtag(this.props.router.match.params.hashtag);
+    }
+  };
+
   render() {
     return (
       <div>
         <Header header="Add Feedback" />
         <div className="add-feedback-cards">
-          {/* <SwipeHints /> */}
           <Deck
             toggleShowAddFeedback={this.toggleShowAddFeedback}
             data={data}
@@ -164,7 +168,7 @@ class AddFeedback extends Component {
 
 export default connect(
   null,
-  { uploadImg }
+  { uploadImg, getDefaultHashtag }
 )(
   geolocated({
     positionOptions: {

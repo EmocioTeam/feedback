@@ -17,7 +17,7 @@ const trans = (r, s) =>
   //`perspective(1500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(${window.innerHeight /
   //  800})`;
   //BACKUP below
-  `perspective(1500px) rotateX(0deg) rotateY(${r /
+  `perspective(1500px) rotateX(15deg) rotateY(${r /
     10}deg) rotateZ(${r}deg) scale(${window.innerHeight / 800})`;
 
 //BACKUP on top

@@ -6,19 +6,25 @@ import { connect } from "react-redux";
 
 class SearchBar extends Component {
   state = {
-    multiple: true
+    multiple: true,
+    selected:
+      this.props.persistUrlParam && this.props.defaultHashtag
+        ? ["#" + this.props.defaultHashtag]
+        : []
   };
 
   render() {
     const { multiple } = this.state;
-    // console.log();
+    const { defaultHashtag } = this.props;
+    console.log("#" + defaultHashtag);
     const options = _.orderBy(this.props.hashtags, ["count"], ["desc"]).map(
       hash => `${hash.id}`
     );
     return (
       <div style={{ height: "auto" }}>
         <Typeahead
-          style={{ height: "auto" }}
+          selected={this.state.selected}
+          flip={true}
           name="hashtags"
           id="typeahead"
           allowNew={this.props.allowNew ? this.props.allowNew : false}
@@ -28,33 +34,26 @@ class SearchBar extends Component {
           multiple={true}
           selectHintOnEnter={true}
           options={options}
-          placeholder="#skypemeeting #needcoffee #happyfriday.."
+          placeholder="#emocio #needcoffee #friday.."
           newSelectionPrefix="Add new hashtag: "
           // defaultInputValue="#"
-          // gives you the array of selected hashtags
-          // onInputChange={e => {
-          // console.log(e);
-          // this.props.handleHashtags(e)
-          // }}
-          // gives you the input string that it is being typed
           onChange={e => {
-            // console.log(e);
+            const selectedHashtags = e.map(hash => {
+              console.log(hash);
+              if (typeof hash === "object" && hash.hashtags[0] !== "#") {
+                hash.hashtags = "#" + hash.hashtags;
+                return hash;
+              }
+              return hash;
+            });
+            this.setState({ selected: selectedHashtags });
             e = e.map(hash => {
               if (typeof hash === "string") return hash;
               if (typeof hash === "object") return hash.hashtags;
             });
-            // console.log("eeoo", e);
             this.props.handleHashtags(e);
           }}
           onKeyDown={e => {
-            // console.log("onKeyDown", " => ", e.which, this);
-            // console.log("string?", " => ", e.target.value);
-            // var regex = new RegExp("^[a-zA-Z0-9]+$");
-            // var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
-            // if ((!regex.test(key) && e.which !== 8) || e.which > 180) {
-            //   e.preventDefault();
-            //   return false;
-            // }
             if (e.which === 32 || e.which === 190) {
               e.preventDefault();
             }
@@ -67,7 +66,8 @@ class SearchBar extends Component {
 
 const mapStateToProps = state => {
   return {
-    hashtags: state.hashtags
+    hashtags: state.hashtags,
+    defaultHashtag: state.defaultHashtag
   };
 };
 

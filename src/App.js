@@ -36,9 +36,6 @@ import "./styles/Loader.css";
 import "./styles/RadarChart.css";
 import "./styles/ImageUploadPreview.css";
 
-// BOOTSTRAP
-import { Container } from "react-bootstrap";
-
 // REDUX
 import { connect } from "react-redux";
 
@@ -165,24 +162,26 @@ class App extends Component {
   };
 
   render() {
-    const { currentTab, feeds, hashtags, alert } = this.state;
-    // console.log("feeds", feeds);
+    const { feeds, hashtags, alert } = this.state;
     const feedPage = (
       <FeedPage
-        // feeds={feeds}
         refreshing={this.state.refreshing}
         addComment={this.addComment}
         addReaction={this.addReaction}
       />
     );
-    const addFeedback = (
+    const addFeedbackComponent = props => (
       <AddFeedback
         author={this.props.user}
         hashtags={hashtags}
         addFeedback={this.addFeedback}
         deleteFeedback={this.deleteFeedback}
+        router={props}
       />
     );
+    const addFeedback = pr => {
+      return <div>{addFeedbackComponent(pr)}</div>;
+    };
     const results = <Results feeds={feeds} hashtags={hashtags} />;
     const profile = <Profile />;
 
@@ -201,7 +200,11 @@ class App extends Component {
           )}
           <Navbar />
           <Switch>
-            <Route path="/add-feed" exact render={props => addFeedback} />
+            <Route
+              path="/add-feed/:hashtag"
+              render={props => addFeedback(props)}
+            />
+            <Route path="/add-feed" render={props => addFeedback(props)} />
             <Route path="/feed-page" render={props => feedPage} />
             <Route path="/analytics" render={props => results} />
             <Route path="/profile" render={props => profile} />
@@ -221,5 +224,9 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { onAuthStateChanged, realTimeFeedListener, getHashtagList }
+  {
+    onAuthStateChanged,
+    realTimeFeedListener,
+    getHashtagList
+  }
 )(App);

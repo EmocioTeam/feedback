@@ -7,6 +7,7 @@ import lastFeedReducer from "./lastFeed-reducer";
 import feedPageTabReducer from "./feedPageTab-reducer";
 import radarChartReducer from "./radarChart-reducer";
 import feedCardImageReducer from "./feedCardImage-reducer";
+import defaultHashtagReducer from "./defaultHashtag-reducer";
 
 export default combineReducers({
   auth: authReducer,
@@ -16,5 +17,6 @@ export default combineReducers({
   lastFeed: lastFeedReducer,
   feedPageTab: feedPageTabReducer,
   radarChartData: radarChartReducer,
-  feedCardImg: feedCardImageReducer
+  feedCardImg: feedCardImageReducer,
+  defaultHashtag: defaultHashtagReducer
 });
