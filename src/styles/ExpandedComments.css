@@ -1,0 +1,15 @@
+.expanded-comments-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: white;
+  z-index: 99999;
+}
+.expanded-comments-card {
+}
+.expanded-comments-header {
+}
+.expanded-comments-body {
+}

@@ -67,6 +67,7 @@ class BottomNavBar extends Component {
     return (
       <Navbar
         fixed="bottom"
+        // sticky="bottom"
         className="bottom-navbar"
         style={this.props.hideKeyboard ? { display: "none" } : {}}
       >

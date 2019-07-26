@@ -13,6 +13,7 @@ import Emoji from "react-facebook-emoji";
 import { fetchImg } from "../actions/firebaseUploadImg";
 import { connect } from "react-redux";
 import { hideKeyboard } from "../actions/hideKeyboard";
+import FeedCardExpandedComments from "./FeedCardExpandedComments";
 
 const emojii = data.map(mood => {
   return {
@@ -28,7 +29,8 @@ class NewFeedCard extends Component {
     feedComment: "",
     maxCommentChars: 140,
     characterCount: 0,
-    alertCommentChars: false
+    alertCommentChars: false,
+    showComments: false
   };
 
   getDate = timestamp => {
@@ -77,6 +79,10 @@ class NewFeedCard extends Component {
       main: dateFormat === "Today" ? `${hours}:${minutes}` : "",
       secondary: `${dateFormat} ${currentYear === year ? "" : ", " + year}`
     };
+  };
+
+  showComments = () => {
+    this.setState({ showComments: !this.state.showComments });
   };
 
   getCharacterCount = () => {
@@ -164,7 +170,7 @@ class NewFeedCard extends Component {
               {feed.comment.split("\n").map((row, index) => (
                 <span key={index}>
                   {row}
-                  <br />
+                  {row.length > 0 ? <br /> : false}
                 </span>
               ))}
             </p>
@@ -200,10 +206,20 @@ class NewFeedCard extends Component {
                     </div>
                   )}
 
+                  {feed.comments && feed.comments.length >= 4 && (
+                    <Button
+                      variant="link"
+                      onClick={() => this.showComments()}
+                      className="feed-card-expand-comments-button"
+                    >
+                      {this.state.showComments ? "Hide" : "View"}{" "}
+                      {feed.comments.length} comments
+                    </Button>
+                  )}
+
                   <div className="feed-card-actions">
                     {
                       <OverlayTrigger
-                        // ref="overlay"
                         placement="top"
                         trigger="click"
                         rootClose
@@ -247,13 +263,23 @@ class NewFeedCard extends Component {
                     {/* <span className="feed-card-actions-item">Share</span> */}
                   </div>
 
-                  {feed.comments && feed.comments.length > 0 && (
+                  {this.state.showComments ||
+                  (feed.comments &&
+                    feed.comments.length > 0 &&
+                    feed.comments.length < 4) ? (
                     <div className="feed-card-comments">
                       <hr className="feed-card-comments-divider" />
                       {/* <strong>Comments</strong> */}
                       {feed.comments.map((comment, i) => {
                         return (
-                          <div className="feed-card-comments-item-div" key={i}>
+                          <div
+                            className={`feed-card-comments-item-div ${
+                              this.state.showComments
+                                ? "animated slideInLeft"
+                                : false
+                            }`}
+                            key={i}
+                          >
                             <p
                               className="feed-card-comments-item"
                               style={
@@ -267,7 +293,7 @@ class NewFeedCard extends Component {
                                 <span>
                                   {comment.author && comment.author.name ? (
                                     <strong style={{ fontSize: "90%" }}>
-                                      {comment.author.name} <br />
+                                      {comment.author.name}{" "}
                                     </strong>
                                   ) : (
                                     ""
@@ -275,12 +301,18 @@ class NewFeedCard extends Component {
 
                                   {comment.comment
                                     .split("\n")
-                                    .map((row, index) => (
-                                      <span key={index}>
-                                        {row}
-                                        <br />
-                                      </span>
-                                    ))}
+                                    .map((row, index) => {
+                                      return (
+                                        <span key={index}>
+                                          {row.trim()}
+                                          {row.trim().length > 0 ? (
+                                            <br />
+                                          ) : (
+                                            false
+                                          )}
+                                        </span>
+                                      );
+                                    })}
                                 </span>
                               ) : (
                                 comment
@@ -302,6 +334,8 @@ class NewFeedCard extends Component {
                         );
                       })}
                     </div>
+                  ) : (
+                    ""
                   )}
                   {this.state.addComment && (
                     <div className="feed-card-add-comment">
@@ -315,19 +349,6 @@ class NewFeedCard extends Component {
                           <InputGroup>
                             <Form.Control
                               autoFocus
-                              // onFocus={() => {
-                              //   if (
-                              //     window.outerHeight !==
-                              //     window.screen.availHeight
-                              //   ) {
-                              //     this.props.hideKeyboard(true);
-                              //   } else {
-                              //     this.props.hideKeyboard(false);
-                              //   }
-                              // }}
-                              // onBlur={() => {
-                              //   this.props.hideKeyboard(false);
-                              // }}
                               as="textarea"
                               rows={1}
                               autoComplete="off"

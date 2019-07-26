@@ -35,6 +35,7 @@ import "./styles/LazyLoadButton.css";
 import "./styles/Loader.css";
 import "./styles/RadarChart.css";
 import "./styles/ImageUploadPreview.css";
+import "./styles/ExpandedComments.css";
 
 // REDUX
 import { connect } from "react-redux";

@@ -26,7 +26,7 @@
 
 .feed-card-content {
   max-width: 100%;
-  padding: 15px 10px 15px 10px;
+  padding: 10px 10px 15px 10px;
 }
 
 .feed-card-header {
@@ -58,6 +58,16 @@
     right: 19% !important;
   }
 }
+@media (min-width: 1020px) {
+  .feed-card-header-meta {
+    right: 20% !important;
+  }
+}
+@media (min-width: 1030px) {
+  .feed-card-header-meta {
+    right: 19% !important;
+  }
+}
 @media (min-width: 1300px) {
   .feed-card-header-meta {
     right: 29.45% !important;
@@ -66,6 +76,7 @@
 
 .feed-card-body > p {
   text-align: justify;
+  font-size: 14px;
   margin-top: 15px;
   margin-bottom: 0;
   max-width: 100% !important;
@@ -97,11 +108,11 @@
 }
 
 .feed-card-reactions-emojii {
-  height: 35px;
+  height: 30px;
   padding: 3px 3px 3px 0px;
   border-color: white;
   margin-left: 0px;
-  margin-right: 25px;
+  margin-right: 20px;
   margin-bottom: 10px;
   margin-top: 3px;
   z-index: 21;
@@ -111,7 +122,7 @@
 .feed-card-reaction-counter {
   position: absolute;
   margin-top: 15px;
-  margin-left: 25px;
+  margin-left: 20px;
   background-color: #34ace0;
   color: white;
   border-radius: 100%;
@@ -124,9 +135,25 @@
   z-index: 20;
 }
 
+.feed-card-expand-comments-button {
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+  font-weight: 600;
+  padding-left: 0;
+}
+.feed-card-expand-comments-button:active {
+  text-decoration: none !important;
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+  font-weight: 600;
+  padding-left: 0;
+}
+
 .feed-card-comments-divider {
   /* border-top: 1px; */
   /* border-color: red; */
+  margin-top: 5px;
+  margin-bottom: 10px;
   width: 90%;
 }
 
@@ -139,6 +166,7 @@
 }
 
 .feed-card-comments-item {
+  font-size: 14px;
   display: block;
   margin-left: 10px;
   margin-right: 10px;
@@ -162,11 +190,11 @@
 .feed-card-comments-item-actions {
   /* margin-right: 10px;
   margin-left: 10px; */
+  /* font-weight: 600; */
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0 0 0 0;
   font-size: 13px;
-  /* font-weight: 600; */
   color: grey;
 }
 
@@ -188,7 +216,7 @@
 }
 
 .feed-card-actions-item {
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 10px;
   color: #34ace0;
   font-weight: 600;
@@ -202,7 +230,7 @@
 }
 
 .feed-card-actions-item:active {
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 10px;
   color: white;
   font-weight: 600;
