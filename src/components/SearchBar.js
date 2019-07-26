@@ -23,6 +23,8 @@ class SearchBar extends Component {
     return (
       <div style={{ height: "auto" }}>
         <Typeahead
+          autoFocus
+          maxResults={5}
           selected={this.state.selected}
           flip={true}
           name="hashtags"
