@@ -65,7 +65,11 @@ class BottomNavBar extends Component {
   };
   render() {
     return (
-      <Navbar fixed="bottom" className="bottom-navbar">
+      <Navbar
+        fixed="bottom"
+        className="bottom-navbar"
+        style={this.props.hideKeyboard ? { display: "none" } : {}}
+      >
         <Nav className="navbar-items">
           {items.map((item, index) => this.NavLink(item, index))}
         </Nav>
@@ -74,7 +78,13 @@ class BottomNavBar extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    hideKeyboard: state.hideKeyboard
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   { getFeedPageTab }
 )(BottomNavBar);

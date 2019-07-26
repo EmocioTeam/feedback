@@ -47,6 +47,7 @@ import {
   realTimeFeedListener,
   getHashtagList
 } from "./actions/firebaseActions";
+// import { hideKeyboard } from "./actions/hideKeyboard";
 import { fbFeeds, fbHashtags } from "./config";
 
 const db = fb.firestore();
@@ -228,5 +229,6 @@ export default connect(
     onAuthStateChanged,
     realTimeFeedListener,
     getHashtagList
+    // hideKeyboard
   }
 )(App);

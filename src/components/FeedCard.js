@@ -12,6 +12,7 @@ import data from "../data";
 import Emoji from "react-facebook-emoji";
 import { fetchImg } from "../actions/firebaseUploadImg";
 import { connect } from "react-redux";
+import { hideKeyboard } from "../actions/hideKeyboard";
 
 const emojii = data.map(mood => {
   return {
@@ -106,7 +107,10 @@ class NewFeedCard extends Component {
       ? (author.stakeholder = true)
       : (author.stakeholder = false);
 
-    if (this.state.feedComment.length < 141) {
+    if (
+      this.state.feedComment.length < 141 &&
+      this.state.feedComment.length > 0
+    ) {
       this.props.addComment(id, this.state.feedComment, author);
       this.setState({ feedComment: "", characterCount: 0 });
     }
@@ -114,8 +118,6 @@ class NewFeedCard extends Component {
 
   render() {
     const { feed } = this.props;
-    // console.log("AJDÑLFJASLF", feed.picture);
-    // console.log(feed);
     const cardBorderColorCode = {
       borderStyle: "solid",
       borderColor: moodColorCode[feed.mood],
@@ -313,6 +315,19 @@ class NewFeedCard extends Component {
                           <InputGroup>
                             <Form.Control
                               autoFocus
+                              // onFocus={() => {
+                              //   if (
+                              //     window.outerHeight !==
+                              //     window.screen.availHeight
+                              //   ) {
+                              //     this.props.hideKeyboard(true);
+                              //   } else {
+                              //     this.props.hideKeyboard(false);
+                              //   }
+                              // }}
+                              // onBlur={() => {
+                              //   this.props.hideKeyboard(false);
+                              // }}
                               as="textarea"
                               rows={1}
                               autoComplete="off"
@@ -327,11 +342,8 @@ class NewFeedCard extends Component {
                                 ) {
                                   e.preventDefault();
                                 }
-                                // this.getCharacterCount();
                               }}
                               onKeyUp={element => {
-                                // console.log(element);
-                                // this.getCharacterCount();
                                 element.target.style.height = "5px";
                                 element.target.style.height =
                                   element.target.scrollHeight + "px";
@@ -410,5 +422,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { fetchImg }
+  { fetchImg, hideKeyboard }
 )(NewFeedCard);

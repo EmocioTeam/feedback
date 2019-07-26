@@ -8,6 +8,7 @@ import feedPageTabReducer from "./feedPageTab-reducer";
 import radarChartReducer from "./radarChart-reducer";
 import feedCardImageReducer from "./feedCardImage-reducer";
 import defaultHashtagReducer from "./defaultHashtag-reducer";
+import hideKeyboardReducer from "./hideKeyboard-reducer";
 
 export default combineReducers({
   auth: authReducer,
@@ -18,5 +19,6 @@ export default combineReducers({
   feedPageTab: feedPageTabReducer,
   radarChartData: radarChartReducer,
   feedCardImg: feedCardImageReducer,
-  defaultHashtag: defaultHashtagReducer
+  defaultHashtag: defaultHashtagReducer,
+  hideKeyboard: hideKeyboardReducer
 });

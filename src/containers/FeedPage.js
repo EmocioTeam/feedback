@@ -93,7 +93,7 @@ class FeedPage extends Component {
 
   render() {
     return (
-      <Fragment>
+      <div className="feed-page-container">
         <Header
           handleState={this.props.getFeedPageTab}
           navtabs={[
@@ -152,7 +152,7 @@ class FeedPage extends Component {
             )
           )}
         </Container>
-      </Fragment>
+      </div>
     );
   }
 }
