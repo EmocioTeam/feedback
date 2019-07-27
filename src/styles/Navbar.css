@@ -32,7 +32,7 @@
   padding: 7px 5px 7px 5px;
   background-color: #fcfaf9;
   height: 50px;
-  z-index: 999999;
+  /* z-index: 999999; */
   /* width: 100%; */
   /* position: fixed !important; */
   /* bottom: 0px !important; */
