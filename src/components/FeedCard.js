@@ -144,7 +144,15 @@ class NewFeedCard extends Component {
         <Badge style={cardBadgeColorCode} className="feed-card-header-meta">
           {feed.mood}
         </Badge>
-        {feed.picture && <img className="feed-card-image" src={feed.picture} />}
+        {feed.picture && (
+          <img
+            onClick={() => {
+              console.log(this);
+            }}
+            className="feed-card-image"
+            src={feed.picture}
+          />
+        )}
         <div className="feed-card-content">
           <div className="feed-card-body">
             {feed.hashtags.length > 0 && (

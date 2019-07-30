@@ -318,6 +318,8 @@
 }
 
 .feed-card-image {
+  image-orientation: from-image;
+  /* image-orientation: from-image; */
   cursor: pointer;
   min-width: 100%;
   max-width: 100%;

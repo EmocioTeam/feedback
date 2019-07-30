@@ -21,7 +21,8 @@ class FeedPage extends Component {
   state = {
     showFeed: "wall",
     showPosts: 15,
-    hashtags: []
+    hashtags: [],
+    lazyButtonText: "Load more Emocios!"
   };
 
   showFeed = status => {
@@ -137,15 +138,21 @@ class FeedPage extends Component {
                 ) : (
                   <span>
                     {this.renderCards()}
+                    {/* {this.state.showPosts < this.props.feed.docs.length && ( */}
                     <LazyLoad
                       offsetVertical={300}
                       onContentVisible={() => this.showPosts()}
                     >
                       <LazyLoadButton
                         showPosts={this.showPosts}
-                        lazyButtonText={"Load more Emocios!"}
+                        lazyButtonText={
+                          this.state.showPosts > this.props.feed.docs.length
+                            ? "There are no more Emocios! :("
+                            : "Load more Emocios! :)"
+                        }
                       />
                     </LazyLoad>
+                    {/* )} */}
                   </span>
                 )}
               </div>
