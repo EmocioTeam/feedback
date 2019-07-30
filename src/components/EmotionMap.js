@@ -82,7 +82,8 @@ class Geomap extends Component {
     const defaultLongitude = 2.1734;
     return (
       <div>
-        {this.state.showCard && this.state.selectedEmojii && (
+        {/* UNCOMMENT THIS TO SHOW COMMENTS ON MAP */}
+        {/* {this.state.showCard && this.state.selectedEmojii && (
           <div className="emotion-map-comment-card">
             <FeedCard
               feed={this.state.selectedEmojii}
@@ -90,7 +91,7 @@ class Geomap extends Component {
               closeCard={this.closeCard}
             />
           </div>
-        )}
+        )} */}
         <div className="emotion-map-container">
           <Map
             zoom={[15]}

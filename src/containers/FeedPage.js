@@ -96,18 +96,18 @@ class FeedPage extends Component {
     return (
       <div className="feed-page-container">
         <Header
-          handleState={this.props.getFeedPageTab}
-          navtabs={[
-            {
-              label: "Wall",
-              name: "wall",
-              value: "wall",
-              icon: FeedPageIcon
-            },
-            { label: "Map", name: "map", value: "map", icon: MapIcon }
-          ]}
-          header={this.props.refreshing ? "Loading new feeds.." : "Feedbacks"}
-          className="feed-page-header"
+        // handleState={this.props.getFeedPageTab}
+        // navtabs={[
+        //   {
+        //     label: "Wall",
+        //     name: "wall",
+        //     value: "wall",
+        //     icon: FeedPageIcon
+        //   },
+        //   { label: "Map", name: "map", value: "map", icon: MapIcon }
+        // ]}
+        // header={this.props.refreshing ? "Loading new feeds.." : "Feedbacks"}
+        // className="feed-page-header"
         />
         <Container className="feed-page">
           {this.props.feedPageTab === "map" ? (
