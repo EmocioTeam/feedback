@@ -118,9 +118,13 @@ export default function(state = initialState, action) {
 
       const newTotalNumberEmocios = newAllData.length;
       const newEmotionCount = getEmotionCount(newAllData);
-      const newTopEmotion = getTopEmotion(newEmotionCount);
+      console.log("test", newEmotionCount);
+      if (Object.keys(newEmotionCount).length <= 0) {
+        newTopEmotion = "-";
+      } else {
+        var newTopEmotion = getTopEmotion(newEmotionCount);
+      }
       const newCommentsCount = getCommentsCount(newAllData);
-      // const newSeries = getRadarChartSeries(newEmotionCount);
       const newSeries = getRadarChartSeries2(action.payload.graphData);
 
       return {
