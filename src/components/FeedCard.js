@@ -14,6 +14,7 @@ import { fetchImg } from "../actions/firebaseUploadImg";
 import { connect } from "react-redux";
 import { hideKeyboard } from "../actions/hideKeyboard";
 import FeedCardExpandedComments from "./FeedCardExpandedComments";
+import Linkify from "react-linkify";
 
 const emojii = data.map(mood => {
   return {
@@ -147,7 +148,7 @@ class NewFeedCard extends Component {
         {feed.picture && (
           <img
             onClick={() => {
-              console.log(this);
+              // console.log(this.target);
             }}
             className="feed-card-image"
             src={feed.picture}
@@ -173,15 +174,17 @@ class NewFeedCard extends Component {
                 <br />
               </div>
             )}
-            <p>
-              {feed.author && <strong>{feed.author} </strong>}
-              {feed.comment.split("\n").map((row, index) => (
-                <span key={index}>
-                  {row}
-                  {row.length > 0 ? <br /> : false}
-                </span>
-              ))}
-            </p>
+            <Linkify>
+              <p>
+                {feed.author && <strong>{feed.author} </strong>}
+                {feed.comment.split("\n").map((row, index) => (
+                  <span key={index}>
+                    {row}
+                    {row.length > 0 ? <br /> : false}
+                  </span>
+                ))}
+              </p>
+            </Linkify>
             <div className="feed-card-body-meta">
               <strong>
                 {this.getDate(feed.timestamp.seconds * 1000).main}
@@ -288,56 +291,61 @@ class NewFeedCard extends Component {
                             }`}
                             key={i}
                           >
-                            <p
-                              className="feed-card-comments-item"
-                              style={
-                                comment.author && comment.author.stakeholder
-                                  ? // && comment.author.stakeholder
-                                    { backgroundColor: "#c1e7ff" }
-                                  : {}
-                              }
-                            >
-                              {comment.comment ? (
-                                <span>
-                                  {comment.author && comment.author.name ? (
-                                    <strong style={{ fontSize: "90%" }}>
-                                      {comment.author.name}{" "}
-                                    </strong>
+                            <Linkify>
+                              <p
+                                className="feed-card-comments-item"
+                                style={
+                                  comment.author && comment.author.stakeholder
+                                    ? // && comment.author.stakeholder
+                                      { backgroundColor: "#c1e7ff" }
+                                    : {}
+                                }
+                              >
+                                {comment.comment ? (
+                                  <span>
+                                    {comment.author && comment.author.name ? (
+                                      <strong style={{ fontSize: "90%" }}>
+                                        {comment.author.name}{" "}
+                                      </strong>
+                                    ) : (
+                                      ""
+                                    )}
+
+                                    {comment.comment
+                                      .split("\n")
+                                      .map((row, index) => {
+                                        return (
+                                          <span key={index}>
+                                            {row.trim()}
+                                            {row.trim().length > 0 ? (
+                                              <br />
+                                            ) : (
+                                              false
+                                            )}
+                                          </span>
+                                        );
+                                      })}
+                                  </span>
+                                ) : (
+                                  comment
+                                )}
+                                <span className="feed-card-comments-item-actions">
+                                  {comment.timestamp ? (
+                                    <span>
+                                      <strong>
+                                        {this.getDate(comment.timestamp).main}
+                                      </strong>{" "}
+                                      {
+                                        this.getDate(comment.timestamp)
+                                          .secondary
+                                      }
+                                    </span>
                                   ) : (
                                     ""
                                   )}
-
-                                  {comment.comment
-                                    .split("\n")
-                                    .map((row, index) => {
-                                      return (
-                                        <span key={index}>
-                                          {row.trim()}
-                                          {row.trim().length > 0 ? (
-                                            <br />
-                                          ) : (
-                                            false
-                                          )}
-                                        </span>
-                                      );
-                                    })}
                                 </span>
-                              ) : (
-                                comment
-                              )}
-                              <span className="feed-card-comments-item-actions">
-                                {comment.timestamp ? (
-                                  <span>
-                                    <strong>
-                                      {this.getDate(comment.timestamp).main}
-                                    </strong>{" "}
-                                    {this.getDate(comment.timestamp).secondary}
-                                  </span>
-                                ) : (
-                                  ""
-                                )}
-                              </span>
-                            </p>
+                              </p>
+                            </Linkify>
                           </div>
                         );
                       })}
@@ -443,7 +451,6 @@ class NewFeedCard extends Component {
 }
 
 const mapStateToProps = state => {
-  // console.log(state.feedCardImg);
   return {
     img: state.feedCardImg
   };
