@@ -58,24 +58,24 @@
     right: 5% !important;
   }
 }
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   .feed-card-header-meta {
     right: 19% !important;
   }
-}
-@media (min-width: 1020px) {
+} */
+@media (min-width: 1000px) {
   .feed-card-header-meta {
     right: 20% !important;
   }
 }
 @media (min-width: 1030px) {
   .feed-card-header-meta {
-    right: 19% !important;
+    right: 20% !important;
   }
 }
 @media (min-width: 1300px) {
   .feed-card-header-meta {
-    right: 29.45% !important;
+    right: 30% !important;
   }
 }
 

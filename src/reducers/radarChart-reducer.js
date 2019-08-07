@@ -35,6 +35,10 @@ function getEmotionCount(data) {
 }
 
 function getTopEmotion(emotionCount) {
+  if (Object.keys(emotionCount) === 0) {
+    return [];
+  }
+  console.log(emotionCount);
   return Object.keys(emotionCount).reduce((a, b) =>
     emotionCount[a] > emotionCount[b] ? a : b
   );
