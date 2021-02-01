@@ -1,7 +1,11 @@
 // import app from "firebase/app";
-// import firebase from "firebase";
+import firebase from "firebase";
 
-const firebase = require("firebase");
+
+require('firebase/auth');
+require('firebase/database');
+
+//var firebase = require('firebase/app');
 // Required for side-effects
 require("firebase/firestore");
 
@@ -16,10 +20,11 @@ const firebaseConfig = {
   appId: "1:1047283803748:web:839cb1cd713b72e0"
 };
 
-export const fb = firebase.initializeApp(firebaseConfig);
-// export const fbFeeds = "publicEmocio";
-// export const fbHashtags = "publicHashtags";
+var fbb = firebase.initializeApp(firebaseConfig);
+export const fb = fbb
+ export const fbFeeds = "publicEmocio";
+ export const fbHashtags = "publicHashtags";
 // export const fbFeeds = "designClub";
 // export const fbHashtags = "designClubHashtags";
-export const fbFeeds = "august";
-export const fbHashtags = "augustHashtags";
+//export const fbFeeds = "august";
+//export const fbHashtags = "augustHashtags";

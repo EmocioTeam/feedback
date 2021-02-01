@@ -9,7 +9,6 @@ import {
 } from "react-bootstrap";
 import moodColorCode from "../moodColorCode";
 import data from "../data";
-import Emoji from "react-facebook-emoji";
 import { fetchImg } from "../actions/firebaseUploadImg";
 import { connect } from "react-redux";
 import { hideKeyboard } from "../actions/hideKeyboard";
@@ -26,7 +25,7 @@ const emojii = data.map(mood => {
 class NewFeedCard extends Component {
   state = {
     addComment: false,
-    showPopover: true,
+    //showPopover: false,
     feedComment: "",
     maxCommentChars: 140,
     characterCount: 0,
@@ -234,8 +233,7 @@ class NewFeedCard extends Component {
                         placement="top"
                         trigger="click"
                         rootClose
-                        onClick={() => this.setState({ showPopover: true })}
-                        show={this.state.showPopover}
+                        //show={this.state.showPopover}
                         overlay={
                           <Popover id={`tooltip-top`}>
                             {emojii.map(mood => {
@@ -264,7 +262,7 @@ class NewFeedCard extends Component {
                         // console.log(feed.id);
                         this.setState({
                           addCommentFocus: true,
-                          addComment: true // this.state.addComment ? false : true
+                          addComment: this.state.addComment ? false : true
                         });
                       }}
                     >
