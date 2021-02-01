@@ -41,7 +41,7 @@ import "./styles/ExpandedComments.css";
 import { connect } from "react-redux";
 
 // FIREBASE
-import firebase from "firebase";
+import firebase from "firebase/app";
 import { fb } from "./config";
 import {
   onAuthStateChanged,
