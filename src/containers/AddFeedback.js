@@ -145,6 +145,7 @@ class AddFeedback extends Component {
     return (
       <div>
         <Header header="Add Feedback" />
+        <SwipeHints />
         <div className="add-feedback-cards">
           <Deck
             toggleShowAddFeedback={this.toggleShowAddFeedback}
