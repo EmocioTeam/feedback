@@ -127,7 +127,7 @@ class NewFeedCard extends Component {
     const cardBorderColorCode = {
       borderStyle: "solid",
       borderColor: moodColorCode[feed.mood],
-      borderWidth: "5px 0px 0px 0px"
+      //borderWidth: "5px 0px 0px 0px"
     };
 
     const cardBadgeColorCode = {
@@ -284,7 +284,7 @@ class NewFeedCard extends Component {
                           <div
                             className={`feed-card-comments-item-div ${
                               this.state.showComments
-                                ? "animated slideInLeft"
+                                ? "animated" /*slideInLeft*/
                                 : false
                             }`}
                             key={i}

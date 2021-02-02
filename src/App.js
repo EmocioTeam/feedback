@@ -190,7 +190,7 @@ class App extends Component {
     return (
       <Router>
         {window.location.pathname === "/" ? (
-          <Redirect to="/add-feed/" />
+          <Redirect to="/add-feed" />
         ) : (
           false
         )}
