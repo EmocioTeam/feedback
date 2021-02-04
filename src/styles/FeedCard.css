@@ -42,14 +42,16 @@
   padding: 3px 6px 5px 6px;
   font-size: 80%;
   color: white;
-  position: absolute;
-  right: 2.8%;
-  margin: 0;
-  margin-right: -2px;
-  margin-top: -2px;
+  /* position: absolute; */
+  /* right: 2.8%; */
+  margin: -0.62rem;
+  float: right;
+  /* margin-right: -2px; */
+  margin-top: -12px;
   border-radius: 0px 9px 0px 10px;
 }
 
+/*
 @media (min-width: 600px) {
   .feed-card-header-meta {
     right: 3% !important;
@@ -59,12 +61,13 @@
   .feed-card-header-meta {
     right: 6.3% !important;
   }
-}
+}*/
 /* @media (min-width: 1000px) {
   .feed-card-header-meta {
     right: 19% !important;
   }
 } */
+/*
 @media (min-width: 1000px) {
   .feed-card-header-meta {
     right: 21% !important;
@@ -77,10 +80,10 @@
 }
 @media (min-width: 1300px) {
   .feed-card-header-meta {
-    right: 30% !important;
+    right: 30.65% !important;
   }
 }
-
+*/
 .feed-card-body > p {
   text-align: justify;
   font-size: 14px;
