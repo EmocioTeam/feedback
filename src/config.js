@@ -22,9 +22,12 @@ const firebaseConfig = {
 
 var fbb = firebase.initializeApp(firebaseConfig);
 export const fb = fbb
- export const fbFeeds = "publicEmocio";
- export const fbHashtags = "publicHashtags";
+export const fbFeeds = "publicEmocio";
+export const fbHashtags = "publicHashtags";
 // export const fbFeeds = "designClub";
 // export const fbHashtags = "designClubHashtags";
-//export const fbFeeds = "august";
-//export const fbHashtags = "augustHashtags";
+// export const fbFeeds = "august";
+// export const fbHashtags = "augustHashtags";
+//export const fbFeeds = "feedback";
+//export const fbHashtags = "hashtags";
+

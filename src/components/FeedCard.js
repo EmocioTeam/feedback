@@ -127,7 +127,7 @@ class NewFeedCard extends Component {
     const cardBorderColorCode = {
       borderStyle: "solid",
       borderColor: moodColorCode[feed.mood],
-      borderWidth: "5px 0px 0px 0px"
+      //borderWidth: "5px 0px 0px 0px"
     };
 
     const cardBadgeColorCode = {
@@ -141,9 +141,7 @@ class NewFeedCard extends Component {
             X
           </span>
         )}
-        <Badge style={cardBadgeColorCode} className="feed-card-header-meta">
-          {feed.mood}
-        </Badge>
+
         {feed.picture && (
           <img
             onClick={() => {
@@ -154,7 +152,11 @@ class NewFeedCard extends Component {
           />
         )}
         <div className="feed-card-content">
+        <Badge style={cardBadgeColorCode} className="feed-card-header-meta">
+          {feed.mood}
+        </Badge>
           <div className="feed-card-body">
+
             {feed.hashtags.length > 0 && (
               <div className="feed-card-body-hashtags" key={feed.id}>
                 {feed.hashtags.map((hashtag, index) => (
@@ -284,7 +286,7 @@ class NewFeedCard extends Component {
                           <div
                             className={`feed-card-comments-item-div ${
                               this.state.showComments
-                                ? "animated slideInLeft"
+                                ? "animated" /*slideInLeft*/
                                 : false
                             }`}
                             key={i}

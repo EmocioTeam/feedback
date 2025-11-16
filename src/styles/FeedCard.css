@@ -4,10 +4,11 @@
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 10px;
+  border-radius: 13px;
   max-width: 100% !important;
   background-color: rgb(255, 255, 255);
   box-sizing: border-box;
+  border-Width: 5px 0px 0px 0px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -38,16 +39,21 @@
 }
 
 .feed-card-header-meta {
-  padding: 5px 5px 5px 5px;
+  padding: 3px 6px 5px 6px;
   font-size: 80%;
   color: white;
-  position: absolute;
-  right: 0px;
-  margin: 0;
-  margin-right: 10px;
-  border-radius: 0px 5px 0px 10px;
+  /* position: absolute; */
+  /* right: 2.8%; */
+  margin-top: -12px;
+    margin-right: -0.63rem;
+    margin-bottom: -0.62rem;
+    margin-left: -0.63rem;
+  float: right;
+  /* margin-right: -2px; */
+  border-radius: 0px 9px 0px 10px;
 }
 
+/*
 @media (min-width: 600px) {
   .feed-card-header-meta {
     right: 3% !important;
@@ -55,30 +61,31 @@
 }
 @media (min-width: 600px) {
   .feed-card-header-meta {
-    right: 5% !important;
+    right: 6.3% !important;
   }
-}
+}*/
 /* @media (min-width: 1000px) {
   .feed-card-header-meta {
     right: 19% !important;
   }
 } */
+/*
 @media (min-width: 1000px) {
   .feed-card-header-meta {
-    right: 20% !important;
+    right: 21% !important;
   }
 }
 @media (min-width: 1030px) {
   .feed-card-header-meta {
-    right: 20% !important;
+    right: 30.8% !important;
   }
 }
 @media (min-width: 1300px) {
   .feed-card-header-meta {
-    right: 30% !important;
+    right: 30.65% !important;
   }
 }
-
+*/
 .feed-card-body > p {
   text-align: justify;
   font-size: 14px;

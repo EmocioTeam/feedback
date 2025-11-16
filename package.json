@@ -2,6 +2,10 @@
   "name": "feedbook",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.14.10",
+    "node": "14.15.4"
+  },
   "dependencies": {
     "apexcharts": "^3.24.0",
     "bootstrap": "^4.6.0",
