@@ -196,8 +196,12 @@ Governance and documentation
   - Date, Commit SHA, files touched, rationale, revert instructions.
 - ERROR_LOG.md (error knowledge base)
   - ID, Timestamp, Environment, Action, Error summary, Log excerpts, Analysis, Resolution steps, Status, Links, Revert.
+- TASK_COMPLETION_SUMMARIES.md (task completion summaries)
+  - Per task, capture a concise summary and “explain changes” details, AC verification, and links (commits, CHANGELOG, TODO_TIMELINE, ERROR_LOG), with revert instructions.
 - Project Brain — Cline Memory Bank
   - Persist key context, decisions, dependency maps, and common remedies for rapid retrieval in future tasks.
+- Documentation formatting pass
+  - At each task completion and substantive documentation change, reformat for readability: prefer narrative paragraphs; use bullets only for checklists and clear enumerations; avoid deep nesting; normalize headings and cross-links.
 
 Security notes
 - Prefer environment variables for Firebase and Mapbox; rotate any previously exposed keys.

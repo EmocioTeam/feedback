@@ -50,6 +50,15 @@ F) Completion
 - Use attempt_completion to summarize:
   - What changed, where documented, how to revert.
   - Links to TODO_TIMELINE tasks, CHANGELOG entries, and ERROR_LOG items.
+- Write/update TASK_COMPLETION_SUMMARIES.md:
+  - Capture a concise task-level summary and “explain changes” details
+  - Verify acceptance criteria and record verification notes
+  - Link to commits, CHANGELOG entries, TODO_TIMELINE tasks, and ERROR_LOG items
+  - Include revert commands
+- Perform a documentation formatting pass:
+  - Prefer narrative paragraphs; use bullets only for checklists and crisp enumerations
+  - Avoid nested lists beyond one level; use short subsections/headings instead
+  - Normalize section titles and cross-links between README, STABILIZATION_README, TODO_TIMELINE, CHANGELOG, ERROR_LOG, TASK_COMPLETION_SUMMARIES
 
 G) Error Handling (Error Knowledge Base)
 - For each error:

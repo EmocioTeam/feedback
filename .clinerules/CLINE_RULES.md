@@ -27,7 +27,15 @@ Documentation Obligations (per change)
 - TODO_TIMELINE.md: add/update tasks (ID, Description, Why, Steps, ACC, Risks, Deps, Owner, Outcome, Links).
 - CHANGELOG.md: per-change entry with date, commit SHA, files touched, rationale, and revert steps.
 - ERROR_LOG.md: record errors with environment, logs, root cause, resolution, and status; link tasks/commits.
+- TASK_COMPLETION_SUMMARIES.md: after each task completion, add a concise summary and explain-changes details with acceptance verification and links (commits, CHANGELOG, TODO_TIMELINE, ERROR_LOG); include revert commands.
 - Project Brain (Cline memory): summarize new structural insights, decisions, and recurring fixes.
+
+Documentation Style
+- Prefer narrative paragraphs and short subsections over long bullet lists.
+- Use bullets only for checklists, discrete enumerations, or command sequences.
+- Avoid nested lists beyond one level; use headings or paragraphs instead.
+- Keep sentences concise and use active voice; limit headings to 1–3 levels.
+- Cross-link governance artifacts (README, STABILIZATION_README, TODO_TIMELINE, CHANGELOG, ERROR_LOG, TASK_COMPLETION_SUMMARIES) for discoverability.
 
 Coding Standards
 - Follow SOLID for classes. Document each function: input → transformation → output.
