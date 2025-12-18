@@ -1,11 +1,137 @@
-## Emocio
+# Emocio
+“Share your emotions.. feels nice.” — Turutupa, 2019
 
-## Demo
+Emocio is a lightweight social feedback application where users:
+- Post emotions with mood categorization, text, hashtags, optional image, and optional geolocation.
+- Browse a real-time wall and a geospatial map view of emotions.
+- Interact with posts via comments and reactions.
+- Explore analytics with totals, top emotion/hashtag, and radar charts for selected hashtags.
 
-https://www.emocio.io
+Demo
+- https://www.emocio.io (legacy link; may be offline)
 
-## Installation
+Motivation
+- “Share your emotions.. feels nice.” This captures Emocio’s ethos: quick, simple expression and collective insight. The UX emphasizes low-friction posting and immediate visualization (wall/map/analytics) to promote lightweight participation and discovery.
 
-## Usage
+Tech Stack
+- Frontend: React 16, Redux, Thunk, React Router 5
+- Data/Realtime: Firebase (Auth, Firestore, Storage)
+- Maps: Mapbox GL via react-mapbox-gl
+- UI/Charts: React Bootstrap, Chart.js, Recharts, ApexCharts
+- Build: react-scripts 3.4.x
+- Deployment: Cloud Foundry staticfile buildpack (serves build/)
 
-Share your emotions.. feels nice.
+Prerequisites
+- Node 14.15.4 and npm 6.14.10 (as per package.json engines)
+- Firebase project (Firestore, Auth, Storage)
+- Mapbox access token
+- Optional: Cloud Foundry CLI for CF deployments
+
+Getting Started (Local)
+1) Install dependencies
+- npm install
+2) Configure environment
+- Recommended: use environment variables via .env.local
+  - REACT_APP_FIREBASE_API_KEY=your-key
+  - REACT_APP_FIREBASE_AUTH_DOMAIN=your-domain
+  - REACT_APP_FIREBASE_DATABASE_URL=your-db-url
+  - REACT_APP_FIREBASE_PROJECT_ID=your-project-id
+  - REACT_APP_FIREBASE_STORAGE_BUCKET=your-bucket
+  - REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+  - REACT_APP_FIREBASE_APP_ID=your-app-id
+  - REACT_APP_MAPBOX_TOKEN=your-mapbox-token
+- Legacy (not recommended): hard-code values in src/config.js and src/components/EmotionMap.js. Do not commit secrets.
+3) Start the app
+- npm start (http://localhost:3000)
+
+Build
+- npm run build (outputs build/)
+
+Deployment (Cloud Foundry example)
+- Ensure build/ is present (npm run build).
+- manifest.yml serves build/ via staticfile buildpack:
+  - name: feedbackapp
+  - path: build
+  - memory: 256M
+  - buildpack: staticfile_buildpack
+- Deploy: cf push
+
+Core Features
+- Create Feedback: select mood, write comment, add hashtags; optional image (auth required) and geolocation.
+- Realtime Wall: live updates ordered by timestamp; hashtag filtering; lazy loading.
+- Map View: mood-specific markers; click to preview card; centers on user location (fallback defaults).
+- Analytics: totals, comments count, top emotion, top hashtag; radar chart per selected hashtags.
+- Reactions & Comments: mood-based reactions; 140-char comment limit; stakeholder comments highlighted.
+
+Architecture Overview
+- Routing and Pages (src/App.js):
+  - /add-feed, /add-feed/:hashtag, /feed-page (Wall/Map tabs), /analytics, /profile; root redirects to /add-feed.
+  - Bottom navigation: Feed (/feed-page), Add (/add-feed), Results (/analytics).
+- State:
+  - Redux store with thunk (src/index.js).
+  - Reducers (src/reducers/*): auth, feed, hashtags, feedWithLocation, lastFeed, feedPageTab, radarChartData, feedCardImg, defaultHashtag, hideKeyboard.
+  - Actions (src/actions/firebaseActions.js): auth listener; realtime feed via Firestore onSnapshot; hashtag list; CRUD for comments/reactions.
+- Config and Collections:
+  - src/config.js initializes Firebase; defaults: fbFeeds="publicEmocio", fbHashtags="publicHashtags".
+  - users collection: stakeholder flag used to highlight comments.
+- Maps:
+  - src/components/EmotionMap.js uses react-mapbox-gl and requires access token.
+
+Data Model (Simplified)
+- Feedback: id, author?, comment, mood, hashtags[], location?(GeoPoint), picture?, reactions{mood:count}, comments[], timestamp(server).
+- Comment: timestamp, comment, author? { name?, stakeholder? }.
+- Hashtag: id (#Tag), count, moods{mood:count}.
+- User: uid, displayName?, email?, stakeholder?.
+
+Validation and Business Rules
+- Hashtags normalized to ensure # prefix and alphanumerics.
+- Comment length: 140 characters max.
+- Image uploads require authenticated user.
+- Server-side timestamps used for ordering.
+
+Scripts
+- start: react-scripts start
+- build: react-scripts build
+- test: react-scripts test
+- eject: react-scripts eject
+
+Troubleshooting
+- Ensure Node 14.15.4 and npm 6.14.10 to avoid react-scripts issues.
+- If map is blank: verify Mapbox token and that your token is injected (env or source).
+- If realtime updates fail: check Firestore rules and FieldValue.serverTimestamp usage.
+- If image upload fails: confirm auth status and Storage rules for authenticated writes.
+- If hashtags list is empty: validate fbHashtags collection and increment logic on create.
+
+Privacy, Security, and Compliance
+- Geolocation is opt-in; store minimal PII.
+- Sanitize and safely linkify user inputs to avoid XSS.
+- Do not commit secrets; prefer environment variables and key rotation.
+
+Contributing and Coding Standards
+- Keep components small; document assumptions inline.
+- Document functions with input, transformation, and output.
+- Optimize code paths if unit tests exceed 100ms.
+- Commit with detailed changelogs identifying author (human vs automation).
+
+Project Structure (Key Paths)
+- src/App.js — routing and handlers (add/delete/comment/react).
+- src/index.js — Redux store/bootstrap.
+- src/config.js — Firebase init and collections.
+- src/actions/firebaseActions.js — auth, realtime, CRUD, aggregations.
+- src/containers/AddFeedback.js — creation UI and flows.
+- src/containers/FeedPage.js — wall/map with filters.
+- src/components/EmotionMap.js — Mapbox layers/markers.
+- src/components/FeedCard.js — card UI, reactions, comments.
+- src/containers/Results.js — analytics/radar.
+- public/emojii/*, public/img/* — assets.
+- manifest.yml — CF deployment.
+
+Roadmap (Selected)
+- Pagination and server-side hashtag filtering.
+- Marker clustering at scale.
+- Rich link previews.
+- Moderation and role-based access.
+- Server-side analytics/caching.
+
+License
+- See LICENSE.
