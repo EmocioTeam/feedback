@@ -11,7 +11,6 @@
     "bootstrap": "^4.6.0",
     "chart.js": "^2.9.4",
     "firebase": "^8.2.5",
-    "grpc": "^1.24.4",
     "lodash": "^4.17.20",
     "mapbox-gl": "^1.13.0",
     "prop-types": "^15.7.2",
