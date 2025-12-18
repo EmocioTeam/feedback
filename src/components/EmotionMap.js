@@ -13,7 +13,10 @@ import data from "../data";
 import FeedCard from "./FeedCard";
 
 const Map = ReactMapboxGl({
+  // Prefer environment token; fallback kept only for Phase 0 stabilization.
+  // TODO(Phase 2): rotate/remove hard-coded fallback and require REACT_APP_MAPBOX_TOKEN.
   accessToken:
+    process.env.REACT_APP_MAPBOX_TOKEN ||
     "pk.eyJ1IjoidHVydXR1cGEiLCJhIjoiY2pyeDlubnI0MGo4dzN6bHh6dHd1eXMyYSJ9.LzJY9l4E1kBtSXQSoPhS9A"
 });
 
