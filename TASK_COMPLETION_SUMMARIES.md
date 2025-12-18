@@ -35,6 +35,35 @@ Exact commands to revert the task if needed (git revert <sha> or git restore <fi
 Follow-ups
 Outstanding items, risks to monitor, and next steps.
 
+Copy-paste Template
+```md
+ID: T-XXX
+Title: <short action-oriented summary>
+Date (UTC): YYYY-MM-DDTHH:mm:ssZ
+Owner: <USER or Cline>
+
+Summary
+<1–2 sentences describing what changed and why>
+
+Explain Changes
+- Files touched with short diff narratives (file: what changed)
+- Key decisions and rationale
+- Acceptance criteria verification notes (how ACs were verified; link to logs/screenshots)
+
+Links
+- Commits: <SHA(s)>
+- CHANGELOG: <entry/ref>
+- TODO_TIMELINE: T-XXX
+- ERROR_LOG: E-YYYYMMDD-XX (if applicable)
+
+Revert
+- git revert <sha>
+- or: git restore <file(s)>
+
+Follow-ups
+- <outstanding items / risks / next steps>
+```
+
 Entries
 
 ID: T-006/T-007

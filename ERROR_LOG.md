@@ -31,6 +31,35 @@ Error Entry Template
   - Commits/PRs:
 - Revert (if applicable):
 
+```md
+ID: E-YYYYMMDD-XX
+Timestamp (UTC): 2025-12-18T00:00:00Z
+Environment:
+  - OS: Windows 11
+  - Node: 14.15.4
+  - npm: 6.14.10
+  - Shell: cmd.exe
+  - Repo path: C:\Users\<USER>\OneDrive - <ORG>\Documents\FaroLabs\emocio-legacy
+Action/Command:
+  - <command that produced the error>
+Error Summary:
+  - <1-2 line summary>
+Log Excerpts (sanitized):
+  - <relevant, sanitized lines>
+Analysis (Root Cause):
+  - <root cause analysis>
+Resolution (steps/commands):
+  1) <step one>
+  2) <step two>
+Status: Open
+Links:
+  - Tasks (TODO_TIMELINE): T-XXX
+  - CHANGELOG entry: <link or description>
+  - Commits/PRs: <SHA or PR #>
+Revert (if applicable):
+  - <revert commands if a change was made>
+```
+
 Entries
 
 ID: E-20251218-01

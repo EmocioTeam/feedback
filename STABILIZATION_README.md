@@ -19,21 +19,25 @@ Environment Baseline
 - Repo path: avoid active OneDrive sync to reduce file locks (or temporarily pause sync during install)
 
 Quickstart Commands (preferred)
-- nvm install 14.15.4
-- nvm use 14.15.4
-- npm i -g npm@6.14.10
-- rmdir /s /q node_modules
-- del /f /q package-lock.json
-- npm cache clean --force
-- npm uninstall grpc
-- npm install
-- npm start
+```bat
+nvm install 14.15.4
+nvm use 14.15.4
+npm i -g npm@6.14.10
+rmdir /s /q node_modules
+del /f /q package-lock.json
+npm cache clean --force
+npm uninstall grpc
+npm install
+npm start
+```
 
 Alternative (if you must use modern Node)
-- npm config set legacy-peer-deps true
-- npm uninstall grpc
-- npm install
-- npm start
+```bat
+npm config set legacy-peer-deps true
+npm uninstall grpc
+npm install
+npm start
+```
 
 OneDrive Mitigation
 - Option A: Pause OneDrive sync during install.
@@ -63,9 +67,18 @@ Risks and Assumptions
 - OneDrive may lock files; mitigate by pausing or relocating the repo.
 
 Revert Instructions (Global)
-- Revert last commit: git revert <commit-sha>
-- Restore files: git restore <file1> <file2>
-- For dependency changes: re-run npm install after revert
+- Revert last commit:
+```bat
+git revert <commit-sha>
+```
+- Restore files:
+```bat
+git restore <file1> <file2>
+```
+- For dependency changes (after revert), re-run install:
+```bat
+npm install
+```
 
 Status Log (append newest on top)
 - YYYY-MM-DD HH:MM — Initialized Phase 0 stabilization plan (this file). Owner: Cline. Status: Planned.
