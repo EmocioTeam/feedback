@@ -1,3 +1,17 @@
+# Emocio Feedback App — Comprehensive Context and Reproduction Guide (Governance Backup)
+
+Tech Stack Update Note (2025-12-19)
+- Frontend: React 18, CRA 5.x; Redux with Thunk; React Router 5 (migration to v6 planned)
+- Firebase: Modular SDK (Auth/Firestore/Storage); image upload base64 fallback via REACT_APP_PICTURE_MODE for environments without Storage/CORS
+- Maps: Mapbox GL via react-mapbox-gl; environment token guard (warning when REACT_APP_MAPBOX_TOKEN is missing)
+- Documentation: governance docs centralized under docs/governance (CHANGELOG.md, ERROR_LOG.md, STABILIZATION_README.md, TODO_TIMELINE.md, FIREBASE_RULES_DEV.md); docs/README.md as index
+- Environment: .env.local.example pattern; storage bucket normalized to <project-id>.appspot.com
+- Repository path (Windows): C:\farolabs\emocio-legacy to avoid OneDrive file locks
+
+Note: Except for the concise tech stack update above, the content below preserves the original EMOCIO_CONTEXT.md verbatim for historical accuracy.
+
+---
+
 # Emocio Feedback App — Comprehensive Context and Reproduction Guide
 
 This document captures the full context of the Emocio feedback application to enable stack-agnostic reproduction. It distills requirements, user flows, data models, page structure, integrations, and operational guidance into a single source-of-truth. Use it to rebuild or extend the application in any technology stack.
@@ -13,22 +27,6 @@ Emocio is a lightweight social feedback application where users:
 The current implementation uses React + Redux on the front-end and integrates with Firebase (Auth, Firestore, Storage) and Mapbox GL for maps. Deployment is configured via a static buildpack manifest.
 
 This document abstracts these into stack-agnostic requirements and models, and documents the original implementation for context.
-
-Modernization Overlay (2025-12-19)
-- Frontend/Tooling: React 18 and CRA 5 baseline with Redux + Thunk; React Router 5 currently (Router v6 migration planned).
-- Firebase: Modular SDK (Auth, Firestore, Storage). Image uploads support an environment-controlled mode:
-  - REACT_APP_PICTURE_MODE=base64 (default for environments without Storage/CORS) — images are embedded as data URLs.
-  - storage mode (future) — uploads to Firebase Storage; requires CORS setup and Storage plan.
-- Maps: react-mapbox-gl with a Mapbox token guard. When REACT_APP_MAPBOX_TOKEN is not set, the app renders a non-blocking warning.
-- Governance and Documentation: Operational docs centralized under docs/governance (CHANGELOG, ERROR_LOG, STABILIZATION_README, TODO_TIMELINE, FIREBASE_RULES_DEV). See docs/README.md for index.
-- Personas: Anonymous (no image uploads), Authenticated (image uploads permitted), Stakeholder (comments highlighted; metadata via users/{uid}).
-- Links:
-  - Governance index: docs/README.md
-  - Stabilization log: docs/governance/STABILIZATION_README.md
-  - Timeline: docs/governance/TODO_TIMELINE.md
-  - Error KB: docs/governance/ERROR_LOG.md
-  - Rules (dev baseline): docs/governance/FIREBASE_RULES_DEV.md
-  - Original context backup (tech stack updated only): docs/governance/EMOCIO_CONTEXT.backup.md
 
 ---
 

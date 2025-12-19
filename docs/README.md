@@ -10,6 +10,8 @@ Governance
 - Changelog (per-change log with revert): docs/governance/CHANGELOG.md
 - Error Knowledge Base (ERROR_LOG): docs/governance/ERROR_LOG.md
 - Firebase Rules (Dev baseline + hardening): docs/governance/FIREBASE_RULES_DEV.md
+- Context (current): EMOCIO_CONTEXT.md
+- Context backup (tech stack updated only): docs/governance/EMOCIO_CONTEXT.backup.md
 
 Runbooks
 - Commit Governance and Approval (no-branch mode): backlog/commit-governance-and-approval.md
