@@ -1,0 +1,31 @@
+chore(repo): consolidate pending changes and enforce commit governance [track:governance] [docs:check]
+
+Rationale:
+- Consolidate remaining modified/added files to align repository state with documented governance.
+- Enforce no-branch commit naming/description segregation and Docs-Checklist gating across all changes.
+
+Files touched (summary):
+- Governance and workflow: .clinerules/CLINE_RULES.md; .clinerules/CLINE_WORKFLOW.md
+- Commit messages: .gitmsg/docs-reorg-and-push.txt; .gitmsg/error-20251219-09.txt
+- Tooling and security: .svgrrc; package.json; package-lock.json
+- VS Code config: .vscode/settings.json
+- App and actions: src/App.js; src/actions/firebaseActions.js; src/actions/firebaseUploadImg.js
+- Components and reducers: src/components/FeedCard.js; src/containers/AddFeedback.js; src/reducers/radarChart-reducer.js
+- Config: src/config.js
+- Workspace: emocio-legacy.code-workspace
+- Runbook and CORS: backlog/commit-governance-and-approval.md; storage-cors.json
+
+Revert:
+- git restore .clinerules/CLINE_RULES.md .clinerules/CLINE_WORKFLOW.md .svgrrc .vscode/settings.json package.json package-lock.json src/App.js src/actions/firebaseActions.js src/actions/firebaseUploadImg.js src/components/FeedCard.js src/containers/AddFeedback.js src/reducers/radarChart-reducer.js src/config.js emocio-legacy.code-workspace backlog/commit-governance-and-approval.md storage-cors.json
+
+Docs-Checklist:
+- [x] STABILIZATION_README updated and moved to docs/governance
+- [x] TODO_TIMELINE updated and moved to docs/governance
+- [x] ERROR_LOG updated with E-20251219-01..09 and moved to docs/governance
+- [x] CHANGELOG moved to docs/governance
+- [x] README updated (Mapbox setup and docs index references)
+
+Links:
+- Tasks (TODO_TIMELINE): T-Docs-Reorg; T-Workspace-Relocation-Fix; T-Mapbox-Guard
+- CHANGELOG: 2025-12-19 entries (firebase migration; security; rules; docs reorg)
+- ERROR_LOG: E-20251219-09

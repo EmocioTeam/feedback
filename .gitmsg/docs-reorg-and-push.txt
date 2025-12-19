@@ -1,0 +1,31 @@
+docs(governance): move core docs to docs/governance; add docs index; update README links [track:governance] [docs:check]
+
+Rationale:
+- Centralize governance documentation under docs/governance for discoverability and policy enforcement.
+- Add docs/README.md as an index entry point; update root README with Mapbox setup and docs references.
+- Prepare repository for ongoing documentation hygiene as encoded in .clinerules.
+
+Files touched:
+- M README.md (added Mapbox setup; will add docs index link if needed)
+- A docs/README.md (documentation index)
+- R docs/governance/CHANGELOG.md (moved from root)
+- R docs/governance/ERROR_LOG.md (moved from root)
+- R docs/governance/STABILIZATION_README.md (moved from root)
+- R docs/governance/TODO_TIMELINE.md (moved from root)
+- (Planned) R docs/governance/FIREBASE_RULES_DEV.md (move from root if tracked)
+
+Revert:
+- git mv docs/governance/CHANGELOG.md docs/governance/ERROR_LOG.md docs/governance/STABILIZATION_README.md docs/governance/TODO_TIMELINE.md .
+- git restore README.md docs/README.md
+
+Docs-Checklist:
+- [x] STABILIZATION_README updated and moved
+- [x] TODO_TIMELINE updated and moved
+- [x] CHANGELOG moved; entries present for recent work
+- [x] ERROR_LOG updated (E-20251219-01..09) and moved
+- [x] docs/README.md added (index)
+
+Links:
+- Tasks (TODO_TIMELINE): T-Docs-Reorg; T-Mapbox-Guard
+- CHANGELOG: 2025-12-19 entries (firebase migration; security; rules)
+- ERROR_LOG: E-20251219-09

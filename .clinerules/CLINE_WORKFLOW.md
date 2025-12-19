@@ -24,22 +24,34 @@ C) Proposal (Plan Mode)
 - Include documentation obligations (README/STABILIZATION/TODO_TIMELINE/CHANGELOG/ERROR_LOG).
 
 D) Implementation Loop (Act Mode)
-1) Branching
-   - git checkout -b feat/<task-name> (or checkout existing feature branch)
+1) No-branch mode (current)
+   - Keep small, auditable commits on the main working line. Use segregated commit naming and descriptions; branches may be enabled later.
 2) Execute smallest viable change
    - One logical change per commit; minimize blast radius.
-3) Documentation updates
-   - STABILIZATION_README.md: phase status, risks, outcomes
-   - TODO_TIMELINE.md: task status/outcomes/links
+3) Documentation updates (Docs-Checklist gating; must be checked before a commit is considered “done”)
+   - STABILIZATION_README.md: phase status, risks, outcomes (if environment/setup changed)
+   - TODO_TIMELINE.md: task status/outcomes/links; AC verification
    - CHANGELOG.md: entry with files touched, rationale, revert commands
-   - ERROR_LOG.md: add entry if any errors occurred (sanitized)
+   - ERROR_LOG.md: entry for any errors (sanitized) including Prevention notes
+   - TASK_COMPLETION_SUMMARIES.md: acceptance verification + Next best actions
+   - README.md: update if user-facing behavior or setup changed
 4) Commit with required structure
-   - Subject: <type>(<scope>): <summary>
+   - Subject: <type>(<scope>): <summary> [track:<track>] [docs:check] [approval:required]
    - Body:
      - Rationale: why this change was required; assumptions made
-     - Revert: exact commands to revert (git revert <sha> / git restore <files>)
      - Files touched: explicit list or short diff summary
-5) Wait for tool confirmation after each step; do not chain tools without confirmation.
+     - Revert: exact commands to revert (git revert <sha> / git restore <files> && npm ci if package files changed)
+     - Docs-Checklist: items in section (3) checked
+     - Links: TODO_TIMELINE Task IDs, ERROR_LOG IDs, related CHANGELOG entries
+     - Approval Record (only for merge/consolidation-like commits):
+       - Requested by: Cline
+       - Approved by: <USER> at <UTC timestamp>
+       - Cline chat reference: <date/time or message anchor>
+5) Ask-to-merge Gate (PR/merge policy)
+   - Cline must explicitly ask for approval before merging any PR (or consolidation commit).
+   - PR/merge description must include Approval Record and a checked Docs-Checklist.
+   - Merges are blocked until user approval is recorded.
+6) Wait for tool confirmation after each step; do not chain tools without confirmation.
 
 E) Validation
 - Run app/build as required; capture logs/screenshots for artifacts.

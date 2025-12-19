@@ -7,6 +7,19 @@ const initialState = {
       name: "No data",
       data: [0, 0, 0, 0, 0]
     }
+  ],
+  // Defaults used when filters produce empty datasets or before firstFeedLoad runs
+  topEmotion: "-",
+  totalNumberEmocios: 0,
+  commentsCount: 0,
+  defaultTopEmotion: "-",
+  defaultTotalNumberEmocios: 0,
+  defaultCommentsCount: 0,
+  defaultSeries: [
+    {
+      name: "All",
+      data: [0, 0, 0, 0, 0]
+    }
   ]
 };
 
@@ -35,13 +48,11 @@ function getEmotionCount(data) {
 }
 
 function getTopEmotion(emotionCount) {
-  if (Object.keys(emotionCount) === 0) {
-    return [];
+  const keys = Object.keys(emotionCount || {});
+  if (keys.length === 0) {
+    return "-";
   }
-  console.log(emotionCount);
-  return Object.keys(emotionCount).reduce((a, b) =>
-    emotionCount[a] > emotionCount[b] ? a : b
-  );
+  return keys.reduce((a, b) => (emotionCount[a] > emotionCount[b] ? a : b));
 }
 
 function getCommentsCount(data) {
@@ -104,10 +115,10 @@ export default function(state = initialState, action) {
       if (action.payload.graphData.length === 0) {
         return {
           ...state,
-          topEmotion: state.defaultTopEmotion,
-          totalNumberEmocios: state.defaultTotalNumberEmocios,
-          commentsCount: state.defaultCommentsCount,
-          series: [...state.defaultSeries]
+          topEmotion: state.defaultTopEmotion !== undefined ? state.defaultTopEmotion : (state.topEmotion !== undefined ? state.topEmotion : "-"),
+          totalNumberEmocios: state.defaultTotalNumberEmocios !== undefined ? state.defaultTotalNumberEmocios : (state.totalNumberEmocios !== undefined ? state.totalNumberEmocios : 0),
+          commentsCount: state.defaultCommentsCount !== undefined ? state.defaultCommentsCount : (state.commentsCount !== undefined ? state.commentsCount : 0),
+          series: [...(state.defaultSeries !== undefined ? state.defaultSeries : state.series)]
         };
       }
       const newAllData = action.payload.feed.docs
@@ -123,10 +134,9 @@ export default function(state = initialState, action) {
       const newTotalNumberEmocios = newAllData.length;
       const newEmotionCount = getEmotionCount(newAllData);
       console.log("test", newEmotionCount);
-      if (Object.keys(newEmotionCount).length <= 0) {
-        newTopEmotion = "-";
-      } else {
-        var newTopEmotion = getTopEmotion(newEmotionCount);
+      let newTopEmotion = "-";
+      if (Object.keys(newEmotionCount).length > 0) {
+        newTopEmotion = getTopEmotion(newEmotionCount);
       }
       const newCommentsCount = getCommentsCount(newAllData);
       const newSeries = getRadarChartSeries2(action.payload.graphData);

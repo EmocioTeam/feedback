@@ -102,3 +102,51 @@ Follow-ups
 - Add Documentation Style guidelines and a documentation formatting pass to rules/workflow.
 - Reduce unnecessary bullets across governance docs for improved readability.
 - Proceed with Phase 0: remove grpc, add env fallbacks, clean install and validate.
+
+ID: T-CurrentTrack-20251219
+Title: Firebase modular migration, governance enforcement, and base64 upload fallback
+Date (UTC): 2025-12-19T21:35:00Z
+Owner: Cline
+
+Summary
+Migrated the app to Firebase modular SDK with a new project configuration, enforced governance (no-branch commit gating with Docs-Checklist and Approval Record), and implemented base64 image upload fallback for environments without Storage/CORS.
+
+Explain Changes
+- src/config.js: modular initializeApp; getAuth/getFirestore/getStorage; bind gs://bucket; helpers (serverTimestamp/increment/arrayUnion)
+- src/actions/firebaseActions.js: refactor async actions to thunks; dispatch success; return payloads for component handling
+- src/App.js: consume returned payloads (e.g., { id }) from thunks; remove compat usage
+- src/reducers/radarChart-reducer.js: guard reduce on empty arrays; initialize defaults
+- src/components/FeedCard.js: guard null Firestore timestamps; compute ms safely
+- src/actions/firebaseUploadImg.js: add base64 data URL fallback when REACT_APP_PICTURE_MODE=base64 or no bucket
+- src/containers/AddFeedback.js: consume uploadImg URL directly (base64 or Storage URL)
+- src/components/EmotionMap.js: add Mapbox token guard (warning banner when REACT_APP_MAPBOX_TOKEN missing)
+- .env.local / .env.local.example: add REACT_APP_PICTURE_MODE; normalize storage bucket
+- .svgrrc: disable svgo to mitigate advisory chain via @svgr
+- package.json: npm overrides (nth-check, css-select, postcss, webpack-dev-server)
+- .clinerules/CLINE_RULES.md / .clinerules/CLINE_WORKFLOW.md: encode no-branch commit gating, Docs-Checklist, ask-to-merge approval gate
+- FIREBASE_RULES_DEV.md: dev baseline rules + production hardening guidance
+- STABILIZATION_README.md: regenerated with Road so far, workspace relocation note
+- TODO_TIMELINE.md: updated with current state and new tasks (workspace fix, docs reorg, map guard)
+- ERROR_LOG.md: backfilled E-20251219-01..08; added E-20251219-09 (VS Code ENOENT)
+
+Acceptance Criteria Verification
+- Dev server compiles and runs at http://localhost:3001
+- Feedback creation, reactions, and comments function without Redux “plain object” errors
+- Base64 upload path works (auth-independent), with images persisted as data URLs and displayed in cards
+- Radar and feed views render without runtime errors; Map shows warning when token missing
+
+Links
+- Commits: local commits on no-branch mode (SHAs available via git log)
+- CHANGELOG: 2025-12-19 entries (firebase modular migration; security mitigations; rules doc)
+- TODO_TIMELINE: T-Firebase-Modular, T-UI-Stability, T-Upload-Fallback, T-Governance-No-Branch, T-Workspace-Relocation-Fix
+- ERROR_LOG: E-20251219-01..09
+
+Revert
+- Code: git restore src/config.js src/actions/firebaseActions.js src/actions/firebaseUploadImg.js src/containers/AddFeedback.js src/App.js src/reducers/radarChart-reducer.js src/components/FeedCard.js src/components/EmotionMap.js
+- Env/docs: git restore .env.local .env.local.example .svgrrc FIREBASE_RULES_DEV.md STABILIZATION_README.md TODO_TIMELINE.md CHANGELOG.md ERROR_LOG.md ".clinerules/CLINE_RULES.md" ".clinerules/CLINE_WORKFLOW.md"
+- Dependencies: npm ci (if package.json changed)
+
+Follow-ups
+- Move governance docs into docs/governance and update README links
+- Add README section for Mapbox token setup and docs index link
+- If Storage is enabled later, apply CORS (storage-cors.json) and switch to “storage” mode

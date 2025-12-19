@@ -134,6 +134,15 @@ class NewFeedCard extends Component {
       backgroundColor: moodColorCode[feed.mood]
     };
 
+    const tsMs =
+      feed && feed.timestamp
+        ? typeof feed.timestamp === "number"
+          ? feed.timestamp
+          : typeof feed.timestamp.seconds === "number"
+          ? feed.timestamp.seconds * 1000
+          : null
+        : null;
+
     return (
       <div className="feed-card" style={cardBorderColorCode} id={feed.id}>
         {this.props.showActions && (
@@ -188,9 +197,9 @@ class NewFeedCard extends Component {
             </Linkify>
             <div className="feed-card-body-meta">
               <strong>
-                {this.getDate(feed.timestamp.seconds * 1000).main}
+                {tsMs ? this.getDate(tsMs).main : ""}
               </strong>{" "}
-              {this.getDate(feed.timestamp.seconds * 1000).secondary}
+              {tsMs ? this.getDate(tsMs).secondary : ""}
             </div>
           </div>
           {this.props.showActions === false

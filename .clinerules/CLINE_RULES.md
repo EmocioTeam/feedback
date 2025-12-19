@@ -44,9 +44,33 @@ Coding Standards
 - Use environment variables for Firebase/Mapbox. Never commit real secrets.
 
 Git Discipline
-- Branching: feature branches per task (e.g., feat/stabilize-phase-0, chore/remove-grpc, refactor/firebase-modular).
-- Commits: one logical change per commit; present-tense imperative subject; second paragraph for rationale and revert.
-- PRs: one modernization track per PR; include API diffs and doc updates.
+- No-branch mode (current): keep small, auditable commits on main working line. Use segregated commit naming and descriptions; branches may be enabled later.
+- Commit Subject Schema:
+  - <type>(<scope>): <summary> [track:<track>] [docs:check] [approval:required]
+  - Example: feat(upload): enable base64 fallback [track:upload-fallback] [docs:check]
+  - Allowed types: feat | fix | chore | docs | refactor | perf | test
+- Commit Body Requirements (every commit):
+  - Rationale: why the change was required; assumptions
+  - Files touched: explicit list
+  - Revert:
+    - git revert <SHA>
+    - or: git restore <files> && npm ci (if package files changed)
+  - Docs-Checklist (must be checked before commit considered “done”):
+    - [ ] CHANGELOG.md updated (date, files, rationale, revert)
+    - [ ] ERROR_LOG.md updated (sanitized logs, Analysis, Resolution, Prevention note)
+    - [ ] TODO_TIMELINE.md updated (AC, outcomes, links)
+    - [ ] TASK_COMPLETION_SUMMARIES.md updated (acceptance verification + Next best actions, links)
+    - [ ] README/STABILIZATION_README updated if user-facing or environment changed
+  - Links: TODO_TIMELINE Task IDs, ERROR_LOG IDs, related CHANGELOG entries
+  - Approval Record (only for merge/consolidation-like commits):
+    - Requested by: Cline
+    - Approved by: <USER> at <UTC timestamp>
+    - Cline chat reference: <date/time or message anchor>
+- Tracks metadata in subject: include [track:<track>] (e.g., firebase-modular-v12, upload-fallback, ui-stability, security, governance, personas, map)
+- Ask-to-merge Gate (PR/merge policy):
+  - Cline must explicitly ask for approval before merging any PR (or consolidation commit).
+  - PR/merge description must include Approval Record and a checked Docs-Checklist.
+  - Merges are blocked until user approval is recorded.
 
 Security and Sanitization
 - Sanitize logs (mask usernames, tokens, emails). Use placeholders like <USER>, <TOKEN>.
