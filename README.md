@@ -203,6 +203,14 @@ Governance and documentation
 - Documentation formatting pass
   - At each task completion and substantive documentation change, reformat for readability: prefer narrative paragraphs; use bullets only for checklists and clear enumerations; avoid deep nesting; normalize headings and cross-links.
 
+Mapbox Setup
+- Obtain a Mapbox access token at https://account.mapbox.com/
+- Add the token to your .env.local file:
+  - REACT_APP_MAPBOX_TOKEN=your-mapbox-token
+- Behavior when missing:
+  - The app will show a non-blocking warning banner in the map view indicating that REACT_APP_MAPBOX_TOKEN is not set.
+  - A temporary fallback token remains only for Phase 0 stabilization and should be removed/rotated in later phases.
+
 Security notes
 - Prefer environment variables for Firebase and Mapbox; rotate any previously exposed keys.
 - Keep .env.local out of VCS; use .env.local.example as a template.

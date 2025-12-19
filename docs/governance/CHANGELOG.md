@@ -129,6 +129,38 @@ Entries
   - or: git restore src/config.js src/components/EmotionMap.js
 - Links: T-003
 
+- Date: 2025-12-19
+- Commit: (to be filled after commit)
+- Change: chore(firebase): migrate to modular SDK; switch to new Firebase project
+- Files touched: .env.local.example, .env.local, src/config.js, src/actions/firebaseActions.js, src/actions/firebaseUploadImg.js, src/containers/AddFeedback.js, src/App.js
+- Rationale: Modernize to the latest Firebase modular SDK and point the app to the new project via environment variables; remove compat usage and centralize configuration while keeping functionality stable.
+- Revert:
+  - git restore .env.local.example src/config.js src/actions/firebaseActions.js src/actions/firebaseUploadImg.js src/containers/AddFeedback.js src/App.js
+  - Restore previous .env.local values
+  - or: git revert <SHA>
+- Links: T-Modernize-Firebase, T-New-Project
+
+- Date: 2025-12-19
+- Commit: (to be filled after commit)
+- Change: chore(security): add npm overrides; disable svgo via .svgrrc; reduce audit advisories
+- Files touched: package.json, .svgrrc
+- Rationale: Mitigate vulnerabilities (nth-check, css-select, postcss, webpack-dev-server) without breaking CRA; disable svgo to avoid vulnerable path via @svgr.
+- Revert:
+  - git restore package.json .svgrrc && npm ci
+  - or: git revert <SHA>
+- Links: T-Security-Audit
+
+- Date: 2025-12-19
+- Commit: (to be filled after commit)
+- Change: docs(rules): add FIREBASE_RULES_DEV.md (dev baseline and hardening)
+- Files touched: FIREBASE_RULES_DEV.md
+- Rationale: Provide development-friendly Firestore/Storage rules and production hardening guidance for the new Firebase project.
+- Revert:
+  - git rm FIREBASE_RULES_DEV.md
+  - git commit -m "revert: remove Firebase rules doc"
+  - or: git revert <SHA>
+- Links: T-Rules-Dev
+
 Notes
 - After each commit, update the Commit field with the actual SHA (git log -1 --pretty=format:%H).
 - If a change fixes an error, add an ERROR_LOG.md entry and reference its ID here.
