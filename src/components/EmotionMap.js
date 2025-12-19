@@ -12,11 +12,11 @@ import { geolocated } from "react-geolocated";
 import data from "../data";
 import FeedCard from "./FeedCard";
 
+const mapboxToken = process.env.REACT_APP_MAPBOX_TOKEN;
 const Map = ReactMapboxGl({
-  // Prefer environment token; fallback kept only for Phase 0 stabilization.
-  // TODO(Phase 2): rotate/remove hard-coded fallback and require REACT_APP_MAPBOX_TOKEN.
+  // Prefer environment token; fallback kept only for Phase 0 stabilization (warn if missing).
   accessToken:
-    process.env.REACT_APP_MAPBOX_TOKEN ||
+    mapboxToken ||
     "pk.eyJ1IjoidHVydXR1cGEiLCJhIjoiY2pyeDlubnI0MGo4dzN6bHh6dHd1eXMyYSJ9.LzJY9l4E1kBtSXQSoPhS9A"
 });
 
@@ -85,6 +85,20 @@ class Geomap extends Component {
     const defaultLongitude = 2.1734;
     return (
       <div>
+        {!mapboxToken && (
+          <div
+            style={{
+              backgroundColor: "#fff3cd",
+              color: "#856404",
+              padding: "10px",
+              border: "1px solid #ffeeba",
+              borderRadius: "4px",
+              marginBottom: "10px"
+            }}
+          >
+            Mapbox token missing. Set REACT_APP_MAPBOX_TOKEN in .env.local to enable authenticated Mapbox usage.
+          </div>
+        )}
         {/* UNCOMMENT THIS TO SHOW COMMENTS ON MAP */}
         {this.state.showCard && this.state.selectedEmojii && (
           <div className="emotion-map-comment-card">
