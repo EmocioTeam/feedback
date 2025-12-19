@@ -5,6 +5,21 @@ Purpose
 - Each item is split into its own numbered, categorized file for focused execution and review.
 - Use backlog/README.md as the master index for navigation and commit governance reminders.
 
+Requirements for Backlog Tracking and Governance
+- Any commit that changes backlog/*.md must:
+  - Include a “Backlog-Refs” subsection in the commit body listing changed backlog paths and related T-IDs
+  - Update docs/governance/TODO_TIMELINE.md (Status and links)
+  - Update this aggregator (summary/status) if scope or status meaningfully changed
+  - Ensure Docs-Checklist includes [x] CHANGELOG and [x] TODO_TIMELINE for backlog changes
+
+Status Overview (live)
+- 001 — Moderation and RBAC: Status: Planned
+- 002 — Marker Clustering: Status: Planned
+- 003 — Router v6 Migration: Status: Planned
+- 004 — Map Stack Refresh: Status: Planned
+- 005 — Storage CORS Enablement and Mode Switch: Status: Backlog
+- 006 — Server-side Analytics: Status: Backlog
+
 Backlog Items (Split Files)
 - 001 — Security/Governance — Moderation and RBAC (Admin/Stakeholder)
   - File: backlog/001-security-moderation-rbac.md

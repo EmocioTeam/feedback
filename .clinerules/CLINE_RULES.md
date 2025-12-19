@@ -62,6 +62,10 @@ Git Discipline
     - [ ] TASK_COMPLETION_SUMMARIES.md updated (acceptance verification + Next best actions, links)
     - [ ] README/STABILIZATION_README updated if user-facing or environment changed
   - Links: TODO_TIMELINE Task IDs, ERROR_LOG IDs, related CHANGELOG entries
+  - Backlog-Refs (when touching backlog/*.md):
+    - Include a “Backlog-Refs” subsection in the commit body listing changed backlog paths and related T-IDs
+    - Update docs/governance/TODO_TIMELINE.md (Status and links) and backlog/000-roadmap-specs.md (summary/status) if scope/status changed
+    - Docs-Checklist must include [x] CHANGELOG and [x] TODO_TIMELINE for backlog changes
   - Approval Record (only for merge/consolidation-like commits):
     - Requested by: Cline
     - Approved by: <USER> at <UTC timestamp>

@@ -12,6 +12,42 @@ Scope
 - Approval Record policy (“Ask-to-merge” gate)
 - Tracks metadata for commit subject
 
+Implementation Documentation
+- Starting a backlog item:
+  - Add a T-ID entry in docs/governance/TODO_TIMELINE.md (Status: Planned) and link to the backlog/<number>-<title>.md file.
+  - If environment/setup changes are expected, add a note in docs/governance/STABILIZATION_README.md (Status Log).
+- During implementation:
+  - Keep commits small; include [track:<track>] and [docs:check] in the subject.
+  - Update the backlog item file with a “Progress” subsection:
+    - Progress:
+      - Status: Planned | In progress | Done | Blocked
+      - Last updated (UTC): YYYY-MM-DDTHH:mm:ssZ
+      - T-IDs: T-XXX
+      - Commits: <SHAs if available>
+      - Links: TODO_TIMELINE | CHANGELOG | ERROR_LOG
+- On completion:
+  - Set Status: Done in the backlog item and add a short outcome note.
+  - Update docs/governance/TODO_TIMELINE.md (AC verified, links) and TASK_COMPLETION_SUMMARIES.md (explain-changes, AC verification, next actions).
+  - Ensure docs/governance/CHANGELOG.md has a per-change entry with revert commands.
+
+Backlog Enforcement and Progress Tracking
+- Aggregator and Index:
+  - backlog/000-roadmap-specs.md is the authoritative aggregator; keep links/summaries up to date when scope or status meaningfully changes.
+  - backlog/README.md is the index by category/benefit.
+- Commit requirements (when touching backlog/*.md):
+  - Include a “Backlog-Refs” subsection in the commit body listing changed backlog files and T-IDs.
+  - Update docs/governance/TODO_TIMELINE.md (Status and links).
+  - Update backlog/000-roadmap-specs.md summary line(s) if scope/status changed.
+  - Ensure Docs-Checklist includes [x] CHANGELOG and [x] TODO_TIMELINE checks.
+
+Status template (to embed in each backlog file)
+- Progress:
+  - Status: Planned | In progress | Done | Blocked
+  - Last updated (UTC): YYYY-MM-DDTHH:mm:ssZ
+  - T-IDs: T-XXX
+  - Commits: <optional SHAs>
+  - Links: TODO_TIMELINE | CHANGELOG | ERROR_LOG
+
 Commit Subject Schema
 - Format:
   <type>(<scope>): <summary> [track:<track>] [docs:check] [approval:required]
@@ -117,6 +153,6 @@ Index of Related Docs
 - README.md / STABILIZATION_README.md — user-facing setup and stabilization log
 
 Next Best Actions
-- Add docs/ skeleton (governance/guides/runbooks) and plan file moves later.
+
 - Update .clinerules to encode this no-branch commit gating and Ask-to-merge enforcement.
 - Keep commits small and auditable; maintain Docs-Checklist rigor.

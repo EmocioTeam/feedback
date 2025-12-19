@@ -35,6 +35,10 @@ D) Implementation Loop (Act Mode)
    - ERROR_LOG.md: entry for any errors (sanitized) including Prevention notes
    - TASK_COMPLETION_SUMMARIES.md: acceptance verification + Next best actions
    - README.md: update if user-facing behavior or setup changed
+   - If backlog/*.md changed:
+     - Update docs/governance/TODO_TIMELINE.md (Status and links)
+     - Update backlog/000-roadmap-specs.md summary/status if scope/status changed
+     - Ensure commit body includes a “Backlog-Refs” subsection listing changed backlog paths and T-IDs
 4) Commit with required structure
    - Subject: <type>(<scope>): <summary> [track:<track>] [docs:check] [approval:required]
    - Body:
@@ -67,6 +71,12 @@ F) Completion
   - Verify acceptance criteria and record verification notes
   - Link to commits, CHANGELOG entries, TODO_TIMELINE tasks, and ERROR_LOG items
   - Include revert commands
+- For backlog changes:
+  - Update the affected backlog/<number>-<title>.md with a “Progress” subsection:
+    - Status: Planned | In progress | Done | Blocked
+    - Last updated (UTC): YYYY-MM-DDTHH:mm:ssZ
+    - T-IDs: T-XXX
+    - Links: TODO_TIMELINE | CHANGELOG | ERROR_LOG
 - Perform a documentation formatting pass:
   - Prefer narrative paragraphs; use bullets only for checklists and crisp enumerations
   - Avoid nested lists beyond one level; use short subsections/headings instead
