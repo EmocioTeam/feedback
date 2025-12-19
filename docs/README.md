@@ -13,6 +13,9 @@ Governance
 - Context (current): EMOCIO_CONTEXT.md
 - Context backup (tech stack updated only): docs/governance/EMOCIO_CONTEXT.backup.md
 
+Backlog
+- Backlog index: backlog/README.md
+
 Runbooks
 - Commit Governance and Approval (no-branch mode): backlog/commit-governance-and-approval.md
   - Contains commit subject/body templates, Docs-Checklist gating, Approval Record usage, and revert hygiene.
