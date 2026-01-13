@@ -1,0 +1,16 @@
+{
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.git/**": true,
+    "C:/Users/**/Desktop/**": true,
+    "C:/Users/**/OneDrive - */**": true
+  },
+  "search.exclude": {
+    "C:/Users/**/Desktop/**": true,
+    "C:/Users/**/OneDrive - */**": true
+  },
+  "files.exclude": {
+    "C:/Users/**/Desktop/**": true,
+    "C:/Users/**/OneDrive - */**": true
+  }
+}

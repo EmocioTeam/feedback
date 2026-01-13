@@ -6,7 +6,8 @@ import SwipeHints from "../components/SwipeHints";
 import moods from "../data.js";
 import _ from "lodash";
 import { geolocated } from "react-geolocated";
-import firebase from "firebase";
+import { FirestoreHelpers } from "../config";
+import { getDownloadURL } from "firebase/storage";
 import { connect } from "react-redux";
 import { uploadImg } from "../actions/firebaseUploadImg";
 import { getDefaultHashtag } from "../actions/defaultHashtag";
@@ -88,7 +89,7 @@ class AddFeedback extends Component {
     const Mood = data[this.state.currentMood].name;
     const Hashtags = this.state.hashtags;
     const Location = this.props.coords
-      ? new firebase.firestore.GeoPoint(
+      ? new FirestoreHelpers.GeoPoint(
           this.props.coords.latitude,
           this.props.coords.longitude
         )
@@ -108,31 +109,22 @@ class AddFeedback extends Component {
 
     this.props
       .uploadImg(pic)
-      .then(res => {
-        console.log("UPLOAD IMG RESPONSE", res);
-        firebase
-          .storage()
-          .ref("images")
-          .child(res.ref.name)
-          .getDownloadURL()
-          .then(url => {
-            // console.log("URL", url);
-            this.props.addFeedback({
-              author: Author,
-              comment: Comment,
-              mood: Mood,
-              hashtags: Hashtags,
-              location: Location,
-              picture: url
-            });
-            this.resetState();
-          })
-          .catch(err => {
-            console.log(err);
-            alert(err);
-          });
+      .then(url => {
+        console.log("UPLOAD IMG URL", url);
+        this.props.addFeedback({
+          author: Author,
+          comment: Comment,
+          mood: Mood,
+          hashtags: Hashtags,
+          location: Location,
+          picture: url
+        });
+        this.resetState();
       })
-      .catch(err => alert("You need to be a logged in user to post images"));
+      .catch(err => {
+        console.log(err);
+        alert(err);
+      });
   };
 
   componentDidMount = () => {

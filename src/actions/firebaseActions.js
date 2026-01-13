@@ -1,42 +1,39 @@
 import _ from "lodash";
-import firebase from "firebase/app";
-import { fb } from "../config";
+import { auth, db, FirestoreHelpers } from "../config";
 import { fbFeeds, fbHashtags } from "../config";
-const db = fb.firestore();
+import { onAuthStateChanged as firebaseOnAuthStateChanged, signInWithEmailAndPassword as firebaseSignInWithEmailAndPassword, signOut as firebaseSignOut, updateProfile as firebaseUpdateProfile } from "firebase/auth";
+import { collection, doc, getDoc, getDocs, addDoc, updateDoc, deleteDoc, setDoc, query, orderBy, onSnapshot } from "firebase/firestore";
 const users = "users";
 
-// export const getUpdatedFeedback = doc => {
-//   db.collection(fbFeeds)
-//     .doc(doc)
-//     .get()
-//     .then(updatedDoc => {
-//       this.state.feeds.findIndex(doc);
-//       this.setState({
-//         feeds: this.state.feeds
-//       });
-//     });
-// }
+/* getUpdatedFeedback: legacy helper removed.
+   Rationale: this action referenced component state (this.state) which is invalid in Redux actions.
+   If needed later, implement as a thunk that dispatches an update based on getDoc(doc(db, fbFeeds, docId)). */
 
 export const onAuthStateChanged = () => dispatch => {
-  firebase.auth().onAuthStateChanged(function(res) {
+  firebaseOnAuthStateChanged(auth, function(res) {
     if (res) {
       // User is signed in.
       console.log("userSignedIn", res);
-      db.collection(users)
-        .doc(res.uid)
-        .get()
-        .then(user => {
-          // console.log("EOOO", user);
-
-          dispatch({
-            type: "signIn",
-            payload: {
-              user: res.displayName,
-              email: res.email,
-              stakeholder: user.exists ? user.data().stakeholder : false
-            }
+      const userDocRef = doc(db, users, res.uid);
+      getDoc(userDocRef).then(async user => {
+        // Ensure users/{uid} doc exists for persona metadata (stakeholder flag)
+        if (!user.exists()) {
+          await setDoc(userDocRef, {
+            displayName: res.displayName || "",
+            email: res.email || "",
+            stakeholder: false,
+            createdAt: Date.now()
           });
+        }
+        dispatch({
+          type: "signIn",
+          payload: {
+            user: res.displayName,
+            email: res.email,
+            stakeholder: user.exists() ? user.data().stakeholder : false
+          }
         });
+      });
     } else {
       // No user is signed in.
       console.log("noUser", res);
@@ -46,24 +43,28 @@ export const onAuthStateChanged = () => dispatch => {
 
 export const signIn = (email, password) => {
   return async dispatch => {
-    await fb
-      .auth()
-      .signInWithEmailAndPassword(email, password)
+    await firebaseSignInWithEmailAndPassword(auth, email, password)
       .then(res => {
         console.log("actionRes", res);
-        db.collection(users)
-          .doc(res.user.uid)
-          .get()
-          .then(user => {
-            dispatch({
-              type: "signIn",
-              payload: {
-                user: res.user.displayName,
-                email: res.user.email,
-                stakeholder: user.exists ? user.data().stakeholder : false
-              }
+        getDoc(doc(db, users, res.user.uid)).then(async user => {
+          const userDocRef = doc(db, users, res.user.uid);
+          if (!user.exists()) {
+            await setDoc(userDocRef, {
+              displayName: res.user.displayName || "",
+              email: res.user.email || "",
+              stakeholder: false,
+              createdAt: Date.now()
             });
+          }
+          dispatch({
+            type: "signIn",
+            payload: {
+              user: res.user.displayName,
+              email: res.user.email,
+              stakeholder: user.exists() ? user.data().stakeholder : false
+            }
           });
+        });
       })
       .catch(err => {
         console.log("err", err);
@@ -76,8 +77,7 @@ export const signIn = (email, password) => {
 };
 
 export const signOut = () => dispatch => {
-  fb.auth()
-    .signOut()
+  firebaseSignOut(auth)
     .then(function() {
       // Sign-out successful.
       dispatch({
@@ -90,13 +90,12 @@ export const signOut = () => dispatch => {
     });
 };
 export const updateUserName = name => dispatch => {
-  var user = firebase.auth().currentUser;
+  const user = auth.currentUser;
 
-  user
-    .updateProfile({
-      displayName: name
-      // photoURL: "https://example.com/jane-q-user/profile.jpg"
-    })
+  firebaseUpdateProfile(user, {
+    displayName: name
+    // photoURL: "https://example.com/jane-q-user/profile.jpg"
+  })
     .then(function(res) {
       // Update successful.
       console.log("updateUserName", res);
@@ -111,9 +110,7 @@ export const updateUserName = name => dispatch => {
 };
 
 export const getAllFeeds = () => dispatch => {
-  db.collection(fbFeeds)
-    .orderBy("timestamp", "desc")
-    .get()
+  getDocs(query(collection(db, fbFeeds), orderBy("timestamp", "desc")))
     .then(res => {
       const dbJSON = {};
       res.docs.forEach(elem => {
@@ -128,11 +125,9 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
   const lastTwoWeeks = new Date();
   lastTwoWeeks.setDate(lastTwoWeeks.getDate() - 10);
   // const n = getState().lastFeed + 15;
-  db.collection(fbFeeds)
-    // .where("timestamp", ">", lastTwoWeeks)
-    .orderBy("timestamp", "desc")
-    // .limit(n)
-    .onSnapshot(snapshot => {
+  onSnapshot(
+    query(collection(db, fbFeeds), orderBy("timestamp", "desc")),
+    snapshot => {
       // const lastVisible = snapshot.docs[snapshot.docs.length - 1];
       // dispatch({
       //   type: "getLastFeed",
@@ -206,11 +201,7 @@ export const realTimeFeedListener = () => (dispatch, getState) => {
 };
 
 export const getFeedWithLocation = () => dispatch => {
-  db.collection(fbFeeds)
-    // .orderByChild('location')
-    // .where("location", "!=", "false")
-    .orderBy("timestamp", "desc")
-    .get()
+  getDocs(query(collection(db, fbFeeds), orderBy("timestamp", "desc")))
     .then(feed => {
       // console.log("FEEED", feed);
       const feedWithLocation = feed.docs
@@ -228,8 +219,7 @@ export const getFeedWithLocation = () => dispatch => {
 };
 
 export const getHashtagList = () => dispatch => {
-  db.collection(fbHashtags)
-    .get()
+  getDocs(collection(db, fbHashtags))
     .then(async hashtags => {
       // this.setState({ hashtags: [] });
       const hashList = await hashtags.docs.map(hash => {
@@ -250,64 +240,57 @@ export const getHashtagList = () => dispatch => {
     });
 };
 
-export const addFeedback = data => {
-  data.timestamp = firebase.firestore.FieldValue.serverTimestamp();
-  // first: get the Refs for the Hashtag list & the new feedback entry
-  const hashtagListRef = db.collection(fbHashtags);
-  const newFeedbackRef = db.collection(fbFeeds);
-  // get whole hashtag obj from firebase
-  const updateHashtagList = data.hashtags.map(async hash => {
-    const hashtagDocRef = hashtagListRef.doc(hash);
-    const hashtagExists = await hashtagDocRef.get().then(res => res.exists);
+export const addFeedback = data => async dispatch => {
+  // Input: data (author, comment, mood, hashtags, location, picture?)
+  // Transformation: serverTimestamp for timestamp; ensure hashtag counters updated; create feedback doc
+  // Output: Promise<{ id: string }>
+  data.timestamp = FirestoreHelpers.serverTimestamp();
 
+  const hashtagListRef = collection(db, fbHashtags);
+  const newFeedbackRef = collection(db, fbFeeds);
+
+  // Update hashtag counters (create-if-missing)
+  const updateHashtagList = (data.hashtags || []).map(async hash => {
+    const hashtagDocRef = doc(hashtagListRef, hash);
+    const hashtagExists = await getDoc(hashtagDocRef).then(res => res.exists());
     if (hashtagExists) {
-      hashtagDocRef.update({
-        count: firebase.firestore.FieldValue.increment(1),
-        [data.mood]: firebase.firestore.FieldValue.increment(1)
+      await updateDoc(hashtagDocRef, {
+        count: FirestoreHelpers.increment(1),
+        [data.mood]: FirestoreHelpers.increment(1)
       });
-      return;
     } else {
-      hashtagDocRef.set({
+      await setDoc(hashtagDocRef, {
         count: 1,
         [data.mood]: 1
       });
-      return;
     }
   });
-  // third: create new feedback entry
-  const createFeedback = newFeedbackRef.add(data);
-  // resolve all promises
-  Promise.all([createFeedback, ...updateHashtagList])
-    .then(res => {
-      // console.log(res);
-      this.setState({
-        alert: {
-          variant: "success",
-          msg: "Thank you for your Feedback!!",
-          id: res[0].id,
-          hashtags: data.hashtags
-        }
-      });
-      // this.getFeeds();
-      this.getHashtagList();
-      setTimeout(() => this.setState({ alert: null }), 2000);
-    })
-    .catch(err => {
-      console.log("error", " => ", err);
-    });
+
+  // Create feedback entry
+  const docRef = await addDoc(newFeedbackRef, data);
+  await Promise.all(updateHashtagList);
+
+  // Optional success action for local state consumers
+  dispatch({
+    type: "feedbackAdded",
+    payload: { id: docRef.id, data }
+  });
+
+  // Return payload to caller (App.js uses this in alert)
+  return { id: docRef.id };
 };
 
-export const deleteFeedback = id => {
-  db.collection(fbFeeds)
-    .doc(id)
-    .delete()
+export const deleteFeedback = id => dispatch => {
+  // Input: id
+  // Transformation: delete doc
+  // Output: Promise<boolean>
+  return deleteDoc(doc(db, fbFeeds, id))
     .then(() => {
-      // console.log("Document successfully deleted!");
-      // this.getFeeds();
-      this.getHashtagList();
+      dispatch({ type: "feedbackDeleted", payload: id });
+      return true;
     })
-    .catch(function(error) {
-      // console.error("Error removing document: ", error);
+    .catch(error => {
+      throw error;
     });
   // const updateHashtagList = data.hashtags.map(hash => {
   //   return hashtagListRef.update({
@@ -316,30 +299,32 @@ export const deleteFeedback = id => {
   // });
 };
 
-export const addComment = (id, comment) => {
-  console.log(id);
-  db.collection(fbFeeds)
-    .doc(id)
-    .update({
-      comments: firebase.firestore.FieldValue.arrayUnion({
-        timestamp: Date.now(),
-        comment
-      })
+export const addComment = (id, comment, author) => dispatch => {
+  // Input: id, comment, author?
+  // Transformation: arrayUnion comment with timestamp and optional author
+  // Output: Promise<boolean>
+  return updateDoc(doc(db, fbFeeds, id), {
+    comments: FirestoreHelpers.arrayUnion({
+      timestamp: Date.now(),
+      comment,
+      author
     })
-    .then(res => {
-      console.log(res);
-      // this.getFeeds();
-    });
+  }).then(() => {
+    dispatch({ type: "commentAdded", payload: { id, comment, author } });
+    return true;
+  });
 };
 
-export const addReaction = (id, reaction) => {
-  console.log("id", id, "reaction", reaction);
+export const addReaction = (id, reaction) => dispatch => {
+  // Input: id, reaction
+  // Transformation: increment reactions.{reaction}
+  // Output: Promise<boolean>
   const updatedField = `reactions.${reaction}`;
-  db.collection(fbFeeds)
-    .doc(id)
-    .update({
-      [updatedField]: firebase.firestore.FieldValue.increment(1)
-    })
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
+  return updateDoc(doc(db, fbFeeds, id), {
+    [updatedField]: FirestoreHelpers.increment(1)
+  })
+    .then(() => {
+      dispatch({ type: "reactionAdded", payload: { id, reaction } });
+      return true;
+    });
 };

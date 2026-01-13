@@ -1,0 +1,21 @@
+docs(error): add E-20251219-09 VS Code ENOENT; workspace relocation prevention [track:governance] [docs:check]
+
+Rationale:
+- Document workspace relocation error (ENOENT) observed when VS Code referenced stale Desktop/OneDrive paths after moving the repo to C:\farolabs\emocio-legacy.
+- Provide prevention and operational guidance to avoid recurrence.
+
+Files touched:
+- ERROR_LOG.md
+
+Revert:
+- git restore ERROR_LOG.md
+
+Docs-Checklist:
+- [x] STABILIZATION_README updated (Road so far, Known Issues)
+- [x] TODO_TIMELINE updated (T-Workspace-Relocation-Fix)
+- [x] CHANGELOG entry planned/linked via governance flow
+
+Links:
+- Tasks (TODO_TIMELINE): T-Workspace-Relocation-Fix
+- CHANGELOG entry: 2025-12-19 (workspace and governance updates)
+- Error ID: E-20251219-09
